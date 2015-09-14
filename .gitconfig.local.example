@@ -1,0 +1,9 @@
+# If the ~/.gitconfig.local file exists, it will be automatically included after
+# the configurations from ~/.gitconfig, thus allowing its content to overwrite
+# or add to the existing git configurations.
+# Use ~/.gitconfig.local to store sensitive information such as the git user
+# credentials.
+
+[user]
+  name = John Appleseed
+  email = john.appleseed@apple.com
