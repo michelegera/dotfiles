@@ -1,0 +1,4 @@
+# Custom Tig command definitions
+# http://jonas.nitro.dk/tig/manual.html
+
+bind generic + !git commit --amend
