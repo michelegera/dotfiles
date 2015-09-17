@@ -5,10 +5,10 @@ cd "$(dirname "$BASH_SOURCE")" \
 
 declare -a FILES_TO_SYMLINK=(
 
+  'shell/config'
   'shell/curlrc'
   'shell/inputrc'
   'shell/screenrc'
-  'shell/config'
   'shell/ssh'
 
   'git/gitattributes'
