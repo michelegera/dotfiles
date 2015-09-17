@@ -18,7 +18,6 @@ main() {
     printf '\n'
 
     brew_install '1Password' '1password' 'cask'
-    brew_install 'A Better Finder Rename' 'a-better-finder-rename' 'cask'
     brew_install 'Adobe Creative Cloud' 'adobe-creative-cloud' 'cask'
     brew_install 'Air Video Server HD' 'air-video-server-hd' 'cask'
     brew_install 'Alfred' 'alfred' 'cask'
@@ -36,9 +35,10 @@ main() {
     brew_install 'iTerm 2' 'iterm2' 'cask'
     brew_install 'LICEcap' 'licecap' 'cask'
     brew_install 'Limechat' 'limechat' 'cask'
-    brew_install 'Little Snitch' 'little-snitch' 'cask'
+    brew_install 'MacDown' 'macdown' 'cask'
     brew_install 'Microsoft Office 2016' 'microsoft-office-365' 'cask'
     brew_install 'Paw' 'paw' 'cask'
+    brew_install 'RightFont' 'rightfont' 'cask'
     brew_install 'Sequel Pro' 'sequel-pro' 'cask'
     brew_install 'Skitch' 'skitch' 'cask'
     brew_install 'Skype' 'skype' 'cask'
@@ -55,6 +55,7 @@ main() {
     brew_install 'Unsplash Wallpaper' 'unsplash-wallpaper' 'cask'
     brew_install 'Viscosity' 'viscosity' 'cask'
     brew_install 'VLC' 'vlc' 'cask'
+    brew_install 'xScope' 'xscope' 'cask'
 
   fi
 
