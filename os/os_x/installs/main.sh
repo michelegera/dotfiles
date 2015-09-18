@@ -16,6 +16,9 @@ main() {
   ./install_homebrew_formulae.sh
   print_in_green '\n  ---\n\n'
 
+  ./install_oh_my_fish.sh
+  print_in_green '\n  ---\n\n'
+
   ./install_homebrew_casks.sh
   print_in_green '\n  ---\n\n'
 

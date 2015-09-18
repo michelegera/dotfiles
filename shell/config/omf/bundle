@@ -1,1 +1,6 @@
 # List of currently installed packages/themes
+package rbenv
+package sublime
+
+theme default
+theme scorphish
