@@ -21,8 +21,16 @@ set_finder_preferences() {
   execute 'defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false' \
     'Disable warning when changing a file extension'
 
-  execute 'defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"' \
-    'Use list view in all Finder windows by default'
+  # View modes
+  # clmv = Column
+  # Flwv = Coverflow
+  # icnv = Icon
+  # Nlsv = List
+  execute 'defaults write com.apple.finder FXPreferredViewStyle -string "clmv"' \
+    'Use column view in all Finder windows by default'
+
+  execute 'defaults write com.apple.finder ShowStatusBar -bool true' \
+    'Show status bar'
 
   execute 'defaults write com.apple.finder NewWindowTarget -string "PfDe" &&
            defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"' \

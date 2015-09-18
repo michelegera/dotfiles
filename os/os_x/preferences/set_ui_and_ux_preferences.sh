@@ -28,6 +28,9 @@ set_ui_and_ux_preferences() {
   execute 'defaults write com.apple.screencapture type -string "png"' \
     'Save screenshots as PNGs'
 
+  execute 'defaults write com.apple.screencapture include-date -int 0' \
+    'Remove date and timestamp from screenshots'
+
   execute 'defaults write NSGlobalDomain AppleFontSmoothing -int 2' \
     'Enable subpixel font rendering on non-Apple LCDs'
 
