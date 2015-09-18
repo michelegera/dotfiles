@@ -22,6 +22,28 @@ set_dock_preferences() {
   execute 'defaults write com.apple.dock tilesize -int 40' \
     'Set icon size'
 
+  # Hot corners
+  #  0: no-op
+  #  2: Mission Control
+  #  3: Show application windows
+  #  4: Desktop
+  #  5: Start screen saver
+  #  6: Disable screen saver
+  #  7: Dashboard
+  # 10: Put display to sleep
+  # 11: Launchpad
+  # 12: Notification Center
+  execute 'defaults write com.apple.dock wvous-tr-corner -int 2;
+           defaults write com.apple.dock wvous-tr-modifier -int 0' \
+    'Top right screen corner → Mission Control'
+
+  execute 'defaults write com.apple.dock wvous-br-corner -int 4
+          defaults write com.apple.dock wvous-br-modifier -int 0' \
+    'Bottom right screen corner → Desktop'
+
+  execute 'defaults write com.apple.dock wvous-bl-corner -int 5
+          defaults write com.apple.dock wvous-bl-modifier -int 0' \
+    'Bottom left screen corner → Start screen saver'
 }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
