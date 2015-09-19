@@ -21,6 +21,9 @@ main() {
     brew_install 'mongodb' 'mongodb'
     brew_install 'mysql' 'mysql'
     brew_install 'node' 'node'
+    brew_install 'rbenv' 'rbenv'
+    brew_install 'rbenv-gemset' 'rbenv-gemset'
+    brew_install 'ruby-build' 'ruby-build'
     brew_install 'sphinx' 'sphinx'
     brew_install 'tig' 'tig'
     brew_install 'tree' 'tree'
@@ -33,6 +36,10 @@ main() {
     MONGODB_PREFIX="$(brew --prefix mongodb)"
     execute 'ln -sfv $MONGODB_PREFIX/*.plist ~/Library/LaunchAgents' \
       'Start MongoDB at login'
+
+    RBENV_INIT="$(rbenv init -)"
+    execute 'eval "$RBENV_INIT"' \
+      'Initialize rbenv'
 
   fi
 
