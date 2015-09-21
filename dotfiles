@@ -286,6 +286,17 @@ main() {
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+  print_info 'Mac App Store applications'
+
+  ask_for_confirmation 'Do you want to open the Mac App Store to install applications?'
+  printf '\n'
+
+  if answer_is_yes; then
+    ./os/os_x/open_mac_app_store.sh
+  fi
+
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
   print_info 'Restart'
 
   ask_for_confirmation 'Do you want to restart?'
