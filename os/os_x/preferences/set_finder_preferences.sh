@@ -45,6 +45,9 @@ set_finder_preferences() {
   execute 'defaults write com.apple.finder ShowRecentTags -bool false' \
     'Do not show recent tags'
 
+  execute 'defaults write com.apple.loginwindow LoginwindowLaunchesRelaunchApps -bool false' \
+    'Disable reopening windows when logging back in'
+
   execute '/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 60" ~/Library/Preferences/com.apple.finder.plist &&
            /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:iconSize 60" ~/Library/Preferences/com.apple.finder.plist &&
            /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:iconSize 60" ~/Library/Preferences/com.apple.finder.plist' \
