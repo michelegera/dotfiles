@@ -35,6 +35,7 @@ main() {
     brew_install 'iTerm 2' 'iterm2' 'cask'
     brew_install 'LICEcap' 'licecap' 'cask'
     brew_install 'Limechat' 'limechat' 'cask'
+    brew_install 'Little Snitch' 'little-snitch' 'cask'
     brew_install 'MacDown' 'macdown' 'cask'
     brew_install 'Microsoft Office 2016' 'microsoft-office-365' 'cask'
     brew_install 'Paw' 'paw' 'cask'

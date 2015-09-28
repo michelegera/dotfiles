@@ -16,7 +16,6 @@ main() {
 
     brew_install 'Airmail Beta' 'airmail-beta' 'cask'
     brew_install 'Sublime Text 3' 'sublime-text3' 'cask'
-    brew_install 'Little Snitch Nightly' 'little-snitch-nightly' 'cask'
     brew_install 'A Better Finder Rename 10 Beta' 'a-better-finder-rename-beta' 'cask'
 
   fi
