@@ -10,7 +10,7 @@ main() {
 
   if ! cmd_exists 'omf'; then
 
-    curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | \
+    curl -LsS github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | \
       CI=true sh &> /dev/null
     #   └─ simulate a CI environment, see http://git.io/vnu8b
 
