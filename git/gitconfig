@@ -1,7 +1,7 @@
 [alias]
 
   a   = commit --amend
-  br  = branch
+  b   = branch
   c   = commit
   ca  = !git add -A && git commit                 # Commit all changes
   co  = checkout
@@ -16,6 +16,14 @@
   rlc = !git reset --hard HEAD~1                  # Remove last commit
   st  = status
   ulc = reset --soft HEAD~1                       # Undo last commit
+
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  # Shows the most recent changes for each branch
+
+  changes = "!f() { \
+    git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/remotes/origin; \
+  }; f"
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -108,7 +116,9 @@
   path = ~/.gitconfig.local
 
 [git-up "bundler"]
+
   check = true
 
 [git-up "fetch"]
+
   prune = true
