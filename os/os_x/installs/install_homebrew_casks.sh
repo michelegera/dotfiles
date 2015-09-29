@@ -24,6 +24,7 @@ main() {
     brew_install 'AppCleaner' 'appcleaner' 'cask'
     brew_install 'Arq' 'arq' 'cask'
     brew_install 'ChitChat' 'chitchat' 'cask'
+    brew_install 'Cocktail' 'cocktail' 'cask'
     brew_install 'Dropbox' 'dropbox' 'cask'
     brew_install 'Evernote' 'evernote' 'cask'
     brew_install 'Firefox' 'firefox' 'cask'
