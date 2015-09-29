@@ -7,16 +7,11 @@ cd "$(dirname "$BASH_SOURCE")" \
 
 set_iterm_preferences() {
 
-  osascript <<EOD
+  execute 'defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder 1' \
+    'Enable loading preferences from custom folder'
 
-  tell application "iTerm"
-
-    (* Do stuff *)
-
-  end tell
-
-EOD
-  print_result $? 'Set iTerm preferences'
+  execute 'defaults write com.googlecode.iterm2.plist PrefsCustomFolder "$dotfilesDirectory/prefs/iterm2"' \
+    'Set preferences custom folder'
 
 }
 
@@ -24,7 +19,7 @@ EOD
 
 main() {
 
-  print_in_purple '\n  Terminal\n\n'
+  print_in_purple '\n  iTerm\n\n'
   set_iterm_preferences
 
 }

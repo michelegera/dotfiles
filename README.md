@@ -59,8 +59,9 @@ as the `git` user credentials, e.g.:
 ### Forks
 
 If you decide to fork this project, don’t forget to substitute my
-username with your own in the [setup snippets](#setup) and [in the
-`dotfiles` script](https://github.com/michelegera/dotfiles/blob/b45ae1a2ad505318588a347d4b11b4fdddbfbefc/dotfiles#L3).
+username with your own in the [setup snippets](#setup), [in the
+`dotfiles` script](https://github.com/michelegera/dotfiles/blob/b45ae1a2ad505318588a347d4b11b4fdddbfbefc/dotfiles#L3)
+and [in the iTerm preferences](https://github.com/michelegera/dotfiles/blob/49c2d9a97434d0eebba511f324c3af63c7340463/prefs/iterm2/com.googlecode.iterm2.plist#L1098).
 
 
 ## Update
