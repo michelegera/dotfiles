@@ -7,19 +7,21 @@ cd "$(dirname "$BASH_SOURCE")"
 main() {
 
   declare -a PROCESSES_TO_TERMINATE=(
-    'SystemUIServer'
     'cfprefsd'
+    'Spectacle'
+    'SystemUIServer'
   )
 
   ./set_chrome_preferences.sh
   ./set_dashboard_preferences.sh
   ./set_dock_preferences.sh
   ./set_finder_preferences.sh
+  ./set_iterm_preferences.sh
   ./set_keyboard_preferences.sh
   ./set_language_and_region_preferences.sh
   ./set_maps_preferences.sh
   ./set_safari_preferences.sh
-  ./set_iterm_preferences.sh
+  ./set_spectacle_preferences.sh
   ./set_textedit_preferences.sh
   ./set_mouse_and_trackpad_preferences.sh
   ./set_transmission_preferences.sh
