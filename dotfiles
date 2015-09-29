@@ -209,6 +209,23 @@ main() {
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+  # Set computer name
+
+  hostname=''
+  while [ -z "$hostname" ]; do
+    ask 'Please choose a name for this computer: '
+    hostname="$(get_answer)"
+  done
+
+  sudo scutil --set ComputerName $hostname
+  sudo scutil --set HostName $hostname
+  sudo scutil --set LocalHostName $hostname
+  sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $hostname
+
+  print_info "Name set to “$hostname”"
+
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
   # Setup the `dotfiles` if needed
 
   if ! cmd_exists 'git' \
