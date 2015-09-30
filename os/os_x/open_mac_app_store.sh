@@ -6,6 +6,7 @@ cd "$(dirname "$BASH_SOURCE")" \
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 declare -a APPS=(
+  'Airmail'
   'AppSana'
   'Byword'
   'Characters'

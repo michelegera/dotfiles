@@ -14,7 +14,6 @@ main() {
   if cmd_exists 'brew' \
     && brew_tap 'caskroom/versions'; then
 
-    brew_install 'Airmail Beta' 'airmail-beta' 'cask'
     brew_install 'Sublime Text 3' 'sublime-text3' 'cask'
     brew_install 'A Better Finder Rename 10 Beta' 'a-better-finder-rename-beta' 'cask'
 
