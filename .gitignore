@@ -1,0 +1,3 @@
+shell/config/fish/
+shell/ssh/id_rsa*
+shell/ssh/known_hosts
