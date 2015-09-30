@@ -59,6 +59,8 @@ main() {
   print_in_purple '\n  Spectacle\n\n'
   set_spectacle_preferences
 
+  killall 'Spectacle' &> /dev/null
+
 }
 
 main
