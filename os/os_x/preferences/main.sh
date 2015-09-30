@@ -11,6 +11,7 @@ main() {
     'SystemUIServer'
   )
 
+  ./set_alfred_preferences.sh
   ./set_chrome_preferences.sh
   ./set_dashboard_preferences.sh
   ./set_dock_preferences.sh
