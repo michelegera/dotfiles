@@ -12,6 +12,7 @@ main() {
   if [ "$OS" == "osx" ]; then
     ./os_x/installs/main.sh
     ./os_x/change_default_shell.sh
+    ./os_x/set_default_apps.sh
   fi
 
 }

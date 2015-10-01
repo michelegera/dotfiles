@@ -13,6 +13,7 @@ main() {
 
   if cmd_exists 'brew'; then
 
+    brew_install 'duti' 'duti'
     brew_install 'fish' 'fish'
     brew_install 'git' 'git'
     brew_install 'httpie' 'httpie'
