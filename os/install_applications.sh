@@ -13,6 +13,7 @@ main() {
     ./os_x/installs/main.sh
     ./os_x/change_default_shell.sh
     ./os_x/set_default_apps.sh
+    ./os_x/sync_sublime_text_preferences.sh
   fi
 
 }

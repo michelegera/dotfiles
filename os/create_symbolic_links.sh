@@ -19,6 +19,7 @@ declare -a FILES_TO_SYMLINK=(
   'prefs/alfred'
   'prefs/duti'
   'prefs/iterm2'
+  'prefs/sublime-text3'
 
 )
 

@@ -1,0 +1,25 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Better CoffeeScript",
+		"Better RSpec",
+		"CSS3",
+		"Emblem.js Syntax Highlighting",
+		"GitGutter",
+		"Handlebars",
+		"JavaScriptNext - ES6 Syntax",
+		"Material Theme",
+		"Package Control",
+		"Ruby Hash Converter",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-coffeelint",
+		"SublimeLinter-jscs",
+		"SublimeLinter-rubocop"
+	]
+}

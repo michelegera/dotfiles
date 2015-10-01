@@ -1,3 +1,9 @@
+Package Control.*-ca-bundle
+Package Control.ca-certs/
+Package Control.ca-list
+Package Control.cache/
+Package Control.last-run
+
 shell/config/fish/
 shell/ssh/id_rsa*
 shell/ssh/known_hosts
