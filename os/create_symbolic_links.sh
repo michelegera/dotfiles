@@ -8,6 +8,7 @@ declare -a FILES_TO_SYMLINK=(
   'shell/config'
   'shell/curlrc'
   'shell/gemrc'
+  'shell/hushlogin'
   'shell/inputrc'
   'shell/screenrc'
   'shell/ssh'
