@@ -7,7 +7,7 @@ declare -r DOTFILES_ORIGIN="git@github.com:$GITHUB_REPOSITORY.git"
 declare -r DOTFILES_TARBALL_URL="https://github.com/$GITHUB_REPOSITORY/tarball/master"
 declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/master/os/utils.sh"
 
-declare dotfilesDirectory="$HOME/.dotfiles"
+declare DOTFILES_DIRECTORY="$HOME/.dotfiles"
 
 # ----------------------------------------------------------------------
 # | Helper Functions                                                   |
@@ -45,42 +45,42 @@ download_dotfiles() {
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  ask_for_confirmation "Do you want to store the dotfiles in '$dotfilesDirectory'?"
+  ask_for_confirmation "Do you want to store the dotfiles in '$DOTFILES_DIRECTORY'?"
 
   if ! answer_is_yes; then
-    dotfilesDirectory=''
-    while [ -z "$dotfilesDirectory" ]; do
+    DOTFILES_DIRECTORY=''
+    while [ -z "$DOTFILES_DIRECTORY" ]; do
       ask 'Please specify another location for the dotfiles (path): '
-      dotfilesDirectory="$(get_answer)"
+      DOTFILES_DIRECTORY="$(get_answer)"
     done
   fi
 
   # Ensure the `dotfiles` directory is available
 
-  while [ -e "$dotfilesDirectory" ]; do
-    ask_for_confirmation "'$dotfilesDirectory' already exists, do you want to overwrite it?"
+  while [ -e "$DOTFILES_DIRECTORY" ]; do
+    ask_for_confirmation "'$DOTFILES_DIRECTORY' already exists, do you want to overwrite it?"
     if answer_is_yes; then
-      rm -rf "$dotfilesDirectory"
+      rm -rf "$DOTFILES_DIRECTORY"
       break
     else
-      dotfilesDirectory=''
-      while [ -z "$dotfilesDirectory" ]; do
+      DOTFILES_DIRECTORY=''
+      while [ -z "$DOTFILES_DIRECTORY" ]; do
         ask 'Please specify another location for the dotfiles (path): '
-        dotfilesDirectory="$(get_answer)"
+        DOTFILES_DIRECTORY="$(get_answer)"
       done
     fi
   done
 
   printf '\n'
 
-  mkdir -p "$dotfilesDirectory"
-  print_result $? "Create '$dotfilesDirectory'" 'true'
+  mkdir -p "$DOTFILES_DIRECTORY"
+  print_result $? "Create '$DOTFILES_DIRECTORY'" 'true'
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   # Extract archive in the `dotfiles` directory
 
-  extract "$tmpFile" "$dotfilesDirectory"
+  extract "$tmpFile" "$DOTFILES_DIRECTORY"
   print_result $? 'Extract archive' 'true'
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -92,7 +92,7 @@ download_dotfiles() {
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  cd "$dotfilesDirectory"
+  cd "$DOTFILES_DIRECTORY"
 
 }
 
