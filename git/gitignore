@@ -16,6 +16,9 @@
 # https://docs.npmjs.com/misc/config#loglevel
 npm-debug.log
 
+# Sublime Text project and workspace files
+*.sublime-project
+*.sublime-workspace
 
 # ----------------------------------------------------------------------
 # | OS X                                                               |
