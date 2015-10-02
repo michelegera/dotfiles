@@ -12,6 +12,7 @@ declare -a APPS=(
   'Characters'
   'Deliveries'
   'Keynote'
+  'Reeder'
   'Sip'
   'Tweetbot'
   'VidConvert'

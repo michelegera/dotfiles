@@ -14,7 +14,7 @@ main() {
   if cmd_exists 'brew' \
     && brew_tap 'michelegera/custom'; then
 
-    brew_install 'Reeder Beta' 'reeder-beta' 'cask'
+    print_in_purple 'No custom Casks to install\n'
 
   fi
 

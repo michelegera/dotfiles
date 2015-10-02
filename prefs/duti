@@ -52,7 +52,7 @@ org.m0k.transmission          .torrent                        all
 
 
 # Bundle id                   URL scheme
-com.reederapp.mac             feed
+com.reederapp.rkit2.mac       feed
 
 it.bloop.airmail2             mailto
 
