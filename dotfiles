@@ -211,18 +211,18 @@ main() {
 
   # Set computer name
 
-  hostname=''
-  while [ -z "$hostname" ]; do
+  HOSTNAME=''
+  while [ -z "$HOSTNAME" ]; do
     ask 'Please choose a name for this computer: '
-    hostname="$(get_answer)"
+    HOSTNAME="$(get_answer)"
   done
 
-  sudo scutil --set ComputerName $hostname
-  sudo scutil --set HostName $hostname
-  sudo scutil --set LocalHostName $hostname
-  sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $hostname
+  sudo scutil --set ComputerName $HOSTNAME
+  sudo scutil --set HostName $HOSTNAME
+  sudo scutil --set LocalHostName $HOSTNAME
+  sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $HOSTNAME
 
-  print_info "Name set to “$hostname”"
+  print_info "Name set to $HOSTNAME"
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
