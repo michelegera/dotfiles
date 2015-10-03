@@ -38,7 +38,6 @@ main() {
     brew_install 'Limechat' 'limechat' 'cask'
     brew_install 'Little Snitch' 'little-snitch' 'cask'
     brew_install 'MacDown' 'macdown' 'cask'
-    brew_install 'Microsoft Office 2016' 'microsoft-office-365' 'cask'
     brew_install 'Paw' 'paw' 'cask'
     brew_install 'RightFont' 'rightfont' 'cask'
     brew_install 'Sequel Pro' 'sequel-pro' 'cask'
@@ -58,7 +57,13 @@ main() {
     brew_install 'Viscosity' 'viscosity' 'cask'
     brew_install 'VLC' 'vlc' 'cask'
     brew_install 'xScope' 'xscope' 'cask'
+    printf '\n'
 
+    ask_for_confirmation 'Do you want to install Microsoft Office 2016?'
+
+    if answer_is_yes; then
+      brew_install 'Microsoft Office 2016' 'microsoft-office-365' 'cask'
+    fi
   fi
 
 }
