@@ -8,8 +8,8 @@ cd "$(dirname "$BASH_SOURCE")" \
 set_spectacle_preferences() {
 
   # Enables Assistive Access, see http://git.io/vcGqX
-  execute "sudo sqlite3 /Library/Application\ Support/com.apple.TCC/TCC.db \
-    \"INSERT or REPLACE INTO access VALUES('kTCCServiceAccessibility', 'com.divisiblebyzero.Spectacle', 0, 1, 1, NULL)\"" \
+  sql_command="INSERT or REPLACE INTO access VALUES ('kTCCServiceAccessibility', 'com.divisiblebyzero.Spectacle', 0, 1, 0, NULL, NULL);"
+  execute 'sudo sqlite3 /Library/Application\ Support/com.apple.TCC/TCC.db "$sql_command"' \
     'Enable Assistive Access'
 
   # To output the current preferences, see http://git.io/vcGJ4

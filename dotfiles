@@ -151,7 +151,7 @@ is_supported_version() {
 
 verify_os() {
 
-  declare -r MINIMUM_OS_X_VERSION='10.10'
+  declare -r MINIMUM_OS_X_VERSION='10.11'
   declare -r OS_NAME="$(uname -s)"
 
   declare OS_VERSION=''
