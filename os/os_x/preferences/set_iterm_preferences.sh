@@ -10,7 +10,7 @@ set_iterm_preferences() {
   execute 'defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder 1' \
     'Enable loading preferences from custom folder'
 
-  execute 'defaults write com.googlecode.iterm2.plist PrefsCustomFolder "$DOTFILES_DIRECTORY/prefs/iterm2"' \
+  execute 'defaults write com.googlecode.iterm2.plist PrefsCustomFolder "~/.iterm2"' \
     'Set preferences custom folder'
 
 }
