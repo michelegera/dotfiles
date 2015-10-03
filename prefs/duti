@@ -52,6 +52,9 @@ org.m0k.transmission          .torrent                        all
 
 
 # Bundle id                   URL scheme
+com.panic.Transmit            ftp
+com.panic.Transmit            sftp
+
 com.reederapp.rkit2.mac       feed
 
 it.bloop.airmail2             mailto
