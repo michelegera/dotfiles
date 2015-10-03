@@ -18,11 +18,11 @@ main() {
   local PACKAGES=$HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages
   local INSTALLED_PACKAGES=$HOME/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
 
-  mkdir -p $PACKAGES
-  mkdir -p $INSTALLED_PACKAGES
+  mkdir -p "$PACKAGES"
+  mkdir -p "$INSTALLED_PACKAGES"
 
-  curl -LsSo $INSTALLED_PACKAGES/"$(echo $PACKAGE_CONTROL_FILE | sed 's/%20/\ /g')" https://packagecontrol.io/$PACKAGE_CONTROL_FILE
-  ln -s $HOME/.sublime-text3 $PACKAGES/User
+  curl -LsS "https://packagecontrol.io/$PACKAGE_CONTROL_FILE" > "$INSTALLED_PACKAGES/$(echo $PACKAGE_CONTROL_FILE | sed 's/%20/\ /g')"
+  ln -s $HOME/.sublime-text3 "$PACKAGES/User"
 
   print_result $? 'Sync Sublime Text 3 preferences'
 
