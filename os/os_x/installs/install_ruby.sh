@@ -18,7 +18,7 @@ main() {
 
   fi
 
-  print_result $? 'Install Ruby $RUBY_VERSION'
+  print_result $? "Install Ruby $RUBY_VERSION"
 
 }
 
