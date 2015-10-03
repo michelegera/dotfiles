@@ -30,6 +30,8 @@ main() {
     brew_install 'tree' 'tree'
     brew_install 'watchman' 'watchman'
 
+    printf '\n'
+
     MYSQL_PREFIX="$(brew --prefix mysql)"
     execute 'ln -sfv $MYSQL_PREFIX/*.plist ~/Library/LaunchAgents' \
       'Start MySQL at login'
