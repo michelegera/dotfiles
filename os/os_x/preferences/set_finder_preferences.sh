@@ -68,15 +68,6 @@ set_finder_preferences() {
            /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist' \
     'Set sort method'
 
-  execute '/usr/libexec/PlistBuddy -c "Delete :favoriteitems:CustomListItems:0" ~/Library/Preferences/com.apple.sidebarlists.plist' \
-    'Remove All My Files from sidebar'
-
-  execute '/usr/libexec/PlistBuddy -c "Delete :favoriteitems:CustomListItems:0" ~/Library/Preferences/com.apple.sidebarlists.plist' \
-    'Remove AirDrop from sidebar'
-
-  execute '/usr/libexec/PlistBuddy -c "Delete :favoriteitems:CustomListItems:2" ~/Library/Preferences/com.apple.sidebarlists.plist' \
-    'Remove Documents from sidebar'
-
 }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
