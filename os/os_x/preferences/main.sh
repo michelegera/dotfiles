@@ -18,6 +18,7 @@ main() {
   ./set_finder_preferences.sh
   ./set_iterm_preferences.sh
   ./set_keyboard_preferences.sh
+  ./set_keyboard_shortcuts.sh
   ./set_language_and_region_preferences.sh
   ./set_maps_preferences.sh
   ./set_safari_preferences.sh
