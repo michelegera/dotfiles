@@ -50,7 +50,6 @@ main() {
     brew_install 'TextWrangler' 'textwrangler' 'cask'
     brew_install 'The Unarchiver' 'the-unarchiver' 'cask'
     brew_install 'Things' 'things' 'cask'
-    brew_install 'Tower' 'tower' 'cask'
     brew_install 'Transmission' 'transmission' 'cask'
     brew_install 'Transmit' 'transmit' 'cask'
     brew_install 'Unsplash Wallpaper' 'unsplash-wallpaper' 'cask'
