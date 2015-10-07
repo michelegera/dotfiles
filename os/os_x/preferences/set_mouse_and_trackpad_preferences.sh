@@ -18,6 +18,10 @@ set_mouse_and_trackpad_preferences() {
   execute 'defaults write NSGlobalDomain com.apple.mouse.scaling -float 5' \
     'Increase mouse tracking speed'
 
+  execute 'defaults write com.apple.AppleMultitouchMouse MouseButtonMode -string TwoButton &&
+           defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string TwoButton' \
+    'Enable secondary mouse click'
+
 }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
