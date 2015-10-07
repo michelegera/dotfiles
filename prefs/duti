@@ -50,6 +50,8 @@ cx.c3.theunarchiver           .zipx                           all
 
 org.m0k.transmission          .torrent                        all
 
+org.videolan.vlc              .avi                            all
+org.videolan.vlc              .mkv                            all
 
 # Bundle id                   URL scheme
 com.panic.Transmit            ftp
