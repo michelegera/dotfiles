@@ -4,6 +4,9 @@ Package Control.ca-list
 Package Control.cache/
 Package Control.last-run
 
+prefs/alfred/Alfred.alfredpreferences/clipboard/
+prefs/alfred/Alfred.alfredpreferences/preferences/local/
+
 shell/config/fish/
 shell/ssh/id_rsa*
 shell/ssh/known_hosts
