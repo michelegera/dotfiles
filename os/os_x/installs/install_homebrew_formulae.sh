@@ -32,6 +32,8 @@ main() {
 
     printf '\n'
 
+    mkdir -p ~/Library/LaunchAgents/
+
     MYSQL_PREFIX="$(brew --prefix mysql)"
     execute 'ln -sfv $MYSQL_PREFIX/*.plist ~/Library/LaunchAgents' \
       'Start MySQL at login'
