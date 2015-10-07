@@ -10,6 +10,8 @@ declare -r -a NPM_PACKAGES=(
   'coffeelint'
   'gh'
   'jscs'
+  'phantom'
+  'phantomjs'
   'sass-lint'
 )
 
