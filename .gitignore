@@ -7,6 +7,7 @@ Package Control.last-run
 prefs/alfred/Alfred.alfredpreferences/clipboard/
 prefs/alfred/Alfred.alfredpreferences/preferences/local/
 
+shell/config/configstore/
 shell/config/fish/
 shell/ssh/id_rsa*
 shell/ssh/known_hosts
