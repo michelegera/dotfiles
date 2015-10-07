@@ -8,8 +8,8 @@
 		"CSS",
 		"Vintage"
 	],
-	"line_padding_bottom": 2,
-	"line_padding_top": 2,
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
 	"rulers":
 	[
 		80,
