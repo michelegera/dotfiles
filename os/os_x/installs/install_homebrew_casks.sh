@@ -39,7 +39,6 @@ main() {
     brew_install 'Little Snitch' 'little-snitch' 'cask'
     brew_install 'MacDown' 'macdown' 'cask'
     brew_install 'Paw' 'paw' 'cask'
-    brew_install 'RightFont' 'rightfont' 'cask'
     brew_install 'Sequel Pro' 'sequel-pro' 'cask'
     brew_install 'Skitch' 'skitch' 'cask'
     brew_install 'Skype' 'skype' 'cask'
