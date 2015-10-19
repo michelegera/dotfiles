@@ -51,7 +51,6 @@ main() {
     brew_install 'Things' 'things' 'cask'
     brew_install 'Transmission' 'transmission' 'cask'
     brew_install 'Transmit' 'transmit' 'cask'
-    brew_install 'Unsplash Wallpaper' 'unsplash-wallpaper' 'cask'
     brew_install 'Viscosity' 'viscosity' 'cask'
     brew_install 'VLC' 'vlc' 'cask'
     brew_install 'xScope' 'xscope' 'cask'
