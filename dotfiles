@@ -314,6 +314,17 @@ main() {
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+  print_info 'Decrypt files'
+
+  ask_for_confirmation 'Do you want to decrypt the encrypted files?'
+  printf '\n'
+
+  if answer_is_yes; then
+    ./os/decrypt_files.sh
+  fi
+
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
   print_info 'Restart'
 
   ask_for_confirmation 'Do you want to restart?'
