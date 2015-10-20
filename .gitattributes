@@ -1,3 +1,1 @@
-# Automatically normalize line endings for all text-based files
-# http://git-scm.com/docs/gitattributes#_end_of_line_conversion
-* text=auto
+shell/ssh/config filter=crypt diff=crypt

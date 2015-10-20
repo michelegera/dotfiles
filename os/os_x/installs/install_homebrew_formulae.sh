@@ -28,6 +28,7 @@ main() {
     brew_install 'ruby-build' 'ruby-build'
     brew_install 'sphinx' 'sphinx'
     brew_install 'tig' 'tig'
+    brew_install 'transcrypt' 'transcrypt'
     brew_install 'tree' 'tree'
     brew_install 'watchman' 'watchman'
 
