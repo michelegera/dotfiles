@@ -44,7 +44,7 @@
 		},
 		"mark_style": "outline",
 		"no_column_highlights_line": false,
-		"passive_warnings": true,
+		"passive_warnings": false,
 		"paths":
 		{
 			"linux":
@@ -71,7 +71,7 @@
 		},
 		"rc_search_limit": 3,
 		"shell_timeout": 10,
-		"show_errors_on_save": false,
+		"show_errors_on_save": true,
 		"show_marks_in_minimap": true,
 		"syntax_map":
 		{
