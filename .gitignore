@@ -6,6 +6,8 @@ Package Control.last-run
 
 prefs/alfred/Alfred.alfredpreferences/clipboard/
 prefs/alfred/Alfred.alfredpreferences/preferences/local/
+prefs/alfred/Alfred.alfredpreferences/preferences/remote/
+prefs/alfred/Alfred.alfredpreferences/remote
 
 shell/config/configstore/
 shell/config/fish/
