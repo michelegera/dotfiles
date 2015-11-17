@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"ApplySyntax",
 		"Better CoffeeScript",
 		"Better RSpec",
 		"CSS3",
