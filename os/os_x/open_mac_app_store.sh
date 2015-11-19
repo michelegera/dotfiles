@@ -11,12 +11,12 @@ declare -a APPS=(
   'Byword'
   'Characters'
   'Deliveries'
-  'Irvue - Unsplash Wallpapers'
   'Keynote'
   'Reeder'
   'Sip'
   'Tweetbot'
   'VidConvert'
+  'Wallcat'
   'XCode'
 )
 
