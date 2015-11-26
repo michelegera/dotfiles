@@ -22,6 +22,7 @@
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-coffeelint",
+		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-jscs",
 		"SublimeLinter-rubocop"
 	]

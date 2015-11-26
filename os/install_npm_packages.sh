@@ -8,8 +8,8 @@ cd "$(dirname "$BASH_SOURCE")" \
 declare -r -a NPM_PACKAGES=(
   'bower'
   'coffeelint'
+  'eslint'
   'gh'
-  'jscs'
   'phantom'
   'phantomjs'
   'sass-lint'
