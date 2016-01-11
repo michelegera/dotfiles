@@ -22,6 +22,7 @@ main() {
     brew_install 'mongodb' 'mongodb'
     brew_install 'mysql' 'mysql'
     brew_install 'node' 'node'
+    brew_install 'phantomjs' 'phantomjs'
     brew_install 'qt' 'qt'
     brew_install 'rbenv' 'rbenv'
     brew_install 'rbenv-gemset' 'rbenv-gemset'
