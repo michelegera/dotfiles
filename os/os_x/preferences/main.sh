@@ -21,6 +21,7 @@ main() {
   ./set_keyboard_shortcuts.sh
   ./set_language_and_region_preferences.sh
   ./set_maps_preferences.sh
+  ./set_misc_preferences.sh
   ./set_mouse_and_trackpad_preferences.sh
   ./set_safari_preferences.sh
   ./set_spectacle_preferences.sh
