@@ -13,6 +13,7 @@ declare -a FILES_TO_SYMLINK=(
   'shell/screenrc'
   'shell/ssh'
   'shell/tigrc'
+  'shell/vimrc'
 
   'git/gitattributes'
   'git/gitconfig'

@@ -89,7 +89,7 @@
 
   attributesfile = ~/.gitattributes
   autocrlf = input
-  editor = subl -n -w
+  editor = vim
   excludesfile = ~/.gitignore
 
 [pretty]
