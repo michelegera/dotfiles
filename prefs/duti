@@ -24,10 +24,6 @@
 
 
 # Bundle id                   UTI/ext/MIME types              Role
-com.sublimetext.3             public.plain-text               all
-com.sublimetext.3             public.shell-script             all
-com.sublimetext.3             public.script                   all
-com.sublimetext.3             public.source-code              all
 
 cx.c3.theunarchiver           .7z                             all
 cx.c3.theunarchiver           .ace                            all

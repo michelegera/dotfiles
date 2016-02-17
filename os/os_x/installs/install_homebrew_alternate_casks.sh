@@ -14,7 +14,7 @@ main() {
   if cmd_exists 'brew' \
     && brew_tap 'caskroom/versions'; then
 
-    brew_install 'Sublime Text 3' 'sublime-text3' 'cask'
+    # Nothing to install!
 
   fi
 

@@ -1,9 +1,3 @@
-Package Control.*-ca-bundle
-Package Control.ca-certs/
-Package Control.ca-list
-Package Control.cache/
-Package Control.last-run
-
 prefs/alfred/Alfred.alfredpreferences/clipboard/
 prefs/alfred/Alfred.alfredpreferences/preferences/local/
 prefs/alfred/Alfred.alfredpreferences/preferences/remote/
