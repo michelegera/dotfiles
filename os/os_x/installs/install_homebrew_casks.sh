@@ -23,6 +23,7 @@ main() {
     brew_install 'Alfred' 'alfred' 'cask'
     brew_install 'AppCleaner' 'appcleaner' 'cask'
     brew_install 'Arq' 'arq' 'cask'
+    brew_install 'Atom' 'atom' 'cask'
     brew_install 'ChitChat' 'chitchat' 'cask'
     brew_install 'Cocktail' 'cocktail' 'cask'
     brew_install 'Dropbox' 'dropbox' 'cask'

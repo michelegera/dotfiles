@@ -3,6 +3,13 @@ prefs/alfred/Alfred.alfredpreferences/preferences/local/
 prefs/alfred/Alfred.alfredpreferences/preferences/remote/
 prefs/alfred/Alfred.alfredpreferences/remote
 
+prefs/atom/.apm
+prefs/atom/.node-gyp
+prefs/atom/blob-store
+prefs/atom/compile-cache
+prefs/atom/packages
+prefs/atom/storage
+
 shell/config/configstore/
 shell/config/fish/
 shell/ssh/id_rsa*

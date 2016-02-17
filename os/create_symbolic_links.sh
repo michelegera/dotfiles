@@ -20,6 +20,7 @@ declare -a FILES_TO_SYMLINK=(
   'git/gitignore'
 
   'prefs/alfred'
+  'prefs/atom'
   'prefs/duti'
   'prefs/iterm2'
 

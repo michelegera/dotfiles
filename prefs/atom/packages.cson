@@ -1,0 +1,15 @@
+packages: [
+  "advanced-open-file"
+  "duotone-dark-sea-syntax"
+  "duotone-dark-space-syntax"
+  "file-icons"
+  "language-emblem"
+  "language-haml"
+  "linter"
+  "linter-eslint"
+  "multi-cursor"
+  "nucleon"
+  "package-sync"
+  "pigments"
+  "sort-lines"
+]

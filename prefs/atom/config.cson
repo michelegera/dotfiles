@@ -1,0 +1,25 @@
+"*":
+  core:
+    disabledPackages: [
+      "background-tips"
+      "metrics"
+      "exception-reporting"
+    ]
+    themes: [
+      "one-dark-ui"
+      "duotone-dark-space-syntax"
+    ]
+  editor:
+    autoIndentOnPaste: false
+    fontFamily: "Input Mono"
+    invisibles: {}
+    lineHeight: 1.75
+    preferredLineLength: 140
+  pigments:
+    markerType: "dot"
+    mergeColorDuplicates: true
+    sortPaletteColors: "by color"
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false

@@ -36,6 +36,9 @@ main() {
   ./install_homebrew_fonts.sh
   print_in_green '\n  ---\n\n'
 
+  ./install_apm_packages.sh
+  print_in_green '\n  ---\n\n'
+
   ./install_oh_my_fish.sh
   print_in_green '\n  ---\n\n'
 

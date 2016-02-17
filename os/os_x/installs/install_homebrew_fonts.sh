@@ -18,6 +18,7 @@ main() {
     brew_install 'Bebas Neue' 'font-bebas-neue' 'cask'
     brew_install 'Hack' 'font-hack' 'cask'
     brew_install 'Inconsolata DZ' 'font-inconsolata-dz' 'cask'
+    brew_install 'Input' 'font-input' 'cask'
     brew_install 'Montserrat' 'font-montserrat' 'cask'
 
   fi
