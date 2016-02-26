@@ -34,7 +34,6 @@ main() {
     brew_install 'Heroku Toolbelt' 'heroku-toolbelt' 'cask'
     brew_install 'ImageOptim' 'imageoptim' 'cask'
     brew_install 'iStat Menus' 'istat-menus' 'cask'
-    brew_install 'iTerm 2' 'iterm2' 'cask'
     brew_install 'LICEcap' 'licecap' 'cask'
     brew_install 'Limechat' 'limechat' 'cask'
     brew_install 'Little Snitch' 'little-snitch' 'cask'

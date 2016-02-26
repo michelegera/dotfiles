@@ -14,7 +14,7 @@ main() {
   if cmd_exists 'brew' \
     && brew_tap 'caskroom/versions'; then
 
-    # Nothing to install!
+    brew_install 'iTerm 3 Beta' 'iterm2-beta' 'cask'
 
   fi
 
