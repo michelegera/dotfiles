@@ -12,6 +12,7 @@ declare -a FILES_TO_SYMLINK=(
   'shell/inputrc'
   'shell/screenrc'
   'shell/ssh'
+  'shell/stylelintrc'
   'shell/tigrc'
   'shell/vimrc'
 

@@ -11,6 +11,7 @@ declare -r -a NPM_PACKAGES=(
   'eslint'
   'gh'
   'sass-lint'
+  'stylelint'
 )
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
