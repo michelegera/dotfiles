@@ -5,10 +5,6 @@
       "metrics"
       "exception-reporting"
     ]
-    themes: [
-      "one-dark-ui"
-      "duotone-dark-space-syntax"
-    ]
   editor:
     autoIndentOnPaste: false
     fontFamily: "Input Mono"
