@@ -39,7 +39,7 @@ main() {
   ./install_apm_packages.sh
   print_in_green '\n  ---\n\n'
 
-  ./install_oh_my_fish.sh
+  ./install_fisherman.sh
   print_in_green '\n  ---\n\n'
 
   ./install_ruby.sh

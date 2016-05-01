@@ -29,7 +29,7 @@ The setup process will:
   [OS X](os/os_x/installs/main.sh)
 * Install the
   [Fish](http://fishshell.com/) shell and the
-  [Oh My Fish](os/os_x/installs/install_oh_my_fish.sh) framework
+  [Fisherman](http://fisherman.sh/) plugin manager
 * Set custom
   [OS X](os/os_x/preferences/main.sh) preferences
 

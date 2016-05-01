@@ -11,6 +11,12 @@ prefs/atom/packages
 prefs/atom/storage
 
 shell/config/configstore/
-shell/config/fish/
+shell/config/fin/
+shell/config/fish/completions
+shell/config/fish/conf.d
+shell/config/fish/fish_history
+shell/config/fish/fishd.*
+shell/config/fish/functions
+shell/config/fisherman/
 shell/ssh/id_rsa*
 shell/ssh/known_hosts

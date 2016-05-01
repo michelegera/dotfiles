@@ -1,5 +1,0 @@
-# List of currently installed packages/themes
-package rbenv
-
-theme default
-theme scorphish
