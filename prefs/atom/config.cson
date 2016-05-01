@@ -12,6 +12,7 @@
     invisibles: {}
     lineHeight: 1.75
     preferredLineLength: 140
+    showInvisibles: true
   "file-icons":
     coloured: false
   pigments:
