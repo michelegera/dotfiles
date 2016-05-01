@@ -4,6 +4,7 @@
       "background-tips"
       "metrics"
       "exception-reporting"
+      "hashy"
     ]
   editor:
     autoIndentOnPaste: false
