@@ -24,7 +24,6 @@ main() {
     brew_install 'AppCleaner' 'appcleaner' 'cask'
     brew_install 'Arq' 'arq' 'cask'
     brew_install 'Atom' 'atom' 'cask'
-    brew_install 'ChitChat' 'chitchat' 'cask'
     brew_install 'Cocktail' 'cocktail' 'cask'
     brew_install 'Dropbox' 'dropbox' 'cask'
     brew_install 'Evernote' 'evernote' 'cask'
@@ -54,6 +53,7 @@ main() {
     brew_install 'Transmit' 'transmit' 'cask'
     brew_install 'Viscosity' 'viscosity' 'cask'
     brew_install 'VLC' 'vlc' 'cask'
+    brew_install 'WhatsApp' 'whatsapp' 'cask'
     brew_install 'xScope' 'xscope' 'cask'
     printf '\n'
 
