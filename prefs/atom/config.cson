@@ -8,9 +8,9 @@
     ]
   editor:
     autoIndentOnPaste: false
-    fontFamily: "Input Mono"
+    fontFamily: "mononoki"
+    fontSize: 16
     invisibles: {}
-    lineHeight: 1.75
     preferredLineLength: 140
     showInvisibles: true
   "file-icons":
