@@ -5,13 +5,15 @@
       "metrics"
       "exception-reporting"
       "hashy"
+      "linter-rubocop"
+      "erb-helper"
     ]
   editor:
     autoIndentOnPaste: false
     fontFamily: "mononoki"
-    fontSize: 16
+    fontSize: 15
     invisibles: {}
-    preferredLineLength: 140
+    preferredLineLength: 120
     showInvisibles: true
   "file-icons":
     coloured: false
