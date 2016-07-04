@@ -12,7 +12,6 @@ prefs/atom/packages
 prefs/atom/storage
 
 shell/config/configstore/
-shell/config/fin/
 shell/config/fish/completions
 shell/config/fish/conf.d
 shell/config/fish/fish_history
