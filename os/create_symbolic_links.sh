@@ -10,6 +10,7 @@ declare -a FILES_TO_SYMLINK=(
   'shell/gemrc'
   'shell/hushlogin'
   'shell/inputrc'
+  'shell/profile'
   'shell/screenrc'
   'shell/ssh'
   'shell/stylelintrc'

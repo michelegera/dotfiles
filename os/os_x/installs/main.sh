@@ -10,6 +10,9 @@ main() {
   ./install_xcode.sh
   print_in_green '\n  ---\n\n'
 
+  ./install_nvm.sh
+  print_in_green '\n  ---\n\n'
+
   ./install_homebrew.sh
   print_in_green '\n  ---\n\n'
 
