@@ -14,7 +14,7 @@ main() {
   if cmd_exists 'brew' \
     && brew_tap 'michelegera/custom'; then
 
-    print_in_purple 'No custom Casks to install\n'
+    brew_install 'Cocktail Beta' 'cocktail-beta' 'cask'
 
   fi
 
