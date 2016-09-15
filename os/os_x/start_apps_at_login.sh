@@ -8,7 +8,6 @@ declare -a APPS_TO_START=(
   ~/Applications/Alfred\ 2.app
   ~/Applications/Dropbox.app
   ~/Applications/Google\ Drive.app
-  ~/Applications/Spectacle.app
   ~/Applications/Unsplash\ Wallpaper.app
 
 )

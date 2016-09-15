@@ -24,7 +24,6 @@ main() {
   ./set_misc_preferences.sh
   ./set_mouse_and_trackpad_preferences.sh
   ./set_safari_preferences.sh
-  ./set_spectacle_preferences.sh
   ./set_textedit_preferences.sh
   ./set_transmission_preferences.sh
   ./set_tweetbot_preferences.sh
