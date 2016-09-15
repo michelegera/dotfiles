@@ -13,7 +13,6 @@ main() {
     ./os_x/installs/main.sh
     ./os_x/change_default_shell.sh
     ./os_x/set_default_apps.sh
-    ./os_x/start_apps_at_login.sh
   fi
 
 }
