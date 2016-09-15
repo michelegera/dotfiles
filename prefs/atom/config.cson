@@ -17,6 +17,8 @@
     showInvisibles: true
   "file-icons":
     coloured: false
+  "linter-stylelint":
+    useStandard: true
   pigments:
     markerType: "dot"
     mergeColorDuplicates: true
