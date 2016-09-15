@@ -20,7 +20,6 @@ main() {
     brew_install '1Password' '1password' 'cask'
     brew_install 'Adobe Creative Cloud' 'adobe-creative-cloud' 'cask'
     brew_install 'Air Video Server HD' 'air-video-server-hd' 'cask'
-    brew_install 'Alfred' 'alfred' 'cask'
     brew_install 'AppCleaner' 'appcleaner' 'cask'
     brew_install 'Arq' 'arq' 'cask'
     brew_install 'Atom' 'atom' 'cask'
