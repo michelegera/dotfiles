@@ -18,9 +18,8 @@ main() {
     printf '\n'
 
     brew_install '1Password' '1password' 'cask'
+    brew_install 'A Better Finder Rename' 'a-better-finder-rename' 'cask'
     brew_install 'Adobe Creative Cloud' 'adobe-creative-cloud' 'cask'
-    brew_install 'Air Video Server HD' 'air-video-server-hd' 'cask'
-    brew_install 'AppCleaner' 'appcleaner' 'cask'
     brew_install 'Arq' 'arq' 'cask'
     brew_install 'Atom' 'atom' 'cask'
     brew_install 'Dropbox' 'dropbox' 'cask'
@@ -30,11 +29,11 @@ main() {
     brew_install 'Google Drive' 'google-drive' 'cask'
     brew_install 'ImageOptim' 'imageoptim' 'cask'
     brew_install 'iStat Menus' 'istat-menus' 'cask'
-    brew_install 'LICEcap' 'licecap' 'cask'
     brew_install 'Limechat' 'limechat' 'cask'
     brew_install 'Little Snitch' 'little-snitch' 'cask'
     brew_install 'MacDown' 'macdown' 'cask'
     brew_install 'Paw' 'paw' 'cask'
+    brew_install 'Postico' 'postico' 'cask'
     brew_install 'RightFont' 'rightfont' 'cask'
     brew_install 'Sequel Pro' 'sequel-pro' 'cask'
     brew_install 'Skitch' 'skitch' 'cask'
@@ -51,12 +50,13 @@ main() {
     brew_install 'VLC' 'vlc' 'cask'
     brew_install 'WhatsApp' 'whatsapp' 'cask'
     brew_install 'xScope' 'xscope' 'cask'
+    brew_install 'Zoom.us' 'zoomus' 'cask'
     printf '\n'
 
     ask_for_confirmation 'Do you want to install Microsoft Office 2016?'
 
     if answer_is_yes; then
-      brew_install 'Microsoft Office 2016' 'microsoft-office-365' 'cask'
+      brew_install 'Microsoft Office 2016' 'microsoft-office' 'cask'
     fi
   fi
 
