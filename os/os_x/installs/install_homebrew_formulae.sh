@@ -26,6 +26,7 @@ main() {
     brew_install 'mysql' 'mysql'
     brew_install 'node' 'node'
     brew_install 'phantomjs' 'phantomjs'
+    brew_install 'postgres' 'postgres'
     brew_install 'rbenv' 'rbenv'
     brew_install 'rbenv-gemset' 'rbenv-gemset'
     brew_install 'ruby-build' 'ruby-build'
