@@ -22,6 +22,7 @@ main() {
     brew_install 'Adobe Creative Cloud' 'adobe-creative-cloud' 'cask'
     brew_install 'Arq' 'arq' 'cask'
     brew_install 'Atom' 'atom' 'cask'
+    brew_install 'Cocktail' 'cocktail' 'cask'
     brew_install 'Dropbox' 'dropbox' 'cask'
     brew_install 'Evernote' 'evernote' 'cask'
     brew_install 'Firefox' 'firefox' 'cask'
