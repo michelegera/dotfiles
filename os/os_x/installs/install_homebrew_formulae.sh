@@ -38,16 +38,6 @@ main() {
 
     printf '\n'
 
-    mkdir -p ~/Library/LaunchAgents/
-
-    MYSQL_PREFIX="$(brew --prefix mysql)"
-    execute 'ln -sfv $MYSQL_PREFIX/*.plist ~/Library/LaunchAgents' \
-      'Start MySQL at login'
-
-    MONGODB_PREFIX="$(brew --prefix mongodb)"
-    execute 'ln -sfv $MONGODB_PREFIX/*.plist ~/Library/LaunchAgents' \
-      'Start MongoDB at login'
-
     RBENV_INIT="$(rbenv init -)"
     execute 'eval "$RBENV_INIT"' \
       'Initialize rbenv'
