@@ -7,6 +7,7 @@ declare -a APPS_TO_START=(
 
   /Applications/Dropbox.app
   /Applications/Google\ Drive.app
+  /Applications/Spectacle.app
 
 )
 
