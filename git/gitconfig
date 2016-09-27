@@ -16,6 +16,7 @@
   rlc = !git reset --hard HEAD~1                  # Remove last commit
   st  = status
   ulc = reset --soft HEAD~1                       # Undo last commit
+  up  = pull --rebase --autostash                 # Requires Git 2.9+
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -122,14 +123,6 @@
 [include]
 
   path = ~/.gitconfig.local
-
-[git-up "bundler"]
-
-  check = true
-
-[git-up "fetch"]
-
-  prune = true
 
 [pager]
 
