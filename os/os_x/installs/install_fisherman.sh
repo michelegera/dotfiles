@@ -10,8 +10,8 @@ main() {
 
   if ! cmd_exists 'fisher'; then
 
-    curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs | \
-      git.io/fisher &> /dev/null
+    curl -LsSo ~/.config/fish/functions/fisher.fish \
+      --create-dirs git.io/fisher
 
   fi
 
