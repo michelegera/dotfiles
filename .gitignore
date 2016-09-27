@@ -1,3 +1,9 @@
+prefs/alfred/Alfred.alfredpreferences/clipboard/
+prefs/alfred/Alfred.alfredpreferences/preferences/local/
+prefs/alfred/Alfred.alfredpreferences/preferences/remote/
+prefs/alfred/Alfred.alfredpreferences/remote
+prefs/alfred/Alfred.alfredpreferences/snippets
+
 prefs/atom/.apm
 prefs/atom/.node-gyp
 prefs/atom/blob-store

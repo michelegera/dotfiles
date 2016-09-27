@@ -5,6 +5,7 @@ cd "$(dirname "$BASH_SOURCE")" \
 
 declare -a APPS_TO_START=(
 
+  /Applications/Alfred\ 3.app
   /Applications/Dropbox.app
   /Applications/Google\ Drive.app
   /Applications/Spectacle.app

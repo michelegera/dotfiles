@@ -20,6 +20,7 @@ main() {
     brew_install '1Password' '1password' 'cask'
     brew_install 'A Better Finder Rename' 'a-better-finder-rename' 'cask'
     brew_install 'Adobe Creative Cloud' 'adobe-creative-cloud' 'cask'
+    brew_install 'Alfred' 'alfred' 'cask'
     brew_install 'Arq' 'arq' 'cask'
     brew_install 'Atom' 'atom' 'cask'
     brew_install 'Cocktail' 'cocktail' 'cask'
