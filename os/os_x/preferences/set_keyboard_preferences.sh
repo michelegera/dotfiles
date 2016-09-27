@@ -16,7 +16,7 @@ set_keyboard_preferences() {
   execute 'defaults write NSGlobalDomain InitialKeyRepeat -int 10' \
     'Set delay until repeat'
 
-  execute 'defaults write NSGlobalDomain KeyRepeat -int 2' \
+  execute 'defaults write NSGlobalDomain KeyRepeat -int 1' \
     'Set the key repeat rate to fast'
 
   execute 'defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false' \
