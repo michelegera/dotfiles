@@ -43,6 +43,7 @@ main() {
     brew_install 'Slack' 'slack' 'cask'
     brew_install 'Spectacle' 'spectacle' 'cask'
     brew_install 'Spotify' 'spotify' 'cask'
+    brew_install 'Spotify Notifications' 'spotify-notifications' 'cask'
     brew_install 'Telegram' 'telegram' 'cask'
     brew_install 'TextWrangler' 'textwrangler' 'cask'
     brew_install 'The Unarchiver' 'the-unarchiver' 'cask'
