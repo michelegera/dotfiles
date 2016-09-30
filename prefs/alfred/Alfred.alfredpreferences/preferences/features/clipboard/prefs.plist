@@ -7,11 +7,11 @@
 	<key>hotkey</key>
 	<dict>
 		<key>key</key>
-		<integer>7</integer>
+		<integer>0</integer>
 		<key>mod</key>
 		<integer>1572864</integer>
 		<key>string</key>
-		<string>X</string>
+		<string>A</string>
 	</dict>
 	<key>persistFor</key>
 	<integer>0</integer>
