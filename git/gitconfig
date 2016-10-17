@@ -1,22 +1,27 @@
 [alias]
 
-  a   = commit --amend
-  b   = branch
-  c   = commit
-  ca  = !git add -A && git commit                 # Commit all changes
-  co  = checkout
-  cp  = cherry-pick
-  d   = diff
-  dc  = diff --cached
-  fp  = push --force
-  g   = log --graph --pretty=custom               # Show custom graph
-  l   = log --pretty=custom                       # Show custom log
-  lc  = shortlog --summary --numbered             # List contributors
-  rc  = rebase --continue
-  rlc = !git reset --hard HEAD~1                  # Remove last commit
-  st  = status
-  ulc = reset --soft HEAD~1                       # Undo last commit
-  up  = pull --rebase --autostash                 # Requires Git 2.9+
+  a       = commit --amend
+  b       = branch
+  c       = commit
+  ca      = !git add -A && git commit                 # Commit all changes
+  co      = checkout
+  commend = commit --amend --no-edit
+  cp      = cherry-pick
+  d       = diff
+  dc      = diff --cached
+  fp      = push --force
+  g       = log --graph --pretty=custom               # Show custom graph
+  l       = log --pretty=custom                       # Show custom log
+  lc      = shortlog --summary --numbered             # List contributors
+  please  = push --force-with-lease
+  rc      = rebase --continue
+  rlc     = !git reset --hard HEAD~1                  # Remove last commit
+  st      = status --short --branch
+  stsh    = stash --keep-index
+  staash  = stash --include-untracked
+  staaash = stash --all
+  ulc     = reset --soft HEAD~1                       # Undo last commit
+  up      = pull --rebase --autostash                 # Requires Git 2.9+
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
