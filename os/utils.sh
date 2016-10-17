@@ -11,6 +11,11 @@ ask() {
   read
 }
 
+ask_for_password() {
+  print_question "$1"
+  read -s
+}
+
 ask_for_confirmation() {
   print_question "$1 (y/n) "
   read -n 1

@@ -21,6 +21,7 @@ main() {
     brew_install 'httpie' 'httpie'
     brew_install 'imagemagick' 'imagemagick --with-webp'
     brew_install 'lame' 'lame'
+    brew_install 'mas' 'mas'
     brew_install 'memcached' 'memcached'
     brew_install 'mongodb' 'mongodb'
     brew_install 'mysql' 'mysql'

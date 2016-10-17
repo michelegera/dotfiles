@@ -28,6 +28,9 @@ main() {
   ./install_homebrew_custom_casks.sh
   print_in_green '\n  ---\n\n'
 
+  ./install_mas_apps.sh
+  print_in_green '\n  ---\n\n'
+
   ask_for_confirmation 'Do you want to install system duplicate formulae?'
   printf '\n'
 
