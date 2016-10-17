@@ -37,7 +37,7 @@ set_safari_preferences() {
            defaults write com.apple.Safari UniversalSearchEnabled -bool false' \
     'Don’t send search queries to Apple'
 
-  execute 'defaults write NSGlobalDomain WebKitDeveloperExtras -bool true' \
+  execute 'defaults write -g WebKitDeveloperExtras -bool true' \
     'Add a context menu item for showing the "Web Inspector" in web views'
 
 }

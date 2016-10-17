@@ -31,22 +31,22 @@ set_ui_and_ux_preferences() {
   execute 'defaults write com.apple.screencapture include-date -int 0' \
     'Remove date and timestamp from screenshots'
 
-  execute 'defaults write NSGlobalDomain AppleFontSmoothing -int 2' \
+  execute 'defaults write -g AppleFontSmoothing -int 2' \
     'Enable subpixel font rendering on non-Apple LCDs'
 
-  execute 'defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true' \
+  execute 'defaults write -g NSDisableAutomaticTermination -bool true' \
     'Disable automatic termination of inactive apps'
 
-  execute 'defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true' \
+  execute 'defaults write -g NSNavPanelExpandedStateForSaveMode -bool true' \
     'Expand save panel by default'
 
-  execute 'defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2' \
+  execute 'defaults write -g NSTableViewDefaultSizeMode -int 2' \
     'Set sidebar icon size to medium'
 
   execute 'defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false' \
     'Disable resume system-wide'
 
-  execute 'defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true' \
+  execute 'defaults write -g PMPrintingExpandedStateForPrint -bool true' \
     'Expand print panel by default'
 
   # TODO: Prompt for name

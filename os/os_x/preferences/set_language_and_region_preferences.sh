@@ -7,19 +7,19 @@ cd "$(dirname "$BASH_SOURCE")" \
 
 set_language_and_region_preferences() {
 
-  execute 'defaults write NSGlobalDomain AppleLanguages -array "en" "it"' \
+  execute 'defaults write -g AppleLanguages -array "en" "it"' \
     'Set language'
 
-  execute 'defaults write NSGlobalDomain AppleLocale -string "en_US@currency=EUR"' \
+  execute 'defaults write -g AppleLocale -string "en_US@currency=EUR"' \
     'Set locale'
 
-  execute 'defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"' \
+  execute 'defaults write -g AppleMeasurementUnits -string "Centimeters"' \
     'Set measurement units'
 
   execute 'sudo systemsetup -settimezone "Europe/Rome"' \
     'Set timezone'
 
-  execute 'defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false' \
+  execute 'defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false' \
     'Disable auto-correct'
 
 }
