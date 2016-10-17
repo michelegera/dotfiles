@@ -6,7 +6,6 @@
       "exception-reporting"
       "hashy"
       "linter-rubocop"
-      "erb-helper"
     ]
     telemetryConsent: "no"
   editor:
