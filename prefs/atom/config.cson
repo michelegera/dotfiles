@@ -8,6 +8,7 @@
       "linter-rubocop"
       "erb-helper"
     ]
+    telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
     fontFamily: "mononoki"
