@@ -21,6 +21,9 @@ set_finder_preferences() {
   execute 'defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false' \
     'Disable warning when changing a file extension'
 
+  execute 'defaults write com.apple.finder _FXSortFoldersFirst -bool true' \
+    'Keep folders on top when sorting by name'
+
   # View modes
   # clmv = Column
   # Flwv = Coverflow
