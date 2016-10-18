@@ -10,6 +10,9 @@ set_ui_and_ux_preferences() {
   execute 'defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true' \
     'Avoid creating ".DS_Store" files on network volumes'
 
+  execute 'defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true' \
+    'Avoid creating ".DS_Store" files on USB drives'
+
   execute 'defaults write com.apple.menuextra.battery ShowPercent -string "NO"' \
     'Hide battery percentage from the menu bar'
 
