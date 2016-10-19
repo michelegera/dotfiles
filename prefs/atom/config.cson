@@ -8,6 +8,10 @@
       "linter-rubocop"
     ]
     telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "oceanic-next"
+    ]
   editor:
     autoIndentOnPaste: false
     fontFamily: "mononoki"
