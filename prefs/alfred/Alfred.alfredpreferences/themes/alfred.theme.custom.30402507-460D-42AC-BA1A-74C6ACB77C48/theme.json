@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 6,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#BFC4CEFF",
+        "font" : "System Light",
+        "color" : "#868686FF"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#FB8F4FFF",
+        "font" : "System Light",
+        "color" : "#909090FF"
+      },
+      "backgroundSelected" : "#4E5B67FF",
+      "text" : {
+        "size" : 16,
+        "colorSelected" : "#FEFFFFFF",
+        "font" : "System Light",
+        "color" : "#CCD3DEFF"
+      },
+      "iconPaddingHorizontal" : 10,
+      "paddingVertical" : 6,
+      "iconSize" : 40
+    },
+    "search" : {
+      "paddingVertical" : 2,
+      "background" : "#1A2A3599",
+      "spacing" : 10,
+      "text" : {
+        "size" : 24,
+        "colorSelected" : "#000000FF",
+        "font" : "System Light",
+        "color" : "#5AB3B3FF"
+      },
+      "backgroundSelected" : "#B2D7FFFF"
+    },
+    "window" : {
+      "color" : "#333C45F2",
+      "paddingHorizontal" : 8,
+      "width" : 620,
+      "borderPadding" : 10,
+      "borderColor" : "#17334600",
+      "blur" : 0,
+      "roundness" : 4,
+      "paddingVertical" : 8
+    },
+    "credit" : "Michele Gerarduzzi",
+    "separator" : {
+      "color" : "#333C45FF",
+      "thickness" : 1
+    },
+    "scrollbar" : {
+      "color" : "#394751FF",
+      "thickness" : 2
+    },
+    "name" : "Oceanic Next"
+  }
+}
