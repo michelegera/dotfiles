@@ -11,11 +11,10 @@ cd "$(dirname "$BASH_SOURCE")" \
 declare -a MAS_APPS=(
   '918858936:Airmail 3'
   '649835201:AppSana'
+  '1091189122:Bear'
   '536511979:Characters'
   '449589707:Dash'
   '924726344:Deliveries'
-  '1039633667:Irvue'
-  '409183694:Keynote'
   '880001334:Reeder'
   '507257563:Sip'
   '557168941:Tweetbot'
