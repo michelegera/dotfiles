@@ -136,3 +136,9 @@
 
 [user]
   useconfigonly = true
+
+[gpg]
+  program = /usr/local/bin/gpg
+
+[commit]
+  gpgsign = true

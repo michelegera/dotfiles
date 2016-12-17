@@ -29,6 +29,7 @@ main() {
     brew_install 'Firefox' 'firefox' 'cask'
     brew_install 'Google Chrome' 'google-chrome' 'cask'
     brew_install 'Google Drive' 'google-drive' 'cask'
+    brew_install 'GPG Tools' 'gpgtools' 'cask'
     brew_install 'ImageOptim' 'imageoptim' 'cask'
     brew_install 'iStat Menus' 'istat-menus' 'cask'
     brew_install 'Limechat' 'limechat' 'cask'

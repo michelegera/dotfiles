@@ -11,6 +11,11 @@ prefs/atom/compile-cache
 prefs/atom/packages
 prefs/atom/storage
 
+prefs/gnupg/*.gpg
+prefs/gnupg/gpg.conf.*
+prefs/gnupg/private-keys-*
+prefs/gnupg/random_seed
+
 shell/config/configstore/
 shell/config/fish/completions
 shell/config/fish/conf.d
