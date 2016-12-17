@@ -9,8 +9,8 @@ main() {
 
   declare -r OS="$(get_os)"
 
-  if [ "$OS" == "osx" ]; then
-    ./os_x/preferences/main.sh
+  if [ "$OS" == "macos" ]; then
+    ./macos/preferences/main.sh
   fi
 
 }

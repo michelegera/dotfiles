@@ -151,25 +151,25 @@ is_supported_version() {
 
 verify_os() {
 
-  declare -r MINIMUM_OS_X_VERSION='10.11'
+  declare -r MINIMUM_MACOS_VERSION='10.11'
   declare -r OS_NAME="$(uname -s)"
 
   declare OS_VERSION=''
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  # Check if the OS is `OS X` and it's above the required version
+  # Check if the OS is `macOS` and it's above the required version
 
   if [ "$OS_NAME" == "Darwin" ]; then
 
     OS_VERSION="$(sw_vers -productVersion)"
 
-    is_supported_version "$OS_VERSION" "$MINIMUM_OS_X_VERSION" \
+    is_supported_version "$OS_VERSION" "$MINIMUM_MACOS_VERSION" \
     && return 0 \
-    || printf "Sorry, this script is intended only for OS X $MINIMUM_OS_X_VERSION+"
+    || printf "Sorry, this script is intended only for macOS $MINIMUM_MACOS_VERSION+"
 
   else
-    printf 'Sorry, this script is intended only for OS X!'
+    printf 'Sorry, this script is intended only for macOS!'
   fi
 
   return 1
@@ -298,7 +298,7 @@ main() {
   printf '\n'
 
   if answer_is_yes; then
-    ./os/os_x/open_mac_app_store.sh
+    ./os/macos/open_mac_app_store.sh
   fi
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

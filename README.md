@@ -26,12 +26,12 @@ The setup process will:
   [git](git), and
   [shell](shell) files
 * Install applications / command-line tools for
-  [OS X](os/os_x/installs/main.sh)
+  [macOS](os/macos/installs/main.sh)
 * Install the
   [Fish](http://fishshell.com/) shell and the
   [Fisherman](http://fisherman.sh/) plugin manager
 * Set custom
-  [OS X](os/os_x/preferences/main.sh) preferences
+  [macOS](os/macos/preferences/main.sh) preferences
 
 
 ## Customize

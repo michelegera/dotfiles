@@ -48,7 +48,7 @@ main() {
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  # Make OS X use the Fish version installed through Homebrew
+  # Make macOS use the Fish version installed through Homebrew
   # https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/chsh.1.html
 
   chsh -s "$HOMEBREW_PREFIX/bin/fish" &> /dev/null

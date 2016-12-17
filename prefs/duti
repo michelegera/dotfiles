@@ -1,10 +1,10 @@
 # duti is a command-line tool to select default applications for document types
-# and URL schemes on Mac OS X.
+# and URL schemes on macOS.
 #
 # For a more complete documentation on use `man duti` or visit
 # http://duti.org/documentation.html
 #
-# List of Uniform Type Identifiers in OS X: https://goo.gl/70xIW7
+# List of Uniform Type Identifiers in macOS: https://goo.gl/70xIW7
 #
 # Find the bundle id: `mdls -name kMDItemCFBundleIdentifier -r SomeApp.app`
 #

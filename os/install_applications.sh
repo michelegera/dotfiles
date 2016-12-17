@@ -9,11 +9,11 @@ main() {
 
   declare -r OS="$(get_os)"
 
-  if [ "$OS" == "osx" ]; then
-    ./os_x/installs/main.sh
-    ./os_x/change_default_shell.sh
-    ./os_x/set_default_apps.sh
-    ./os_x/start_apps_at_login.sh
+  if [ "$OS" == "macos" ]; then
+    ./macos/installs/main.sh
+    ./macos/change_default_shell.sh
+    ./macos/set_default_apps.sh
+    ./macos/start_apps_at_login.sh
   fi
 
 }
