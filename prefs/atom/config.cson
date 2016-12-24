@@ -10,7 +10,7 @@
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
-      "oceanic-next"
+      "atom-snazzy-clear-syntax"
     ]
   editor:
     autoIndentOnPaste: false
