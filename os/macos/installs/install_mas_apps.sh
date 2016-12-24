@@ -18,6 +18,7 @@ declare -a MAS_APPS=(
   '1082624744:Gifox'
   '880001334:Reeder'
   '507257563:Sip'
+  '1187772509:stts'
   '557168941:Tweetbot'
   '417701035:VidConvert'
   '1000397973:Wallcat'
