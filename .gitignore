@@ -18,4 +18,5 @@ prefs/gnupg/random_seed
 
 shell/config/configstore/
 shell/ssh/id_rsa*
+shell/ssh/authorized_keys
 shell/ssh/known_hosts
