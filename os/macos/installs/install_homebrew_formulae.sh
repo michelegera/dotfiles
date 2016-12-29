@@ -16,7 +16,6 @@ main() {
     brew_install 'blueutil' 'blueutil'
     brew_install 'diff-so-fancy' 'diff-so-fancy'
     brew_install 'duti' 'duti'
-    brew_install 'fish' 'fish'
     brew_install 'git' 'git'
     brew_install 'heroku' 'heroku'
     brew_install 'httpie' 'httpie'

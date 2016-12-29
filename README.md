@@ -28,8 +28,8 @@ The setup process will:
 * Install applications / command-line tools for
   [macOS](os/macos/installs/main.sh)
 * Install the
-  [Fish](http://fishshell.com/) shell and the
-  [Fisherman](http://fisherman.sh/) plugin manager
+  [Zsh](http://zsh.sourceforge.net/) shell and the
+  [Oh My Zsh](http://ohmyz.sh/) plugin manager
 * Set custom
   [macOS](os/macos/preferences/main.sh) preferences
 

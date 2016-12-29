@@ -45,9 +45,6 @@ main() {
   ./install_apm_packages.sh
   print_in_green '\n  ---\n\n'
 
-  ./install_fisherman.sh
-  print_in_green '\n  ---\n\n'
-
   ./install_oh_my_zsh.sh
   print_in_green '\n  ---\n\n'
 
