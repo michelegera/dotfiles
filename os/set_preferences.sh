@@ -7,11 +7,7 @@ cd "$(dirname "$BASH_SOURCE")" \
 
 main() {
 
-  declare -r OS="$(get_os)"
-
-  if [ "$OS" == "macos" ]; then
-    ./macos/preferences/main.sh
-  fi
+  ./preferences/main.sh
 
 }
 

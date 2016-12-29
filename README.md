@@ -26,12 +26,12 @@ The setup process will:
   [git](git), and
   [shell](shell) files
 * Install applications / command-line tools for
-  [macOS](os/macos/installs/main.sh)
+  [macOS](os/installs/main.sh)
 * Install the
   [Zsh](http://zsh.sourceforge.net/) shell and the
   [Oh My Zsh](http://ohmyz.sh/) plugin manager
 * Set custom
-  [macOS](os/macos/preferences/main.sh) preferences
+  [macOS](os/preferences/main.sh) preferences
 
 
 ## Customize

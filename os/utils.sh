@@ -51,23 +51,6 @@ get_answer() {
   printf "$REPLY"
 }
 
-get_os() {
-
-  declare -r OS_NAME="$(uname -s)"
-  local os=''
-
-  if [ "$OS_NAME" == "Darwin" ]; then
-    os='macos'
-  elif [ "$OS_NAME" == "Linux" ] && [ -e "/etc/lsb-release" ]; then
-    os='ubuntu'
-  else
-    os="$OS_NAME"
-  fi
-
-  printf "%s" "$os"
-
-}
-
 is_git_repository() {
   git rev-parse &> /dev/null
   return $?

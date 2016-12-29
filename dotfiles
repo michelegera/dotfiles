@@ -298,7 +298,7 @@ main() {
   printf '\n'
 
   if answer_is_yes; then
-    ./os/macos/open_mac_app_store.sh
+    ./os/open_mac_app_store.sh
   fi
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
