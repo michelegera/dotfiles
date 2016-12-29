@@ -16,6 +16,7 @@ declare -a FILES_TO_SYMLINK=(
   'shell/stylelintrc'
   'shell/tigrc'
   'shell/vimrc'
+  'shell/zshrc'
 
   'git/gitattributes'
   'git/gitconfig'
