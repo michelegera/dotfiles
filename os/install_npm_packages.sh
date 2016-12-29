@@ -7,7 +7,6 @@ cd "$(dirname "$BASH_SOURCE")" \
 
 declare -r -a NPM_PACKAGES=(
   'bower'
-  'gh'
   'pure-prompt'
 )
 
