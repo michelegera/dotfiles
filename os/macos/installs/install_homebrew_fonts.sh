@@ -15,7 +15,6 @@ main() {
     && brew_tap 'caskroom/fonts'; then
 
     brew_install 'Asap' 'font-asap' 'cask'
-    brew_install 'Bebas Neue' 'font-bebas-neue' 'cask'
     brew_install 'Hack' 'font-hack' 'cask'
     brew_install 'Inconsolata DZ' 'font-inconsolata-dz' 'cask'
     brew_install 'Input' 'font-input' 'cask'
