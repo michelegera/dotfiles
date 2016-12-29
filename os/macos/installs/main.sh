@@ -48,6 +48,9 @@ main() {
   ./install_oh_my_zsh.sh
   print_in_green '\n  ---\n\n'
 
+  ./install_nvm_and_plugins.sh
+  print_in_green '\n  ---\n\n'
+
   ./install_ruby.sh
   print_in_green '\n  ---\n\n'
 
