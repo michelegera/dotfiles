@@ -27,6 +27,7 @@ main() {
     brew_install 'Dropbox' 'dropbox' 'cask'
     brew_install 'Evernote' 'evernote' 'cask'
     brew_install 'Firefox' 'firefox' 'cask'
+    brew_install 'Gitscout' 'gitscout' 'cask'
     brew_install 'Google Chrome' 'google-chrome' 'cask'
     brew_install 'Google Drive' 'google-drive' 'cask'
     brew_install 'GPG Tools' 'gpgtools' 'cask'
