@@ -1,8 +1,7 @@
 packages: [
   "advanced-open-file"
-  "duotone-dark-sea-syntax"
-  "duotone-dark-space-syntax"
   "file-icons"
+  "language-babel"
   "language-emblem"
   "language-haml"
   "linter"
