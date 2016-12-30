@@ -21,6 +21,9 @@
     showInvisibles: true
   "file-icons":
     coloured: false
+  "git-plus":
+    general:
+      analytics: false
   "linter-stylelint":
     useStandard: true
   pigments:

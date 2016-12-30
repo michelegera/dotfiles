@@ -1,6 +1,7 @@
 packages: [
   "advanced-open-file"
   "file-icons"
+  "git-plus"
   "language-babel"
   "language-emblem"
   "language-haml"
