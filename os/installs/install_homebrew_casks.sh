@@ -36,7 +36,6 @@ main() {
     brew_install 'iStat Menus' 'istat-menus' 'cask'
     brew_install 'Limechat' 'limechat' 'cask'
     brew_install 'Little Snitch' 'little-snitch' 'cask'
-    brew_install 'MacDown' 'macdown' 'cask'
     brew_install 'Paw' 'paw' 'cask'
     brew_install 'Postico' 'postico' 'cask'
     brew_install 'RightFont' 'rightfont' 'cask'
