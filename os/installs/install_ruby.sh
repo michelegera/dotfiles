@@ -8,7 +8,7 @@ cd "$(dirname "$BASH_SOURCE")" \
 
 main() {
 
-  if ! cmd_exists 'rbenv'; then
+  if cmd_exists 'rbenv'; then
 
     # Find the most recent stable MRI version number, see http://stackoverflow.com/a/30183040/246054
     local RUBY_VERSION="$(rbenv install -l | sed -n '/^[[:space:]]*[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}[[:space:]]*$/ h;${g;p;}')"
