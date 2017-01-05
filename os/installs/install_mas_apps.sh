@@ -13,7 +13,6 @@ declare -a MAS_APPS=(
   '649835201:AppSana'
   '1091189122:Bear'
   '536511979:Characters'
-  '449589707:Dash'
   '924726344:Deliveries'
   '1082624744:Gifox'
   '880001334:Reeder'
@@ -21,7 +20,6 @@ declare -a MAS_APPS=(
   '1187772509:stts'
   '557168941:Tweetbot'
   '417701035:VidConvert'
-  '1000397973:Wallcat'
   '497799835:Xcode'
 )
 
