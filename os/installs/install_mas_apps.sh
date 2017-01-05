@@ -39,14 +39,16 @@ main() {
 
   printf '\n'
 
-  mas signout
-  mas signin $APPLE_ID_EMAIL $APPLE_ID_PASSWORD
+  mas signout &> /dev/null
+  mas signin $APPLE_ID_EMAIL $APPLE_ID_PASSWORD &> /dev/null
 
   for app in "${MAS_APPS[@]}" ; do
     ID="${app%%:*}"
     NAME="${app##*:}"
     execute "mas install $ID" "$NAME"
   done
+
+  xcodebuild -license accept &> /dev/null
 
   printf '\n'
 
