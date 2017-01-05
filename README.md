@@ -54,6 +54,7 @@ as the `git` user credentials, e.g.:
 [user]
   name = Michele Gerarduzzi
   email = michelegera@example.com
+  signingkey = XXXXXXXX
 ```
 
 ### Forks

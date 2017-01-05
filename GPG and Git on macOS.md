@@ -15,17 +15,17 @@
 
 ## Keybase.io
 
-### Import key to GPG on another host
+### Import key to GPG on another device
 
 ```
 % keybase pgp export
-% keybase pgp export -q <key-id> | gpg --import
-% keybase pgp export -q <key-id> --secret | gpg --allow-secret-key-import --import
+% keybase pgp export | gpg --import
+% keybase pgp export -s | gpg --allow-secret-key-import --import
 ```
 
 ### Add public GPG key to GitHub
 
 ```
 % open https://github.com/settings/keys
-% keybase pgp export -q <key-id> | pbcopy
+% keybase pgp export | pbcopy
 ```
