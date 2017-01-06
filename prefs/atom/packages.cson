@@ -1,5 +1,6 @@
 packages: [
   "advanced-open-file"
+  "atom-snazzy-clear-syntax"
   "file-icons"
   "git-plus"
   "language-babel"
