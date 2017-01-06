@@ -88,5 +88,5 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(rbenv init -)"
 
 # This loads nvm
-export NVM_DIR="~/.nvm"
+export NVM_DIR=$(cd ~/.nvm && pwd -P)
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
