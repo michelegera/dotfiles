@@ -31,13 +31,8 @@ main() {
   ./install_mas_apps.sh
   print_in_green '\n  ---\n\n'
 
-  ask_for_confirmation 'Do you want to install system duplicate formulae?'
-  printf '\n'
-
-  if answer_is_yes; then
-    ./install_homebrew_dupes.sh
-    print_in_green '\n  ---\n\n'
-  fi
+  ./install_homebrew_dupes.sh
+  print_in_green '\n  ---\n\n'
 
   ./install_homebrew_fonts.sh
   print_in_green '\n  ---\n\n'
