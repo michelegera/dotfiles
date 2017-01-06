@@ -15,6 +15,7 @@ main() {
 
     brew_install 'blueutil' 'blueutil'
     brew_install 'diff-so-fancy' 'diff-so-fancy'
+    brew_install 'doxygen' 'doxygen'
     brew_install 'duti' 'duti'
     brew_install 'git' 'git'
     brew_install 'heroku' 'heroku'
@@ -34,7 +35,6 @@ main() {
     brew_install 'ruby-build' 'ruby-build'
     brew_install 'sphinx' 'sphinx'
     brew_install 'tig' 'tig'
-    brew_install 'transcrypt' 'transcrypt'
     brew_install 'tree' 'tree'
     brew_install 'watchman' 'watchman'
     brew_install 'yarn' 'yarn'
