@@ -14,10 +14,9 @@
     ]
   editor:
     autoIndentOnPaste: false
-    fontFamily: "mononoki"
-    fontSize: 15
+    fontFamily: "Hack"
     invisibles: {}
-    preferredLineLength: 120
+    preferredLineLength: 140
     showInvisibles: true
   "file-icons":
     coloured: false
