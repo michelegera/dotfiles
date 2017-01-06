@@ -9,7 +9,7 @@ cd "$(dirname "$BASH_SOURCE")" \
 main() {
 
   # nvm
-  execute 'curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash'
+  bash -c "$(curl -LsS https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh)"
 
   # Plugins
   if [ -d '~/.oh-my-zsh/' ]; then
