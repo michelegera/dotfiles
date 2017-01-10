@@ -1,6 +1,7 @@
 packages: [
   "advanced-open-file"
   "atom-snazzy-clear-syntax"
+  "emmet"
   "file-icons"
   "git-plus"
   "language-babel"
