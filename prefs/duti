@@ -59,6 +59,6 @@ com.panic.Transmit            sftp
 
 com.reederapp.rkit2.mac       feed
 
-it.bloop.airmail2             mailto
+com.readdle.smartemail-Mac    mailto
 
 # Last line must be blank
