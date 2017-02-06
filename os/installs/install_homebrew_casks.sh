@@ -34,6 +34,7 @@ main() {
     brew_install 'GPG Tools' 'gpgtools' 'cask'
     brew_install 'Hyper' 'hyper' 'cask'
     brew_install 'ImageOptim' 'imageoptim' 'cask'
+    brew_install 'Install Disk Creator' 'install-disk-creator' 'cask'
     brew_install 'iStat Menus' 'istat-menus' 'cask'
     brew_install 'Limechat' 'limechat' 'cask'
     brew_install 'Little Snitch' 'little-snitch' 'cask'
