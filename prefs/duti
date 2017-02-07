@@ -24,9 +24,14 @@
 
 
 # Bundle id                   UTI/ext/MIME types              Role
+com.github.atom               .css                            all
+com.github.atom               .js                             all
+com.github.atom               .rb                             all
+com.github.atom               .sass                           all
+com.github.atom               .scss                           all
 com.github.atom               public.plain-text               all
-com.github.atom               public.shell-script             all
 com.github.atom               public.script                   all
+com.github.atom               public.shell-script             all
 com.github.atom               public.source-code              all
 
 cx.c3.theunarchiver           .7z                             all
