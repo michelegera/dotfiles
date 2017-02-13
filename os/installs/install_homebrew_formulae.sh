@@ -19,6 +19,7 @@ main() {
     brew_install 'duti' 'duti'
     brew_install 'git' 'git'
     brew_install 'heroku' 'heroku'
+    brew_isntall 'htop' 'htop'
     brew_install 'httpie' 'httpie'
     brew_install 'imagemagick' 'imagemagick --with-webp'
     brew_install 'keybase' 'keybase'
