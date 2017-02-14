@@ -16,6 +16,7 @@ prefs/gnupg/gpg.conf.*
 prefs/gnupg/private-keys-*
 prefs/gnupg/random_seed
 
+shell/bundle/cache/
 shell/config/configstore/
 shell/config/yarn/
 shell/ssh/*id_rsa*
