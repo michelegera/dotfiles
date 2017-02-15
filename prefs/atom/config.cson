@@ -16,7 +16,6 @@
     autoIndentOnPaste: false
     fontFamily: "Hack"
     invisibles: {}
-    preferredLineLength: 140
     showInvisibles: true
   "file-icons":
     coloured: false
