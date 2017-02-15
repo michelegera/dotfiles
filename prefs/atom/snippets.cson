@@ -19,3 +19,47 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+'.source.js.jsx':
+  'React: class skeleton (ES6)':
+    'prefix': 'rcc'
+    'body': """
+      import React, { Component } from 'react';
+
+      import './${1}.scss';
+
+      class $1 extends Component {
+        render() {
+          return (
+            <div className="${1}">
+            </div>
+          );
+        }
+      }
+
+      export default ${1};
+    """
+
+  'React: test skeleton (ES6)':
+    'prefix': 'rct'
+    'body': """
+      import React from 'react';
+      import { shallow } from 'enzyme';
+
+      import $1 from './${1}';
+
+      describe('<${1} />', () => {
+        describe('shallow tests', () => {
+          let wrapper;
+
+          beforeEach(() => {
+            wrapper = shallow(<${1} />);
+          });
+
+          it('renders a container', () => {
+            expect(wrapper.find('div.${1}').length).toBe(1);
+          });
+        });
+      });
+
+    """
