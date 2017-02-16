@@ -24,7 +24,7 @@
   'React: class skeleton (ES6)':
     'prefix': 'rcc'
     'body': """
-      import React, { Component } from 'react';
+      import React, { Component, PropTypes } from 'react';
 
       import './${1}.scss';
 
