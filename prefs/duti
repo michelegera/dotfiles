@@ -59,8 +59,8 @@ org.videolan.vlc              .avi                            all
 org.videolan.vlc              .mkv                            all
 
 # Bundle id                   URL scheme
-com.panic.Transmit            ftp
-com.panic.Transmit            sftp
+com.binarynights.ForkLift-3   ftp
+com.binarynights.ForkLift-3   sftp
 
 com.reederapp.rkit2.mac       feed
 
