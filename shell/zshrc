@@ -53,7 +53,7 @@ SPACESHIP_PREFIX_ENV_DEFAULT=' '
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(z zsh-nvm zsh-better-npm-completion yarn)
+plugins=(z zsh-nvm zsh-better-npm-completion yarn npm)
 
 source $ZSH/oh-my-zsh.sh
 
