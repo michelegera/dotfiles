@@ -19,9 +19,6 @@ set_language_and_region_preferences() {
   execute 'sudo systemsetup -settimezone "Europe/Rome"' \
     'Set timezone'
 
-  execute 'defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false' \
-    'Disable auto-correct'
-
   execute 'defaults write -g NSUseSpellCheckerForCompletions -bool false' \
     'Disable autocomplete when pressing ESC'
 

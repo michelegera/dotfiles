@@ -25,6 +25,15 @@ set_keyboard_preferences() {
   execute 'defaults write -g NSAutomaticDashSubstitutionEnabled -bool false' \
     'Disable smart dashes'
 
+  execute 'defaults write -g NSAutomaticCapitalizationEnabled -bool false' \
+    'Disable automatic capitalization'
+
+  execute 'defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false' \
+    'Disable automatic period substitution'
+
+  execute 'defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false' \
+    'Disable auto-correct'
+
 }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
