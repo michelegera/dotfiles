@@ -3,25 +3,26 @@
   a       = commit --amend
   b       = branch
   c       = commit
-  ca      = !git add -A && git commit                 # Commit all changes
+  ca      = !git add -A && git commit                                       # Commit all changes
   co      = checkout
   commend = commit --amend --no-edit
   cp      = cherry-pick
   d       = diff
   dc      = diff --cached
+  dm      = !git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d # Remove branches that have already been merged with master
   fp      = push --force
-  g       = log --graph --pretty=custom               # Show custom graph
-  l       = log --pretty=custom                       # Show custom log
-  lc      = shortlog --summary --numbered             # List contributors
+  g       = log --graph --pretty=custom                                     # Show custom graph
+  l       = log --pretty=custom                                             # Show custom log
+  lc      = shortlog --summary --numbered                                   # List contributors
   please  = push --force-with-lease
   rc      = rebase --continue
-  rlc     = !git reset --hard HEAD~1                  # Remove last commit
+  rlc     = !git reset --hard HEAD~1                                        # Remove last commit
   st      = status --short --branch
   stsh    = stash --keep-index
   staash  = stash --include-untracked
   staaash = stash --all
-  ulc     = reset --soft HEAD~1                       # Undo last commit
-  up      = pull --rebase --autostash                 # Requires Git 2.9+
+  ulc     = reset --soft HEAD~1                                             # Undo last commit
+  up      = pull --rebase --autostash                                       # Requires Git 2.9+
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -79,6 +80,30 @@
     git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; \
   }; f"
 
+[apply]
+
+  # Detect whitespace errors when applying a patch
+  whitespace = fix
+
+[core]
+
+  attributesfile = ~/.gitattributes
+  autocrlf = input
+  editor = vim
+  excludesfile = ~/.gitignore
+
+  # Prevent showing files whose names contain non-ASCII symbols as unversioned.
+  # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+  precomposeunicode = false
+
+  # Make `git rebase` safer on macOS
+  # http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/
+  trustctime = false
+
+  # Treat spaces before tabs and all kinds of trailing whitespace as an error
+  # [default] trailing-space: looks for spaces at the end of a line
+  # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
+  whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
 [color "branch"]
 
@@ -99,12 +124,31 @@
   changed = yellow reverse
   untracked = red reverse
 
-[core]
+[commit]
 
-  attributesfile = ~/.gitattributes
-  autocrlf = input
-  editor = vim
-  excludesfile = ~/.gitignore
+  gpgsign = true
+
+[diff]
+
+  # Enable an experimental heuristic that shifts the hunk boundary in an
+  # attempt to make the resulting patch easier to read.
+  indentHeuristic = true
+
+  # Detect copies as well as renames
+  renames = copies
+
+[gpg]
+
+  program = /usr/local/bin/gpg
+
+[include]
+
+  path = ~/.gitconfig.local
+
+[pager]
+
+  diff = diff-so-fancy | less --tabs=1,5 -RFX
+  show = diff-so-fancy | less --tabs=1,5 -RFX
 
 [pretty]
 
@@ -125,20 +169,5 @@
   # Make `git push` push only the current branch
   default = simple
 
-[include]
-
-  path = ~/.gitconfig.local
-
-[pager]
-
-  diff = diff-so-fancy | less --tabs=1,5 -RFX
-  show = diff-so-fancy | less --tabs=1,5 -RFX
-
 [user]
   useconfigonly = true
-
-[gpg]
-  program = /usr/local/bin/gpg
-
-[commit]
-  gpgsign = true
