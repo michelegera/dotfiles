@@ -34,6 +34,7 @@ set_ui_and_ux_preferences() {
   execute 'defaults write com.apple.screencapture include-date -int 0' \
     'Remove date and timestamp from screenshots'
 
+  # Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
   execute 'defaults write -g AppleFontSmoothing -int 2' \
     'Enable subpixel font rendering on non-Apple LCDs'
 
