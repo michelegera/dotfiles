@@ -40,6 +40,12 @@ set_safari_preferences() {
   execute 'defaults write -g WebKitDeveloperExtras -bool true' \
     'Add a context menu item for showing the "Web Inspector" in web views'
 
+   execute 'defaults write com.apple.Safari WebKitMediaPlaybackAllowsInline -bool false &&
+            defaults write com.apple.SafariTechnologyPreview WebKitMediaPlaybackAllowsInline -bool false &&
+            defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2AllowsInlineMediaPlayback -bool false &&
+            defaults write com.apple.SafariTechnologyPreview com.apple.Safari.ContentPageGroupIdentifier.WebKit2AllowsInlineMediaPlayback -bool false' \
+    'Disable auto-playing videos'
+
 }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
