@@ -53,13 +53,6 @@ set_ui_and_ux_preferences() {
   execute 'defaults write -g PMPrintingExpandedStateForPrint -bool true' \
     'Expand print panel by default'
 
-  # TODO: Prompt for name
-  # execute 'sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Laptop" &&
-  #          sudo scutil --set ComputerName "Laptop" &&
-  #          sudo scutil --set HostName "Laptop" &&
-  #          sudo scutil --set LocalHostName "Laptop"' \
-  #   'Set computer name'
-
   execute 'sudo systemsetup -setrestartfreeze on' \
     'Restart automatically if the computer freezes'
 
