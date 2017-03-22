@@ -19,6 +19,10 @@ set_language_and_region_preferences() {
   execute 'sudo systemsetup -settimezone "Europe/Rome"' \
     'Set timezone'
 
+  execute 'sudo systemsetup -setnetworktimeserver "time.euro.apple.com" &&
+           sudo systemsetup -setusingnetworktime on' \
+    'Sync time from network'
+
   execute 'defaults write -g NSUseSpellCheckerForCompletions -bool false' \
     'Disable autocomplete when pressing ESC'
 
