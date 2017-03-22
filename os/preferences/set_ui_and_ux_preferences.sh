@@ -56,6 +56,32 @@ set_ui_and_ux_preferences() {
   execute 'sudo systemsetup -setrestartfreeze on' \
     'Restart automatically if the computer freezes'
 
+  execute 'sudo pmset -a lidwake 1' \
+    'Turns on lid wakeup'
+
+  execute 'sudo pmset -a autorestart 1' \
+    'Restart automatically on power loss'
+
+  execute 'sudo pmset -a displaysleep 15' \
+    'Put the display to sleep after 15 minutes'
+
+  execute 'sudo pmset -c sleep 0' \
+    'Do not allow machine to sleep on charger'
+
+  execute 'sudo pmset -b sleep 5' \
+    'Set machine sleep to 5 minutes on battery'
+
+  execute 'sudo systemsetup -setcomputersleep Off' \
+    'Never go into computer sleep mode'
+
+  execute 'sudo pmset -a hibernatemode 0' \
+    'Disable hibernation'
+
+  execute 'sudo rm /private/var/vm/sleepimage &&
+           sudo touch /private/var/vm/sleepimage &&
+           sudo chflags uchg /private/var/vm/sleepimage' \
+    'Remove the sleep image file to save disk space'
+
   execute ' for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
               sudo defaults write "${domain}" dontAutoLoad -array \
                 "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
