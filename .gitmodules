@@ -1,0 +1,33 @@
+[submodule "shell/vim/pack/plugins/start/dracula-theme"]
+	path = shell/vim/pack/plugins/start/dracula-theme
+	url = https://github.com/dracula/vim.git
+[submodule "shell/vim/pack/plugins/start/vim-airline"]
+	path = shell/vim/pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "shell/vim/pack/plugins/start/vim-fugitive"]
+	path = shell/vim/pack/plugins/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "shell/vim/pack/plugins/start/ctrlp.vim"]
+	path = shell/vim/pack/plugins/start/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "shell/vim/pack/plugins/start/vim-gitgutter"]
+	path = shell/vim/pack/plugins/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "shell/vim/pack/plugins/start/syntastic"]
+	path = shell/vim/pack/plugins/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "shell/vim/pack/plugins/start/nerdtree"]
+	path = shell/vim/pack/plugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "shell/vim/pack/plugins/start/nerdtree-git-plugin"]
+	path = shell/vim/pack/plugins/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "shell/vim/pack/plugins/start/vim-jsx"]
+	path = shell/vim/pack/plugins/start/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
+[submodule "shell/vim/pack/plugins/start/vim-rails"]
+	path = shell/vim/pack/plugins/start/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "shell/vim/pack/plugins/start/vim-bundler"]
+	path = shell/vim/pack/plugins/start/vim-bundler
+	url = https://github.com/tpope/vim-bundler.git

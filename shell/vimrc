@@ -1,1 +1,109 @@
-syntax on
+" General settings {{{
+  set nocompatible                    " Allow Vim-only settings (must be first)
+  set backspace=indent,eol,start      " Allow backspace in insert mode
+  set ttimeoutlen=10                  " Avoid pausing when leaving insert mode
+  set visualbell                      " No sounds
+  set laststatus=2                    " Always display a status line
+  set autoread                        " Reload files changed outside of Vim
+  set history=1000                    " Number of commands to remember
+  set undolevels=1000                 " Number of undo levels
+  set noshowmode                      " Do not show mode
+  set hidden                          " Hide buffers when abandoned
+  set mouse=a                         " Enable mouse support
+" }}}
+" Colors {{{
+  syntax enable
+  colorscheme dracula
+  set termguicolors
+" }}}
+" UI Layout {{{
+  set number                          " Show line numbers
+  set showcmd                         " Show command in bottom bar
+  set nocursorline                    " Highlight current line
+  set wildmenu
+  set lazyredraw
+  set showmatch                       " Higlight matching parenthesis
+  set splitright                      " Open new splits on the right
+  set list listchars=tab:\ \ ,trail:· " Display tabs and trailing spaces
+  set scrolloff=5                     " Start scrolling when close to margin
+  set textwidth=80
+  set colorcolumn=+1
+  set fillchars+=vert:┃
+" }}}
+" Spaces & Tabs {{{
+  set tabstop=2                       " Two-space tab
+  set expandtab                       " Use spaces for tabs
+  set softtabstop=2
+  set shiftwidth=2
+  set modelines=1
+  set autoindent smartindent          " Auto-indent based on previous line
+  filetype indent plugin on           " Enable file type detection
+" }}}
+" Searching {{{
+  set ignorecase                      " Ignore case when searching
+  set incsearch                       " Search as you type
+  set hlsearch                        " Highlight all matches
+" }}}
+" Folding {{{
+  set foldmethod=indent               " Fold based on indent level
+  set foldnestmax=10                  " Max 10 depth
+  set foldenable                      " Do not fold files by default on open
+  nnoremap <space> za
+  set foldlevelstart=10               " Start with fold level of 1
+" }}}
+" Swap files {{{
+  set noswapfile
+  set nobackup
+  set nowb
+" }}}
+" Syntastic {{{
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
+" }}}
+" NERDTree {{{
+  " Open a NERDTree automatically when Vim starts up if no files were specified
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+  " Close Vim if the only window left open is a NERDTree
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" }}}
+" The Silver Searcher {{{
+  if executable('ag')
+    " Use ag over grep
+    set grepprg=ag\ --nogroup\ --nocolor
+
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 0
+  endif
+" }}}
+" Airline {{{
+  " Automatically populate the dictionary with the proper font glyphs
+  let g:airline_powerline_fonts = 1
+" }}}
+" Auto vommands {{{
+  " Trim whitespace when saving
+  autocmd BufWritePre * :call TrimWhitespace()
+" }}}
+" Key bindings {{{
+  " Grep word under cursor
+  nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" }}}
+" Custom functions {{{
+  " Trim trailing whitespace without side-effects
+  function! TrimWhitespace()
+    let l:save = winsaveview()
+    %s/\s\+$//e
+    call winrestview(l:save)
+  endfunction
+" }}}
+" vim:foldmethod=marker:foldlevel=0

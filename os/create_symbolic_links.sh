@@ -17,6 +17,7 @@ declare -a FILES_TO_SYMLINK=(
   'shell/ssh'
   'shell/stylelintrc'
   'shell/tigrc'
+  'shell/vim'
   'shell/vimrc'
   'shell/zshrc'
 
