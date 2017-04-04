@@ -14,6 +14,7 @@ main() {
   if cmd_exists 'brew'; then
 
     brew_install 'blueutil' 'blueutil'
+    brew_install 'ctags' 'ctags'
     brew_install 'diff-so-fancy' 'diff-so-fancy'
     brew_install 'doxygen' 'doxygen'
     brew_install 'duti' 'duti'
@@ -35,8 +36,10 @@ main() {
     brew_install 'rbenv-gemset' 'rbenv-gemset'
     brew_install 'ruby-build' 'ruby-build'
     brew_install 'sphinx' 'sphinx'
+    brew_install 'the_silver_searcher' 'the_silver_searcher'
     brew_install 'tig' 'tig'
     brew_install 'tree' 'tree'
+    brew_install 'vim' 'vim --with-override-system-vi'
     brew_install 'watchman' 'watchman'
     brew_install 'yarn' 'yarn'
     brew_install 'zsh' 'zsh'
