@@ -5,7 +5,7 @@
       "metrics"
       "exception-reporting"
       "hashy"
-      "linter-rubocop"
+      "linter-sass-lint"
     ]
     telemetryConsent: "no"
     themes: [
@@ -14,7 +14,7 @@
     ]
   editor:
     autoIndentOnPaste: false
-    fontFamily: "Hack"
+    fontFamily: "Source Code Pro for Powerline"
     invisibles: {}
     showInvisibles: true
   "file-icons":
@@ -22,12 +22,17 @@
   "git-plus":
     general:
       analytics: false
+  linter: {}
+  "linter-eslint": {}
   "linter-stylelint":
     useStandard: true
+  "linter-ui-default": {}
   pigments:
     markerType: "dot"
     mergeColorDuplicates: true
     sortPaletteColors: "by color"
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
   whitespace:
