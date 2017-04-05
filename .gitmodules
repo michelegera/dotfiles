@@ -31,3 +31,6 @@
 [submodule "shell/vim/pack/plugins/start/vim-bundler"]
 	path = shell/vim/pack/plugins/start/vim-bundler
 	url = https://github.com/tpope/vim-bundler.git
+[submodule "shell/vim/pack/plugins/start/editorconfig-vim"]
+	path = shell/vim/pack/plugins/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
