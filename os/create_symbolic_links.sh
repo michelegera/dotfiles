@@ -10,7 +10,6 @@ declare -a FILES_TO_SYMLINK=(
   'shell/curlrc'
   'shell/gemrc'
   'shell/hushlogin'
-  'shell/hyper.js'
   'shell/inputrc'
   'shell/profile'
   'shell/screenrc'

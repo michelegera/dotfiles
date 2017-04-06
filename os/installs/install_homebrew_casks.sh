@@ -33,7 +33,6 @@ main() {
     brew_install 'Google Chrome' 'google-chrome' 'cask'
     brew_install 'Google Drive' 'google-drive' 'cask'
     brew_install 'GPG Tools' 'gpgtools' 'cask'
-    brew_install 'Hyper' 'hyper' 'cask'
     brew_install 'ImageOptim' 'imageoptim' 'cask'
     brew_install 'Install Disk Creator' 'install-disk-creator' 'cask'
     brew_install 'iStat Menus' 'istat-menus' 'cask'
