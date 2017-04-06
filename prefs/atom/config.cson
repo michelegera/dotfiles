@@ -26,7 +26,8 @@
   "linter-eslint": {}
   "linter-stylelint":
     useStandard: true
-  "linter-ui-default": {}
+  "linter-ui-default":
+    showPanel: true
   pigments:
     markerType: "dot"
     mergeColorDuplicates: true
