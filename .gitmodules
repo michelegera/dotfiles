@@ -34,3 +34,9 @@
 [submodule "shell/vim/pack/plugins/start/editorconfig-vim"]
 	path = shell/vim/pack/plugins/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "shell/vim/pack/plugins/start/vim-closetag"]
+	path = shell/vim/pack/plugins/start/vim-closetag
+	url = https://github.com/alvan/vim-closetag.git
+[submodule "shell/vim/pack/plugins/start/auto-pairs"]
+	path = shell/vim/pack/plugins/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
