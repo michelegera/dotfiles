@@ -169,10 +169,6 @@
   # Make `git push` push only the current branch
   default = simple
 
-[sequence]
-
-  editor = rebase-editor
-
 [user]
 
   useconfigonly = true
