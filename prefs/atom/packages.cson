@@ -1,6 +1,6 @@
 packages: [
   "advanced-open-file"
-  "atom-snazzy-clear-syntax"
+  "dracula-theme"
   "emmet"
   "file-icons"
   "git-plus"

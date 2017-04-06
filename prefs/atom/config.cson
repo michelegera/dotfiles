@@ -10,7 +10,7 @@
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
-      "atom-snazzy-clear-syntax"
+      "dracula-theme"
     ]
   editor:
     autoIndentOnPaste: false
