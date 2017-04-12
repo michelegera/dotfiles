@@ -23,7 +23,6 @@ main() {
     brew_isntall 'htop' 'htop'
     brew_install 'httpie' 'httpie'
     brew_install 'imagemagick' 'imagemagick --with-webp'
-    brew_install 'keybase' 'keybase'
     brew_install 'lame' 'lame'
     brew_install 'mas' 'mas'
     brew_install 'memcached' 'memcached'
