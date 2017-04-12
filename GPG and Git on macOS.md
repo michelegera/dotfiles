@@ -1,31 +1,18 @@
 # GPG and Git on macOS
 
-## Setup
-
-1. Create or import a key (see below)
-2. Run `gpg --list-secret-keys` and look for `sec`, use the key ID for the next step
-3. Configure `git` to use GPG – replace the key with the one from `gpg --list-secret-keys`
+1. [Generate a new GPG key][1]
+2. [Add the new key to your account][2]
+3. Run `gpg --list-secret-keys --keyid-format LONG` and look for the key ID in
+    the `sec` line
+4. In `.gitconfig.local`, replace the `signingkey` with the key ID from the
+   previous step
     ```
-    git config --global user.signingkey <key-id>
+    signingkey = <your-key-id>
     ```
-4. Add this line to ~/.gnupg/gpg.conf
+5. Add this line to ~/.gnupg/gpg.conf
     ```
     no-tty
     ```
 
-## Keybase.io
-
-### Import key to GPG on another device
-
-```
-% keybase pgp export
-% keybase pgp export | gpg --import
-% keybase pgp export -s | gpg --allow-secret-key-import --import
-```
-
-### Add public GPG key to GitHub
-
-```
-% open https://github.com/settings/keys
-% keybase pgp export | pbcopy
-```
+[1]: https://help.github.com/articles/generating-a-new-gpg-key/
+[2]: https://help.github.com/articles/adding-a-new-gpg-key-to-your-github-account/
