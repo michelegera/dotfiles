@@ -40,3 +40,6 @@
 [submodule "shell/vim/pack/plugins/start/auto-pairs"]
 	path = shell/vim/pack/plugins/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "shell/vim/pack/plugins/start/vim-multiple-cursors"]
+	path = shell/vim/pack/plugins/start/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
