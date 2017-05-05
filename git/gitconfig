@@ -141,6 +141,10 @@
 
   program = /usr/local/bin/gpg
 
+[help]
+
+  autocorrect = 30
+
 [include]
 
   path = ~/.gitconfig.local
