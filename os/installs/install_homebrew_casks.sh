@@ -60,10 +60,10 @@ main() {
     brew_install 'Zoom.us' 'zoomus' 'cask'
     printf '\n'
 
-    ask_for_confirmation 'Do you want to install Microsoft Office 2016?'
+    ask_for_confirmation 'Do you want to install Microsoft Office?'
 
     if answer_is_yes; then
-      brew_install 'Microsoft Office 2016' 'microsoft-office' 'cask'
+      brew_install 'Microsoft Office' 'microsoft-office' 'cask'
     fi
   fi
 
