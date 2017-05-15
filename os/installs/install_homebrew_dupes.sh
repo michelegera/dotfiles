@@ -14,7 +14,7 @@ main() {
   if cmd_exists 'brew' \
     && brew_tap 'homebrew/dupes'; then
 
-    brew_install 'Apple GCC compiler' 'apple-gcc42'
+    print_in_purple 'Nothing to install\n'
 
   fi
 
