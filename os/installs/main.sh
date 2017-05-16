@@ -52,8 +52,6 @@ main() {
   ./update_and_upgrade.sh
   print_in_green '\n  ---\n\n'
 
-  ./cleanup.sh
-
 }
 
 main
