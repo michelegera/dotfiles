@@ -26,7 +26,7 @@ set_language_and_region_preferences() {
   execute 'defaults write -g NSUseSpellCheckerForCompletions -bool false' \
     'Disable autocomplete when pressing ESC'
 
-  execute 'defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true' \
+  execute 'sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true' \
     'Show language menu in the top right corner of the boot screen'
 
 }
