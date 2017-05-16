@@ -9,7 +9,7 @@ export ZSH=/Users/michelegera/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME='spaceship'
 SPACESHIP_PROMPT_SYMBOL='❯'
-SPACESHIP_PREFIX_ENV_DEFAULT=' '
+SPACESHIP_PROMPT_DEFAULT_PREFIX=' '
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
