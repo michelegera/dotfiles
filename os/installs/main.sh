@@ -7,7 +7,7 @@ cd "$(dirname "$BASH_SOURCE")" \
 
 main() {
 
-  ./install_xcode.sh
+  ./install_xcode_command_line_tools.sh
   print_in_green '\n  ---\n\n'
 
   ./install_homebrew.sh
