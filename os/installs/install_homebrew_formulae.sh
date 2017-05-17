@@ -18,6 +18,7 @@ main() {
     brew_install 'diff-so-fancy' 'diff-so-fancy'
     brew_install 'doxygen' 'doxygen'
     brew_install 'duti' 'duti'
+    brew_install 'git-secret' 'git-secret'
     brew_install 'git' 'git'
     brew_install 'heroku' 'heroku'
     brew_install 'htop' 'htop'
