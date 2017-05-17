@@ -247,6 +247,8 @@
 	<false/>
 	<key>HideTabNumber</key>
 	<false/>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>JobName</key>
 	<false/>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -282,16 +284,10 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>440 497 400 129 0 0 1280 777 </string>
-	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 780 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>810 299 796 473 0 0 2560 1417 </string>
+	<string>269 179 918 416 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 48 2554 1367 0 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 560 1290 827 0 0 2560 1417 </string>
+	<string>0 51 1280 726 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_4F775489-B082-4A62-B776-40AA206D1887</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_4F775489-B082-4A62-B776-40AA206D1887_selection</key>
@@ -956,15 +952,13 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>7F2847B8-C9DF-43A8-B6EB-1849B1A00FA4</string>
+	<string>4AFB66B6-9414-4F7E-96D7-F6DB7906BDA1</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
-	<key>NoSyncPermissionToShowTip</key>
-	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>505819960.80292797</real>
+	<real>516633022.47645497</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1012,20 +1006,12 @@
 	<string>~/.iterm2</string>
 	<key>PromptOnQuit</key>
 	<true/>
-	<key>SUAutomaticallyUpdate</key>
-	<true/>
-	<key>SUEnableAutomaticChecks</key>
-	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=95</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=60</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
-	<key>SULastCheckTime</key>
-	<date>2017-04-03T12:56:08Z</date>
-	<key>SUSendProfileInfo</key>
-	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -1050,7 +1036,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.15</string>
+	<string>3.1.beta.3</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
