@@ -11,6 +11,7 @@ declare -a FILES_TO_SYMLINK=(
   'shell/gemrc'
   'shell/hushlogin'
   'shell/inputrc'
+  'shell/irbrc'
   'shell/profile'
   'shell/screenrc'
   'shell/ssh'
