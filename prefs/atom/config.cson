@@ -6,11 +6,12 @@
       "exception-reporting"
       "hashy"
       "linter-sass-lint"
+      "linter-stylelint"
     ]
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
-      "dracula-theme"
+      "dracula-syntax"
     ]
   editor:
     autoIndentOnPaste: false
@@ -27,13 +28,19 @@
   "linter-stylelint":
     useStandard: true
   "linter-ui-default":
-    showPanel: true
+    panelHeight: 69
   pigments:
     markerType: "dot"
     mergeColorDuplicates: true
     sortPaletteColors: "by color"
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      showInStatusBar: true
+    prettierOptions:
+      singleQuote: true
+      trailingComma: "all"
+  "tree-view": {}
   welcome:
     showOnStartup: false
   whitespace:
