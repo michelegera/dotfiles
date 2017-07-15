@@ -1,4 +1,5 @@
 {
-  "skip_analytics": false,
-  "color": true
+  "skip_analytics": true,
+  "color": true,
+  "install": "c8d4381f-dc0c-4c65-8139-77d5e3a09196"
 }
