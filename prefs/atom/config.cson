@@ -40,7 +40,8 @@
     prettierOptions:
       singleQuote: true
       trailingComma: "all"
-  "tree-view": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
   whitespace:
