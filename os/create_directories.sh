@@ -5,6 +5,7 @@ cd "$(dirname "$BASH_SOURCE")" \
 
 declare -a DIRECTORIES=(
   "$HOME/Code"
+  "$HOME/Scripts"
 )
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
