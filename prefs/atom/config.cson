@@ -4,9 +4,6 @@
       "background-tips"
       "metrics"
       "exception-reporting"
-      "hashy"
-      "linter-sass-lint"
-      "linter-stylelint"
     ]
     telemetryConsent: "no"
     themes: [
@@ -18,8 +15,7 @@
     fontFamily: "Source Code Pro for Powerline"
     invisibles: {}
     showInvisibles: true
-  "file-icons":
-    coloured: false
+  "file-icons": {}
   "git-plus":
     general:
       analytics: false
@@ -41,7 +37,7 @@
       singleQuote: true
       trailingComma: "all"
   "tree-view":
-    hideVcsIgnoredFiles: true
+    hideVcsIgnoredFiles: false
   welcome:
     showOnStartup: false
   whitespace:
