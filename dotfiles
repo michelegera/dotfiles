@@ -254,6 +254,11 @@ main() {
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+  print_info 'Create symbolic links for application settings'
+  ./os/create_settings_symbolic_links.sh
+
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
   if cmd_exists 'git'; then
 
     if [ "$(git config --get remote.origin.url)" != "$DOTFILES_ORIGIN" ]; then
