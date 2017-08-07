@@ -59,6 +59,9 @@ main() {
     brew_install 'Zoom.us' 'zoomus' 'cask'
     printf '\n'
 
+    print_info 'Please run the Adobe Creative Cloud installer'
+    print_info 'Please run the Little Snitch installer'
+
     ask_for_confirmation 'Do you want to install Microsoft Office?'
 
     if answer_is_yes; then
