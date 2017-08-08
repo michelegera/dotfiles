@@ -31,7 +31,6 @@
     sortPaletteColors: "by color"
   "prettier-atom":
     formatOnSaveOptions:
-      enabled: true
       showInStatusBar: true
     prettierOptions:
       singleQuote: true
