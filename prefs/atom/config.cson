@@ -22,6 +22,7 @@
   linter: {}
   "linter-eslint": {}
   "linter-stylelint":
+    disableWhenNoConfig: false
     useStandard: true
   "linter-ui-default":
     panelHeight: 69
@@ -31,6 +32,10 @@
     sortPaletteColors: "by color"
   "prettier-atom":
     formatOnSaveOptions:
+      cssScopes: [
+        ""
+      ]
+      enabled: true
       showInStatusBar: true
     prettierOptions:
       singleQuote: true
