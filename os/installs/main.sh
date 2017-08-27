@@ -31,9 +31,6 @@ main() {
   ./install_mas_apps.sh
   print_in_green '\n  ---\n\n'
 
-  ./install_homebrew_dupes.sh
-  print_in_green '\n  ---\n\n'
-
   ./install_homebrew_fonts.sh
   print_in_green '\n  ---\n\n'
 
