@@ -32,7 +32,7 @@ main() {
     brew_install 'FontBase' 'fontbase' 'cask'
     brew_install 'Gitscout' 'gitscout' 'cask'
     brew_install 'Google Chrome' 'google-chrome' 'cask'
-    brew_install 'Google Drive' 'google-drive' 'cask'
+    brew_install 'Google Backup & Sync' 'google-backup-and-sync' 'cask'
     brew_install 'GPG Tools' 'gpgtools' 'cask'
     brew_install 'ImageOptim' 'imageoptim' 'cask'
     brew_install 'Install Disk Creator' 'install-disk-creator' 'cask'
