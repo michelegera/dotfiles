@@ -52,6 +52,7 @@ main() {
     brew_install 'Telegram Desktop' 'telegram-desktop' 'cask'
     brew_install 'The Unarchiver' 'the-unarchiver' 'cask'
     brew_install 'Transmission' 'transmission' 'cask'
+    brew_install 'Transmit' 'transmit' 'cask'
     brew_install 'Viscosity' 'viscosity' 'cask'
     brew_install 'VLC' 'vlc' 'cask'
     brew_install 'WhatsApp' 'whatsapp' 'cask'
