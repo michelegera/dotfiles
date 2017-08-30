@@ -261,6 +261,15 @@ main() {
 
   if cmd_exists 'git'; then
 
+    print_info 'Git submodules'
+    execute 'git submodule update --init --recursive' 'Initialize'
+
+  fi
+
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  if cmd_exists 'git'; then
+
     if [ "$(git config --get remote.origin.url)" != "$DOTFILES_ORIGIN" ]; then
       print_info 'Initialize Git repository'
       ./os/initialize_git_repository.sh "$DOTFILES_ORIGIN"
