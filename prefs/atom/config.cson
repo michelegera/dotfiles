@@ -27,7 +27,6 @@
   "linter-ui-default":
     panelHeight: 69
   pigments:
-    markerType: "dot"
     mergeColorDuplicates: true
     sortPaletteColors: "by color"
   "prettier-atom":
