@@ -116,3 +116,5 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
+# Source Spaceship theme
+source "/Users/michelegera/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
