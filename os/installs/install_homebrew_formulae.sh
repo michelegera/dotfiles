@@ -42,7 +42,7 @@ main() {
     brew_install 'tree' 'tree'
     brew_install 'vim' 'vim --with-override-system-vi'
     brew_install 'watchman' 'watchman'
-    brew_install 'yarn' 'yarn'
+    brew_install 'yarn' 'yarn --without-node'
     brew_install 'zsh' 'zsh'
     brew_install 'zsh-syntax-highlighting' 'zsh-syntax-highlighting'
 
