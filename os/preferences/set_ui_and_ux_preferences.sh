@@ -77,11 +77,6 @@ set_ui_and_ux_preferences() {
   execute 'sudo pmset -a hibernatemode 0' \
     'Disable hibernation'
 
-  execute 'sudo rm /private/var/vm/sleepimage &&
-           sudo touch /private/var/vm/sleepimage &&
-           sudo chflags uchg /private/var/vm/sleepimage' \
-    'Remove the sleep image file to save disk space'
-
   execute ' for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
               sudo defaults write "${domain}" dontAutoLoad -array \
                 "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
