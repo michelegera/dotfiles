@@ -19,7 +19,6 @@ declare -a MAS_APPS=(
   '1176895641:Spark'
   '1187772509:stts'
   '557168941:Tweetbot'
-  '417701035:VidConvert'
   '497799835:Xcode'
 )
 
