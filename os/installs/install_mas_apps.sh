@@ -48,7 +48,7 @@ main() {
     execute "mas install $ID" "$NAME"
   done
 
-  xcodebuild -license accept &> /dev/null
+  sudo xcodebuild -license accept &> /dev/null
 
   printf '\n'
 
