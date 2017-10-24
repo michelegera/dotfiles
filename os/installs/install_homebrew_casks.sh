@@ -36,6 +36,7 @@ main() {
     brew_install 'iStat Menus' 'istat-menus' 'cask'
     brew_install 'Limechat' 'limechat' 'cask'
     brew_install 'Little Snitch' 'little-snitch' 'cask'
+    brew_install 'Numi' 'numi' 'cask'
     brew_install 'Paw' 'paw' 'cask'
     brew_install 'Postico' 'postico' 'cask'
     brew_install 'Sequel Pro' 'sequel-pro' 'cask'
