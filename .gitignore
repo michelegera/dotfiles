@@ -18,6 +18,7 @@ prefs/gnupg/random_seed
 
 shell/bundle/cache/
 shell/config/configstore/
+shell/config/htop/
 shell/config/yarn/
 shell/ssh/*id_rsa*
 shell/ssh/authorized_keys
