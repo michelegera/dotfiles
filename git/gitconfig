@@ -137,6 +137,9 @@
   # Detect copies as well as renames
   renames = copies
 
+[fetch]
+  prune = true
+
 [gpg]
 
   program = /usr/local/bin/gpg
