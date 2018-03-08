@@ -9,6 +9,7 @@ prefs/atom/.node-gyp
 prefs/atom/blob-store
 prefs/atom/compile-cache
 prefs/atom/packages
+prefs/atom/recovery
 prefs/atom/storage
 
 prefs/gnupg/*.gpg
