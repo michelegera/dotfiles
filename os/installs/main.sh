@@ -28,6 +28,9 @@ main() {
   ./install_homebrew_custom_casks.sh
   print_in_green '\n  ---\n\n'
 
+  ./install_homebrew_drivers.sh
+  print_in_green '\n  ---\n\n'
+
   ./install_mas_apps.sh
   print_in_green '\n  ---\n\n'
 
