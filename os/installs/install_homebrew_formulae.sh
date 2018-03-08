@@ -42,6 +42,7 @@ main() {
     brew_install 'sphinx' 'sphinx'
     brew_install 'the_silver_searcher' 'the_silver_searcher'
     brew_install 'tig' 'tig'
+    brew_install 'tldr' 'tldr'
     brew_install 'tmux' 'tmux'
     brew_install 'tree' 'tree'
     brew_install 'vim' 'vim --with-override-system-vi'
