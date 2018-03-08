@@ -6,10 +6,6 @@
       "exception-reporting"
     ]
     telemetryConsent: "no"
-    themes: [
-      "one-dark-ui"
-      "dracula-syntax"
-    ]
   editor:
     autoIndentOnPaste: false
     fontFamily: "Source Code Pro for Powerline"
