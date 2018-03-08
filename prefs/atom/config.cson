@@ -17,6 +17,8 @@
       analytics: false
   linter: {}
   "linter-eslint": {}
+  "linter-rubocop":
+    disableWhenNoConfigFile: true
   "linter-stylelint":
     disableWhenNoConfig: false
     useStandard: true
