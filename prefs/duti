@@ -26,6 +26,7 @@
 # Bundle id                   UTI/ext/MIME types              Role
 com.github.atom               .css                            all
 com.github.atom               .js                             all
+com.github.atom               .md                             all
 com.github.atom               .rb                             all
 com.github.atom               .sass                           all
 com.github.atom               .scss                           all
