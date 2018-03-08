@@ -43,7 +43,6 @@ main() {
     brew_install 'Skitch' 'skitch' 'cask'
     brew_install 'Skype' 'skype' 'cask'
     brew_install 'Slack' 'slack' 'cask'
-    brew_install 'Spectacle' 'spectacle' 'cask'
     brew_install 'Spotify' 'spotify' 'cask'
     brew_install 'Spotify Notifications' 'spotify-notifications' 'cask'
     brew_install 'Telegram Desktop' 'telegram-desktop' 'cask'

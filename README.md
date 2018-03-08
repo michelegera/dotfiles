@@ -27,7 +27,6 @@ The setup process will:
   [shell](shell) files
 * Install applications / command-line tools for
   [macOS](os/installs/main.sh)
-* [Symlink](os/create_settings_symbolic_links.sh) application settings
 * Install the
   [Zsh](http://zsh.sourceforge.net/) shell and the
   [Oh My Zsh](http://ohmyz.sh/) plugin manager
