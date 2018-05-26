@@ -1,6 +1,3 @@
-[submodule "shell/vim/pack/plugins/start/dracula-theme"]
-	path = shell/vim/pack/plugins/start/dracula-theme
-	url = https://github.com/dracula/vim.git
 [submodule "shell/vim/pack/plugins/start/vim-airline"]
 	path = shell/vim/pack/plugins/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
@@ -43,3 +40,6 @@
 [submodule "shell/vim/pack/plugins/start/vim-multiple-cursors"]
 	path = shell/vim/pack/plugins/start/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "shell/vim/pack/plugins/start/ayu-vim"]
+	path = shell/vim/pack/plugins/start/ayu-vim
+	url = https://github.com/ayu-theme/ayu-vim.git
