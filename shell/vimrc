@@ -12,9 +12,10 @@
   set mouse=a                         " Enable mouse support
 " }}}
 " Colors {{{
+  set termguicolors                   " Enable true colors support
+  let ayucolor="mirage"               " Other options: 'light' or 'dark'
+  colorscheme ayu
   syntax enable
-  colorscheme dracula
-  set termguicolors
 " }}}
 " UI Layout {{{
   set number                          " Show line numbers
