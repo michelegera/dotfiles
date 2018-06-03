@@ -4,14 +4,6 @@ prefs/alfred/Alfred.alfredpreferences/preferences/remote/
 prefs/alfred/Alfred.alfredpreferences/remote
 prefs/alfred/Alfred.alfredpreferences/snippets
 
-prefs/atom/.apm
-prefs/atom/.node-gyp
-prefs/atom/blob-store
-prefs/atom/compile-cache
-prefs/atom/packages
-prefs/atom/recovery
-prefs/atom/storage
-
 prefs/gnupg/*.gpg
 prefs/gnupg/gpg.conf.*
 prefs/gnupg/private-keys-*
