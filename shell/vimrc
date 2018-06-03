@@ -18,7 +18,12 @@
   syntax enable
 " }}}
 " UI Layout {{{
-  set number                          " Show line numbers
+  set number relativenumber           " Show relative line numbers
+  augroup numbertoggle                " Toggle relative line numbers
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  augroup END
   set showcmd                         " Show command in bottom bar
   set nocursorline                    " Highlight current line
   set wildmenu
@@ -67,14 +72,6 @@
   let g:syntastic_check_on_open = 1
   let g:syntastic_check_on_wq = 0
 " }}}
-" NERDTree {{{
-  " Open a NERDTree automatically when Vim starts up if no files were specified
-  autocmd StdinReadPre * let s:std_in=1
-  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-  " Close Vim if the only window left open is a NERDTree
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" }}}
 " The Silver Searcher {{{
   if executable('ag')
     " Use ag over grep
@@ -87,17 +84,25 @@
     let g:ctrlp_use_caching = 0
   endif
 " }}}
-" Airline {{{
+" vim-airline {{{
   " Automatically populate the dictionary with the proper font glyphs
   let g:airline_powerline_fonts = 1
+  let g:airline#extensions#tabline#enabled = 1
 " }}}
-" Auto vommands {{{
+" vim-jsx {{{
+  let g:jsx_ext_required = 0
+" }}}
+" Auto commands {{{
   " Trim whitespace when saving
   autocmd BufWritePre * :call TrimWhitespace()
 " }}}
 " Key bindings {{{
   " Grep word under cursor
   nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+  " Cycle through listed buffers
+  nnoremap <Tab> :bnext<CR>
+  nnoremap <S-Tab> :bprevious<CR>
 " }}}
 " Custom functions {{{
   " Trim trailing whitespace without side-effects
