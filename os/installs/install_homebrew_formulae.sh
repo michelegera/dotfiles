@@ -48,6 +48,7 @@ main() {
     brew_install 'vim' 'vim --with-override-system-vi'
     brew_install 'watchman' 'watchman'
     brew_install 'yarn' 'yarn --without-node'
+    brew_install 'zsh-history-substring-search' 'zsh-history-substring-search'
     brew_install 'zsh' 'zsh'
     brew_install 'zsh-syntax-highlighting' 'zsh-syntax-highlighting'
 
