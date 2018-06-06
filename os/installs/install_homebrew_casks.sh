@@ -36,6 +36,7 @@ main() {
     brew_install 'iStat Menus' 'istat-menus' 'cask'
     brew_install 'Limechat' 'limechat' 'cask'
     brew_install 'Little Snitch' 'little-snitch' 'cask'
+    brew_install 'Meslo Nerd Font' 'font-meslo-nerd-font' 'cask'
     brew_install 'Numi' 'numi' 'cask'
     brew_install 'Paw' 'paw' 'cask'
     brew_install 'Postico' 'postico' 'cask'
