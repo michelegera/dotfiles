@@ -18,12 +18,7 @@
   syntax enable
 " }}}
 " UI Layout {{{
-  set number relativenumber           " Show relative line numbers
-  augroup numbertoggle                " Toggle relative line numbers
-    autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-  augroup END
+  set number                          " Show line numbers
   set showcmd                         " Show command in bottom bar
   set nocursorline                    " Highlight current line
   set wildmenu
