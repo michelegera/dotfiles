@@ -14,6 +14,7 @@ main() {
   if cmd_exists 'brew'; then
 
     brew_install 'blueutil' 'blueutil'
+    brew_install 'cmake' 'cmake'
     brew_install 'ctags' 'ctags'
     brew_install 'diff-so-fancy' 'diff-so-fancy'
     brew_install 'doxygen' 'doxygen'
