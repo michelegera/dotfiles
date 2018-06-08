@@ -11,9 +11,10 @@
   Plug 'ayu-theme/ayu-vim'
   Plug 'vim-airline/vim-airline'
 
-  " File navigation
+  " File navigation & utilities
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'scrooloose/nerdtree'
+  Plug 'tpope/vim-unimpaired'
 
   " Git
   Plug 'tpope/vim-fugitive'
