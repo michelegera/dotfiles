@@ -1,9 +1,55 @@
+" Plugins {{{
+  " Install vim-plug automatically
+  if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  endif
+  call plug#begin()
+
+  " Theme and appearance
+  Plug 'ayu-theme/ayu-vim'
+  Plug 'vim-airline/vim-airline'
+
+  " File navigation
+  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'scrooloose/nerdtree'
+
+  " Git
+  Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+
+  " Code editing, formatting and completion
+  Plug 'vim-syntastic/syntastic'
+  Plug 'Valloric/YouCompleteMe', { 'do': '!./install.py --clang-completer --js-completer' }
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-abolish'
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+  Plug 'tpope/vim-surround'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'terryma/vim-multiple-cursors'
+
+  " Ruby and Rails
+  Plug 'vim-ruby/vim-ruby'
+  Plug 'tpope/vim-rails'
+  Plug 'tpope/vim-bundler'
+  Plug 'tpope/vim-endwise'
+
+  " JavaScript, React and Ember
+  Plug 'pangloss/vim-javascript'
+  Plug 'elzr/vim-json'
+  Plug 'styled-components/vim-styled-components'
+  Plug 'mxw/vim-jsx'
+  Plug 'yalesov/vim-emblem'
+  call plug#end()
+" }}}
 " General settings {{{
   set nocompatible                    " Allow Vim-only settings (must be first)
   set backspace=indent,eol,start      " Allow backspace in insert mode
   set ttimeoutlen=10                  " Avoid pausing when leaving insert mode
   set visualbell                      " No sounds
   set laststatus=2                    " Always display a status line
+  set cmdheight=2                     " Avoid “Press <ENTER> to continue” prompt
   set autoread                        " Reload files changed outside of Vim
   set history=1000                    " Number of commands to remember
   set undolevels=1000                 " Number of undo levels
@@ -25,11 +71,17 @@
   set lazyredraw
   set showmatch                       " Higlight matching parenthesis
   set splitright                      " Open new splits on the right
-  set list listchars=tab:\ \ ,trail:· " Display tabs and trailing spaces
+  set list
+  set listchars=tab:▸\ ,trail:·       " Display tabs and trailing spaces
   set scrolloff=5                     " Start scrolling when close to margin
   set textwidth=80
   set colorcolumn=+1
   set fillchars+=vert:┃
+" }}}
+" Behavior {{{
+  " Open :help in a new tab
+  cnoreabbrev <expr> help getcmdtype() == ":" && getcmdline() == 'help' ?
+    \ 'tab help' : 'help'
 " }}}
 " Spaces & Tabs {{{
   set tabstop=2                       " Two-space tab
@@ -57,39 +109,25 @@
   set nobackup
   set nowb
 " }}}
-" Syntastic {{{
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
-
-  let g:syntastic_always_populate_loc_list = 1
-  let g:syntastic_auto_loc_list = 1
-  let g:syntastic_check_on_open = 1
-  let g:syntastic_check_on_wq = 0
-" }}}
 " The Silver Searcher {{{
   if executable('ag')
     " Use ag over grep
     set grepprg=ag\ --nogroup\ --nocolor
 
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 
     " ag is fast enough that CtrlP doesn't need to cache
-    let g:ctrlp_use_caching = 0
+    let g:ctrlp_use_caching=0
   endif
-" }}}
-" vim-airline {{{
-  " Automatically populate the dictionary with the proper font glyphs
-  let g:airline_powerline_fonts = 1
-  let g:airline#extensions#tabline#enabled = 1
-" }}}
-" vim-jsx {{{
-  let g:jsx_ext_required = 0
 " }}}
 " Auto commands {{{
   " Trim whitespace when saving
   autocmd BufWritePre * :call TrimWhitespace()
+
+  " Set specific type based on file type
+  autocmd FileType gitcommit setlocal textwidth=72
+  autocmd FileType gitcommit setlocal spell
 " }}}
 " Key bindings {{{
   " Grep word under cursor
@@ -98,11 +136,77 @@
   " Cycle through listed buffers
   nnoremap <Tab> :bnext<CR>
   nnoremap <S-Tab> :bprevious<CR>
+
+  " Vim. Live it.
+  nnoremap <up> <nop>
+  nnoremap <down> <nop>
+  nnoremap <left> <nop>
+  nnoremap <right> <nop>
+  inoremap <up> <nop>
+  inoremap <down> <nop>
+  inoremap <left> <nop>
+  inoremap <right> <nop>
+
+  " Toggle NERDTree
+  map <C-n> :NERDTreeToggle<CR>
+
+  " Easy ESC with jk in insert mode
+  inoremap jk <esc>
+  snoremap jk <esc>
+" }}}
+" Plugins configuration {{{
+  " vim-airline
+  let g:airline_powerline_fonts=1
+  let g:airline#extensions#tabline#enabled=1
+
+  " netrw
+  let g:loaded_netrw=1
+  let g:loaded_netrwPlugin=1
+
+  " NERDTree
+  let g:NERDTreeHijackNetrw=0
+
+  " Syntastic
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+
+  let g:syntastic_always_populate_loc_list=1
+  let g:syntastic_auto_loc_list=1
+  let g:syntastic_check_on_open=1
+  let g:syntastic_check_on_wq=0
+  let g:syntastic_aggregate_errors=1
+
+  let g:syntastic_error_symbol="✘"
+  let g:syntastic_style_error_symbol="✘"
+  let g:syntastic_warning_symbol='▶'
+  let g:syntastic_style_warning_symbol='▶'
+
+  let g:syntastic_javascript_checkers=['eslint']
+  let g:syntastic_ruby_checkers=['mri', 'rubocop', 'reek']
+  let g:syntastic_sass_checkers=['stylelint']
+  let g:syntastic_scss_checkers=['stylelint']
+
+  if executable('./node_modules/eslint/bin/eslint.js')
+    let g:syntastic_javascript_eslint_exec='./node_modules/eslint/bin/eslint.js'
+  endif
+
+  if executable('./node_modules/stylelint/bin/stylelint.js')
+    let g:syntastic_sass_stylelint_exec='./node_modules/stylelint/bin/stylelint.js'
+    let g:syntastic_scss_stylelint_exec='./node_modules/stylelint/bin/stylelint.js'
+  endif
+
+  " vim-prettier
+  let g:prettier#autoformat=0
+  autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,
+        \*.graphql,.eslintrc,.babelrc,.esformatter,.tern-project,.babelrc,
+        \.prettierrc
+        \ PrettierAsync
 " }}}
 " Custom functions {{{
   " Trim trailing whitespace without side-effects
   function! TrimWhitespace()
-    let l:save = winsaveview()
+    let l:save=winsaveview()
     %s/\s\+$//e
     call winrestview(l:save)
   endfunction
