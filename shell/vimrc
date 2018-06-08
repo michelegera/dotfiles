@@ -102,7 +102,7 @@
   set foldnestmax=10                  " Max 10 depth
   set foldenable                      " Do not fold files by default on open
   nnoremap <space> za
-  set foldlevelstart=10               " Start with fold level of 1
+  set foldlevelstart=10               " Start with fold level of 10
 " }}}
 " Swap files {{{
   set noswapfile
