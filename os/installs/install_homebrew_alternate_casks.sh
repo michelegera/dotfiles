@@ -15,7 +15,6 @@ main() {
     && brew_tap 'caskroom/versions'; then
 
     brew_install 'iTerm 3 Beta' 'iterm2-beta' 'cask'
-    brew_install 'Safari Technology Preview' 'safari-technology-preview' 'cask'
 
   fi
 
