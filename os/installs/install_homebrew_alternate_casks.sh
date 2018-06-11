@@ -14,7 +14,6 @@ main() {
   if cmd_exists 'brew' \
     && brew_tap 'caskroom/versions'; then
 
-    brew_install 'iTerm 3 Beta' 'iterm2-beta' 'cask'
     brew_install 'Skype 7' 'skype7' 'cask'
 
   fi

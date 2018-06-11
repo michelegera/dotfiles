@@ -34,6 +34,7 @@ main() {
     brew_install 'ImageOptim' 'imageoptim' 'cask'
     brew_install 'Install Disk Creator' 'install-disk-creator' 'cask'
     brew_install 'iStat Menus' 'istat-menus' 'cask'
+    brew_install 'iTerm2' 'iterm2' 'cask'
     brew_install 'Limechat' 'limechat' 'cask'
     brew_install 'Little Snitch' 'little-snitch' 'cask'
     brew_install 'Numi' 'numi' 'cask'
