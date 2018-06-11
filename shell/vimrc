@@ -15,10 +15,12 @@
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-unimpaired'
+  Plug 'tpope/vim-eunuch'
 
   " Git
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-rhubarb'
 
   " Code editing, formatting and completion
   Plug 'vim-syntastic/syntastic'
