@@ -28,8 +28,7 @@ The setup process will:
 * Install applications / command-line tools for
   [macOS](os/installs/main.sh)
 * Install the
-  [Zsh](http://zsh.sourceforge.net/) shell and the
-  [Oh My Zsh](http://ohmyz.sh/) plugin manager
+  [Zsh](http://zsh.sourceforge.net/) shell
 * Set custom
   [macOS](os/preferences/main.sh) preferences
 
