@@ -40,7 +40,7 @@ main() {
   ./install_nvm_and_plugins.sh
   print_in_green '\n  ---\n\n'
 
-  ./install_ruby.sh
+  ./install_rvm_and_ruby.sh
   print_in_green '\n  ---\n\n'
 
   ./update_and_upgrade.sh

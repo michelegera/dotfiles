@@ -37,9 +37,6 @@ main() {
     brew_install 'pinentry-mac' 'pinentry-mac'
     brew_install 'postgres' 'postgres'
     brew_install 'pv' 'pv'
-    brew_install 'rbenv' 'rbenv'
-    brew_install 'rbenv-gemset' 'rbenv-gemset'
-    brew_install 'ruby-build' 'ruby-build'
     brew_install 'sphinx' 'sphinx'
     brew_install 'the_silver_searcher' 'the_silver_searcher'
     brew_install 'tig' 'tig'
@@ -54,10 +51,6 @@ main() {
     brew_install 'zsh-syntax-highlighting' 'zsh-syntax-highlighting'
 
     printf '\n'
-
-    RBENV_INIT="$(rbenv init -)"
-    execute 'eval "$RBENV_INIT"' \
-      'Initialize rbenv'
 
   fi
 

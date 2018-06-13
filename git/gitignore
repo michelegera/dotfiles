@@ -16,9 +16,6 @@
 # https://docs.npmjs.com/misc/config#loglevel
 npm-debug.log
 
-# rbenv gemset files
-.gems/
-.rbenv-gemsets
 
 # ----------------------------------------------------------------------
 # | macOS                                                              |
