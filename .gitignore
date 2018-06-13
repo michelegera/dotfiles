@@ -4,10 +4,9 @@ prefs/alfred/Alfred.alfredpreferences/preferences/remote/
 prefs/alfred/Alfred.alfredpreferences/remote
 prefs/alfred/Alfred.alfredpreferences/snippets
 
-prefs/gnupg/*.gpg
-prefs/gnupg/gpg.conf.*
-prefs/gnupg/private-keys-*
-prefs/gnupg/random_seed
+prefs/gnupg/*
+!prefs/gnupg/gpg-agent.conf
+!prefs/gnupg/gpg.conf
 
 shell/bundle/cache/
 shell/config/configstore/
