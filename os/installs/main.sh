@@ -31,16 +31,16 @@ main() {
   ./install_homebrew_drivers.sh
   print_in_green '\n  ---\n\n'
 
-  ./install_mas_apps.sh
+  ./install_homebrew_fonts.sh
   print_in_green '\n  ---\n\n'
 
-  ./install_homebrew_fonts.sh
+  ./install_rvm_and_ruby.sh
   print_in_green '\n  ---\n\n'
 
   ./install_nvm_and_plugins.sh
   print_in_green '\n  ---\n\n'
 
-  ./install_rvm_and_ruby.sh
+  ./install_mas_apps.sh
   print_in_green '\n  ---\n\n'
 
   ./update_and_upgrade.sh
