@@ -24,6 +24,7 @@ main() {
     brew_install 'AppCleaner' 'appcleaner' 'cask'
     brew_install 'AppGrid' 'appgrid' 'cask'
     brew_install 'Arq' 'arq' 'cask'
+    brew_install 'Catch' 'catch' 'cask' 
     brew_install 'Cocktail' 'cocktail' 'cask' 
     brew_install 'Firefox' 'firefox' 'cask'
     brew_install 'Google Backup & Sync' 'google-backup-and-sync' 'cask'
