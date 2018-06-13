@@ -14,6 +14,7 @@ main() {
   if cmd_exists 'brew' \
     && brew_tap 'heroku/brew'; then
 
+    brew_install 'autojump' 'autojump'
     brew_install 'diff-so-fancy' 'diff-so-fancy'
     brew_install 'duti' 'duti'
     brew_install 'git' 'git'
