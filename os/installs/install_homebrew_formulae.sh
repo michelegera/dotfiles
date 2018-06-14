@@ -25,7 +25,7 @@ main() {
     brew_install 'httpie' 'httpie'
     brew_install 'mas' 'mas'
     brew_install 'mongodb' 'mongodb'
-    brew_install 'mysql' 'mysql'
+    brew_install 'mysql' 'mysql@5.6'
     brew_install 'neovim' 'neovim'
     brew_install 'pinentry-mac' 'pinentry-mac'
     brew_install 'postgres' 'postgres'
