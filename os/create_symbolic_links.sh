@@ -20,6 +20,7 @@ declare -a FILES_TO_SYMLINK=(
   'shell/tmux.conf'
   'shell/vim'
   'shell/vimrc'
+  'shell/wtf'
 
   'git/gitattributes'
   'git/gitconfig'

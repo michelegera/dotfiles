@@ -17,3 +17,4 @@ shell/ssh/authorized_keys
 shell/ssh/known_hosts
 shell/vim/autoload/plug.vim
 shell/vim/plugged
+shell/wtf/log.txt
