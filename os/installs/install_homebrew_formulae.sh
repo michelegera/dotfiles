@@ -33,6 +33,7 @@ main() {
     brew_install 'tig' 'tig'
     brew_install 'tldr' 'tldr'
     brew_install 'tmux' 'tmux'
+    brew_install 'watchman' 'watchman'
     brew_install 'yarn' 'yarn --ignore-dependencies'
     brew_install 'zsh' 'zsh'
     brew_install 'zsh-history-substring-search' 'zsh-history-substring-search'
