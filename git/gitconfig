@@ -89,7 +89,7 @@
 
   attributesfile = ~/.gitattributes
   autocrlf = input
-  editor = vim
+  editor = nvim
   excludesfile = ~/.gitignore
 
   # Prevent showing files whose names contain non-ASCII symbols as unversioned.
