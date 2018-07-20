@@ -1,3 +1,7 @@
+" Workaround for https://github.com/vim/vim/issues/3117
+if has('python3')
+  silent! python3 1
+endif
 " Plugins {{{
   " Install vim-plug automatically
   if empty(glob('~/.vim/autoload/plug.vim'))
