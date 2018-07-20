@@ -48,6 +48,7 @@ endif
   Plug 'styled-components/vim-styled-components'
   Plug 'mxw/vim-jsx'
   Plug 'yalesov/vim-emblem'
+  Plug 'digitaltoad/vim-pug'
   call plug#end()
 " }}}
 " General settings {{{
@@ -160,6 +161,9 @@ endif
   " Easy ESC with jk in insert mode
   inoremap jk <esc>
   snoremap jk <esc>
+
+  " Delete current file
+  nnoremap <Leader>d. :call DeleteFileAndCloseBuffer()<CR>
 " }}}
 " Plugins configuration {{{
   " vim-airline
@@ -190,7 +194,7 @@ endif
   let g:syntastic_style_warning_symbol='▶'
 
   let g:syntastic_javascript_checkers=['eslint']
-  let g:syntastic_ruby_checkers=['mri', 'rubocop', 'reek']
+  let g:syntastic_ruby_checkers=['mri', 'rubocop']
   let g:syntastic_sass_checkers=['stylelint']
   let g:syntastic_scss_checkers=['stylelint']
 
@@ -216,6 +220,12 @@ endif
     let l:save=winsaveview()
     %s/\s\+$//e
     call winrestview(l:save)
+  endfunction
+
+  " Delete file and close buffer
+  fun! DeleteFileAndCloseBuffer()
+    let choice = confirm("Delete file and close buffer?", "&Yes\n&No", 1)
+    if choice == 1 | call delete(expand('%:p')) | bdelete! | endif
   endfunction
 " }}}
 " vim:foldmethod=marker:foldlevel=0
