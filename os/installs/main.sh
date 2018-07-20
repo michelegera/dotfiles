@@ -34,6 +34,9 @@ main() {
   ./install_homebrew_fonts.sh
   print_in_green '\n  ---\n\n'
 
+  ./install_bash_it.sh
+  print_in_green '\n  ---\n\n'
+
   ./install_rvm_and_ruby.sh
   print_in_green '\n  ---\n\n'
 

@@ -1,0 +1,16 @@
+# Use Neovim instead of Vim or Vi
+alias v{,i,im}='nvim'
+
+# Enable vi mode
+set -o vi
+
+# Enable globstar, aka ./**/* matching
+shopt -s globstar
+
+# Aliases
+alias mux='tmuxinator'
+alias ls='gls --color=auto'
+alias ll='ls -al'
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

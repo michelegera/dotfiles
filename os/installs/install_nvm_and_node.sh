@@ -11,9 +11,6 @@ main() {
   # Install nvm
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash &> /dev/null
 
-  # Source zsh configuration to load nvm
-  source ~/.zshrc
-
   # Install latest Node.js (required by heroku, yarn)
   nvm install node &> /dev/null
 

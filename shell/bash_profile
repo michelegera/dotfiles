@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+# Path to the Bash-it configuration
+export BASH_IT="/Users/michelegera/.bash_it"
+
+# Lock and Load a custom theme file (see /.bash_it/themes/)
+export BASH_IT_THEME='bobby'
+
+# Don't check mail when opening terminal
+unset MAILCHECK
+
+# Reload after activating or deactivating plugins, aliases, or completions
+export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=true
+
+# Turn on version control status checking within the prompt for all themes
+export SCM_CHECK=true
+
+# Load Bash-it
+source "$BASH_IT"/bash_it.sh
+
+# Allow using coreutils commands and man pages with their normal names
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+# Use Neovim as preferred editor
+export EDITOR=nvim
+export VISUAL=nvim
+export VIMCONFIG=~/.config/nvim
+export VIMDATA=~/.local/share/nvim
+
+# Configure nvs
+export NVS_HOME="$HOME/.nvs"
+
+# Configure MySQL
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+
+# Configure gpg-agent
+gpgconf --launch gpg-agent
+export SSH_AUTH_SOCKET=$HOME/.gnupg/S.gpg-agent.ssh
+
+# Source Git autocompletion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+# Source local profile
+if [ -f ~/.bash_profile.local ]; then
+  . ~/.bash_profile.local
+fi
+
+# Source .bashrc
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
+
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

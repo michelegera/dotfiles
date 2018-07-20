@@ -28,7 +28,7 @@ The setup process will:
 * Install applications / command-line tools for
   [macOS](os/installs/main.sh)
 * Install the
-  [Zsh](http://zsh.sourceforge.net/) shell
+  [Bash](https://www.gnu.org/software/bash/) shell
 * Set custom
   [macOS](os/preferences/main.sh) preferences
 

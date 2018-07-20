@@ -15,6 +15,7 @@ main() {
     && brew_tap 'heroku/brew'; then
 
     brew_install 'autojump' 'autojump'
+    brew_install 'bash' 'bash'
     brew_install 'diff-so-fancy' 'diff-so-fancy'
     brew_install 'duti' 'duti'
     brew_install 'git' 'git'
@@ -35,9 +36,6 @@ main() {
     brew_install 'tmux' 'tmux'
     brew_install 'watchman' 'watchman'
     brew_install 'yarn' 'yarn --ignore-dependencies'
-    brew_install 'zsh' 'zsh'
-    brew_install 'zsh-history-substring-search' 'zsh-history-substring-search'
-    brew_install 'zsh-syntax-highlighting' 'zsh-syntax-highlighting'
     printf '\n'
 
   fi
