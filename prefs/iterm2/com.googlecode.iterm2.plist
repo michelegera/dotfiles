@@ -433,19 +433,19 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1233 217 962 428 0 0 2560 1418 </string>
+	<string>1233 217 962 294 0 0 2560 1418 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>330 293 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>300 334 928 394 0 0 1280 778 </string>
+	<string>786 756 928 394 0 0 2560 1418 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
-	<string>230 834 592 584 0 0 2560 1418 </string>
+	<string>80 194 592 584 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 74 1280 704 0 0 1280 778 </string>
+	<string>0 669 1290 747 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 773 1130 547 0 0 2560 1418 </string>
+	<string>0 50 1280 728 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 49 1280 728 0 0 1280 777 </string>
+	<string>0 489 1290 747 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>0 54 1280 723 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_4F775489-B082-4A62-B776-40AA206D1887</key>
@@ -1275,7 +1275,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-06-06T12:50:31Z</date>
+	<date>2018-07-20T11:46:26Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1289,7 +1289,7 @@
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1527082240</real>
+	<real>1528413696</real>
 	<key>URLHandlersByGuid</key>
 	<dict>
 		<key>ssh</key>
@@ -1306,7 +1306,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.6</string>
+	<string>3.1.7</string>
 	<key>kCPFavoritesUserDefaultsKey</key>
 	<array>
 		<data>
