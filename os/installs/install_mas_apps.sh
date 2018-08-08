@@ -14,6 +14,7 @@ declare -a MAS_APPS=(
   '536511979:Characters'
   '1082624744:Gifox'
   '409183694:Keynote'
+  '1084713122:Markoff'
   '880001334:Reeder'
   '507257563:Sip'
   '1176895641:Spark'
