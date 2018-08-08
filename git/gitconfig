@@ -17,7 +17,8 @@
   please  = push --force-with-lease
   rc      = rebase --continue
   rlc     = !git reset --hard HEAD~1                                        # Remove last commit
-  st      = status --short --branch
+  st      = status
+  sts     = status --short --branch
   stsh    = stash --keep-index
   staash  = stash --include-untracked
   staaash = stash --all
