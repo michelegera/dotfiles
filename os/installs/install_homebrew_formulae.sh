@@ -17,6 +17,7 @@ main() {
     brew_install 'bash' 'bash'
     brew_install 'diff-so-fancy' 'diff-so-fancy'
     brew_install 'duti' 'duti'
+    brew_install 'exa' 'exa'
     brew_install 'fasd' 'fasd'
     brew_install 'git' 'git'
     brew_install 'gnupg' 'gnupg'
