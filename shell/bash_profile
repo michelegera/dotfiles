@@ -30,6 +30,7 @@ export VIMDATA=~/.local/share/nvim
 
 # Configure nvs
 export NVS_HOME="$HOME/.nvs"
+[ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
 
 # Configure MySQL
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
@@ -52,6 +53,5 @@ fi
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
-
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
