@@ -15,7 +15,7 @@ main() {
   curl -sSL https://get.rvm.io | bash -s head --ruby &> /dev/null
 
   # Source this script to load RVM
-  source /Users/michelegera/.rvm/scripts/rvm
+  source ${HOME}/.rvm/scripts/rvm
 
   print_result $? 'Install RVM and latest Ruby'
 

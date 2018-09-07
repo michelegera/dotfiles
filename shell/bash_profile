@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Path to the Bash-it configuration
-export BASH_IT="/Users/michelegera/.bash_it"
+export BASH_IT="${HOME}/.bash_it"
 
 # Lock and Load a custom theme file (see /.bash_it/themes/)
 export BASH_IT_THEME='bobby'

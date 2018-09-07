@@ -14,7 +14,7 @@ main() {
     exit 1
   fi
 
-  duti $HOME/.duti &> /dev/null
+  duti ${HOME}/.duti &> /dev/null
 
   print_result $? 'Set default applications for document types and URL schemes'
 
