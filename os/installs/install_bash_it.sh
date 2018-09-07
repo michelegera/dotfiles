@@ -9,9 +9,6 @@ cd "$(dirname "$BASH_SOURCE")" \
 declare -a BASH_IT_ALIASES=(
 
   'git'
-  'homebrew'
-  'homebrew-cask'
-  'npm'
   'rails'
 
 )
@@ -20,7 +17,6 @@ declare -a BASH_IT_PLUGINS=(
 
   'alias-completion'
   'fasd'
-  'nvm'
   'rvm'
 
 )
@@ -30,14 +26,14 @@ declare -a BASH_IT_PLUGINS=(
 main() {
 
   # Clone the Bash-it repo...
-  #execute 'git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it --no-modify-config --silent &> /dev/null' \
-  #  'Clone latest Bash-it'
+  execute 'git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it &> /dev/null' \
+    'Clone latest Bash-it'
 
   # ...and install it
-  #execute 'bash ~/.bash_it/install.sh' 'Install Bash-it'
+  execute 'bash ~/.bash_it/install.sh --no-modify-config --silent' 'Install Bash-it'
 
   # Source Bash configuration
-  #source ~/.bash_profile
+  source ~/.bash_profile
 
   # Enable aliases
   for i in ${BASH_IT_ALIASES[@]}; do
