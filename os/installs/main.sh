@@ -40,9 +40,6 @@ main() {
   ./install_rvm_and_ruby.sh
   print_in_green '\n  ---\n\n'
 
-  ./install_nvm_and_plugins.sh
-  print_in_green '\n  ---\n\n'
-
   ./install_mas_apps.sh
   print_in_green '\n  ---\n\n'
 
