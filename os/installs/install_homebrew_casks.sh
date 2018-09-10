@@ -28,7 +28,6 @@ main() {
     brew_install 'Catch' 'catch' 'cask'
     brew_install 'Cocktail' 'cocktail' 'cask'
     brew_install 'Firefox' 'firefox' 'cask'
-    brew_install 'Garmin Express' 'garmin-express' 'cask'
     brew_install 'Google Backup & Sync' 'google-backup-and-sync' 'cask'
     brew_install 'Google Chrome' 'google-chrome' 'cask'
     brew_install 'ImageOptim' 'imageoptim' 'cask'
