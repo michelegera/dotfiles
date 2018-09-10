@@ -245,7 +245,6 @@ main() {
 
   print_info 'Install applications'
   ./os/install_applications.sh
-  ./os/install_npm_packages.sh
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
