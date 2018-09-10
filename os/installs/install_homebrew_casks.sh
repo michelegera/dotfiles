@@ -55,7 +55,6 @@ main() {
     printf '\n'
 
     print_info 'Please run the Adobe Creative Cloud installer'
-    print_info 'Please run the Little Snitch installer'
   fi
 
 }
