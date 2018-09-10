@@ -253,6 +253,11 @@ main() {
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+  print_info 'Set default apps'
+  ./os/set_default_apps.sh
+
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
   print_info 'Install Bash-it'
   ./os/install_bash_it.sh
 
