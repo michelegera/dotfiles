@@ -25,22 +25,26 @@ declare -a MAS_APPS=(
 
 main() {
 
-  APPLE_ID_EMAIL=''
-  while [ -z "$APPLE_ID_EMAIL" ]; do
-    ask 'Please type your Apple ID email: '
-    APPLE_ID_EMAIL="$(get_answer)"
-  done
+  # Temporary commented out, see https://github.com/mas-cli/mas/issues/164
 
-  APPLE_ID_PASSWORD=''
-  while [ -z "$APPLE_ID_PASSWORD" ]; do
-    ask_for_password 'Please type your Apple ID password: '
-    APPLE_ID_PASSWORD="$(get_answer)"
-  done
+  # APPLE_ID_EMAIL=''
+  # while [ -z "$APPLE_ID_EMAIL" ]; do
+  #  ask 'Please type your Apple ID email: '
+  #  APPLE_ID_EMAIL="$(get_answer)"
+  # done
 
-  printf '\n'
+  # APPLE_ID_PASSWORD=''
+  # while [ -z "$APPLE_ID_PASSWORD" ]; do
+  #  ask_for_password 'Please type your Apple ID password: '
+  #  APPLE_ID_PASSWORD="$(get_answer)"
+  # done
 
-  mas signout &> /dev/null
-  mas signin $APPLE_ID_EMAIL $APPLE_ID_PASSWORD &> /dev/null
+  # printf '\n'
+
+  # mas signout &> /dev/null
+  # mas signin $APPLE_ID_EMAIL $APPLE_ID_PASSWORD &> /dev/null
+
+  login_to_mas
 
   for app in "${MAS_APPS[@]}" ; do
     ID="${app%%:*}"

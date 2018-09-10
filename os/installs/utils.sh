@@ -29,3 +29,14 @@ brew_tap() {
   return $?
 
 }
+
+login_to_mas() {
+  print_in_purple 'Please log into the Mac App Store'
+
+  open -a '/Applications/App Store.app'
+
+  until (mas account > /dev/null);
+  do
+    sleep 3
+  done
+}
