@@ -20,7 +20,6 @@ declare -a FILES_TO_SYMLINK=(
   'shell/ssh'
   'shell/tigrc'
   'shell/tmux.conf'
-  'shell/vim'
   'shell/vimrc'
   'shell/wtf'
 
