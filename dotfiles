@@ -253,6 +253,11 @@ main() {
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+  print_info 'Install Bash-it'
+  ./os/install_bash_it.sh
+
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
   if cmd_exists 'git'; then
 
     if [ "$(git config --get remote.origin.url)" != "$DOTFILES_ORIGIN" ]; then

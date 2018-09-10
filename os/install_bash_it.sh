@@ -1,8 +1,7 @@
 #!/bin/bash
 
 cd "$(dirname "$BASH_SOURCE")" \
-  && source '../utils.sh' \
-  && source './utils.sh'
+  && source 'utils.sh'
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -39,6 +38,7 @@ main() {
   for i in ${BASH_IT_ALIASES[@]}; do
 
     execute "bash-it enable alias $i" "Enable $i aliases"
+    source ~/.bash_profile # Needed after each enabling
 
   done
 
@@ -46,10 +46,9 @@ main() {
   for i in ${BASH_IT_PLUGINS[@]}; do
 
     execute "bash-it enable plugin $i" "Enable $i plugin"
+    source ~/.bash_profile # Needed after each enabling
 
   done
-
-  print_result $? 'Install Bash-it and plugins'
 
 }
 
