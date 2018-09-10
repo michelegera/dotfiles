@@ -21,7 +21,6 @@ main() {
     brew_install 'fasd' 'fasd'
     brew_install 'git' 'git'
     brew_install 'gnupg' 'gnupg'
-    brew_install 'gpg-agent' 'gpg-agent'
     brew_install 'heroku' 'heroku/brew/heroku'
     brew_install 'htop' 'htop'
     brew_install 'httpie' 'httpie'
