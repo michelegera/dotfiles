@@ -15,6 +15,7 @@ main() {
     && brew_tap 'heroku/brew'; then
 
     brew_install 'bash' 'bash'
+    brew_install 'bat' 'bat'
     brew_install 'diff-so-fancy' 'diff-so-fancy'
     brew_install 'duti' 'duti'
     brew_install 'exa' 'exa'

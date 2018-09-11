@@ -8,10 +8,11 @@ set -o vi
 shopt -s globstar
 
 # Aliases
-alias mux='tmuxinator'
-alias ls='exa'
-alias ll='ls -la'
+alias cat='bat'
 alias grp='grep --color -n -C 1'
+alias ll='ls -la'
+alias ls='exa'
+alias mux='tmuxinator'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
