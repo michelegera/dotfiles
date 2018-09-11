@@ -29,6 +29,7 @@ main() {
     brew_install 'mas' 'mas'
     brew_install 'mongodb' 'mongodb'
     brew_install 'mysql' 'mysql@5.7'
+    brew_install 'ncdu' 'ncdu'
     brew_install 'neovim' 'neovim'
     brew_install 'pinentry-mac' 'pinentry-mac'
     brew_install 'postgres' 'postgres'
