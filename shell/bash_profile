@@ -45,13 +45,10 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 # Source local profile
-if [ -f ~/.bash_profile.local ]; then
-  . ~/.bash_profile.local
-fi
+[ -f ~/.bash_profile.local ] && source ~/.bash_profile.local
 
 # Source .bashrc
-if [ -f ~/.bashrc ]; then
-  . ~/.bashrc
-fi
+[ -f ~/.bashrc ] && source ~/.bashrc
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Load RVM into a shell session as a function
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
