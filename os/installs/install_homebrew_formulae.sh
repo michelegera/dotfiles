@@ -31,6 +31,7 @@ main() {
     brew_install 'neovim' 'neovim'
     brew_install 'pinentry-mac' 'pinentry-mac'
     brew_install 'postgres' 'postgres'
+    brew_install 'prettyping' 'prettyping'
     brew_install 'the_silver_searcher' 'the_silver_searcher'
     brew_install 'tig' 'tig'
     brew_install 'tldr' 'tldr'
