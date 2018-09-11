@@ -15,7 +15,7 @@ declare -a BASH_IT_ALIASES=(
 declare -a BASH_IT_PLUGINS=(
 
   'alias-completion'
-  'fasd'
+  'fzf'
   'rvm'
 
 )
