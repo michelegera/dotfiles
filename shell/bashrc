@@ -11,6 +11,7 @@ shopt -s globstar
 alias cat='bat'
 alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
 alias grp='grep --color -n -C 1'
+alias help='tldr'
 alias ll='ls -la'
 alias ls='exa'
 alias mux='tmuxinator'
