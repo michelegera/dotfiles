@@ -19,6 +19,7 @@ main() {
     brew_install 'diff-so-fancy' 'diff-so-fancy'
     brew_install 'duti' 'duti'
     brew_install 'exa' 'exa'
+    brew_install 'fd' 'fd'
     brew_install 'fzf' 'fzf'
     brew_install 'git' 'git'
     brew_install 'gnupg' 'gnupg'
