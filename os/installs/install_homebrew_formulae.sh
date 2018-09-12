@@ -22,7 +22,6 @@ main() {
     brew_install 'fzf' 'fzf'
     brew_install 'git' 'git'
     brew_install 'gnupg' 'gnupg'
-    brew_install 'grc' 'grc'
     brew_install 'heroku' 'heroku/brew/heroku'
     brew_install 'htop' 'htop'
     brew_install 'httpie' 'httpie'

@@ -13,9 +13,13 @@ alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
 alias grp='grep --color -n -C 1'
 alias help='tldr'
 alias ll='ls -lah'
+alias ls='ls --color=auto'
 alias mux='tmuxinator'
 alias ping='prettyping --nolegend'
 alias top='htop'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Load colors
+eval $(dircolors -b $HOME/.dircolors)
