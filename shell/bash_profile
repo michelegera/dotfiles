@@ -3,8 +3,8 @@
 # Path to the Bash-it configuration
 export BASH_IT="${HOME}/.bash_it"
 
-# Lock and Load a custom theme file (see /.bash_it/themes/)
-export BASH_IT_THEME='bobby'
+# Lock and load a custom theme file (see /.bash_it/themes/)
+export BASH_IT_THEME='nwinkler'
 
 # Don't check mail when opening terminal
 unset MAILCHECK
