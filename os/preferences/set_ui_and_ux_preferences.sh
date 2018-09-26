@@ -34,9 +34,15 @@ set_ui_and_ux_preferences() {
   execute 'defaults write com.apple.screencapture include-date -int 0' \
     'Remove date and timestamp from screenshots'
 
+  # Enable subpixel font rendering on non-Apple LCDs
   # Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
-  execute 'defaults write -g AppleFontSmoothing -int 2' \
+  execute 'defaults write -g AppleFontSmoothing -int 1' \
     'Enable subpixel font rendering on non-Apple LCDs'
+
+  # Disable Font Smoothing Disabler in macOS Mojave
+  # Reference: https://ahmadawais.com/fix-macos-mojave-font-rendering-issue/
+  execute 'defaults write -g CGFontRenderingFontSmoothingDisabled -bool false' \
+    'Disable Font Smoothing Disabler'
 
   execute 'defaults write -g NSDisableAutomaticTermination -bool true' \
     'Disable automatic termination of inactive apps'
