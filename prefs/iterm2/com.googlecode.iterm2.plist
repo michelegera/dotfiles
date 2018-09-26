@@ -391,8 +391,10 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<string>1</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads/ayu-vim-master/term</string>
+	<string>~/Desktop</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{832, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
@@ -425,10 +427,27 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>1233 217 962 294 0 0 2560 1418 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>330 293 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>662 348 928 394 0 0 2560 1417 </string>
+	<string>786 822 796 486 0 0 2560 1418 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>80 194 592 584 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 670 1290 747 0 0 2560 1417 </string>
+	<string>0 73 2560 1345 0 0 2560 1418 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>0 492 1290 747 0 0 2560 1418 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>0 489 1290 747 0 0 2560 1418 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>0 54 1280 723 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_4F775489-B082-4A62-B776-40AA206D1887</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_4F775489-B082-4A62-B776-40AA206D1887_selection</key>
@@ -1161,7 +1180,7 @@
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
-			<true/>
+			<false/>
 			<key>Use Bright Bold</key>
 			<true/>
 			<key>Use Cursor Guide</key>
@@ -1185,13 +1204,15 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>18296633-A4DE-4250-B483-13EF502403F4</string>
+	<string>549CBC03-F164-4FD4-8154-12483328B19F</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>558294536.40781701</real>
+	<real>530178949.00691801</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1243,16 +1264,18 @@
 	<true/>
 	<key>PromptOnQuit</key>
 	<true/>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=50</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=26</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-09-10T21:18:46Z</date>
+	<date>2018-09-09T20:38:11Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1265,6 +1288,8 @@
 	<integer>1</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1528413696</real>
 	<key>URLHandlersByGuid</key>
 	<dict>
 		<key>ssh</key>
@@ -2245,7 +2270,5 @@
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
-	<key>moveToApplicationsFolderAlertSuppress</key>
-	<true/>
 </dict>
 </plist>
