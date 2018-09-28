@@ -7,3 +7,4 @@
 [user]
   name = John Appleseed
   email = john.appleseed@apple.com
+  signingkey = XXXXXXXX

@@ -51,8 +51,8 @@ as the `git` user credentials, e.g.:
 
 ```bash
 [user]
-  name = Michele Gerarduzzi
-  email = michelegera@example.com
+  name = John Appleseed
+  email = john.appleseed@apple.com
   signingkey = XXXXXXXX
 ```
 
