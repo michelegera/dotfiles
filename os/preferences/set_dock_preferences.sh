@@ -19,6 +19,9 @@ set_dock_preferences() {
            defaults write com.apple.dock persistent-others -array ""' \
     'Wipe all app icons'
 
+  execute 'defaults write com.apple.dock show-recents -bool false' \
+    'Do not show recent applications'
+
   execute 'defaults write com.apple.dock tilesize -int 40' \
     'Set icon size'
 
