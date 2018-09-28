@@ -38,6 +38,7 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 # Configure gpg-agent
 gpgconf --launch gpg-agent
 export SSH_AUTH_SOCKET=$HOME/.gnupg/S.gpg-agent.ssh
+export GPG_TTY=$(tty)
 
 # Source Git autocompletion
 if [ -f ~/.git-completion.bash ]; then
