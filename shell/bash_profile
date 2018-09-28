@@ -33,7 +33,7 @@ export NVS_HOME="$HOME/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
 
 # Configure MySQL
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # Configure gpg-agent
 gpgconf --launch gpg-agent
