@@ -4,9 +4,6 @@ alias v{,i,im}='nvim'
 # Enable vi mode
 set -o vi
 
-# Enable globstar, aka ./**/* matching
-shopt -s globstar
-
 # Aliases
 alias cat='bat'
 alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
