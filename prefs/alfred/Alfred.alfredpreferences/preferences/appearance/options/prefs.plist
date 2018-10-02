@@ -6,9 +6,7 @@
 	<true/>
 	<key>hidemenu</key>
 	<true/>
-	<key>hideshortcuts</key>
-	<true/>
 	<key>visibleresults</key>
-	<integer>4</integer>
+	<integer>7</integer>
 </dict>
 </plist>
