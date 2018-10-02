@@ -56,3 +56,7 @@ fi
 
 # Load RVM into a shell session as a function
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Load NVS
+export NVS_HOME="$HOME/.nvs"
+[ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
