@@ -55,6 +55,12 @@ main() {
     brew_install 'Zoom.us' 'zoomus' 'cask'
     printf '\n'
 
+    # Fix a quarantine issue
+    # https://github.com/Homebrew/homebrew-cask/issues/51646#issuecomment-418885172
+    execute 'xattr -r -d com.apple.quarantine /Applications/Firefox.app'
+    execute 'xattr -r -d com.apple.quarantine /Applications/Google\ Chrome.app'
+    execute 'xattr -r -d com.apple.quarantine /Applications/1Password\ 7.app'
+
     print_info 'Please run the Adobe Creative Cloud installer'
   fi
 
