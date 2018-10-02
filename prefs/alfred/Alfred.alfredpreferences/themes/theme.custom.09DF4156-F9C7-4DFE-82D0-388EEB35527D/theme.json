@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 4,
+      "subtext" : {
+        "size" : 12,
+        "colorSelected" : "#73D0FFFF",
+        "font" : "System",
+        "color" : "#667380FF"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#FFCC66FF",
+        "font" : "System",
+        "color" : "#5C6773FF"
+      },
+      "backgroundSelected" : "#414856E4",
+      "text" : {
+        "size" : 16,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "System",
+        "color" : "#F8F8F27F"
+      },
+      "iconPaddingHorizontal" : 4,
+      "paddingVertical" : 4,
+      "iconSize" : 48
+    },
+    "search" : {
+      "paddingVertical" : 4,
+      "background" : "#242B3700",
+      "spacing" : 4,
+      "text" : {
+        "size" : 32,
+        "colorSelected" : "#000000FF",
+        "font" : "System",
+        "color" : "#F8F8F2FF"
+      },
+      "backgroundSelected" : "#A3CCFEFF"
+    },
+    "window" : {
+      "color" : "#242B37F9",
+      "paddingHorizontal" : 4,
+      "width" : 576,
+      "borderPadding" : 0,
+      "borderColor" : "#121824CC",
+      "blur" : 0,
+      "roundness" : 4,
+      "paddingVertical" : 4
+    },
+    "credit" : "Michele Gerarduzzi",
+    "separator" : {
+      "color" : "#1B202CFF",
+      "thickness" : 0
+    },
+    "scrollbar" : {
+      "color" : "#1B202CFF",
+      "thickness" : 4
+    },
+    "name" : "Ayu Mirage"
+  }
+}
