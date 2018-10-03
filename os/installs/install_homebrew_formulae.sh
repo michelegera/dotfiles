@@ -18,6 +18,7 @@ main() {
     brew_install 'bat' 'bat'
     brew_install 'diff-so-fancy' 'diff-so-fancy'
     brew_install 'duti' 'duti'
+    brew_install 'elasticsearch' 'elasticsearch'
     brew_install 'fd' 'fd'
     brew_install 'fzf' 'fzf'
     brew_install 'git' 'git'

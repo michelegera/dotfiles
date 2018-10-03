@@ -14,6 +14,8 @@ main() {
   if cmd_exists 'brew' \
     && brew_tap 'homebrew/services'; then
 
+    execute 'brew services start elasticsearch' \
+      'Start Elasticsearch at login'
     execute 'brew services start mysql@5.7' \
       'Start MySQL at login'
     execute 'brew services start mongodb' \
