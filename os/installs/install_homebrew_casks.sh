@@ -38,7 +38,7 @@ main() {
     brew_install 'Microsoft Office' 'microsoft-office' 'cask'
     brew_install 'Paw' 'paw' 'cask'
     brew_install 'Postico' 'postico' 'cask'
-    brew_install 'Sequel Pro' 'sequel-pro' 'cask'
+    brew_install 'Sequel Pro (Nightly Build)' 'sequel-pro-nightly' 'cask'
     brew_install 'Slack' 'slack' 'cask'
     brew_install 'Spotify Notifications' 'spotify-notifications' 'cask'
     brew_install 'Spotify' 'spotify' 'cask'
