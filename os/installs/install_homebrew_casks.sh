@@ -26,7 +26,6 @@ main() {
     brew_install 'Arq' 'arq' 'cask'
     brew_install 'Battle.net' 'battle-net' 'cask'
     brew_install 'Catch' 'catch' 'cask'
-    brew_install 'Cocktail' 'cocktail' 'cask'
     brew_install 'Firefox' 'firefox' 'cask'
     brew_install 'Google Backup & Sync' 'google-backup-and-sync' 'cask'
     brew_install 'Google Chrome' 'google-chrome' 'cask'
