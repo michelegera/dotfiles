@@ -71,6 +71,9 @@ endif
   let ayucolor="mirage"               " Other options: 'light' or 'dark'
   colorscheme ayu
   syntax enable
+
+  " Make 'listchars' visible until https://git.io/fxZSl is merged
+  hi NonText ctermfg=130 guifg=#3D4751
 " }}}
 " UI Layout {{{
   set number                          " Show line numbers
@@ -165,6 +168,12 @@ endif
 
   " Delete current file
   nnoremap <Leader>d. :call DeleteFileAndCloseBuffer()<CR>
+
+  " Toggle invisibles
+  nmap <leader>l :set list!<CR>
+
+  " Symbols for tabstops and EOLs
+  set listchars=tab:▸\ ,eol:¬
 " }}}
 " Plugins configuration {{{
   " vim-airline
