@@ -46,7 +46,7 @@ endif
   " JavaScript, React and Ember
   Plug 'pangloss/vim-javascript'
   Plug 'elzr/vim-json'
-  Plug 'styled-components/vim-styled-components'
+  Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
   Plug 'mxw/vim-jsx'
   Plug 'yalesov/vim-emblem'
   Plug 'digitaltoad/vim-pug'
