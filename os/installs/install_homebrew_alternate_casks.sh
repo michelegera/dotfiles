@@ -15,7 +15,6 @@ main() {
     && brew_tap 'caskroom/versions'; then
 
     brew_install 'Java 1.8' 'java8' 'cask'
-    brew_install 'Skype 7' 'skype7' 'cask'
 
   fi
 
