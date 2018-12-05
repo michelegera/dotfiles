@@ -24,16 +24,16 @@
 
 
 # Bundle id                   UTI/ext/MIME types              Role
-com.sublimetext.3             .css                            all
-com.sublimetext.3             .js                             all
-com.sublimetext.3             .md                             all
-com.sublimetext.3             .rb                             all
-com.sublimetext.3             .sass                           all
-com.sublimetext.3             .scss                           all
-com.sublimetext.3             public.plain-text               all
-com.sublimetext.3             public.script                   all
-com.sublimetext.3             public.shell-script             all
-com.sublimetext.3             public.source-code              all
+com.github.atom               .css                            all
+com.github.atom               .js                             all
+com.github.atom               .md                             all
+com.github.atom               .rb                             all
+com.github.atom               .sass                           all
+com.github.atom               .scss                           all
+com.github.atom               public.plain-text               all
+com.github.atom               public.script                   all
+com.github.atom               public.shell-script             all
+com.github.atom               public.source-code              all
 
 cx.c3.theunarchiver           .7z                             all
 cx.c3.theunarchiver           .ace                            all
@@ -60,8 +60,8 @@ org.videolan.vlc              .avi                            all
 org.videolan.vlc              .mkv                            all
 
 # Bundle id                   URL scheme
-com.binarynights.ForkLift-3   ftp
-com.binarynights.ForkLift-3   sftp
+com.panic.Transmit            ftp
+com.panic.Transmit            sftp
 
 com.reederapp.rkit2.mac       feed
 
