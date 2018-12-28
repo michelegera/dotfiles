@@ -35,6 +35,7 @@ main() {
     brew_install 'iStat Menus' 'istat-menus' 'cask'
     brew_install 'iTerm2' 'iterm2' 'cask'
     brew_install 'Microsoft Office' 'microsoft-office' 'cask'
+    brew_install 'NTFS for Mac' 'paragon-ntfs' 'cask'
     brew_install 'Paw' 'paw' 'cask'
     brew_install 'Postico' 'postico' 'cask'
     brew_install 'Sequel Pro (Nightly Build)' 'sequel-pro-nightly' 'cask'
