@@ -17,6 +17,7 @@ declare -a FILES_TO_SYMLINK=(
   'shell/inputrc'
   'shell/irbrc'
   'shell/profile'
+  'shell/rvmrc'
   'shell/screenrc'
   'shell/ssh'
   'shell/tigrc'
