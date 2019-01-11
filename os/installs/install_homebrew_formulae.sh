@@ -28,7 +28,6 @@ main() {
     brew_install 'httpie' 'httpie'
     brew_install 'mas' 'mas'
     brew_install 'mkcert' 'mkcert'
-    brew_install 'mongodb' 'mongodb'
     brew_install 'mysql' 'mysql@5.7'
     brew_install 'ncdu' 'ncdu'
     brew_install 'neovim' 'neovim'
