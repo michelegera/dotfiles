@@ -1,22 +1,7 @@
 #!/usr/bin/env bash
 
-# Path to the Bash-it configuration
-export BASH_IT="${HOME}/.bash_it"
-
-# Lock and load a custom theme file (see /.bash_it/themes/)
-export BASH_IT_THEME='nwinkler'
-
 # Don't check mail when opening terminal
 unset MAILCHECK
-
-# Reload after activating or deactivating plugins, aliases, or completions
-export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=true
-
-# Turn on version control status checking within the prompt for all themes
-export SCM_CHECK=true
-
-# Load Bash-it
-source "$BASH_IT"/bash_it.sh
 
 # Allow using coreutils commands and man pages with their normal names
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
