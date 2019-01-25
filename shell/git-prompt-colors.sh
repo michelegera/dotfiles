@@ -16,7 +16,7 @@ override_git_prompt_colors() {
   GIT_PROMPT_SUFFIX="${Yellow}]"
   GIT_PROMPT_END_USER=" ${ResetColor}via ${Green}${NodePrompt} ${Red}${RubyPrompt}${ResetColor}\n_LAST_COMMAND_INDICATOR_${ResetColor} "
 
-  GIT_PROMPT_CLEAN="${Yellow}·"
+  GIT_PROMPT_CLEAN="${Yellow}✔"
   GIT_PROMPT_STAGED="${Yellow}+"
   GIT_PROMPT_CHANGED="${Yellow}!"
   GIT_PROMPT_STASHED="${Yellow}$"
