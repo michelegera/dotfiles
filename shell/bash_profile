@@ -25,6 +25,13 @@ gpgconf --launch gpg-agent
 export SSH_AUTH_SOCKET=$HOME/.gnupg/S.gpg-agent.ssh
 export GPG_TTY=$(tty)
 
+# Source prompt
+if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR=/usr/local/opt/bash-git-prompt/share
+  GIT_PROMPT_ONLY_IN_REPO=0
+  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+
 # Source Git autocompletion
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
