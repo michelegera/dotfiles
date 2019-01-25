@@ -12,7 +12,7 @@ declare -a FILES_TO_SYMLINK=(
   'shell/curlrc'
   'shell/dircolors'
   'shell/gemrc'
-  'shell/git-completion.bash'
+  'shell/git-completion.sh'
   'shell/git-prompt-colors.sh'
   'shell/hushlogin'
   'shell/inputrc'

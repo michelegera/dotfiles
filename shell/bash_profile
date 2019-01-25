@@ -35,8 +35,8 @@ if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
 fi
 
 # Source Git autocompletion
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
+if [ -f ~/.git-completion.sh ]; then
+  . ~/.git-completion.sh
 fi
 
 # Source local profile
