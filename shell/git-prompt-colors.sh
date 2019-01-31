@@ -10,8 +10,8 @@ override_git_prompt_colors() {
   NodePrompt='⬢ $(node -v)'
 
   GIT_PROMPT_START_USER="\n${Blue}${PathShort}"
-  GIT_PROMPT_PREFIX="${ResetColor}on ${BoldMagenta} "
-  GIT_PROMPT_BRANCH="${BoldMagenta}"
+  GIT_PROMPT_PREFIX="${ResetColor}on ${Magenta} "
+  GIT_PROMPT_BRANCH="${Magenta}"
   GIT_PROMPT_SEPARATOR="${ResetColor} ${BrightBlack}["
   GIT_PROMPT_SUFFIX="${BrightBlack}]"
   GIT_PROMPT_END_USER=" ${ResetColor}via ${Green}${NodePrompt} ${Red}${RubyPrompt}${ResetColor}\n_LAST_COMMAND_INDICATOR_${ResetColor} "
