@@ -27,6 +27,7 @@ main() {
     brew_install 'heroku' 'heroku/brew/heroku'
     brew_install 'htop' 'htop'
     brew_install 'httpie' 'httpie'
+    brew_install 'jump' 'jump'
     brew_install 'mas' 'mas'
     brew_install 'mkcert' 'mkcert'
     brew_install 'mysql' 'mysql@5.7'
