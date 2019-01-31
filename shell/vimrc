@@ -36,6 +36,7 @@ endif
   Plug 'jiangmiao/auto-pairs'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'terryma/vim-multiple-cursors'
 
   " Ruby and Rails
   Plug 'vim-ruby/vim-ruby'
