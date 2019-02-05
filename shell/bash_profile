@@ -45,6 +45,9 @@ fi
 # Source .bashrc
 [ -f ~/.bashrc ] && source ~/.bashrc
 
+# Source Sensible Bash
+[ -f ~/.sensible.bash ] && source ~/.sensible.bash
+
 # Load fzf auto-completion and key bindings
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 

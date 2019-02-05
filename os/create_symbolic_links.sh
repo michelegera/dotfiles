@@ -20,6 +20,7 @@ declare -a FILES_TO_SYMLINK=(
   'shell/profile'
   'shell/rvmrc'
   'shell/screenrc'
+  'shell/sensible.bash'
   'shell/ssh'
   'shell/tigrc'
   'shell/tmux.conf'
