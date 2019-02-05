@@ -15,6 +15,7 @@ declare -a MAS_APPS=(
   '1082624744:Gifox'
   '1039633667:Irvue'
   '409183694:Keynote'
+  '1450640351:Lightweight PDF'
   '1084713122:Markoff'
   '880001334:Reeder'
   '507257563:Sip'
