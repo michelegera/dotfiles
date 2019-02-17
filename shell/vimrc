@@ -43,13 +43,14 @@ endif
   Plug 'tpope/vim-bundler'
   Plug 'tpope/vim-endwise'
 
-  " JavaScript, React and Ember
+  " JavaScript and JS frameworks
   Plug 'pangloss/vim-javascript'
   Plug 'elzr/vim-json'
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
   Plug 'mxw/vim-jsx'
   Plug 'yalesov/vim-emblem'
   Plug 'digitaltoad/vim-pug'
+  Plug 'posva/vim-vue'
   call plug#end()
 " }}}
 " General settings {{{
