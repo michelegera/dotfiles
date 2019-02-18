@@ -39,6 +39,7 @@ main() {
     brew_install 'Paw' 'paw' 'cask'
     brew_install 'Postico' 'postico' 'cask'
     brew_install 'Sequel Pro (Nightly Build)' 'sequel-pro-nightly' 'cask'
+    brew_install 'Sip' 'sip' 'sip'
     brew_install 'Sketch' 'sketch' 'sketch'
     brew_install 'Skype' 'skype' 'skype'
     brew_install 'Slack' 'slack' 'cask'

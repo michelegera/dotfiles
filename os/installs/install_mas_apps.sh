@@ -18,7 +18,6 @@ declare -a MAS_APPS=(
   '1450640351:Lightweight PDF'
   '1084713122:Markoff'
   '880001334:Reeder'
-  '507257563:Sip'
   '1176895641:Spark'
   '1187772509:stts'
   '557168941:Tweetbot'
