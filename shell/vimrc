@@ -27,7 +27,6 @@ endif
   Plug 'tpope/vim-rhubarb'
 
   " Code editing, formatting and completion
-  Plug 'vim-syntastic/syntastic'
   Plug 'Valloric/YouCompleteMe', { 'do': '!./install.py --clang-completer --js-completer' }
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-abolish'
@@ -187,36 +186,6 @@ endif
 
   " NERDTree
   let g:NERDTreeHijackNetrw=0
-
-  " Syntastic
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
-
-  let g:syntastic_always_populate_loc_list=1
-  let g:syntastic_auto_loc_list=1
-  let g:syntastic_check_on_open=0
-  let g:syntastic_check_on_wq=0
-  let g:syntastic_aggregate_errors=1
-
-  let g:syntastic_error_symbol="✘"
-  let g:syntastic_style_error_symbol="✘"
-  let g:syntastic_warning_symbol='▶'
-  let g:syntastic_style_warning_symbol='▶'
-
-  let g:syntastic_javascript_checkers=['eslint']
-  let g:syntastic_ruby_checkers=['mri', 'rubocop']
-  let g:syntastic_sass_checkers=['stylelint']
-  let g:syntastic_scss_checkers=['stylelint']
-
-  if executable('./node_modules/eslint/bin/eslint.js')
-    let g:syntastic_javascript_eslint_exec='./node_modules/eslint/bin/eslint.js'
-  endif
-
-  if executable('./node_modules/stylelint/bin/stylelint.js')
-    let g:syntastic_sass_stylelint_exec='./node_modules/stylelint/bin/stylelint.js'
-    let g:syntastic_scss_stylelint_exec='./node_modules/stylelint/bin/stylelint.js'
-  endif
 
   " vim-prettier
   let g:prettier#autoformat=0
