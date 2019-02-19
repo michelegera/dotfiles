@@ -36,6 +36,7 @@ endif
   Plug 'terryma/vim-multiple-cursors'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'w0rp/ale'
+  Plug 'alvan/vim-closetag'
 
   " Ruby and Rails
   Plug 'vim-ruby/vim-ruby'
@@ -187,13 +188,6 @@ endif
 
   " NERDTree
   let g:NERDTreeHijackNetrw=0
-
-  " vim-prettier
-  let g:prettier#autoformat=0
-  autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,
-        \*.graphql,.eslintrc,.babelrc,.esformatter,.tern-project,.babelrc,
-        \.prettierrc
-        \ PrettierAsync
 " }}}
 " Custom functions {{{
   " Trim trailing whitespace without side-effects
