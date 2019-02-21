@@ -13,10 +13,6 @@ export VISUAL=nvim
 export VIMCONFIG=~/.config/nvim
 export VIMDATA=~/.local/share/nvim
 
-# Configure nvs
-export NVS_HOME="$HOME/.nvs"
-[ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
-
 # Configure MySQL
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
