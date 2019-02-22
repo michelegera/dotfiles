@@ -23,7 +23,7 @@
   staash  = stash --include-untracked
   staaash = stash --all
   ulc     = reset --soft HEAD~1                                             # Undo last commit
-  up      = pull --rebase --autostash                                       # Requires Git 2.9+
+  up      = pull origin --rebase --autostash
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
