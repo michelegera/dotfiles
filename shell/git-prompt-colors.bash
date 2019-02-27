@@ -16,7 +16,7 @@ override_git_prompt_colors() {
   GIT_PROMPT_BRANCH="${Magenta}"
   GIT_PROMPT_SEPARATOR="${ResetColor} ${BrightBlack}["
   GIT_PROMPT_SUFFIX="${BrightBlack}]"
-  GIT_PROMPT_END_USER=" ${ResetColor}via${Green}${NodePrompt}${Red}${RubyPrompt}${ResetColor}\n_LAST_COMMAND_INDICATOR_${ResetColor} "
+  GIT_PROMPT_END_USER=" ${ResetColor}with${Green}${NodePrompt}${Red}${RubyPrompt}${ResetColor}\n_LAST_COMMAND_INDICATOR_${ResetColor} "
 
   GIT_PROMPT_CLEAN="${Green}✔"
   GIT_PROMPT_STAGED="${Green}+"
