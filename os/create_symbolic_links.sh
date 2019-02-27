@@ -25,7 +25,6 @@ declare -a FILES_TO_SYMLINK=(
   'shell/tigrc'
   'shell/tmux.conf'
   'shell/vimrc'
-  'shell/wtf'
 
   'git/gitattributes'
   'git/gitconfig'
