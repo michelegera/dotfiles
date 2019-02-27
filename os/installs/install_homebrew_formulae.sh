@@ -23,6 +23,7 @@ main() {
     brew_install 'fd' 'fd'
     brew_install 'fzf' 'fzf'
     brew_install 'git' 'git'
+    brew_install 'go' 'go'
     brew_install 'gnupg' 'gnupg'
     brew_install 'heroku' 'heroku/brew/heroku'
     brew_install 'htop' 'htop'

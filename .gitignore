@@ -12,6 +12,7 @@ shell/bundle/cache/
 shell/config/configstore/
 shell/config/htop/
 shell/config/tmuxinator/
+shell/config/wtf/credentials.json
 shell/config/wtf/log.txt
 shell/config/yarn/
 shell/ssh/*id_rsa*

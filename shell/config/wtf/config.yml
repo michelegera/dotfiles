@@ -1,36 +1,61 @@
 wtf:
   colors:
     border:
-      focusable: darkslateblue
-      focused: orange
-      normal: gray
+      normal: "gray"
+      focusable: "slategray"
+      focused: "orange"
   grid:
-    columns: [80, 80]
-    rows: [20]
+    # 158x42
+    columns: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+    rows: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
   refreshInterval: 1
   mods:
     clocks:
+      enabled: true
+      position:
+        top: 0
+        left: 0
+        width: 3
+        height: 3
+      refreshInterval: 1
       colors:
         rows:
           even: "lightblue"
           odd: "white"
-      enabled: true
       locations:
         Venice: "Europe/Rome"
         New York: "America/New_York"
         Los Angeles: "America/Los_Angeles"
+        Tokyo: "Asia/Tokyo"
+      sort: "chronological"
+      dateFormat: ""
+
+    prettyweather:
+      enabled: true
+      position:
+        top: 3
+        left: 0
+        width: 3
+        height: 5
+      city: "roncade?q"
+      refreshInterval: 300
+
+    hackernews:
+      enabled: true
+      numberOfStories: 14
       position:
         top: 0
-        left: 0
-        height: 1
-        width: 1
-      refreshInterval: 15
-      sort: "chronological"
+        left: 3
+        height: 8
+        width: 10
+        storyType: top
+        refreshInterval: 900
+
     security:
       enabled: true
       position:
-        top: 0
-        left: 1
+        top: 20
+        left: 0
         height: 1
         width: 1
       refreshInterval: 3600
