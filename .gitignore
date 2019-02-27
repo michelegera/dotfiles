@@ -12,10 +12,10 @@ shell/bundle/cache/
 shell/config/configstore/
 shell/config/htop/
 shell/config/tmuxinator/
+shell/config/wtf/log.txt
 shell/config/yarn/
 shell/ssh/*id_rsa*
 shell/ssh/authorized_keys
 shell/ssh/known_hosts*
 shell/vim/autoload/plug.vim
 shell/vim/plugged
-shell/wtf/log.txt
