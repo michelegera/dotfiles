@@ -134,6 +134,10 @@
 
   autocorrect = 30
 
+[http]
+
+  postBuffer = 134217728
+
 [include]
 
   path = ~/.gitconfig.local
