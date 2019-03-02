@@ -169,9 +169,6 @@ endif
   inoremap jk <esc>
   snoremap jk <esc>
 
-  " Delete current file
-  nnoremap <Leader>d. :call DeleteFileAndCloseBuffer()<CR>
-
   " Toggle invisibles
   nmap <leader>l :set list!<CR>
 
@@ -206,12 +203,6 @@ endif
     let l:save=winsaveview()
     %s/\s\+$//e
     call winrestview(l:save)
-  endfunction
-
-  " Delete file and close buffer
-  fun! DeleteFileAndCloseBuffer()
-    let choice = confirm("Delete file and close buffer?", "&Yes\n&No", 1)
-    if choice == 1 | call delete(expand('%:p')) | bdelete! | endif
   endfunction
 " }}}
 " vim:foldmethod=marker:foldlevel=0
