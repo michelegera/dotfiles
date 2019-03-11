@@ -164,7 +164,7 @@ endif
   inoremap <right> <nop>
 
   " Toggle NERDTree
-  map <C-o> :NERDTreeToggle<CR>
+  map <C-[> :NERDTreeToggle<CR>
 
   " Easy ESC with jk in insert mode
   inoremap jk <esc>
@@ -187,17 +187,9 @@ endif
 
   " NERDTree
   let g:NERDTreeHijackNetrw=0
-  let NERDTreeQuitOnOpen=1
   let NERDTreeAutoDeleteBuffer=1
   let NERDTreeMinimalUI=1
   let NERDTreeDirArrows=1
-
-  " Open on start
-  autocmd StdinReadPre * let s:std_in=1
-  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-  " Automatically close a tab if the only remaining window is NerdTree
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
   " ALE
   let g:ale_lint_on_text_changed='never'
