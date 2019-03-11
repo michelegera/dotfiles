@@ -23,7 +23,7 @@
   staash  = stash --include-untracked
   staaash = stash --all
   ulc     = reset --soft HEAD~1                                             # Undo last commit
-  up      = pull origin --rebase --autostash
+  up      = pull --rebase --autostash
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -124,6 +124,7 @@
   renames = copies
 
 [fetch]
+
   prune = true
 
 [gpg]
