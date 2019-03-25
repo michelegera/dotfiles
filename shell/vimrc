@@ -164,7 +164,7 @@ endif
   inoremap <right> <nop>
 
   " Toggle NERDTree
-  map <C-[> :NERDTreeToggle<CR>
+  map <silent> <C-p><C-p> :NERDTreeToggle<CR>
 
   " Easy ESC with jk in insert mode
   inoremap jk <esc>
@@ -186,10 +186,12 @@ endif
   let g:loaded_netrwPlugin=1
 
   " NERDTree
-  let g:NERDTreeHijackNetrw=0
   let NERDTreeAutoDeleteBuffer=1
-  let NERDTreeMinimalUI=1
   let NERDTreeDirArrows=1
+  let NERDTreeMinimalUI=1
+  let NERDTreeQuitOnOpen=1
+  let NERDTreeShowHidden=1
+  let g:NERDTreeHijackNetrw=0
 
   " ALE
   let g:ale_lint_on_text_changed='never'
