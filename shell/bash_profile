@@ -65,3 +65,10 @@ export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 
 # Configure Go
 export GOPATH="$HOME/.go"
+
+# Load colors
+eval $(dircolors -b $HOME/.dircolors)
+
+# Load jump
+eval "$(jump shell)"
+
