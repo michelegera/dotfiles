@@ -1,5 +1,4 @@
 [alias]
-
   a       = commit --amend
   b       = branch
   c       = commit
@@ -25,54 +24,57 @@
   ulc     = reset --soft HEAD~1                                             # Undo last commit
   up      = pull --rebase --autostash
 
-  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-  # Shows the most recent changes for each branch
-
-  changes = "!f() { \
-    git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/remotes/origin; \
-  }; f"
-
-  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-  # Credit an author on the latest commit
-
-  credit = "!f() { \
-    if [ -n \"$1\" ] && [ -n \"$2\" ]; then \
-      git commit --amend --author \"$1 <$2>\" -C HEAD; \
-    fi \
-  }; f"
-
-  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+  # ----------------------------------------------------------------------------
   # Switch to a branch, creating it if necessary
 
   go = "!f() { \
     git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; \
   }; f"
 
-  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+  # ----------------------------------------------------------------------------
   # Interactive rebase with the given number of latest commits
 
   reb = "!f() { \
     git rebase -i HEAD~$1; \
   }; f"
 
-  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+  # ----------------------------------------------------------------------------
   # Undo (http://megakemp.com/2016/08/25/git-undo/)
   undo = "!f() { \
     git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; \
   }; f"
 
 [apply]
-
   # Detect whitespace errors when applying a patch
   whitespace = fix
 
-[core]
+[branch]
+  autosetuprebase = always
 
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  showbranch = auto
+  ui = true
+
+[color "branch"]
+  current = green bold
+  local = green
+  remote = yellow
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold                             # line info
+  old = red                                       # deletions
+  new = green                                     # additions
+
+[color "status"]
+  added = green reverse
+  changed = yellow reverse
+  untracked = red reverse
+
+[core]
   attributesfile = ~/.gitattributes
   autocrlf = input
   editor = nvim
@@ -89,33 +91,12 @@
   # Treat spaces before tabs and all kinds of trailing whitespace as an error
   # [default] trailing-space: looks for spaces at the end of a line
   # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
-  whitespace = space-before-tab,-indent-with-non-tab,trailing-space
-
-[color "branch"]
-
-  current = green bold
-  local = green
-  remote = yellow
-
-[color "diff"]
-
-  meta = yellow bold
-  frag = magenta bold                             # line info
-  old = red                                       # deletions
-  new = green                                     # additions
-
-[color "status"]
-
-  added = green reverse
-  changed = yellow reverse
-  untracked = red reverse
+  whitespace = space-before-tab,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [commit]
-
   gpgsign = true
 
 [diff]
-
   # Enable an experimental heuristic that shifts the hunk boundary in an
   # attempt to make the resulting patch easier to read.
   indentHeuristic = true
@@ -124,32 +105,25 @@
   renames = copies
 
 [fetch]
-
   prune = true
 
 [gpg]
-
   program = /usr/local/bin/gpg
 
 [help]
-
   autocorrect = 30
 
 [http]
-
   postBuffer = 134217728
 
 [include]
-
   path = ~/.gitconfig.local
 
 [pager]
-
   diff = diff-so-fancy | less --tabs=1,5 -RFX
   show = diff-so-fancy | less --tabs=1,5 -RFX
 
 [pretty]
-
   custom = "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green)%s %C(yellow)(%an)"
   #                     │        │            │            │             └─ author name
   #                     │        │            │            └─ message
@@ -157,16 +131,16 @@
   #                     │        └─ decorations (branch, heads or tags)
   #                     └─ hash (abbreviated)
 
-[push]
+[pull]
+  rebase = true
 
+[push]
   # Make `git push` automatically push relevant
   # annotated tags when pushing branches out
-
   followTags = true
 
   # Make `git push` push only the current branch
   default = simple
 
 [user]
-
   useconfigonly = true

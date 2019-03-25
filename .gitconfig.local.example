@@ -8,3 +8,6 @@
   name = John Appleseed
   email = john.appleseed@apple.com
   signingkey = XXXXXXXX
+
+[github]
+  user = johnappleseed
