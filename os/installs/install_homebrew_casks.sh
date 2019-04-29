@@ -27,6 +27,7 @@ main() {
     brew_install 'Battle.net' 'battle-net' 'cask'
     brew_install 'Catch' 'catch' 'cask'
     brew_install 'Firefox' 'firefox' 'cask'
+    brew_install 'Flume' 'flume' 'cask'
     brew_install 'Google Backup & Sync' 'google-backup-and-sync' 'cask'
     brew_install 'Google Chrome' 'google-chrome' 'cask'
     brew_install 'Google Drive File Stream' 'google-drive-file-stream' 'cask'
