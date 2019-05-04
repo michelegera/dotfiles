@@ -6,7 +6,6 @@ cd "$(dirname "$BASH_SOURCE")" \
 declare -a FILES_TO_SYMLINK=(
 
   'shell/bash_profile'
-  'shell/bashrc'
   'shell/bundle'
   'shell/config'
   'shell/curlrc'
@@ -17,7 +16,6 @@ declare -a FILES_TO_SYMLINK=(
   'shell/hushlogin'
   'shell/inputrc'
   'shell/irbrc'
-  'shell/profile'
   'shell/rvmrc'
   'shell/screenrc'
   'shell/sensible.bash'

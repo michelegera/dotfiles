@@ -34,9 +34,6 @@ fi
 # Source local profile
 [ -f ~/.bash_profile.local ] && source ~/.bash_profile.local
 
-# Source .bashrc
-[ -f ~/.bashrc ] && source ~/.bashrc
-
 # Source Sensible Bash
 [ -f ~/.sensible.bash ] && source ~/.sensible.bash
 
@@ -72,3 +69,28 @@ eval $(dircolors -b $HOME/.dircolors)
 # Load jump
 eval "$(jump shell)"
 
+# Use Neovim instead of Vim or Vi
+alias v{,i,im}='nvim'
+
+# Enable vi mode
+set -o vi
+
+# Aliases
+alias cat='bat'
+alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
+alias g='git'
+alias grp='grep --color -n -C 1'
+alias help='tldr'
+alias ll='ls -lAh'
+alias ls='ls --color=auto'
+alias mux='tmuxinator'
+alias ping='prettyping --nolegend'
+alias top='htop'
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Use English for command line tools
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
