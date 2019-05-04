@@ -1,7 +1,3 @@
-" Workaround for https://github.com/vim/vim/issues/3117
-if has('python3')
-  silent! python3 1
-endif
 " Plugins {{{
   " Install vim-plug automatically
   if empty(glob('~/.vim/autoload/plug.vim'))
@@ -39,7 +35,7 @@ endif
   Plug 'w0rp/ale'
   Plug 'alvan/vim-closetag'
 
-  " Ruby and Rails
+  " Ruby + frameworks
   Plug 'vim-ruby/vim-ruby'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-bundler'
@@ -47,7 +43,7 @@ endif
   Plug 'janko-m/vim-test'
   Plug 'tpope/vim-liquid'
 
-  " JavaScript and JS frameworks
+  " JavaScript + frameworks
   Plug 'pangloss/vim-javascript'
   Plug 'elzr/vim-json'
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
