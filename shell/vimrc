@@ -45,6 +45,7 @@ endif
   Plug 'tpope/vim-bundler'
   Plug 'tpope/vim-endwise'
   Plug 'janko-m/vim-test'
+  Plug 'tpope/vim-liquid'
 
   " JavaScript and JS frameworks
   Plug 'pangloss/vim-javascript'
