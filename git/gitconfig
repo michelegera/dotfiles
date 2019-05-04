@@ -10,8 +10,7 @@
   dc      = diff --cached
   dm      = !git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d # Remove branches that have already been merged with master
   fp      = push --force
-  g       = log --graph --pretty=custom                                     # Show custom graph
-  l       = log --pretty=custom                                             # Show custom log
+  l       = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
   lc      = shortlog --summary --numbered                                   # List contributors
   please  = push --force-with-lease
   rc      = rebase --continue
