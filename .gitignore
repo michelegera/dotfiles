@@ -13,8 +13,6 @@ shell/config/configstore/
 shell/config/gatsby/
 shell/config/htop/
 shell/config/tmuxinator/
-shell/config/wtf/credentials.json
-shell/config/wtf/log.txt
 shell/config/yarn/
 shell/ssh/*id_rsa*
 shell/ssh/authorized_keys
