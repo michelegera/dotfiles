@@ -10,6 +10,7 @@ prefs/gnupg/*
 
 shell/bundle/cache/
 shell/config/configstore/
+shell/config/gatsby/
 shell/config/htop/
 shell/config/tmuxinator/
 shell/config/wtf/credentials.json
