@@ -34,23 +34,16 @@
   Plug 'editorconfig/editorconfig-vim'
   Plug 'w0rp/ale'
   Plug 'alvan/vim-closetag'
+  Plug 'sheerun/vim-polyglot'
 
   " Ruby + frameworks
-  Plug 'vim-ruby/vim-ruby'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-bundler'
   Plug 'tpope/vim-endwise'
   Plug 'janko-m/vim-test'
-  Plug 'tpope/vim-liquid'
 
   " JavaScript + frameworks
-  Plug 'pangloss/vim-javascript'
-  Plug 'elzr/vim-json'
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-  Plug 'mxw/vim-jsx'
-  Plug 'yalesov/vim-emblem'
-  Plug 'digitaltoad/vim-pug'
-  Plug 'posva/vim-vue'
   call plug#end()
 " }}}
 " General settings {{{
