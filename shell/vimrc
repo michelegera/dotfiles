@@ -12,11 +12,13 @@
   Plug 'vim-airline/vim-airline'
 
   " File navigation & utilities
-  Plug 'ctrlpvim/ctrlp.vim'
   Plug 'scrooloose/nerdtree'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-eunuch'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+  Plug 'junegunn/fzf.vim'
+  Plug 'jremmen/vim-ripgrep'
 
   " Git
   Plug 'tpope/vim-fugitive'
@@ -115,18 +117,6 @@
   set nobackup
   set nowb
 " }}}
-" The Silver Searcher {{{
-  if executable('ag')
-    " Use ag over grep
-    set grepprg=ag\ --nogroup\ --nocolor
-
-    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
-
-    " ag is fast enough that CtrlP doesn't need to cache
-    let g:ctrlp_use_caching=0
-  endif
-" }}}
 " Auto commands {{{
   " Trim whitespace when saving
   autocmd BufWritePre * :call TrimWhitespace()
@@ -162,6 +152,11 @@
 
   " Toggle invisibles
   nmap <leader>l :set list!<CR>
+
+  " Search for stuff
+  nnoremap <C-p> :Files<CR>
+  nnoremap <Leader>b :Buffers<CR>
+  nnoremap <Leader>h :History<CR>
 
   " Symbols for tabstops and EOLs
   set listchars=tab:▸\ ,eol:¬
