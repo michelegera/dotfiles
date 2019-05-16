@@ -16,6 +16,9 @@
 # https://docs.npmjs.com/misc/config#loglevel
 npm-debug.log
 
+# ripgrep ignored files
+.rgignore
+
 
 # ----------------------------------------------------------------------
 # | macOS                                                              |
