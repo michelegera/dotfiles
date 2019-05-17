@@ -46,6 +46,7 @@
 
   " JavaScript + frameworks
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+  Plug 'posva/vim-vue'
   call plug#end()
 " }}}
 " General settings {{{
@@ -192,6 +193,10 @@
   nmap <silent> t<C-s> :TestSuite<CR>
   nmap <silent> t<C-l> :TestLast<CR>
   nmap <silent> t<C-g> :TestVisit<CR>
+
+  " vim-closetag
+  let g:closetag_filenames = '*.html,*.vue'
+
 " }}}
 " Custom functions {{{
   " Trim trailing whitespace without side-effects
