@@ -13,17 +13,16 @@ override_git_prompt_colors() {
   IconQuestion=$'\uf059'
   IconPlus=$'\uf055'
   IconCheck=$'\uf058'
-  IconCross=$'\uf057'
   IconDots=$'\ufcc1'
 
   if [ -e ~/.rvm/bin/rvm-prompt ]; then
-    RubyPrompt=" ${IconRuby} $(~/.rvm/bin/rvm-prompt v g)"
+    RubyPrompt=' ${IconRuby} $(~/.rvm/bin/rvm-prompt v g)'
   else
-    RubyPrompt=" ${IconRuby} $(ruby -v | sed -E 's/ruby ([0-9]+\.[0-9]+\.[0-9]+).*/\1/')"
+    RubyPrompt=' ${IconRuby} $(ruby -v | sed -E "s/ruby ([0-9]+\.[0-9]+\.[0-9]+).*/\1/")'
   fi
 
   if [ -x "$(command -v node)" ]; then
-    NodePrompt=" ${IconNode} $(node -v | sed -E 's/v([0-9]+\.[0-9]+\.[0-9]+)/\1/')"
+    NodePrompt=' ${IconNode} $(node -v | sed -E "s/v([0-9]+\.[0-9]+\.[0-9]+)/\1/")'
   fi
 
   GIT_PROMPT_START_USER="\n${Blue}${IconFolder}  ${PathShort}"
