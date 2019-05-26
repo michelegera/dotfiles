@@ -37,6 +37,7 @@
   Plug 'w0rp/ale'
   Plug 'alvan/vim-closetag'
   Plug 'sheerun/vim-polyglot'
+  Plug 'mattn/emmet-vim'
 
   " Ruby + frameworks
   Plug 'tpope/vim-rails'
@@ -197,7 +198,9 @@
   " vim-closetag
   let g:closetag_filenames = '*.html,*.vue'
 
-" }}}
+  " emmett-vim
+  let g:user_emmet_leader_key=','
+  " }}}
 " Custom functions {{{
   " Trim trailing whitespace without side-effects
   function! TrimWhitespace()
