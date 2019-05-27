@@ -28,6 +28,9 @@ if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
 fi
 
+# Source Bash autocompletion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
 # Source Git autocompletion
 [ -f ~/.git-completion.bash ] && source ~/.git-completion.bash
 

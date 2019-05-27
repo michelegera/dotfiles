@@ -14,6 +14,7 @@ main() {
   if cmd_exists 'brew' \
     && brew_tap 'heroku/brew'; then
 
+    brew_install 'bash-completion' 'bash-completion'
     brew_install 'bash-git-prompt' 'bash-git-prompt'
     brew_install 'bash' 'bash'
     brew_install 'bat' 'bat'
