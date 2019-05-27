@@ -37,7 +37,7 @@ main() {
   ./install_rvm_and_ruby.sh
   print_in_green '\n  ---\n\n'
 
-  ./install_nvs_and_node.sh
+  ./install_node.sh
   print_in_green '\n  ---\n\n'
 
   # Temporary commented out, see https://github.com/mas-cli/mas/issues/164
