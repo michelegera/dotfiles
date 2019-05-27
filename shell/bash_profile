@@ -19,13 +19,12 @@ export SSH_AUTH_SOCKET=$HOME/.gnupg/S.gpg-agent.ssh
 export GPG_TTY=$(tty)
 
 # Source prompt
-if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-  __GIT_PROMPT_DIR=/usr/local/opt/bash-git-prompt/share
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
   GIT_PROMPT_ONLY_IN_REPO=0
   GIT_PROMPT_SHOW_CHANGED_FILES_COUNT=0
   GIT_PROMPT_THEME=Custom
-  GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.bash
-  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 fi
 
 # Source Bash autocompletion

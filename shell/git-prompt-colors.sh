@@ -1,5 +1,5 @@
 override_git_prompt_colors() {
-  GIT_PROMPT_THEME_NAME="Spaceship"
+  GIT_PROMPT_THEME_NAME="Custom"
 
   # Patched nerd font required - https://nerdfonts.com
   IconFolder=$'\uf115'
@@ -46,4 +46,4 @@ override_git_prompt_colors() {
   GIT_PROMPT_COMMAND_FAIL="${Red}${IconAngleRight}"
 }
 
-reload_git_prompt_colors "Spaceship"
+reload_git_prompt_colors "Custom"
