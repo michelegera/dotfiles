@@ -21,7 +21,7 @@
   staash  = stash --include-untracked
   staaash = stash --all
   ulc     = reset --soft HEAD~1                                             # Undo last commit
-  up      = pull --rebase --autostash
+  up      = !git fetch && git rebase --autostash FETCH_HEAD
 
   # ----------------------------------------------------------------------------
   # Switch to a branch, creating it if necessary
