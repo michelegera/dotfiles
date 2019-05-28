@@ -46,7 +46,7 @@ main() {
     brew_install 'tldr' 'tldr'
     brew_install 'tmux' 'tmux'
     brew_install 'watchman' 'watchman'
-    brew_install 'yarn' 'yarn --without-node'
+    brew_install 'yarn' 'yarn --ignore-dependencies'
     printf '\n'
 
   fi
