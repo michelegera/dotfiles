@@ -24,6 +24,8 @@ main() {
     execute "npm install --global $i" "$i"
   done
 
+  execute "avn setup" "Setting up avn"
+
   print_result $? 'Install Node version manager, latest Node and npm packages'
 
 }
