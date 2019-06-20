@@ -1,3 +1,4 @@
 ---
 BUNDLE_JOBS: "3"
 BUNDLE_BUILD__NOKOGIRI: "--with-xml2-lib=/usr/local/opt/libxml2/lib --with-xslt-lib=/usr/local/opt/libxslt/lib"
+BUNDLE_BUILD__MYSQL2: "--with-opt-dir=/usr/local/opt/openssl"
