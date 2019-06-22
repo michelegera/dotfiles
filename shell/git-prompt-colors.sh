@@ -1,3 +1,11 @@
+__ruby_version () {
+  printf `rbenv version | awk '{print $1}'`
+}
+
+__node_version () {
+  printf `nvm version | cut -c2-`
+}
+
 override_git_prompt_colors() {
   GIT_PROMPT_THEME_NAME="Custom"
 
@@ -15,15 +23,8 @@ override_git_prompt_colors() {
   IconCheck=$'\uf058'
   IconDots=$'\ufcc1'
 
-  if [ -e ~/.rvm/bin/rvm-prompt ]; then
-    RubyPrompt=" ${IconRuby} $(~/.rvm/bin/rvm-prompt v g)"
-  else
-    RubyPrompt=" ${IconRuby} $(ruby -v | sed -E "s/ruby ([0-9]+\.[0-9]+\.[0-9]+).*/\1/")"
-  fi
-
-  if [ -x "$(command -v node)" ]; then
-    NodePrompt=" ${IconNode} $(node -v | sed -E "s/v([0-9]+\.[0-9]+\.[0-9]+)/\1/")"
-  fi
+  RubyPrompt=' ${IconRuby} $(__ruby_version)'
+  NodePrompt=' ${IconNode} $(__node_version)'
 
   GIT_PROMPT_START_USER="\n${Blue}${IconFolder}  ${PathShort}"
   GIT_PROMPT_PREFIX="${ResetColor}on ${Magenta}${IconGit} "
