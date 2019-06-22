@@ -41,6 +41,8 @@ main() {
     brew_install 'postgres' 'postgres'
     brew_install 'prettyping' 'prettyping'
     brew_install 'python' 'python'
+    brew_install 'rbenv-gemset' 'rbenv-gemset'
+    brew_install 'rbenv' 'rbenv'
     brew_install 'ripgrep' 'ripgrep'
     brew_install 'tig' 'tig'
     brew_install 'tldr' 'tldr'

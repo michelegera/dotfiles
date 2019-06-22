@@ -6,30 +6,21 @@ cd "$(dirname "$BASH_SOURCE")" \
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-declare -r -a RUBY_GEMS=(
-  'colorls'
-  'tmuxinator'
-)
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 main() {
 
-  # Install the authors’ public keys, used to verify the installation package
-  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB &> /dev/null
+  if cmd_exists 'rbenv'; then
 
-  # Install `RVM` and latest Ruby
-  curl -sSL https://get.rvm.io | bash -s head --ruby &> /dev/null
+    export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl)"
 
-  # Load RVM
-  source ${HOME}/.rvm/scripts/rvm
+    # Find the most recent stable MRI version number, see http://stackoverflow.com/a/30183040/246054
+    local RUBY_VERSION="$(rbenv install -l | sed -n '/^[[:space:]]*[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}[[:space:]]*$/ h;${g;p;}')"
 
-  # Install gems
-  for i in ${RUBY_GEMS[@]}; do
-    execute "gem install $i" "$i"
-  done
+    rbenv install $RUBY_VERSION &> /dev/null
+    rbenv global $RUBY_VERSION &> /dev/null
 
-  print_result $? 'Install Ruby version manager, latest Ruby and gems'
+  fi
+
+  print_result $? "Install Ruby $RUBY_VERSION"
 
 }
 

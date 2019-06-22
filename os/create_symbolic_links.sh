@@ -18,7 +18,6 @@ declare -a FILES_TO_SYMLINK=(
   'shell/inputrc'
   'shell/irbrc'
   'shell/rgignore'
-  'shell/rvmrc'
   'shell/screenrc'
   'shell/sensible.bash'
   'shell/ssh'

@@ -41,12 +41,16 @@ fi
 # Source .bashrc
 [ -f ~/.bashrc ] && source ~/.bashrc
 
-# Load RVM into a shell session as a function
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# Configure nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# Configure n and avn
-export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+# Configure avn
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
+
+# Configure rbenv
+eval "$(rbenv init -)"
 
 # Soruce Homebrew's completions
 if type brew 2&>/dev/null; then
@@ -77,6 +81,7 @@ alias v{,i,im}='nvim'
 set -o vi
 
 # Aliases
+alias be='bundle exec'
 alias cat='bat'
 alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
 alias g='git'
@@ -87,9 +92,6 @@ alias ls='gls --color'
 alias mux='tmuxinator'
 alias ping='prettyping --nolegend'
 alias top='htop'
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 # Use English for command line tools
 export LC_ALL=en_US.UTF-8
