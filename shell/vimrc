@@ -36,7 +36,6 @@
   Plug 'editorconfig/editorconfig-vim'
   Plug 'w0rp/ale'
   Plug 'alvan/vim-closetag'
-  Plug 'sheerun/vim-polyglot'
   Plug 'mattn/emmet-vim'
 
   " Ruby + frameworks
@@ -48,6 +47,7 @@
   " JavaScript + frameworks
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
   Plug 'posva/vim-vue'
+  Plug 'maxmellon/vim-jsx-pretty'
   call plug#end()
 " }}}
 " General settings {{{
