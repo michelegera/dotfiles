@@ -12,8 +12,10 @@ shell/bundle/cache/
 shell/config/configstore/
 shell/config/gatsby/
 shell/config/htop/
+shell/config/real-dev/
 shell/config/tmuxinator/
 shell/config/yarn/
+shell/ssh/*.pem
 shell/ssh/*id_rsa*
 shell/ssh/authorized_keys
 shell/ssh/known_hosts*
