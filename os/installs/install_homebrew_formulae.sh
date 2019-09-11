@@ -15,7 +15,6 @@ main() {
     && brew_tap 'heroku/brew'; then
 
     brew_install 'bash-completion' 'bash-completion'
-    brew_install 'bash-git-prompt' 'bash-git-prompt'
     brew_install 'bash' 'bash'
     brew_install 'bat' 'bat'
     brew_install 'cmake' 'cmake'
@@ -44,6 +43,7 @@ main() {
     brew_install 'rbenv-gemset' 'rbenv-gemset'
     brew_install 'rbenv' 'rbenv'
     brew_install 'ripgrep' 'ripgrep'
+    brew_install 'starship' 'starship'
     brew_install 'tig' 'tig'
     brew_install 'tldr' 'tldr'
     brew_install 'tmux' 'tmux'

@@ -13,7 +13,6 @@ declare -a FILES_TO_SYMLINK=(
   'shell/dircolors'
   'shell/gemrc'
   'shell/git-completion.bash'
-  'shell/git-prompt-colors.bash'
   'shell/hushlogin'
   'shell/inputrc'
   'shell/irbrc'

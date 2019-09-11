@@ -1,0 +1,5 @@
+[jobs]
+disabled = true
+
+[directory]
+style = "blue"
