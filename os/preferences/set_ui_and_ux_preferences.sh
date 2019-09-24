@@ -16,6 +16,9 @@ set_ui_and_ux_preferences() {
   execute 'defaults write com.apple.menuextra.battery ShowPercent -string "NO"' \
     'Hide battery percentage from the menu bar'
 
+  execute 'defaults write com.apple.menuextra.clock "DateFormat" "EEE MMM d  H.mm"' \
+    'Show date and time in the menu bar'
+
   execute 'defaults write com.apple.LaunchServices LSQuarantine -bool false' \
     'Disable "Are you sure you want to open this application?" dialog'
 
