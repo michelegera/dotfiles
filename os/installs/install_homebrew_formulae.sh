@@ -34,6 +34,7 @@ main() {
     brew_install 'mas' 'mas'
     brew_install 'mkcert' 'mkcert'
     brew_install 'ncdu' 'ncdu'
+    brew_install 'neofetch' 'neofetch'
     brew_install 'neovim' 'neovim'
     brew_install 'nss' 'nss'
     brew_install 'pinentry-mac' 'pinentry-mac'
