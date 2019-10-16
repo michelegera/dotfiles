@@ -462,7 +462,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>0 125 224 275 0 0 1280 777 </string>
+	<string>0 127 224 275 0 0 1280 777 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1013 202 633 163 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -472,7 +472,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>898 844 796 486 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 695 1290 722 0 0 2560 1417 </string>
+	<string>0 44 2560 1373 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 42 2560 1375 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -687,13 +687,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.21960784494876862</real>
+				<real>0.29999999999999999</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.17647059261798859</real>
+				<real>0.29999999999999999</real>
 				<key>Red Component</key>
-				<real>0.15294118225574493</real>
+				<real>0.29999999999999999</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -1249,6 +1249,7 @@
 		<string>3.3.2</string>
 		<string>3.2.9</string>
 		<string>3.3.1</string>
+		<string>3.3.4</string>
 		<string>3.3.0</string>
 		<string>3.3.3</string>
 	</array>
@@ -1263,7 +1264,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{291, 647}</string>
+		<string>{1159, 799}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -1276,7 +1277,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>065A204F-268A-4F71-AAEC-F4999DF0FA22</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>10</integer>
+	<integer>13</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2041,7 +2042,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-09-11T09:47:42Z</date>
+	<date>2019-09-23T07:01:01Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -2082,7 +2083,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.3</string>
+	<string>3.3.4</string>
 	<key>kCPFavoritesUserDefaultsKey</key>
 	<array>
 		<data>
