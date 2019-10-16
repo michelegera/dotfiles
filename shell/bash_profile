@@ -50,8 +50,8 @@ if type brew 2&>/dev/null; then
   done
 fi
 
-# Configure MySQL
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+# Configure MariaDB
+export PATH="/usr/local/opt/mariadb@10.1/bin:$PATH"
 
 # Configure Python 3
 export PATH="/usr/local/opt/python@3/bin:$PATH"
