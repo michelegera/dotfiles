@@ -3,3 +3,6 @@ disabled = true
 
 [directory]
 style = "blue"
+
+[aws]
+disabled = true
