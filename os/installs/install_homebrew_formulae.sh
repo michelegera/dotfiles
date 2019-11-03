@@ -18,6 +18,7 @@ main() {
     brew_install 'bash' 'bash'
     brew_install 'bat' 'bat'
     brew_install 'cmake' 'cmake'
+    brew_install 'coreutils' 'coreutils'
     brew_install 'diff-so-fancy' 'diff-so-fancy'
     brew_install 'duti' 'duti'
     brew_install 'elasticsearch' 'elasticsearch'
