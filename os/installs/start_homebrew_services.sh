@@ -16,8 +16,8 @@ main() {
 
     execute 'brew services start elasticsearch' \
       'Start Elasticsearch at login'
-    execute 'brew services start mysql@5.7' \
-      'Start MySQL at login'
+    execute 'brew services start mariadb@10.1' \
+      'Start MariaDB at login'
     execute 'brew services start postgresql' \
       'Start PostgreSQL at login'
 
