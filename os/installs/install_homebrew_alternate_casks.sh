@@ -12,7 +12,7 @@ main() {
   # https://github.com/caskroom/homebrew-versions
 
   if cmd_exists 'brew' \
-    && brew_tap 'caskroom/versions'; then
+    && brew_tap 'homebrew/cask-versions'; then
 
     brew_install 'Java 1.8' 'java8' 'cask'
 

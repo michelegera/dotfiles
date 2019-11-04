@@ -12,7 +12,7 @@ main() {
   # https://github.com/caskroom/homebrew-fonts
 
   if cmd_exists 'brew' \
-    && brew_tap 'caskroom/fonts'; then
+    && brew_tap 'homebrew/cask-fonts'; then
 
     brew_install 'Source Code Pro for Powerline' 'font-source-code-pro-for-powerline' 'cask'
 

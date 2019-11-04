@@ -11,11 +11,7 @@ main() {
   # Homebrew Casks
   # https://github.com/caskroom/homebrew-cask
 
-  if cmd_exists 'brew' \
-    && brew_tap 'caskroom/cask'; then
-
-    brew_install 'Homebrew Cask' 'caskroom/cask/brew-cask'
-    printf '\n'
+  if cmd_exists 'brew'; then
 
     brew_install '1Password' '1password' 'cask'
     brew_install 'A Better Finder Rename' 'a-better-finder-rename' 'cask'
