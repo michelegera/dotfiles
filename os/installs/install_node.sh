@@ -9,6 +9,7 @@ cd "$(dirname "$BASH_SOURCE")" \
 declare -r -a NPM_PACKAGES=(
   'avn'
   'avn-nvm'
+  'avn-n'
 )
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -16,7 +17,7 @@ declare -r -a NPM_PACKAGES=(
 main() {
 
   # Install nvm
-  bash -c "$(curl -LsS https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh)" &> /dev/null
+  bash -c "$(curl -LsS https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh)" &> /dev/null
 
    # Source this to load nvm
   source ${HOME}/.bash_profile
