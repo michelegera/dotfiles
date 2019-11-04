@@ -39,7 +39,7 @@ main() {
     brew_install 'Slack' 'slack' 'cask'
     brew_install 'Spotify Notifications' 'spotify-notifications' 'cask'
     brew_install 'Spotify' 'spotify' 'cask'
-    brew_install 'SwiftDefaultApps' 'swift-default-apps' 'cask'
+    brew_install 'SwiftDefaultApps' 'swiftdefaultappsprefpane' 'cask'
     brew_install 'Telegram Desktop' 'telegram-desktop' 'cask'
     brew_install 'The Unarchiver' 'the-unarchiver' 'cask'
     brew_install 'Transmission' 'transmission' 'cask'
