@@ -15,6 +15,7 @@ main() {
     && brew_tap 'homebrew/cask-versions'; then
 
     brew_install 'Java 1.8' 'java8' 'cask'
+    brew_install 'Sequel Pro (Nightly Build)' 'sequel-pro-nightly' 'cask'
 
   fi
 

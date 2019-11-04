@@ -32,7 +32,6 @@ main() {
     brew_install 'Optimage' 'optimage' 'cask'
     brew_install 'Paw' 'paw' 'cask'
     brew_install 'Postico' 'postico' 'cask'
-    brew_install 'Sequel Pro (Nightly Build)' 'sequel-pro-nightly' 'cask'
     brew_install 'Sip' 'sip' 'cask'
     brew_install 'Sketch' 'sketch' 'cask'
     brew_install 'Sketchpacks' 'sketchpacks' 'cask'
