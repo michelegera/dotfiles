@@ -13,6 +13,10 @@ main() {
   ./install_homebrew.sh
   print_in_green '\n  ---\n\n'
 
+  # Install Java before formulae as it is an elasticsearch requirement
+  ./install_homebrew_alternate_casks.sh
+  print_in_green '\n  ---\n\n'
+
   ./install_homebrew_formulae.sh
   print_in_green '\n  ---\n\n'
 
@@ -20,9 +24,6 @@ main() {
   print_in_green '\n  ---\n\n'
 
   ./install_homebrew_casks.sh
-  print_in_green '\n  ---\n\n'
-
-  ./install_homebrew_alternate_casks.sh
   print_in_green '\n  ---\n\n'
 
   ./install_homebrew_custom_casks.sh
