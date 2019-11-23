@@ -258,6 +258,11 @@ main() {
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+  print_info 'Install Ruby'
+  ./os/install_ruby.sh
+
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
   print_info 'Set default apps'
   ./os/set_default_apps.sh
 
