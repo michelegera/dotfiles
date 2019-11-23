@@ -38,9 +38,6 @@ main() {
   ./install_ruby.sh
   print_in_green '\n  ---\n\n'
 
-  ./install_node.sh
-  print_in_green '\n  ---\n\n'
-
   # Temporary commented out, see https://github.com/mas-cli/mas/issues/164
   # ./install_mas_apps.sh
   # print_in_green '\n  ---\n\n'

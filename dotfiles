@@ -253,6 +253,11 @@ main() {
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+  print_info 'Install Node'
+  ./os/install_node.sh
+
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
   print_info 'Set default apps'
   ./os/set_default_apps.sh
 
