@@ -17,7 +17,7 @@ main() {
 
   if cmd_exists 'brew'; then
     execute 'brew update' 'Brew (update)'
-    execute 'brew upgrade --all' 'Brew (upgrade)'
+    execute 'brew upgrade' 'Brew (upgrade)'
     execute 'brew cleanup' 'Brew (cleanup)'
   fi
 
