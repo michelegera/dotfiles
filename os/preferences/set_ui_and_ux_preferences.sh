@@ -7,7 +7,7 @@ cd "$(dirname "$BASH_SOURCE")" \
 
 set_ui_and_ux_preferences() {
 
-  execute 'defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true' \
+  execute 'defaults write com.apple.desktopservices DSDontWriteNetworkStores -string true' \
     'Avoid creating ".DS_Store" files on network volumes'
 
   execute 'defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true' \
