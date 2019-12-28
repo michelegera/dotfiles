@@ -64,6 +64,10 @@ export PATH="/usr/local/opt/python@3/bin:$PATH"
 # Configure Go
 export GOPATH="$HOME/.go"
 
+# Link Rubies to Homebrew’s OpenSSL, since ruby-build installs a non-Homebrew
+# OpenSSL for each Ruby version installed and these are never upgraded.
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl)"
+
 # Load colors
 eval $(gdircolors -b $HOME/.dircolors)
 
@@ -88,4 +92,3 @@ alias ls='gls --color'
 alias mux='tmuxinator'
 alias ping='prettyping --nolegend'
 alias top='htop'
-
