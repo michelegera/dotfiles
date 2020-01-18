@@ -16,6 +16,7 @@ main() {
   ./set_dashboard_preferences.sh
   ./set_dock_preferences.sh
   ./set_finder_preferences.sh
+  ./set_gatekeeper_preferences.sh
   ./set_iterm_preferences.sh
   ./set_keyboard_preferences.sh
   ./set_keyboard_shortcuts.sh
