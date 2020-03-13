@@ -19,10 +19,6 @@
 # | Miscellaneous                                                      |
 # ----------------------------------------------------------------------
 
-# npm log file
-# https://docs.npmjs.com/misc/config#loglevel
-npm-debug.log
-
 # ripgrep ignored files
 .rgignore
 
@@ -42,10 +38,12 @@ Icon
 
 
 # ----------------------------------------------------------------------
-# | Node.js                                                            |
+# | Node.js and package managers                                       |
 # ----------------------------------------------------------------------
 
 node_modules
+npm-debug.log
+yarn-error.log
 
 
 # ----------------------------------------------------------------------
