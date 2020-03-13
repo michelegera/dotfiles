@@ -9,20 +9,18 @@ cd "$(dirname "$BASH_SOURCE")" \
 # Bash 3 does not support associative arrays, so we use a hack
 
 declare -a MAS_APPS=(
-  '649835201:AppSana'
   '1091189122:Bear'
   '536511979:Characters'
-  '1287239339:ColorSlurp'
   '1082624744:Gifox'
-  '1039633667:Irvue'
   '409183694:Keynote'
   '1450640351:Lightweight PDF'
+  '441258766:Magnet'
   '1084713122:Markoff'
+  '1464122853:NextDNS'
   '957810159:Raindrop.io for Safari'
   '1449412482:Reeder 4'
   '1176895641:Spark'
-  '1187772509:stts'
-  '1384080005:Tweetbot 3'
+  '1384080005:Tweetbot'
   '497799835:Xcode'
 )
 
