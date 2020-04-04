@@ -142,4 +142,4 @@
   default = simple
 
 [user]
-  useconfigonly = true
+  useConfigOnly = true
