@@ -49,6 +49,7 @@
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
   Plug 'posva/vim-vue'
   Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'kristijanhusak/vim-js-file-import', { 'do': 'npm install' }
   call plug#end()
 " }}}
 " General settings {{{
@@ -201,6 +202,9 @@
 
   " emmett-vim
   let g:user_emmet_leader_key=','
+
+  " vim-js-file-import
+  let g:js_file_import_from_root = 1
 
   " gutentags
   let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']
