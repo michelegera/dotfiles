@@ -201,7 +201,8 @@
   nmap <silent> t<C-g> :TestVisit<CR>
 
   " vim-closetag
-  let g:closetag_filenames = '*.html,*.vue'
+  let g:closetag_filenames = '*.html,*.vue,*.js'
+  let g:closetag_emptyTags_caseSensitive = 1
 
   " emmett-vim
   let g:user_emmet_leader_key=','
