@@ -50,6 +50,9 @@
   Plug 'posva/vim-vue'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'kristijanhusak/vim-js-file-import', { 'do': 'npm install' }
+
+  " GraphQL
+  Plug 'jparise/vim-graphql'
   call plug#end()
 " }}}
 " General settings {{{
