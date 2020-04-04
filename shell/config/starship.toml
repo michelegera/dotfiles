@@ -1,8 +1,11 @@
-[jobs]
+[aws]
 disabled = true
 
 [directory]
 style = "blue"
 
-[aws]
+[git_status]
+show_sync_count = true
+
+[jobs]
 disabled = true
