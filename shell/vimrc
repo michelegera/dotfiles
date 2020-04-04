@@ -37,6 +37,7 @@
   Plug 'w0rp/ale'
   Plug 'alvan/vim-closetag'
   Plug 'mattn/emmet-vim'
+  Plug 'ludovicchabant/vim-gutentags'
 
   " Ruby + frameworks
   Plug 'tpope/vim-rails'
@@ -200,6 +201,9 @@
 
   " emmett-vim
   let g:user_emmet_leader_key=','
+
+  " gutentags
+  let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']
   " }}}
 " Custom functions {{{
   " Trim trailing whitespace without side-effects

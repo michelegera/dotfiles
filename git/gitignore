@@ -22,6 +22,10 @@
 # ripgrep ignored files
 .rgignore
 
+# ctags
+tags.*
+tags
+
 
 # ----------------------------------------------------------------------
 # | macOS                                                              |
