@@ -47,7 +47,6 @@
 
   " JavaScript + frameworks
   Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-  Plug 'posva/vim-vue'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'kristijanhusak/vim-js-file-import', { 'do': 'npm install' }
 
