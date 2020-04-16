@@ -3,3 +3,14 @@ Include config.local
 Host *
   ServerAliveInterval 300
   ServerAliveCountMax 3
+  UseKeychain yes
+
+Host geraldcharles
+  HostName geraldcharles.zooppa.com
+  User bitnami
+  IdentityFile ~/.ssh/LightsailDefaultKey-eu-west-1.pem
+
+Host cronjobs
+  Hostname ec2-52-90-172-22.compute-1.amazonaws.com
+  User ec2-user
+  IdentityFile ~/.ssh/aws-ec2-linux-2-ami-cronjobs-machine.pem
