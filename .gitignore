@@ -11,6 +11,7 @@ prefs/gnupg/*
 shell/bundle/cache/
 shell/config/configstore/
 shell/config/gatsby/
+shell/config/gh/
 shell/config/htop/
 shell/config/real-dev/
 shell/config/tmuxinator/
