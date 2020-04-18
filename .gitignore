@@ -19,6 +19,7 @@ shell/config/yarn/
 shell/ssh/*.pem
 shell/ssh/*id_rsa*
 shell/ssh/authorized_keys
+shell/ssh/config.local
 shell/ssh/known_hosts*
 shell/vim/autoload/plug.vim
 shell/vim/plugged

@@ -56,6 +56,14 @@ as the `git` user credentials, e.g.:
   signingkey = XXXXXXXX
 ```
 
+#### `~/.ssh/config.local`
+
+If the `~/.ssh/config.local` file exists, it will be automatically included in
+the SSH configuration.
+
+__Note:__ Use `~/.ssh/config.local` to store sensitive information such as
+server names and credentials.
+
 ### Forks
 
 If you decide to fork this project, don’t forget to substitute my

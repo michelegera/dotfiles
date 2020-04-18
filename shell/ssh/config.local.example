@@ -1,0 +1,9 @@
+# If the `~/.ssh/config.local` file exists, it will be automatically included in
+# the SSH configuration.
+# Use `~/.ssh/config.local` to store sensitive information such as server names
+# and credentials.
+
+Host example
+  HostName example.com
+  User user
+  IdentityFile ~/.ssh/secret_key.pem
