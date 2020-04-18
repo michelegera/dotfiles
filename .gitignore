@@ -10,6 +10,7 @@ prefs/gnupg/*
 
 shell/bundle/cache/
 shell/config/configstore/
+shell/config/coc/
 shell/config/gatsby/
 shell/config/gh/
 shell/config/htop/

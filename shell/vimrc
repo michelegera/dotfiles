@@ -26,7 +26,6 @@
   Plug 'tpope/vim-rhubarb'
 
   " Code editing, formatting and completion
-  Plug 'Valloric/YouCompleteMe', { 'do': '!./install.py --clang-completer --js-completer' }
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-abolish'
   Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -38,6 +37,7 @@
   Plug 'alvan/vim-closetag'
   Plug 'mattn/emmet-vim'
   Plug 'ludovicchabant/vim-gutentags'
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
   " Ruby + frameworks
   Plug 'tpope/vim-rails'
@@ -211,7 +211,28 @@
 
   " gutentags
   let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']
-  " }}}
+
+  " CoC
+  " Don't pass messages to |ins-completion-menu|.
+  set shortmess+=c
+
+  let g:coc_global_extensions=[
+  \  'coc-css',
+  \  'coc-html',
+  \  'coc-json',
+  \  'coc-snippets',
+  \  'coc-tailwindcss',
+  \  'coc-tsserver'
+  \]
+
+  " Use <Tab> and <S-Tab> to navigate the completion list
+  inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+  inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+  " Use <Tab> and <S-Tab> to navigate across placehoders
+  let g:coc_snippet_next = '<Tab>'
+  let g:coc_snippet_prev = '<S-Tab>'
+" }}}
 " Custom functions {{{
   " Trim trailing whitespace without side-effects
   function! TrimWhitespace()
