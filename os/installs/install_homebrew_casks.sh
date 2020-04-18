@@ -44,7 +44,7 @@ main() {
     brew_install 'Tower' 'tower' 'cask'
     brew_install 'Transmission' 'transmission' 'cask'
     brew_install 'Transmit' 'transmit' 'cask'
-    brew_install 'Viscosity' 'viscosity' 'cask'
+    brew_install 'NordVPN' 'nordvpn' 'cask'
     brew_install 'Visual Studio Code' 'visual-studio-code' 'cask'
     brew_install 'VLC' 'vlc' 'cask'
     brew_install 'WhatsApp' 'whatsapp' 'cask'
