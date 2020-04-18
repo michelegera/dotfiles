@@ -16,7 +16,6 @@ declare -a MAS_APPS=(
   '1450640351:Lightweight PDF'
   '441258766:Magnet'
   '1084713122:Markoff'
-  '1464122853:NextDNS'
   '957810159:Raindrop.io for Safari'
   '1449412482:Reeder 4'
   '1176895641:Spark'
