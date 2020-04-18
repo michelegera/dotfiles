@@ -9,6 +9,7 @@ declare -r -a NPM_PACKAGES=(
   'avn'
   'avn-nvm'
   'avn-n'
+  'neovim'
 )
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
