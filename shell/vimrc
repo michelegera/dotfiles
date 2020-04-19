@@ -62,9 +62,9 @@
   Plug 'tpope/vim-rails'
 
   " Advanced JavaScript + frameworks
-  Plug 'kristijanhusak/vim-js-file-import', { 'do': 'npm install' }
+  Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
   Plug 'maxmellon/vim-jsx-pretty'
-  Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+  Plug 'styled-components/vim-styled-components', {'branch': 'main'}
 
   " GraphQL
   Plug 'jparise/vim-graphql'
@@ -72,41 +72,38 @@
 " }}}
 " General settings {{{
   set nocompatible                    " Allow Vim-only settings (must be first)
-  set backspace=indent,eol,start      " Allow backspace in insert mode
-  set ttimeoutlen=10                  " Avoid pausing when leaving insert mode
-  set visualbell                      " No sounds
-  set laststatus=2                    " Always display a status line
-  set cmdheight=2                     " Avoid “Press <ENTER> to continue” prompt
   set autoread                        " Reload files changed outside of Vim
-  set history=1000                    " Number of commands to remember
-  set undolevels=1000                 " Number of undo levels
-  set noshowmode                      " Do not show mode
+  set backspace=indent,eol,start      " Allow backspace in insert mode
+  set cmdheight=2                     " Avoid “Press <ENTER> to continue” prompt
   set hidden                          " Hide buffers when abandoned
+  set history=1000                    " Number of commands to remember
+  set laststatus=2                    " Always display a status line
   set mouse=a                         " Enable mouse support
+  set noshowmode                      " Do not show mode
+  set ttimeoutlen=10                  " Avoid pausing when leaving insert mode
+  set undolevels=1000                 " Number of undo levels
+  set visualbell                      " No sounds
 " }}}
 " Colors {{{
   set termguicolors                   " Enable true colors support
   let ayucolor="mirage"               " Other options: 'light' or 'dark'
   colorscheme ayu
   syntax enable
-
-  " Make 'listchars' visible until https://git.io/fxZSl is merged
-  hi NonText ctermfg=130 guifg=#3D4751
 " }}}
 " UI Layout {{{
-  set number                          " Show line numbers
-  set showcmd                         " Show command in bottom bar
-  set nocursorline                    " Highlight current line
-  set wildmenu
-  set lazyredraw
-  set showmatch                       " Higlight matching parenthesis
-  set splitright                      " Open new splits on the right
-  set list
-  set listchars=tab:▸\ ,trail:·       " Display tabs and trailing spaces
-  set scrolloff=5                     " Start scrolling when close to margin
-  set textwidth=80
   set colorcolumn=+1
   set fillchars+=vert:┃
+  set lazyredraw
+  set list
+  set listchars=tab:▸\ ,trail:·       " Display tabs and trailing spaces
+  set nocursorline                    " Highlight current line
+  set number                          " Show line numbers
+  set scrolloff=5                     " Start scrolling when close to margin
+  set showcmd                         " Show command in bottom bar
+  set showmatch                       " Higlight matching parenthesis
+  set splitright                      " Open new splits on the right
+  set textwidth=80
+  set wildmenu
 " }}}
 " Behavior {{{
   " Open :help in a new tab
@@ -114,38 +111,44 @@
     \ 'tab help' : 'help'
 " }}}
 " Spaces & Tabs {{{
-  set tabstop=2                       " Two-space tab
-  set expandtab                       " Use spaces for tabs
-  set softtabstop=2
-  set shiftwidth=2
-  set modelines=1
-  set autoindent smartindent          " Auto-indent based on previous line
   filetype indent plugin on           " Enable file type detection
+  set autoindent smartindent          " Auto-indent based on previous line
+  set expandtab smarttab              " Use spaces for tabs
+  set modelines=1
+  set shiftwidth=2
+  set softtabstop=2
+  set tabstop=2                       " Two-space tab
 " }}}
 " Searching {{{
+  set hlsearch                        " Highlight all matches
   set ignorecase                      " Ignore case when searching
   set incsearch                       " Search as you type
-  set hlsearch                        " Highlight all matches
+  set smartcase                       " Try to be smart about cases
 " }}}
 " Folding {{{
+  nnoremap <space> za
+  set foldenable                      " Do not fold files by default on open
+  set foldlevelstart=10               " Start with fold level of 10
   set foldmethod=indent               " Fold based on indent level
   set foldnestmax=10                  " Max 10 depth
-  set foldenable                      " Do not fold files by default on open
-  nnoremap <space> za
-  set foldlevelstart=10               " Start with fold level of 10
 " }}}
 " Swap files {{{
-  set noswapfile
   set nobackup
+  set noswapfile
   set nowb
 " }}}
 " Auto commands {{{
-  " Trim whitespace when saving
-  autocmd BufWritePre * :call TrimWhitespace()
-
   " Set specific type based on file type
   autocmd FileType gitcommit setlocal textwidth=72
   autocmd FileType gitcommit setlocal spell
+
+  " If files are changed externally (e.g.: changing branches), update buffers
+  autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+  autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk, buffer reloaded." | echohl None
+
+  " Correctly style all .env files
+  autocmd BufNewFile,BufRead * if expand('%t') =~ '.env' | set filetype=sh | endif
 " }}}
 " Key bindings {{{
   " Grep word under cursor
@@ -203,7 +206,7 @@
   " ALE
   let g:ale_lint_on_text_changed='never'
   let g:ale_fix_on_save=1
-  let g:ale_fixers = {
+  let g:ale_fixers={
   \  '*': ['remove_trailing_lines', 'trim_whitespace'],
   \  'javascript': ['prettier', 'eslint'],
   \}
@@ -216,17 +219,27 @@
   nmap <silent> t<C-g> :TestVisit<CR>
 
   " vim-closetag
-  let g:closetag_filenames = '*.html,*.vue,*.js'
-  let g:closetag_emptyTags_caseSensitive = 1
+  let g:closetag_filenames='*.html,*.js,*.jsx'
+  let g:closetag_emptyTags_caseSensitive=1
+  let g:closetag_regions = {
+  \  'javascript.jsx': 'jsxRegion',
+  \  'javascriptreact': 'jsxRegion',
+  \}
 
   " emmett-vim
   let g:user_emmet_leader_key=','
 
   " vim-js-file-import
-  let g:js_file_import_from_root = 1
+  let g:js_file_import_from_root=1
 
   " gutentags
-  let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']
+  let g:gutentags_exclude_filetypes=[
+  \  'git',
+  \  'gitcommit',
+  \  'gitconfig',
+  \  'gitrebase',
+  \  'gitsendemail'
+  \]
 
   " CoC
   " Don't pass messages to |ins-completion-menu|.
@@ -248,13 +261,11 @@
   " Use <Tab> and <S-Tab> to navigate across placehoders
   let g:coc_snippet_next = '<Tab>'
   let g:coc_snippet_prev = '<S-Tab>'
+
+  " vim-jsx-pretty
+  " allow jsx syntax in .js files
+  let g:jsx_ext_required=0
 " }}}
 " Custom functions {{{
-  " Trim trailing whitespace without side-effects
-  function! TrimWhitespace()
-    let l:save=winsaveview()
-    %s/\s\+$//e
-    call winrestview(l:save)
-  endfunction
 " }}}
 " vim:foldmethod=marker:foldlevel=0
