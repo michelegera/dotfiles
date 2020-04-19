@@ -1,9 +1,11 @@
 .DS_Store
 .cache/
 .git/
+.next/
 .sass-cache/
 build/
 cache/
 coverage/
 node_modules/
+out/
 tmp/
