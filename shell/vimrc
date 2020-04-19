@@ -16,7 +16,7 @@
 
   " Theme and appearance
   Plug 'ayu-theme/ayu-vim'
-  Plug 'vim-airline/vim-airline'
+  Plug 'itchyny/lightline.vim'
 
   " File navigation and utilities
   Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
@@ -226,6 +226,13 @@
   let g:user_emmet_leader_key=','
 
   " ----------------------------------------------------------------------------
+  " lightline
+  " ----------------------------------------------------------------------------
+  let g:lightline = {
+  \  'colorscheme': 'ayu',
+  \}
+
+  " ----------------------------------------------------------------------------
   " nerdtree
   " ----------------------------------------------------------------------------
   let NERDTreeAutoDeleteBuffer=1
@@ -240,12 +247,6 @@
   " ----------------------------------------------------------------------------
   let g:loaded_netrw=1
   let g:loaded_netrwPlugin=1
-
-  " ----------------------------------------------------------------------------
-  " vim-airline
-  " ----------------------------------------------------------------------------
-  let g:airline_powerline_fonts=1
-  let g:airline#extensions#tabline#enabled=1
 
   " ----------------------------------------------------------------------------
   " vim-closetag
