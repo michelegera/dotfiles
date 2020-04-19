@@ -187,23 +187,9 @@
   set listchars=tab:▸\ ,eol:¬
 " }}}
 " Plugins configuration {{{
-  " vim-airline
-  let g:airline_powerline_fonts=1
-  let g:airline#extensions#tabline#enabled=1
-
-  " netrw
-  let g:loaded_netrw=1
-  let g:loaded_netrwPlugin=1
-
-  " NERDTree
-  let NERDTreeAutoDeleteBuffer=1
-  let NERDTreeDirArrows=1
-  let NERDTreeMinimalUI=1
-  let NERDTreeQuitOnOpen=1
-  let NERDTreeShowHidden=1
-  let g:NERDTreeHijackNetrw=0
-
-  " ALE
+  " ----------------------------------------------------------------------------
+  " ale
+  " ----------------------------------------------------------------------------
   let g:ale_lint_on_text_changed='never'
   let g:ale_fix_on_save=1
   let g:ale_fixers={
@@ -211,38 +197,10 @@
   \  'javascript': ['prettier', 'eslint'],
   \}
 
-  " vim-test
-  nmap <silent> t<C-n> :TestNearest<CR>
-  nmap <silent> t<C-f> :TestFile<CR>
-  nmap <silent> t<C-s> :TestSuite<CR>
-  nmap <silent> t<C-l> :TestLast<CR>
-  nmap <silent> t<C-g> :TestVisit<CR>
-
-  " vim-closetag
-  let g:closetag_filenames='*.html,*.js,*.jsx'
-  let g:closetag_emptyTags_caseSensitive=1
-  let g:closetag_regions = {
-  \  'javascript.jsx': 'jsxRegion',
-  \  'javascriptreact': 'jsxRegion',
-  \}
-
-  " emmett-vim
-  let g:user_emmet_leader_key=','
-
-  " vim-js-file-import
-  let g:js_file_import_from_root=1
-
-  " gutentags
-  let g:gutentags_exclude_filetypes=[
-  \  'git',
-  \  'gitcommit',
-  \  'gitconfig',
-  \  'gitrebase',
-  \  'gitsendemail'
-  \]
-
-  " CoC
-  " Don't pass messages to |ins-completion-menu|.
+  " ----------------------------------------------------------------------------
+  " coc.nvim
+  " ----------------------------------------------------------------------------
+  " Don't pass messages to |ins-completion-menu|
   set shortmess+=c
 
   let g:coc_global_extensions=[
@@ -262,9 +220,73 @@
   let g:coc_snippet_next = '<Tab>'
   let g:coc_snippet_prev = '<S-Tab>'
 
+  " ----------------------------------------------------------------------------
+  " emmett-vim
+  " ----------------------------------------------------------------------------
+  let g:user_emmet_leader_key=','
+
+  " ----------------------------------------------------------------------------
+  " nerdtree
+  " ----------------------------------------------------------------------------
+  let NERDTreeAutoDeleteBuffer=1
+  let NERDTreeDirArrows=1
+  let NERDTreeMinimalUI=1
+  let NERDTreeQuitOnOpen=1
+  let NERDTreeShowHidden=1
+  let g:NERDTreeHijackNetrw=0
+
+  " ----------------------------------------------------------------------------
+  " netrw
+  " ----------------------------------------------------------------------------
+  let g:loaded_netrw=1
+  let g:loaded_netrwPlugin=1
+
+  " ----------------------------------------------------------------------------
+  " vim-airline
+  " ----------------------------------------------------------------------------
+  let g:airline_powerline_fonts=1
+  let g:airline#extensions#tabline#enabled=1
+
+  " ----------------------------------------------------------------------------
+  " vim-closetag
+  " ----------------------------------------------------------------------------
+  let g:closetag_filenames='*.html,*.js,*.jsx'
+  let g:closetag_emptyTags_caseSensitive=1
+  let g:closetag_regions = {
+  \  'javascript.jsx': 'jsxRegion',
+  \  'javascriptreact': 'jsxRegion',
+  \}
+
+  " ----------------------------------------------------------------------------
+  " vim-gutentags
+  " ----------------------------------------------------------------------------
+  let g:gutentags_exclude_filetypes=[
+  \  'git',
+  \  'gitcommit',
+  \  'gitconfig',
+  \  'gitrebase',
+  \  'gitsendemail'
+  \]
+
+  " ----------------------------------------------------------------------------
+  " vim-js-file-import
+  " ----------------------------------------------------------------------------
+  let g:js_file_import_from_root=1
+
+  " ----------------------------------------------------------------------------
   " vim-jsx-pretty
+  " ----------------------------------------------------------------------------
   " allow jsx syntax in .js files
   let g:jsx_ext_required=0
+
+  " ----------------------------------------------------------------------------
+  " vim-test
+  " ----------------------------------------------------------------------------
+  nmap <silent> t<C-n> :TestNearest<CR>
+  nmap <silent> t<C-f> :TestFile<CR>
+  nmap <silent> t<C-s> :TestSuite<CR>
+  nmap <silent> t<C-l> :TestLast<CR>
+  nmap <silent> t<C-g> :TestVisit<CR>
 " }}}
 " Custom functions {{{
 " }}}
