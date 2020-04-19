@@ -1,54 +1,70 @@
 " Plugins {{{
   " Install vim-plug automatically
-  if empty(glob('~/.vim/autoload/plug.vim'))
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  let s:plugged_autoload_prefix='~/.vim'
+  let s:plugged_autoload_path=s:plugged_autoload_prefix . '/autoload/plug.vim'
+  let s:plugged_install_dir=s:plugged_autoload_prefix . '/plugged'
+
+  if empty(glob(s:plugged_autoload_path))
+    let s:command='!curl -fLo ' . s:plugged_autoload_path . ' --create-dirs '
+    let s:command.='https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+    silent exec s:command
+
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
   endif
-  call plug#begin()
+  call plug#begin(s:plugged_install_dir)
 
   " Theme and appearance
   Plug 'ayu-theme/ayu-vim'
   Plug 'vim-airline/vim-airline'
 
-  " File navigation & utilities
-  Plug 'scrooloose/nerdtree'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'tpope/vim-unimpaired'
-  Plug 'tpope/vim-eunuch'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
-  Plug 'junegunn/fzf.vim'
+  " File navigation and utilities
+  Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
   Plug 'jremmen/vim-ripgrep'
+  Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+  Plug 'junegunn/fzf.vim'
+  Plug 'schickling/vim-bufonly'
+  Plug 'scrooloose/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
+  Plug 'tpope/vim-eunuch'
+  Plug 'tpope/vim-unimpaired'
 
   " Git
-  Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
 
   " Code editing, formatting and completion
-  Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-abolish'
-  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-  Plug 'tpope/vim-surround'
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'terryma/vim-multiple-cursors'
-  Plug 'editorconfig/editorconfig-vim'
-  Plug 'w0rp/ale'
   Plug 'alvan/vim-closetag'
-  Plug 'mattn/emmet-vim'
+  Plug 'editorconfig/editorconfig-vim'
+  Plug 'jiangmiao/auto-pairs'
   Plug 'ludovicchabant/vim-gutentags'
-  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+  Plug 'mattn/emmet-vim'
+  Plug 'matze/vim-move'
+  Plug 'mlaursen/vim-react-snippets'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'prettier/vim-prettier', {'do': 'yarn install'}
+  Plug 'terryma/vim-multiple-cursors'
+  Plug 'tpope/vim-abolish'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-surround'
+  Plug 'w0rp/ale'
+
+  " HTML, CSS and JavaScript
+  Plug 'hail2u/vim-css3-syntax'
+  Plug 'cakebaker/scss-syntax.vim'
+  Plug 'pangloss/vim-javascript'
 
   " Ruby + frameworks
-  Plug 'tpope/vim-rails'
+  Plug 'janko-m/vim-test'
   Plug 'tpope/vim-bundler'
   Plug 'tpope/vim-endwise'
-  Plug 'janko-m/vim-test'
+  Plug 'tpope/vim-rails'
 
-  " JavaScript + frameworks
-  Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-  Plug 'maxmellon/vim-jsx-pretty'
+  " Advanced JavaScript + frameworks
   Plug 'kristijanhusak/vim-js-file-import', { 'do': 'npm install' }
+  Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
   " GraphQL
   Plug 'jparise/vim-graphql'
