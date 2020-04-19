@@ -1,0 +1,17 @@
+# General
+alias cat='bat'
+alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
+alias grp='grep --color -n -C 1'
+alias help='tldr'
+alias ll='ls -lAh'
+alias ls='gls --color'
+alias mux='tmuxinator'
+alias ping='prettyping --nolegend'
+alias top='htop'
+alias v{,i,im}='nvim'
+
+# Git
+alias g='git'
+
+# Ruby/Rails
+alias be='bundle exec'

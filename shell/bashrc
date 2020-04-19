@@ -26,6 +26,9 @@ export GPG_TTY=$(tty)
 # Source Git autocompletion
 [ -f $HOME/.git-completion.bash ] && source $HOME/.git-completion.bash
 
+# Source aliases
+[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
+
 # Source local profile
 [ -f $HOME/.bash_profile.local ] && source $HOME/.bash_profile.local
 
@@ -66,24 +69,8 @@ eval $(gdircolors -b $HOME/.dircolors)
 # Load jump
 eval "$(jump shell)"
 
-# Use Neovim instead of Vim or Vi
-alias v{,i,im}='nvim'
-
 # Enable vi mode
 set -o vi
-
-# Aliases
-alias be='bundle exec'
-alias cat='bat'
-alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
-alias g='git'
-alias grp='grep --color -n -C 1'
-alias help='tldr'
-alias ll='ls -lAh'
-alias ls='gls --color'
-alias mux='tmuxinator'
-alias ping='prettyping --nolegend'
-alias top='htop'
 
 # Load fzf auto-completion and key bindings
 export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
