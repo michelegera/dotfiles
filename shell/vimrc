@@ -14,9 +14,10 @@
   endif
   call plug#begin(s:plugged_install_dir)
 
-  " Theme and appearance
+  " Theme and UI
   Plug 'ayu-theme/ayu-vim'
   Plug 'itchyny/lightline.vim'
+  Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
   " File navigation and utilities
   Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
@@ -97,7 +98,7 @@
   set list
   set listchars=tab:▸\ ,trail:·       " Display tabs and trailing spaces
   set nocursorline                    " Highlight current line
-  set number                          " Show line numbers
+  set number relativenumber           " Show current line number and relative
   set scrolloff=5                     " Start scrolling when close to margin
   set showcmd                         " Show command in bottom bar
   set showmatch                       " Higlight matching parenthesis
