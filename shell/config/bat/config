@@ -1,0 +1,3 @@
+# Set the theme to "ayu-mirage"
+# Remeber to update the binary cache with `bat cache --build`
+--theme="ayu-mirage"
