@@ -18,6 +18,7 @@
   Plug 'ayu-theme/ayu-vim'
   Plug 'itchyny/lightline.vim'
   Plug 'jeffkreeftmeijer/vim-numbertoggle'
+  Plug 'mengelbrecht/lightline-bufferline'
 
   " File navigation and utilities
   Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
@@ -102,6 +103,7 @@
   set scrolloff=5                     " Start scrolling when close to margin
   set showcmd                         " Show command in bottom bar
   set showmatch                       " Higlight matching parenthesis
+  set showtabline=2                   " Show buffers bar
   set splitright                      " Open new splits on the right
   set textwidth=80
   set wildmenu
@@ -229,9 +231,14 @@
   " ----------------------------------------------------------------------------
   " lightline
   " ----------------------------------------------------------------------------
-  let g:lightline = {
-  \  'colorscheme': 'ayu',
-  \}
+  let g:lightline={'colorscheme': 'ayu'}
+
+  " ----------------------------------------------------------------------------
+  " lightline-bufferline
+  " ----------------------------------------------------------------------------
+  let g:lightline.tabline={'left': [['buffers']]}
+  let g:lightline.component_expand={'buffers': 'lightline#bufferline#buffers'}
+  let g:lightline.component_type={'buffers': 'tabsel'}
 
   " ----------------------------------------------------------------------------
   " nerdtree
