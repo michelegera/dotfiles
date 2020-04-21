@@ -1,7 +1,6 @@
 # General
 alias cat='bat'
 alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
-alias grp='grep --color -n -C 1'
 alias help='tldr'
 alias ll='ls -lAh'
 alias ls='gls --color'
