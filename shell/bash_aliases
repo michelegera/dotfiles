@@ -9,6 +9,21 @@ alias ping='prettyping --nolegend'
 alias top='htop'
 alias v{,i,im}='nvim'
 
+# Brew
+alias bcin='brew cask install'
+alias bcl='brew cleanup'
+alias bcls='brew cask list'
+alias bcrm='brew cask uninstall'
+alias bcup='brew cask upgrade'
+alias bdr='brew doctor'
+alias bin='brew install'
+alias binf='brew info'
+alias bls='brew list'
+alias bout='brew outdated'
+alias brm='brew uninstall'
+alias bsr='brew search'
+alias bup='brew upgrade'
+
 # Bundler
 alias be='bundle exec'
 alias bi='bundle install'
