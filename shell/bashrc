@@ -75,10 +75,10 @@ set -o vi
 # Load fzf auto-completion and key bindings, set Ayu Mirage colors
 export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
- --color=fg:#cbccc6,bg:#1f2430,hl:#707a8c
- --color=fg+:#707a8c,bg+:#191e2a,hl+:#ffcc66
- --color=info:#73d0ff,prompt:#707a8c,pointer:#ffcc66
- --color=marker:#73d0ff,spinner:#73d0ff,header:#d4bfff'
+  --color=fg:#707a8c,bg:#1f2430,hl:#cbccc6
+  --color=fg+:#cbccc6,bg+:#191e2a,hl+:#ffcc66
+  --color=info:#73d0ff,prompt:#707a8c,pointer:#cbccc6
+  --color=marker:#73d0ff,spinner:#73d0ff,header:#d4bfff'
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
 
 # Source prompt
