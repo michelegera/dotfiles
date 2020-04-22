@@ -1,5 +1,6 @@
 # General
 alias cat='bat'
+alias cl='clear'
 alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
 alias help='tldr'
 alias ll='ls -lAh'
