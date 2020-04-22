@@ -9,6 +9,13 @@ alias ping='prettyping --nolegend'
 alias top='htop'
 alias v{,i,im}='nvim'
 
+# Bundler
+alias be='bundle exec'
+alias bi='bundle install'
+alias bl='bundle list'
+alias bp='bundle package'
+alias bu='bundle update'
+
 # Git
 alias g='git'
 alias ga='git add'
@@ -52,6 +59,3 @@ alias gta='git tag -a'
 alias gtd='git tag -d'
 alias gtl='git tag -l'
 alias gup='git fetch && git rebase --autostash FETCH_HEAD'
-
-# Ruby/Rails
-alias be='bundle exec'
