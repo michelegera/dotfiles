@@ -75,6 +75,12 @@ alias gtd='git tag -d'
 alias gtl='git tag -l'
 alias gup='git fetch && git rebase --autostash FETCH_HEAD'
 
+# Rails
+alias r='rails'
+alias rc='rails c'
+alias rdbm='rails db:migrate'
+alias rs='rails s'
+
 # Yarn
 alias ya='yarn'
 alias yaa='yarn add'
