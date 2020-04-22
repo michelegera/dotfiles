@@ -75,6 +75,9 @@ alias gtd='git tag -d'
 alias gtl='git tag -l'
 alias gup='git fetch && git rebase --autostash FETCH_HEAD'
 
+# macOS
+alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
+
 # Rails
 alias r='rails'
 alias rc='rails c'
