@@ -1,3 +1,4 @@
 {
-  "tsserver.npm": "/usr/local/bin/npm"
+  "tsserver.npm": "/usr/local/bin/npm",
+  "typescript.suggestionActions.enabled": false
 }
