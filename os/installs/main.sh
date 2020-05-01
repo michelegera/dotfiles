@@ -32,6 +32,9 @@ main() {
   ./install_homebrew_fonts.sh
   print_in_green '\n  ---\n\n'
 
+  ./install_packages.sh
+  print_in_green '\n  ---\n\n'
+
   # Temporary commented out, see https://github.com/mas-cli/mas/issues/164
   # ./install_mas_apps.sh
   # print_in_green '\n  ---\n\n'

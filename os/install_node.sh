@@ -5,15 +5,6 @@ cd "$(dirname "$BASH_SOURCE")" \
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-declare -r -a NPM_PACKAGES=(
-  'avn'
-  'avn-nvm'
-  'avn-n'
-  'neovim'
-)
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 main() {
 
   # Install nvm
@@ -25,14 +16,7 @@ main() {
   # Install latst Node
   execute 'nvm install node' 'Install latest Node'
 
-  # Install `npm` packages
-  for i in ${NPM_PACKAGES[@]}; do
-    execute "npm install --global $i" "Install $i"
-  done
-
-  execute 'avn setup' 'Setting up avn'
-
-  print_result $? 'Install Node version manager, latest Node and npm packages'
+  print_result $? 'Install Node version manager and latest Node'
 
 }
 
