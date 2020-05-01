@@ -44,7 +44,6 @@
   Plug 'matze/vim-move'
   Plug 'mlaursen/vim-react-snippets'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'prettier/vim-prettier', {'do': 'yarn install'}
   Plug 'terryma/vim-multiple-cursors'
   Plug 'tpope/vim-abolish'
   Plug 'tpope/vim-commentary'
@@ -140,7 +139,10 @@
   set noswapfile
   set nowb
 " }}}
-" Auto commands {{{
+" Commands and Autocommands {{{
+  " Format with Prettier
+  command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
   " Set specific type based on file type
   autocmd FileType gitcommit setlocal textwidth=72
   autocmd FileType gitcommit setlocal spell
@@ -180,6 +182,9 @@
 
   " Toggle invisibles
   nmap <leader>l :set list!<CR>
+
+  vmap <leader>p  <Plug>(coc-format-selected)
+  nmap <leader>p  <Plug>(coc-format-selected)
 
   " Search for stuff
   nnoremap <C-p> :Files<CR>

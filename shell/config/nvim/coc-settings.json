@@ -1,4 +1,10 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "html",
+    "js",
+    "markdown"
+  ],
   "javascript.suggestionActions.enabled": false,
   "tsserver.npm": "/usr/local/bin/npm",
   "typescript.suggestionActions.enabled": false
