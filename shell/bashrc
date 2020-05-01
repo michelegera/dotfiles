@@ -56,8 +56,8 @@ fi
 # Configure MariaDB
 export PATH="/usr/local/opt/mariadb@10.1/bin:$PATH"
 
-# Configure Python 3
-export PATH="/usr/local/opt/python@3/bin:$PATH"
+# Configure Python
+export PATH="/usr/local/opt/python/bin:$PATH"
 
 # Link Rubies to Homebrew’s OpenSSL, since ruby-build installs a non-Homebrew
 # OpenSSL for each Ruby version installed and these are never upgraded.
