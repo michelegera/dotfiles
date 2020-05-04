@@ -78,12 +78,12 @@
   show = diff-so-fancy | less --tabs=1,5 -RFX
 
 [pretty]
-  custom = "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green)%s %C(yellow)(%an)"
-  #                     │        │            │            │             └─ author name
-  #                     │        │            │            └─ message
-  #                     │        │            └─ date (relative)
-  #                     │        └─ decorations (branch, heads or tags)
-  #                     └─ hash (abbreviated)
+  custom = "%C(red)%h%C(yellow)%d %C(reset)%s %C(bold blue)<%an> %C(green)(%cr)"
+  #                 │           │           │                │              └─ date (relative)
+  #                 │           │           │                └─ author name
+  #                 │           │           └─ message
+  #                 │           └─ decorations (branch, heads or tags)
+  #                 └─ hash (abbreviated)
 
 [pull]
   rebase = true
