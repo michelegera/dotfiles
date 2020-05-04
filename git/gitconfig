@@ -71,6 +71,7 @@
   postBuffer = 134217728
 
 [include]
+  path = ~/.gitaliases
   path = ~/.gitconfig.local
 
 [pager]

@@ -1,0 +1,44 @@
+[alias]
+  a       = commit --amend
+  all     = add -A
+  b       = branch
+  c       = commit
+  ca      = !git add -A && git commit
+  co      = checkout
+  commend = commit --amend --no-edit
+  cp      = cherry-pick
+  d       = diff
+  dc      = diff --cached
+  fp      = push --force
+  l       = log --color --graph --abbrev-commit --branches --pretty=custom
+  lc      = shortlog --summary --numbered
+  p       = push
+  please  = push --force-with-lease
+  rc      = rebase --continue
+  rlc     = reset --hard HEAD~1
+  st      = status
+  staaash = stash --all
+  staash  = stash --include-untracked
+  sts     = status --short --branch
+  stsh    = stash --keep-index
+  up      = !git fetch && git rebase --autostash FETCH_HEAD
+
+  # Remove branches that have already been merged with master
+  dm = "!f() {\
+    git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d; \
+  }; f"
+
+  # Switch to a branch, creating it if necessary
+  go = "!f() { \
+    git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; \
+  }; f"
+
+  # Interactive rebase with the given number of latest commits
+  reb = "!f() { \
+    git rebase -i HEAD~$1; \
+  }; f"
+
+  # Undo (http://megakemp.com/2016/08/25/git-undo/)
+  undo = "!f() { \
+    git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; \
+  }; f"
