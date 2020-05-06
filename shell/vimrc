@@ -1,3 +1,4 @@
+:scriptencoding utf-8
 " Plugins {{{
   " Install vim-plug automatically
   let s:plugged_autoload_prefix='~/.vim'
