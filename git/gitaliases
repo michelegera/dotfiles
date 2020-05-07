@@ -4,6 +4,7 @@
   b       = branch
   c       = commit
   ca      = !git add -A && git commit
+  cam     = !git add -A && git commit -m
   co      = checkout
   commend = commit --amend --no-edit
   cp      = cherry-pick
