@@ -158,7 +158,7 @@
 " }}}
 " Key bindings {{{
   " Grep word under cursor
-  nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+  nnoremap K :Rg "\b<C-R><C-W>\b"<CR>:cw<CR>
 
   " Cycle through listed buffers
   nnoremap <Tab> :bnext<CR>
