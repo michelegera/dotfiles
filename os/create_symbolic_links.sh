@@ -33,7 +33,6 @@ declare -a FILES_TO_SYMLINK=(
   'prefs/alfred'
   'prefs/duti'
   'prefs/gnupg'
-  'prefs/iterm2'
 
 )
 
