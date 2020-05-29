@@ -3,7 +3,8 @@
     "css",
     "html",
     "js",
-    "markdown"
+    "markdown",
+    "ts"
   ],
   "javascript.suggestionActions.enabled": false,
   "tsserver.npm": "/usr/local/bin/npm",
