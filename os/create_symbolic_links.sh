@@ -15,6 +15,7 @@ declare -a FILES_TO_SYMLINK=(
   'shell/gemrc'
   'shell/git-completion.bash'
   'shell/hushlogin'
+  'shell/hyper.js'
   'shell/inputrc'
   'shell/irbrc'
   'shell/rgignore'
