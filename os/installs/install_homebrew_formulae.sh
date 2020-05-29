@@ -14,6 +14,7 @@ main() {
   if cmd_exists 'brew' \
     && brew_tap 'heroku/brew'; then
 
+    brew_head_install 'universal-ctags' 'universal-ctags/universal-ctags/universal-ctags'
     brew_install 'bash' 'bash'
     brew_install 'bash-completion' 'bash-completion@2'
     brew_install 'bat' 'bat'

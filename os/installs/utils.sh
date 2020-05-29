@@ -19,6 +19,19 @@ brew_install() {
 
 }
 
+brew_head_install() {
+
+  declare -r FORMULA="$2"
+  declare -r FORMULA_READABLE_NAME="$1"
+
+  if brew list "$FORMULA" &> /dev/null; then
+    print_success "$FORMULA_READABLE_NAME"
+  else
+    execute "brew install --HEAD $FORMULA" "$FORMULA_READABLE_NAME"
+  fi
+
+}
+
 brew_tap() {
 
   declare -r REPOSITORY="$1"
