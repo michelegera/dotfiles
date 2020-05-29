@@ -14,8 +14,8 @@ main() {
   if cmd_exists 'brew' \
     && brew_tap 'heroku/brew'; then
 
-    brew_install 'bash-completion@2' 'bash-completion@2'
     brew_install 'bash' 'bash'
+    brew_install 'bash-completion' 'bash-completion@2'
     brew_install 'bat' 'bat'
     brew_install 'cmake' 'cmake'
     brew_install 'coreutils' 'coreutils'
@@ -43,8 +43,8 @@ main() {
     brew_install 'prettyping' 'prettyping'
     brew_install 'pv' 'pv'
     brew_install 'python' 'python'
-    brew_install 'rbenv-gemset' 'rbenv-gemset'
     brew_install 'rbenv' 'rbenv'
+    brew_install 'rbenv-gemset' 'rbenv-gemset'
     brew_install 'ripgrep' 'ripgrep'
     brew_install 'starship' 'starship'
     brew_install 'tig' 'tig'
