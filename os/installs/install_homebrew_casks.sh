@@ -26,7 +26,6 @@ main() {
     brew_install 'Google Drive File Stream' 'google-drive-file-stream' 'cask'
     brew_install 'Hyper' 'hyper' 'cask'
     brew_install 'Install Disk Creator' 'install-disk-creator' 'cask'
-    brew_install 'kitty' 'kitty' 'cask'
     brew_install 'Microsoft Office' 'microsoft-office' 'cask'
     brew_install 'NordVPN' 'nordvpn' 'cask'
     brew_install 'NTFS for Mac' 'paragon-ntfs' 'cask'
