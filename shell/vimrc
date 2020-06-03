@@ -38,6 +38,7 @@
 
   " Code editing, formatting and completion
   Plug 'alvan/vim-closetag'
+  Plug 'christoomey/vim-sort-motion'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'jiangmiao/auto-pairs'
   Plug 'ludovicchabant/vim-gutentags'
