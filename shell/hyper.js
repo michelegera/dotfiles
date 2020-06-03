@@ -110,7 +110,9 @@ module.exports = {
     shellArgs: ["--login"],
 
     // for environment variables
-    env: {},
+    env: {
+      TERM: "xterm-256color",
+    },
 
     // set to `false` for no bell
     bell: false,
