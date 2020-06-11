@@ -65,8 +65,8 @@ server names and credentials.
 ### Forks
 
 If you decide to fork this project, don’t forget to substitute my
-username with your own in the [setup snippets](#setup), and [in the
-`dotfiles` script](https://github.com/michelegera/dotfiles/blob/b45ae1a2ad505318588a347d4b11b4fdddbfbefc/dotfiles#L3).
+username with your own in the [setup snippets](#setup) and [in the
+`dotfiles` script].
 
 ## Update
 
