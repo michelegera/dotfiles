@@ -194,6 +194,9 @@
   nnoremap <Leader>b :Buffers<CR>
   nnoremap <Leader>h :History<CR>
 
+  " Search project for current word
+  map <leader>* :Rg <cword><CR><CR>
+
   " Symbols for tabstops and EOLs
   set listchars=tab:▸\ ,eol:¬
 " }}}
