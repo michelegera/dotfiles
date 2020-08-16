@@ -60,6 +60,10 @@ export PATH="/usr/local/opt/mariadb@10.1/bin:$PATH"
 export PATH="~/.pyenv/shims:$PATH"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
+# Configure jEnv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
 # Link Rubies to Homebrew’s OpenSSL, since ruby-build installs a non-Homebrew
 # OpenSSL for each Ruby version installed and these are never upgraded.
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl)"
