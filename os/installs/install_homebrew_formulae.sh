@@ -43,7 +43,7 @@ main() {
     brew_install 'postgres' 'postgres'
     brew_install 'prettyping' 'prettyping'
     brew_install 'pv' 'pv'
-    brew_install 'python' 'python'
+    brew_install 'pyenv' 'pyenv'
     brew_install 'rbenv' 'rbenv'
     brew_install 'rbenv-gemset' 'rbenv-gemset'
     brew_install 'ripgrep' 'ripgrep'

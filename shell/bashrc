@@ -56,8 +56,9 @@ fi
 # Configure MariaDB
 export PATH="/usr/local/opt/mariadb@10.1/bin:$PATH"
 
-# Configure Python
-export PATH="/usr/local/opt/python/bin:$PATH"
+# Configure pyenv
+export PATH="~/.pyenv/shims:$PATH"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # Link Rubies to Homebrew’s OpenSSL, since ruby-build installs a non-Homebrew
 # OpenSSL for each Ruby version installed and these are never upgraded.
