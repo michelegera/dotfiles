@@ -461,6 +461,10 @@
 	<string>972 945 616 174 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 782 620 392 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 0</key>
+	<string>1110 147 1290 706 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>579 411 698 485 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_4F775489-B082-4A62-B776-40AA206D1887</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_4F775489-B082-4A62-B776-40AA206D1887_selection</key>
@@ -724,8 +728,10 @@
 			</dict>
 			<key>Blend</key>
 			<real>0.49531375200320521</real>
-			<key>Blinking Cursor</key>
+			<key>Blink Allowed</key>
 			<false/>
+			<key>Blinking Cursor</key>
+			<true/>
 			<key>Blur</key>
 			<false/>
 			<key>Bold Color</key>
@@ -1236,23 +1242,32 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+		<string>3.3.9</string>
+		<string>3.3.8</string>
 		<string>3.3.11</string>
+		<string>3.3.7</string>
+	</array>
+	<key>NoSyncBFPFavorites</key>
+	<array>
+		<string>Source Code Pro for Powerline</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
 		<string>Source Code Pro for Powerline</string>
+		<string>Menlo</string>
+		<string>JetBrains Mono for Powerline</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{39, 743}</string>
+		<string>{34, 744}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>63309056-16DD-4257-8E9E-6310F29BC9F9</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>48</integer>
+	<integer>52</integer>
 	<key>NoSyncNeverPromptToChangeOption</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -2043,7 +2058,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-06-10T13:51:48Z</date>
+	<date>2020-06-15T13:29:23Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
