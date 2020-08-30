@@ -123,51 +123,16 @@ extract() {
 
 }
 
-is_supported_version() {
-
-  declare -a v1=(${1//./ })
-  declare -a v2=(${2//./ })
-  local i=''
-
-  # Fill empty positions in v1 with zeros
-  for (( i=${#v1[@]}; i<${#v2[@]}; i++ )); do
-    v1[i]=0
-  done
-
-  for (( i=0; i<${#v1[@]}; i++ )); do
-
-    # Fill empty positions in v2 with zeros
-    if [[ -z ${v2[i]} ]]; then
-      v2[i]=0
-    fi
-
-    if (( 10#${v1[i]} < 10#${v2[i]} )); then
-      return 1
-    fi
-
-  done
-
-}
-
 verify_os() {
 
-  declare -r MINIMUM_MACOS_VERSION='10.11'
   declare -r OS_NAME="$(uname -s)"
-
-  declare OS_VERSION=''
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  # Check if the OS is `macOS` and it's above the required version
+  # Check if the OS is `macOS`
 
   if [ "$OS_NAME" == "Darwin" ]; then
-
-    OS_VERSION="$(sw_vers -productVersion)"
-
-    is_supported_version "$OS_VERSION" "$MINIMUM_MACOS_VERSION" \
-    && return 0 \
-    || printf "Sorry, this script is intended only for macOS $MINIMUM_MACOS_VERSION+"
-
+    return 0
   else
     printf 'Sorry, this script is intended only for macOS!'
   fi
