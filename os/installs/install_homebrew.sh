@@ -9,8 +9,7 @@ cd "$(dirname "$BASH_SOURCE")" \
 main() {
 
   if ! cmd_exists 'brew'; then
-    printf "\n" | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" &> /dev/null
-    #  └─ simulate the ENTER keypress
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" &> /dev/null
   fi
 
   print_result $? 'Homebrew'
