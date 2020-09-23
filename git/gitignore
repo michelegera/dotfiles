@@ -26,6 +26,9 @@
 tags.*
 tags
 
+# Metals (https://scalameta.org/metals/)
+.metals
+
 
 # ----------------------------------------------------------------------
 # | macOS                                                              |
@@ -45,6 +48,7 @@ Icon
 # | Node.js and package managers                                       |
 # ----------------------------------------------------------------------
 
+bower_components
 node_modules
 npm-debug.log
 yarn-error.log
