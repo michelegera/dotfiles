@@ -9,11 +9,12 @@ prefs/gnupg/*
 !prefs/gnupg/gpg.conf
 
 shell/bundle/cache/
-shell/config/configstore/
 shell/config/coc/
+shell/config/configstore/
 shell/config/gatsby/
 shell/config/gh/
 shell/config/htop/
+shell/config/nvm/
 shell/config/real-dev/
 shell/config/tmuxinator/
 shell/config/yarn/
