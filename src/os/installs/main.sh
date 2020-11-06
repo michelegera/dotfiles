@@ -10,3 +10,4 @@ print_in_purple "\n • Installs\n"
 
 ./xcode.sh
 ./homebrew.sh
+./fish.sh
