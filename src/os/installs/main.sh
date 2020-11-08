@@ -16,3 +16,4 @@ print_in_purple "\n • Installs\n"
 ./browsers.sh
 ./gpg.sh
 ./creative_tools.sh
+./vscode.sh
