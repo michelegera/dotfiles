@@ -14,3 +14,4 @@ print_in_purple "\n • Installs\n"
 
 ./git.sh
 ./browsers.sh
+./gpg.sh
