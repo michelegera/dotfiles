@@ -13,3 +13,4 @@ print_in_purple "\n • Installs\n"
 ./fish.sh
 
 ./git.sh
+./browsers.sh
