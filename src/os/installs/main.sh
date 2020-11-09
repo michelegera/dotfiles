@@ -20,3 +20,4 @@ print_in_purple "\n • Installs\n"
 ./neovim.sh
 ./applications.sh
 ./tools.sh
+./fonts.sh
