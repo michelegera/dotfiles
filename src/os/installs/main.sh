@@ -17,3 +17,4 @@ print_in_purple "\n • Installs\n"
 ./gpg.sh
 ./creative_tools.sh
 ./vscode.sh
+./neovim.sh
