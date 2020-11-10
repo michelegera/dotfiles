@@ -1,10 +1,10 @@
 #!/bin/bash
 
-cd "$(dirname "${BASH_SOURCE[0]}")" \
-    && . "../../utils.sh"
+cd "$(dirname "${BASH_SOURCE[0]}")"
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-print_in_purple "\n • Preferences\n"
+# Close any open `System Preferences` panes in order to
+# avoid overriding the preferences that are being changed.
 
-# TODO: set preferences
+./close_system_preferences_panes.applescript

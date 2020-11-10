@@ -8,9 +8,10 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 main() {
 
     find \
-        ../src/ \
+        ../src/os \
         ../tests \
         -type f \
+        ! -path '../src/os/preferences/*.applescript' \
         -exec shellcheck \
                 -e SC1090 \
                 -e SC1091 \
