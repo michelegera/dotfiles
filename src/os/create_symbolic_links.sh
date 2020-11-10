@@ -20,6 +20,7 @@ create_symlinks() {
         "shell/curlrc"
         "shell/gemrc"
         "shell/hushlogin"
+        "shell/hyper.js"
         "shell/inputrc"
         "shell/screenrc"
 
