@@ -8,3 +8,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 # avoid overriding the preferences that are being changed.
 
 ./close_system_preferences_panes.applescript
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+./app_store.sh
