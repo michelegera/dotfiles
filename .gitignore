@@ -4,3 +4,6 @@
 # Ignore non-customized configuration files
 src/shell/config/fish/*
 !src/shell/config/fish/config.fish
+
+src/shell/config/fish/conf.d/*
+!src/shell/config/fish/conf.d/__nvm_use_on_cd.fish
