@@ -14,6 +14,8 @@ create_symlinks() {
         "git/gitconfig"
         "git/gitignore"
 
+        "prefs/duti"
+
     )
 
     local i=""
