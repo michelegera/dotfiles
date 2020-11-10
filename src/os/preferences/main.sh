@@ -15,3 +15,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ./chrome.sh
 ./dock.sh
 ./finder.sh
+./firefox.sh
