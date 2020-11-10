@@ -1,0 +1,8 @@
+# Ruby gems settings
+# http://docs.rubygems.org/read/chapter/11
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Disable documentation generation
+
+gem: --no-document
