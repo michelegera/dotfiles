@@ -21,3 +21,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ./maps.sh
 ./photos.sh
 ./safari.sh
+./textedit.sh
