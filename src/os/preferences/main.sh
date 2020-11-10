@@ -20,3 +20,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ./language_and_region.sh
 ./maps.sh
 ./photos.sh
+./safari.sh
