@@ -16,6 +16,8 @@ create_symlinks() {
 
         "prefs/duti"
 
+        "shell/screenrc"
+
     )
 
     local i=""
