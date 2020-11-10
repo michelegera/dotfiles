@@ -16,6 +16,7 @@ create_symlinks() {
 
         "prefs/duti"
 
+        "shell/config"
         "shell/curlrc"
         "shell/gemrc"
         "shell/hushlogin"

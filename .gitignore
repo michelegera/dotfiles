@@ -1,2 +1,6 @@
 # Ignore Desktop Services Store files
 .DS_Store
+
+# Ignore non-customized configuration files
+src/shell/config/fish/*
+!src/shell/config/fish/config.fish
