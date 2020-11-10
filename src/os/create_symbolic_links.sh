@@ -9,7 +9,10 @@ create_symlinks() {
 
     declare -a FILES_TO_SYMLINK=(
 
-        # TODO: add files
+        "git/gitaliases"
+        "git/gitattributes"
+        "git/gitconfig"
+        "git/gitignore"
 
     )
 

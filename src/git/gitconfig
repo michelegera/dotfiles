@@ -1,0 +1,163 @@
+[apply]
+
+    # Detect whitespace errors when applying a patch
+
+    whitespace = fix
+
+[branch]
+
+    autosetuprebase = always
+
+[color]
+
+    branch = auto
+    diff = auto
+    showbranch = auto
+    status = auto
+    ui = true
+
+[color "branch"]
+
+    current = green bold
+    local = green
+    remote = yellow
+
+[color "diff"]
+
+    frag = magenta
+    meta = yellow
+
+    new = green
+    old = red
+
+    newMoved = cyan
+    oldMoved = blue
+
+[color "status"]
+
+    added = green reverse
+    changed = yellow reverse
+    untracked = red reverse
+
+[core]
+
+    abbrev = 12
+    attributesfile = ~/.gitattributes
+    autocrlf = input
+    editor = nvim
+    excludesfile = ~/.gitignore
+
+    # Prevent showing files whose names contain non-ASCII symbols as
+    # unversioned.
+    #
+    # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+
+    precomposeunicode = false
+
+    # Make `git rebase` safer on macOS
+    #
+    # http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/
+
+    trustctime = false
+
+    # Treat spaces before tabs and all kinds of trailing whitespace as an error
+    # [default] trailing-space: looks for spaces at the end of a line
+    # [default] space-before-tab: looks for spaces before tabs at the beginning
+    # of a line
+    whitespace = space-before-tab,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[diff]
+
+    # Show blocks of moved text of at least 20 alphanumeric characters
+    # differently than adds/deletes.
+    #
+    # https://git-scm.com/docs/git-diff#git-diff-zebra
+
+    colorMoved = zebra
+
+    # Enable an experimental heuristic that shifts the hunk boundary in an
+    # attempt to make the resulting patch easier to read.
+
+    indentHeuristic = true
+
+    # Detect copies as well as renames
+
+    renames = copies
+
+[fetch]
+
+    prune = true
+
+[gpg]
+
+    program = /usr/local/bin/gpg
+
+[help]
+
+    # If a command is mistyped, make Git automatically run
+    # the command it thinks the user wanted to type while also
+    # giving the user some time to prevent it from doing so.
+    #
+    # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_help_autocorrect
+
+    autocorrect = 20
+
+[init]
+
+    defaultBranch = main
+
+[pager]
+
+    diff = diff-so-fancy | less --tabs=1,5 -RFX
+    show = diff-so-fancy | less --tabs=1,5 -RFX
+
+[pretty]
+
+    custom = "%C(white)%h%C(red)%d %C(green)%s %C(cyan)(%an) %C(magenta)%ar"
+    #                   │        │           │           │               └─ date (relative)
+    #                   │        │           │           └─ author name
+    #                   │        │           └─ message
+    #                   │        └─ decorations (branch, heads or tags)
+    #                   └─ hash (abbreviated)
+
+[pull]
+
+    rebase = true
+
+[push]
+
+    # Make `git push` automatically push relevant
+    # annotated tags when pushing branches out
+
+    followTags = true
+
+    # Make `git push` push only the current branch
+
+    default = simple
+
+[user]
+
+    # Do not guess the user’s identity.
+    #
+    # https://github.com/git/git/blob/90f7b16b3adc78d4bbabbd426fb69aa78c714f71/Documentation/config.txt#L2847-L2855
+
+    useConfigOnly = true
+
+    # [!] DO NOT store sensitive information such as the Git user credentials
+    #     (`name`/`email`), or things such as the `signingkey` in this file, add
+    #     them to `~/.gitconfig.local`!
+    #
+    # See also: https://github.com/alrra/dotfiles#gitconfiglocal
+
+[include]
+
+    path = ~/.gitaliases
+
+    # Load local configs.
+    #
+    # https://git-scm.com/docs/git-config#_includes
+    #
+    # [!] The following needs to remain at the end of this file in order to
+    #     allow any of the above configs to be overwritten by the local ones
+
+    path = ~/.gitconfig.local

@@ -1,0 +1,11 @@
+# Automatically normalize line endings for all text-based files
+# https://git-scm.com/docs/gitattributes#_end_of_line_conversion
+
+* text=auto
+
+# Better diff output for Ruby files
+# https://tekin.co.uk/2020/10/better-git-diff-output-for-ruby-python-elixir-and-more
+
+*.rb diff=ruby
+*.rake diff=ruby
+*.gemspec diff=ruby
