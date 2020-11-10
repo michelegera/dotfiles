@@ -17,3 +17,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ./finder.sh
 ./firefox.sh
 ./keyboard.sh
+./language_and_region.sh
