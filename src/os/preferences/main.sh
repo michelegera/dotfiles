@@ -24,4 +24,5 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ./textedit.sh
 ./trackpad_and_mouse.sh
 ./transmission.sh
+./tweetbot.sh
 ./ui_and_ux.sh
