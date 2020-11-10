@@ -9,6 +9,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 print_in_purple "\n   Tools\n\n"
 
 brew_install "bat" "bat"
+brew_install "coreutils" "coreutils"
 brew_install "diff-so-fancy" "diff-so-fancy"
 brew_install "duti" "duti"
 brew_install "fd" "fd"
