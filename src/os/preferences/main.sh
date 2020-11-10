@@ -22,3 +22,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ./photos.sh
 ./safari.sh
 ./textedit.sh
+./trackpad_and_mouse.sh
