@@ -16,3 +16,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ./dock.sh
 ./finder.sh
 ./firefox.sh
+./keyboard.sh
