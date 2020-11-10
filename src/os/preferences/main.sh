@@ -13,3 +13,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 ./app_store.sh
 ./chrome.sh
+./dock.sh
