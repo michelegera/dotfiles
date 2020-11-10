@@ -23,3 +23,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ./safari.sh
 ./textedit.sh
 ./trackpad_and_mouse.sh
+./transmission.sh
