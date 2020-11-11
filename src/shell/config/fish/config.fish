@@ -1,10 +1,60 @@
 # Aliases
 
+# General
+
 alias cat="bat"
-alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 alias ll="ls -lAh"
 alias ls="gls --color"
+alias ping="prettyping --nolegend"
+alias top="htop"
 alias v="nvim"
+
+# Brew
+
+alias bcin="brew cask install"
+alias bcl="brew cleanup"
+alias bcls="brew list --cask"
+alias bcrm="brew cask uninstall"
+alias bcup="brew upgrade --cask"
+alias bdr="brew doctor"
+alias bin="brew install"
+alias binf="brew info"
+alias bls="brew list --formula"
+alias bout="brew outdated"
+alias brm="brew uninstall"
+alias bsr="brew search"
+alias bup="brew upgrade"
+
+# Bundler
+
+alias be="bundle exec"
+alias bi="bundle install"
+alias bl="bundle list"
+alias bp="bundle package"
+alias bu="bundle update"
+
+# macOS
+
+alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+
+# Rails
+
+alias r="rails"
+alias rc="rails c"
+alias rdbm="rails db:migrate"
+alias rs="rails s"
+
+# Yarn
+
+alias ya="yarn"
+alias yaa="yarn add"
+alias yaad="yarn add --dev"
+alias yaga="yarn global add"
+alias yagrm="yarn global remove"
+alias yai="yarn init"
+alias yarm="yarn remove"
+alias yaru="yarn run"
+alias yat="yarn test"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
