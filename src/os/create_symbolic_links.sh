@@ -19,6 +19,7 @@ create_symlinks() {
         "shell/config"
         "shell/curlrc"
         "shell/dircolors"
+        "shell/fdignore"
         "shell/gemrc"
         "shell/hushlogin"
         "shell/hyper.js"
