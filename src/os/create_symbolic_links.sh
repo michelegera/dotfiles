@@ -24,6 +24,7 @@ create_symlinks() {
         "shell/hyper.js"
         "shell/inputrc"
         "shell/screenrc"
+        "shell/ssh"
 
     )
 

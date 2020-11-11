@@ -1,0 +1,6 @@
+Include config.local
+
+Host *
+  ServerAliveInterval 300
+  ServerAliveCountMax 3
+  UseKeychain yes
