@@ -72,6 +72,15 @@ set -e MAILCHECK
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Use Neovim as the preferred editor
+
+set -x EDITOR nvim
+set -x VISUAL nvim
+set -x VIMCONFIG ~/.config/nvim
+set -x VIMDATA ~/.local/share/nvim
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Include Homebrew’s executables path
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
