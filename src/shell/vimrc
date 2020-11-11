@@ -1,0 +1,282 @@
+:scriptencoding utf-8
+" Plugins {{{
+    " Install vim-plug automatically
+    let s:plugged_autoload_prefix='~/.vim'
+    let s:plugged_autoload_path=s:plugged_autoload_prefix . '/autoload/plug.vim'
+    let s:plugged_install_dir=s:plugged_autoload_prefix . '/plugged'
+
+    if empty(glob(s:plugged_autoload_path))
+        let s:command='!curl -fLo ' . s:plugged_autoload_path . ' --create-dirs '
+        let s:command.='https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+        silent exec s:command
+
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    endif
+    call plug#begin(s:plugged_install_dir)
+
+    " Theme and UI
+    Plug 'ayu-theme/ayu-vim'
+    Plug 'itchyny/lightline.vim'
+    Plug 'jeffkreeftmeijer/vim-numbertoggle'
+    Plug 'mengelbrecht/lightline-bufferline'
+
+    " File navigation and utilities
+    Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
+    Plug 'jremmen/vim-ripgrep'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'schickling/vim-bufonly'
+    Plug 'scrooloose/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
+    Plug 'tpope/vim-eunuch'
+    Plug 'tpope/vim-unimpaired'
+
+    " Git
+    Plug 'airblade/vim-gitgutter'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-rhubarb'
+
+    " Code editing, formatting and completion
+    Plug 'alvan/vim-closetag'
+    Plug 'ap/vim-css-color'
+    Plug 'christoomey/vim-sort-motion'
+    Plug 'editorconfig/editorconfig-vim'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'mattn/emmet-vim'
+    Plug 'matze/vim-move'
+    Plug 'mlaursen/vim-react-snippets'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'terryma/vim-multiple-cursors'
+    Plug 'tpope/vim-abolish'
+    Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-repeat'
+    Plug 'tpope/vim-surround'
+    Plug 'w0rp/ale'
+
+    " HTML, CSS and JavaScript
+    Plug 'hail2u/vim-css3-syntax'
+    Plug 'cakebaker/scss-syntax.vim'
+    Plug 'pangloss/vim-javascript'
+
+    " Ruby + frameworks
+    Plug 'tpope/vim-bundler'
+    Plug 'tpope/vim-endwise'
+    Plug 'tpope/vim-rails'
+
+    " Advanced JavaScript + frameworks
+    Plug 'maxmellon/vim-jsx-pretty'
+    Plug 'styled-components/vim-styled-components', {'branch': 'main'}
+
+    " GraphQL
+    Plug 'jparise/vim-graphql'
+    call plug#end()
+" }}}
+" General settings {{{
+    set nocompatible                  " Allow Vim-only settings (must be first)
+    set autoread                      " Reload files changed outside of Vim
+    set backspace=indent,eol,start    " Allow backspace in insert mode
+    set cmdheight=2                   " Avoid “Press <ENTER> to continue” prompt
+    set hidden                        " Hide buffers when abandoned
+    set history=1000                  " Number of commands to remember
+    set laststatus=2                  " Always display a status line
+    set mouse=a                       " Enable mouse support
+    set noshowmode                    " Do not show mode
+    set ttimeoutlen=10                " Avoid pausing when leaving insert mode
+    set undolevels=1000               " Number of undo levels
+    set visualbell                    " No sounds
+" }}}
+" Colors {{{
+    set termguicolors                 " Enable true colors support
+    let ayucolor="mirage"             " Other options: 'light' or 'dark'
+    colorscheme ayu
+    syntax enable
+" }}}
+" UI Layout {{{
+    set colorcolumn=+1
+    set fillchars+=vert:┃
+    set lazyredraw
+    set list
+    set listchars=tab:▸\ ,trail:·     " Display tabs and trailing spaces
+    set nocursorline                  " Highlight current line
+    set number relativenumber         " Show current line number and relative
+    set scrolloff=5                   " Start scrolling when close to margin
+    set showcmd                       " Show command in bottom bar
+    set showmatch                     " Higlight matching parenthesis
+    set showtabline=2                 " Show buffers bar
+    set splitright                    " Open new splits on the right
+    set textwidth=80
+    set wildmenu
+" }}}
+" Behavior {{{
+    " Open :help in a new tab
+    cnoreabbrev <expr> help getcmdtype() == ":" && getcmdline() == 'help' ?
+        \ 'tab help' : 'help'
+" }}}
+" Spaces & Tabs {{{
+    filetype indent plugin on         " Enable file type detection
+    set autoindent smartindent        " Auto-indent based on previous line
+    set expandtab smarttab            " Use spaces for tabs
+    set modelines=1
+    set shiftwidth=2
+    set softtabstop=2
+    set tabstop=2                     " Two-space tab
+" }}}
+" Searching {{{
+    set hlsearch                      " Highlight all matches
+    set ignorecase                    " Ignore case when searching
+    set incsearch                     " Search as you type
+    set smartcase                     " Try to be smart about cases
+" }}}
+" Folding {{{
+    nnoremap <space> za
+    set foldenable                    " Do not fold files by default on open
+    set foldlevelstart=10             " Start with fold level of 10
+    set foldmethod=indent             " Fold based on indent level
+    set foldnestmax=10                " Max 10 depth
+" }}}
+" Swap files {{{
+    set nobackup
+    set noswapfile
+    set nowb
+" }}}
+" Commands and Autocommands {{{
+    " Format with Prettier
+    command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+    " Set specific type based on file type
+    autocmd FileType gitcommit setlocal textwidth=72
+    autocmd FileType gitcommit setlocal spell
+
+  " If files are changed externally (e.g.: changing branches), update buffers
+  autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+  autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk, buffer reloaded." | echohl None
+
+  " Correctly style all .env files
+  autocmd BufNewFile,BufRead * if expand('%t') =~ '.env' | set filetype=sh | endif
+" }}}
+" Key bindings {{{
+    " Cycle through listed buffers
+    nnoremap <Tab> :bnext<CR>
+    nnoremap <S-Tab> :bprevious<CR>
+
+    " Vim. Live it.
+    nnoremap <up> <nop>
+    nnoremap <down> <nop>
+    nnoremap <left> <nop>
+    nnoremap <right> <nop>
+    inoremap <up> <nop>
+    inoremap <down> <nop>
+    inoremap <left> <nop>
+    inoremap <right> <nop>
+
+    " Toggle NERDTree
+    map <silent> <C-p><C-p> :NERDTreeToggle<CR>
+
+    " Easy ESC with jk in insert mode
+    inoremap jk <esc>
+    snoremap jk <esc>
+
+    " Toggle invisibles
+    nmap <leader>l :set list!<CR>
+
+    vmap <leader>p  <Plug>(coc-format-selected)
+    nmap <leader>p  <Plug>(coc-format-selected)
+
+    " Search for stuff
+    nnoremap <C-p> :Files<CR>
+    nnoremap <Leader>b :Buffers<CR>
+    nnoremap <Leader>h :History<CR>
+
+    " Search project for current word
+    map <leader>* :Rg <cword><CR><CR>
+
+    " Symbols for tabstops and EOLs
+    set listchars=tab:▸\ ,eol:¬
+" }}}
+" Plugins configuration {{{
+    " --------------------------------------------------------------------------
+    " ale
+    " --------------------------------------------------------------------------
+    let g:ale_lint_on_text_changed='never'
+    let g:ale_fix_on_save=1
+    let g:ale_fixers={
+    \  '*': ['remove_trailing_lines', 'trim_whitespace'],
+    \  'javascript': ['prettier', 'eslint'],
+    \}
+
+    " --------------------------------------------------------------------------
+    " coc.nvim
+    " --------------------------------------------------------------------------
+    " Don’t pass messages to |ins-completion-menu|
+    set shortmess+=c
+
+    let g:coc_global_extensions=[
+    \  'coc-css',
+    \  'coc-html',
+    \  'coc-json',
+    \  'coc-snippets',
+    \  'coc-tailwindcss',
+    \  'coc-tsserver'
+    \]
+
+    " Use <Tab> and <S-Tab> to navigate the completion list
+    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+    " Use <Tab> and <S-Tab> to navigate across placehoders
+    let g:coc_snippet_next = '<Tab>'
+    let g:coc_snippet_prev = '<S-Tab>'
+
+    " --------------------------------------------------------------------------
+    " emmett-vim
+    " --------------------------------------------------------------------------
+    let g:user_emmet_leader_key=','
+
+    " --------------------------------------------------------------------------
+    " lightline
+    " --------------------------------------------------------------------------
+    let g:lightline={'colorscheme': 'ayu'}
+
+    " --------------------------------------------------------------------------
+    " lightline-bufferline
+    " --------------------------------------------------------------------------
+    let g:lightline.tabline={'left': [['buffers']]}
+    let g:lightline.component_expand={'buffers': 'lightline#bufferline#buffers'}
+    let g:lightline.component_type={'buffers': 'tabsel'}
+
+    " --------------------------------------------------------------------------
+    " nerdtree
+    " --------------------------------------------------------------------------
+    let NERDTreeAutoDeleteBuffer=1
+    let NERDTreeDirArrows=1
+    let NERDTreeMinimalUI=1
+    let NERDTreeQuitOnOpen=1
+    let NERDTreeShowHidden=1
+    let g:NERDTreeHijackNetrw=0
+
+    " --------------------------------------------------------------------------
+    " netrw
+    " --------------------------------------------------------------------------
+    let g:loaded_netrw=1
+    let g:loaded_netrwPlugin=1
+
+    " --------------------------------------------------------------------------
+    " vim-closetag
+    " --------------------------------------------------------------------------
+    let g:closetag_filenames='*.html,*.js,*.jsx'
+    let g:closetag_emptyTags_caseSensitive=1
+    let g:closetag_regions = {
+    \  'javascript.jsx': 'jsxRegion',
+    \  'javascriptreact': 'jsxRegion',
+    \}
+
+    " --------------------------------------------------------------------------
+    " vim-jsx-pretty
+    " --------------------------------------------------------------------------
+    " allow jsx syntax in .js files
+    let g:jsx_ext_required=0
+" }}}
+" Custom functions {{{
+" }}}
+" vim:foldmethod=marker:foldlevel=0
