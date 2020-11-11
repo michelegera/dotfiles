@@ -10,8 +10,7 @@
     dc  = diff --cached -- . ':!*package-lock.json' ':!*yarn.lock'
     f   = fetch
     fp  = push --force
-    g   = log --graph --pretty=custom
-    l   = log --pretty=custom
+    l   = log --branches --pretty=custom
     lc  = shortlog --email --numbered --summary
     p   = push
     r   = rebase
