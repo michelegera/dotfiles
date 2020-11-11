@@ -2,6 +2,8 @@
 .DS_Store
 
 # Ignore non-customized configuration files
+src/shell/config/coc
+
 src/shell/config/fish/*
 !src/shell/config/fish/config.fish
 !src/shell/config/fish/fish_plugins
@@ -9,7 +11,11 @@ src/shell/config/fish/*
 src/shell/config/fish/conf.d/*
 !src/shell/config/fish/conf.d/__nvm_use_on_cd.fish
 
+src/shell/config/htop
+
 src/shell/config/nvm
+
+src/shell/config/yarn
 
 src/shell/ssh/*
 !src/shell/ssh/config
