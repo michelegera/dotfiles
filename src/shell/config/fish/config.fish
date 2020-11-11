@@ -81,6 +81,14 @@ set -x VIMDATA ~/.local/share/nvim
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Configure gpg-agent
+
+gpgconf --launch gpg-agent
+set -x SSH_AUTH_SOCKET $HOME/.gnupg/S.gpg-agent.ssh
+set -x GPG_TTY (tty)
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Include Homebrew’s executables path
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
