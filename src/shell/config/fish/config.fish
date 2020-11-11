@@ -66,6 +66,12 @@ set -x LANGUAGE en_US.UTF-8
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Don’t check mail when opening terminal
+
+set -e MAILCHECK
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Include Homebrew’s executables path
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
