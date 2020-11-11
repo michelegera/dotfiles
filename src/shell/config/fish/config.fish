@@ -58,6 +58,14 @@ alias yat="yarn test"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Use English for command line tools
+
+set -x LC_ALL en_US.UTF-8
+set -x LANG en_US.UTF-8
+set -x LANGUAGE en_US.UTF-8
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Include Homebrew’s executables path
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
