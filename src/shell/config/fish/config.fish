@@ -120,6 +120,14 @@ set -xa FZF_DEFAULT_OPTS "
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Alias `python` to Homebrew’s Python, `python2` to macOS’s
+
+alias pip="/usr/local/bin/pip3"
+alias python="/usr/local/bin/python3"
+alias python2="/usr/bin/python"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Source prompt
 
 starship init fish | source
