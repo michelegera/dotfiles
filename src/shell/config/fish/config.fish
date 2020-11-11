@@ -14,6 +14,12 @@ set PATH /usr/local/opt/mariadb/bin $PATH
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Set up dircolors
+
+eval (gdircolors -c $HOME/.dircolors)
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Source prompt
 
 starship init fish | source
