@@ -95,6 +95,13 @@ set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Link Rubies to Homebrew’s OpenSSL, since ruby-build installs a non-Homebrew
+# OpenSSL for each Ruby version installed and these are never upgraded.
+
+set -x RUBY_CONFIGURE_OPTS --with-openssl-dir=(brew --prefix openssl)
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Set up dircolors
 
 eval (gdircolors -c $HOME/.dircolors)
