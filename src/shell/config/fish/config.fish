@@ -14,6 +14,12 @@ set PATH /usr/local/opt/mariadb/bin $PATH
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Include Homebrew’s executables path
+
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Set up dircolors
 
 eval (gdircolors -c $HOME/.dircolors)
