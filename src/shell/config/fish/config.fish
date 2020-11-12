@@ -11,19 +11,15 @@ alias v="nvim"
 
 # Brew
 
-alias bcin="brew cask install"
-alias bcl="brew cleanup"
-alias bcls="brew list --cask"
-alias bcrm="brew cask uninstall"
-alias bcup="brew upgrade --cask"
-alias bdr="brew doctor"
-alias bin="brew install"
-alias binf="brew info"
-alias bls="brew list --formula"
-alias bout="brew outdated"
-alias brm="brew uninstall"
-alias bsr="brew search"
-alias bup="brew upgrade"
+alias brcl="brew cleanup"
+alias brd="brew doctor"
+alias brin="brew install"
+alias brinf="brew info"
+alias brls="brew list"
+alias brout="brew outdated"
+alias brs="brew search"
+alias brun="brew uninstall"
+alias brup="brew upgrade"
 
 # Bundler
 
