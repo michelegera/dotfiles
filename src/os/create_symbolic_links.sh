@@ -22,7 +22,6 @@ create_symlinks() {
         "shell/fdignore"
         "shell/gemrc"
         "shell/hushlogin"
-        "shell/hyper.js"
         "shell/inputrc"
         "shell/screenrc"
         "shell/ssh"
