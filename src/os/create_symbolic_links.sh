@@ -16,6 +16,7 @@ create_symlinks() {
 
         "prefs/duti"
 
+        "shell/alacritty.yml"
         "shell/config"
         "shell/curlrc"
         "shell/dircolors"
