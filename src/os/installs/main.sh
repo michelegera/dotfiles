@@ -12,12 +12,12 @@ print_in_purple "\n • Installs\n\n"
 ./homebrew.sh
 ./fish.sh
 
-./git.sh
-./browsers.sh
-./gpg.sh
-./creative_tools.sh
-./vscode.sh
-./neovim.sh
 ./applications.sh
-./tools.sh
+./browsers.sh
+./creative_tools.sh
 ./fonts.sh
+./git.sh
+./gpg.sh
+./neovim.sh
+./tools.sh
+./vscode.sh
