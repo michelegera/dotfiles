@@ -44,6 +44,12 @@ alias rc="rails c"
 alias rdbm="rails db:migrate"
 alias rs="rails s"
 
+# Tmux
+
+alias txa="tmux a -t"
+alias txl="tmux ls"
+alias txn="tmux new -s"
+
 # Yarn
 
 alias ya="yarn"

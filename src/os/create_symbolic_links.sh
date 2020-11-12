@@ -26,6 +26,7 @@ create_symlinks() {
         "shell/inputrc"
         "shell/screenrc"
         "shell/ssh"
+        "shell/tmux.conf"
         "shell/vimrc"
 
     )
