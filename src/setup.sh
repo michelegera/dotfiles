@@ -8,7 +8,7 @@ declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSIT
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-declare dotfilesDirectory="$HOME/Code/dotfiles-v2"
+declare dotfilesDirectory="$HOME/Code/dotfiles"
 declare skipQuestions=false
 
 #  ----------------------------------------------------------------------------
