@@ -24,6 +24,7 @@ create_symlinks() {
         "shell/gemrc"
         "shell/hushlogin"
         "shell/inputrc"
+        "shell/rgignore"
         "shell/screenrc"
         "shell/ssh"
         "shell/tmux.conf"
