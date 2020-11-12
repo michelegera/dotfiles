@@ -6,7 +6,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-print_in_purple "\n • Installs\n"
+print_in_purple "\n • Installs\n\n"
 
 ./xcode.sh
 ./homebrew.sh
