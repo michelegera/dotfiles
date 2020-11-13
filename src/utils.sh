@@ -17,6 +17,11 @@ ask_for_confirmation() {
     printf "\n"
 }
 
+ask_for_password() {
+    print_question "$1"
+    read -s
+}
+
 ask_for_sudo() {
 
     # Ask for the administrator password upfront.
