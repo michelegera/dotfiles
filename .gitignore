@@ -2,6 +2,10 @@
 .DS_Store
 
 # Ignore non-customized configuration files
+src/prefs/gnupg/*
+!src/prefs/gnupg/gpg.conf
+!src/prefs/gnupg/gpg-agent.conf
+
 src/shell/config/coc
 
 src/shell/config/fish/*

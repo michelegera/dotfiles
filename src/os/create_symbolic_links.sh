@@ -15,6 +15,7 @@ create_symlinks() {
         "git/gitignore"
 
         "prefs/duti"
+        "prefs/gnupg"
 
         "shell/alacritty.yml"
         "shell/config"
