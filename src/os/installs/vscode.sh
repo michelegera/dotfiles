@@ -19,6 +19,12 @@ brew_install "Visual Studio Code" "visual-studio-code" "homebrew/cask" "cask"
 
 printf "\n"
 
+# Symlink settings
+symlink "${HOME}/.vscode/settings.json" \
+    "${HOME}/Library/Application\ Support/Code/User/settings.json"
+
+printf "\n"
+
 # Install the VSCode plugins
 install_plugin "bradlc.vscode-tailwindcss" "Tailwind CSS IntelliSense"
 install_plugin "bungcip.better-toml" "Better TOML"

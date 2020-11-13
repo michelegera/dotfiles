@@ -1,0 +1,12 @@
+{
+  "editor.find.addExtraSpaceOnTop": false,
+  "editor.fontFamily": "'Source Code Pro for Powerline', monospace",
+  "editor.fontSize": 13,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [80],
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabSize": 2,
+  "files.trimFinalNewlines": true,
+  "workbench.colorTheme": "Ayu Mirage"
+}

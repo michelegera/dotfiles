@@ -16,6 +16,7 @@ create_symlinks() {
 
         "prefs/duti"
         "prefs/gnupg"
+        "prefs/vscode"
 
         "shell/alacritty.yml"
         "shell/config"

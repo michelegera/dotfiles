@@ -6,6 +6,9 @@ src/prefs/gnupg/*
 !src/prefs/gnupg/gpg.conf
 !src/prefs/gnupg/gpg-agent.conf
 
+src/prefs/vscode/*
+!src/prefs/vscode/settings.json
+
 src/shell/config/coc
 
 src/shell/config/fish/*
