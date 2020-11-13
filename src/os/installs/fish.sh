@@ -50,12 +50,26 @@ change_default_shell() {
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+install_fisher() {
+
+    local script="curl -sL git.io/fisher | source && \
+        fisher install jorgebucaran/fisher"
+
+
+    fish -c "$script" &> /dev/null
+    print_result $? "Fisher"
+
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 main() {
 
     print_in_purple "\n   Fish\n\n"
 
     brew_install "Fish" "fish" \
-        && change_default_shell
+        && change_default_shell \
+        && install_fisher
 
 }
 
