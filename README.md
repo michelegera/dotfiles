@@ -7,15 +7,15 @@ For more specific local needs I use the `*.local` files described in the
 ## Table of Contents
 
 - [🔧 Setup](#setup)
-- [🎨 Customize](#customize)
-  - [🌐 Local Settings](#local-settings)
+- [🎛 Customize](#customize)
+  - [🌍 Local Settings](#local-settings)
     - [🐟 `~/.fishconfig.local`](#fishconfiglocal)
-    - [🔁 `~/.gitconfig.local`](#gitconfiglocal)
-    - [⌨️ `~/.vimrc.local`](#vimrclocal)
+    - [🐙 `~/.gitconfig.local`](#gitconfiglocal)
+    - [💻 `~/.vimrc.local`](#vimrclocal)
   - [🔀 Forks](#forks)
 - [↕️ Update](#update)
 - [🥇 Acknowledgements](#acknowledgements)
-- [📑 License](#license)
+- [⚖️ License](#license)
 
 ## Setup
 
