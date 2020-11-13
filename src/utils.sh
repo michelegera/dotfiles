@@ -333,3 +333,37 @@ show_spinner() {
     done
 
 }
+
+symlink() {
+    if [ ! -e "$2" ] || $skipQuestions; then
+
+        execute \
+            "ln -fs $1 $2" \
+            "$2 → $1"
+
+    elif [ "$(readlink "$2")" == "$1" ]; then
+        print_success "$2 → $1"
+    else
+
+        if ! $skipQuestions; then
+
+            ask_for_confirmation \
+                "'$2' already exists, do you want to overwrite it?"
+
+            if answer_is_yes; then
+
+                rm -rf "$2"
+
+                execute \
+                    "ln -fs $1 $2" \
+                    "$2 → $1"
+
+            else
+                print_error "$2 → $1"
+            fi
+
+        fi
+
+    fi
+
+}
