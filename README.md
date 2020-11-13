@@ -12,7 +12,7 @@ terminal:
 (**DO NOT** run the command if you don’t fully
 understand [what it does](dotfiles). Seriously, **DON’T**!)
 
-`bash -c "$(curl -LsS https://raw.github.com/michelegera/dotfiles/master/dotfiles)"`
+`bash -c "$(curl -LsS https://raw.github.com/michelegera/dotfiles/v1/dotfiles)"`
 
 That’s it!
 
