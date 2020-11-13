@@ -5,6 +5,7 @@
 src/shell/config/coc
 
 src/shell/config/fish/*
+!src/shell/config/fish/aliases.fish
 !src/shell/config/fish/config.fish
 !src/shell/config/fish/fish_plugins
 
