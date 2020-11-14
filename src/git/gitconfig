@@ -113,12 +113,12 @@
 
 [pretty]
 
-    custom = "%C(black bold)%h%C(yellow)%d %C(reset)%s %C(bold blue)<%an> %C(green)(%cr)"
-    #                        │           │           │                │              └─ date (relative)
-    #                        │           │           │                └─ author name
-    #                        │           │           └─ message
-    #                        │           └─ decorations (branch, heads or tags)
-    #                        └─ hash (abbreviated)
+    custom = "%C(yellow)%h%C(magenta bold)%d %C(reset)%s %C(bold blue)<%an> %C(green)(%cr)"
+    #                    │                 │           │                │              └─ date (relative)
+    #                    │                 │           │                └─ author name
+    #                    │                 │           └─ message
+    #                    │                 └─ decorations (branch, heads or tags)
+    #                    └─ hash (abbreviated)
 
 [pull]
 
