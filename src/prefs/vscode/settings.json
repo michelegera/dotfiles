@@ -7,6 +7,7 @@
   "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "workbench.colorTheme": "Ayu Mirage"
 }
