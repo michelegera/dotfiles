@@ -1,4 +1,4 @@
-# [michelegera][github profile]’s dotfiles
+# [michelegera][github profile]’s dotfiles [![Build Status][ci badge]][ci link]
 
 These are the base dotfiles that I start with when I set up a new environment.
 For more specific local needs I use the `*.local` files described in the
@@ -136,6 +136,8 @@ The code is available under the [MIT license][license].
 <!-- Link labels -->
 
 [alrra]: https://github.com/alrra/dotfiles
+[ci badge]: https://github.com/michelegera/dotfiles/workflows/tests/badge.svg
+[ci link]: https://github.com/michelegera/dotfiles/actions
 [dirs]: src/os/create_directories.sh
 [fish]: src/shell/config/fish/config.fish
 [fork]: https://help.github.com/en/github/getting-started-with-github/fork-a-repo

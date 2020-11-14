@@ -1,0 +1,23 @@
+# For more information about the configurations used in this file, please see
+# GitHub actions documentation.
+#
+# https://help.github.com/en/github/automating-your-workflow-with-github-actions/
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+name: tests
+
+on: push
+
+jobs:
+  tests:
+    runs-on: macos-11.0
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: brew install shellcheck
+
+      - name: Run tests
+        run: ./tests/shellcheck.sh
