@@ -25,7 +25,7 @@ To set up the dotfiles run the appropriate snippet in the terminal:
 [what it does][setup]. Seriously, **DON’T**!)
 
 ```shell
-bash -c "$(curl -LsS https://raw.github.com/michelegera/dotfiles/main/src/setup.sh)"
+bash -c "$(curl -LsS https://setup.dotfiles.michelegera.dev)"
 ```
 
 That’s it! ✨
