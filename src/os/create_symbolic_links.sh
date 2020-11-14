@@ -39,12 +39,12 @@ create_symlinks() {
     local targetFile=""
     local skipQuestions=false
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     skip_questions "$@" \
         && skipQuestions=true
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     for i in "${FILES_TO_SYMLINK[@]}"; do
 
