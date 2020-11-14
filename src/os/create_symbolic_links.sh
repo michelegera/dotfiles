@@ -51,7 +51,7 @@ create_symlinks() {
         sourceFile="$(cd .. && pwd)/$i"
         targetFile="$HOME/.$(printf "%s" "$i" | sed "s/.*\/\(.*\)/\1/g")"
 
-        symlink $sourceFile $targetFile $skip_questions
+        symlink "$sourceFile" "$targetFile" $skipQuestions
 
     done
 
