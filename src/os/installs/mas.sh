@@ -6,7 +6,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-mas_install() {
+install_apps() {
 
     # Bash 3 does not support associative arrays, so we use a hack
 
@@ -37,35 +37,49 @@ mas_install() {
 
 }
 
+install_mas() {
 
-mas_signin() {
+    brew_install 'Install mas' 'mas'
 
-    local appleIDEmail=""
-    local appleIDPassword=""
+    printf "\n"
 
-    while [ -z "$appleIDEmail" ]; do
-        ask "Please type your Apple ID email: "
-        appleIDEmail="$(get_answer)"
-    done
+}
 
-    while [ -z "$appleIDPassword" ]; do
-        ask_for_password "Please type your Apple ID password: " && printf "\n"
-        appleIDPassword="$(get_answer)"
-    done
+is_signed_into_mas() {
 
-    mas signout &> /dev/null
-    mas signin "$appleIDEmail" "$appleIDPassword" &> /dev/null
+    mas account
 
-    print_result $? "Sign in"
+}
+
+sign_into_mas() {
+
+    open /System/Applications/App\ Store.app
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Wait until signed into the App Store.
+
+    execute \
+        "until is_signed_into_mas; do \
+            sleep 5; \
+         done" \
+        "Sign in"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    osascript -e 'quit app "App Store"'
+
+    printf "\n"
+
 }
 
 main() {
 
     print_in_purple "\n • Mac App Store\n\n"
 
-    mas_signin
-    mas_install
-
+    install_mas
+    sign_into_mas
+    install_apps
 }
 
 main
