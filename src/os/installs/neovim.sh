@@ -13,3 +13,5 @@ main() {
     brew_install "Neovim" "neovim"
 
 }
+
+main
