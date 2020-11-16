@@ -1,8 +1,13 @@
 {
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.find.addExtraSpaceOnTop": false,
   "editor.fontFamily": "'Source Code Pro for Powerline', monospace",
   "editor.fontSize": 13,
+  "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
+  "editor.formatOnType": false,
   "editor.minimap.enabled": false,
   "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
