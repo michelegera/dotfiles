@@ -14,8 +14,8 @@ create_fishconfig_local() {
     if [ ! -e "$FILE_PATH" ] || [ -z "$FILE_PATH" ]; then
 
         printf "%s\n" \
-"# set NPMJS_AUTH_TOKEN
-# set REACT_APP_NPMJS_AUTH_TOKEN \$NPMJS_AUTH_TOKEN" \
+"# set -x NPMJS_AUTH_TOKEN
+# set -x REACT_APP_NPMJS_AUTH_TOKEN \$NPMJS_AUTH_TOKEN" \
         >> "$FILE_PATH"
     fi
 
