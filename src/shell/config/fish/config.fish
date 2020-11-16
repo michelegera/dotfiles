@@ -29,9 +29,13 @@ set -x GPG_TTY (tty)
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Include Homebrew’s executables path
+# Homebrew’s executables path
 
 set -ua fish_user_paths /usr/local/sbin
+
+# sbt executables path
+
+set -ua fish_user_paths /usr/local/opt/sbt@0.13/bin
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
