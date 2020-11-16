@@ -22,4 +22,3 @@ print_in_purple "\n • Installs\n\n"
 ./neovim.sh
 ./tools.sh
 ./vscode.sh
-./yarn.sh
