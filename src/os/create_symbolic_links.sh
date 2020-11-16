@@ -19,6 +19,7 @@ create_symlinks() {
         "prefs/vscode"
 
         "shell/alacritty.yml"
+        "shell/bundle"
         "shell/config"
         "shell/curlrc"
         "shell/dircolors"

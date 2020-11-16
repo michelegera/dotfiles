@@ -1,0 +1,2 @@
+---
+BUNDLE_BUILD__MYSQL2: "--with-opt-dir=/usr/local/opt/openssl"

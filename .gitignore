@@ -11,6 +11,9 @@ src/prefs/vscode/*
 
 src/shell/config/coc
 
+src/shell/bundle/*
+!src/shell/bundle/config
+
 src/shell/config/fish/*
 !src/shell/config/fish/aliases.fish
 !src/shell/config/fish/config.fish
