@@ -6,7 +6,7 @@
   "editor.fontFamily": "'Source Code Pro for Powerline', monospace",
   "editor.fontSize": 13,
   "editor.formatOnPaste": false,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.formatOnType": false,
   "editor.minimap.enabled": false,
   "editor.rulers": [80],
