@@ -9,10 +9,10 @@ src/prefs/gnupg/*
 src/prefs/vscode/*
 !src/prefs/vscode/settings.json
 
-src/shell/config/coc
-
 src/shell/bundle/*
 !src/shell/bundle/config
+
+src/shell/config/coc
 
 src/shell/config/fish/*
 !src/shell/config/fish/aliases.fish
@@ -21,6 +21,10 @@ src/shell/config/fish/*
 
 src/shell/config/fish/conf.d/*
 !src/shell/config/fish/conf.d/__nvm_use_on_cd.fish
+
+src/shell/config/configstore
+
+src/shell/config/gatsby
 
 src/shell/config/htop
 
