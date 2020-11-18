@@ -60,10 +60,9 @@ create_sshconfig_local() {
     if [ ! -e "$FILE_PATH" ] || [ -z "$FILE_PATH" ]; then
 
         printf "%s\n" \
-"# Host example
-# HostName example.com
-# User user
-# IdentityFile ~/.ssh/secret_key.pem" \
+"# Host github.com
+#   IdentityFile ~/.ssh/github
+#   LogLevel ERROR" \
         >> "$FILE_PATH"
     fi
 

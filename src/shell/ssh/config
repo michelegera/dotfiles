@@ -1,4 +1,4 @@
-Include config.local
+Include ~/.sshconfig.local
 
 Host *
   ServerAliveInterval 300
