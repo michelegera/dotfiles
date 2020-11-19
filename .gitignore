@@ -26,6 +26,8 @@ src/shell/config/configstore
 
 src/shell/config/gatsby
 
+src/shell/config/gh
+
 src/shell/config/htop
 
 src/shell/config/nvm
