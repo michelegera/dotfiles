@@ -65,12 +65,6 @@ set -xa FZF_DEFAULT_OPTS "
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Import aliases
-
-[ -f $HOME/.config/fish/aliases.fish ]; and . $HOME/.config/fish/aliases.fish
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 # Source prompt
 
 starship init fish | source

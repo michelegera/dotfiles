@@ -18,6 +18,11 @@ src/shell/config/fish/*
 !src/shell/config/fish/aliases.fish
 !src/shell/config/fish/config.fish
 !src/shell/config/fish/fish_plugins
+!src/shell/config/fish/functions
+src/shell/config/fish/functions/__*
+src/shell/config/fish/functions/fisher.fish
+src/shell/config/fish/functions/nvm.fish
+src/shell/config/fish/functions/rbenv.fish
 
 src/shell/config/fish/conf.d/*
 !src/shell/config/fish/conf.d/__nvm_use_on_cd.fish
