@@ -1,3 +1,9 @@
+# Suppress greeting
+
+set -U fish_greeting ''
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Use English for command line tools
 
 set -x LC_ALL en_US.UTF-8
