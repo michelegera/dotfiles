@@ -1,3 +1,3 @@
-function brin--wraps='brew install'
+function brin --wraps='brew install'
   brew install $argv;
 end
