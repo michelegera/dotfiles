@@ -14,6 +14,7 @@ brew_install "Adobe Creative Cloud" "adobe-creative-cloud" "homebrew/cask" "cask
 brew_install "Alacritty" "alacritty" "homebrew/cask" "cask"
 brew_install "Alfred" "alfred" "homebrew/cask" "cask"
 brew_install "AppCleaner" "appcleaner" "homebrew/cask" "cask"
+brew_install "Catch" "catch" "homebrew/cask" "cask"
 brew_install "Garmin Express" "garmin-express" "homebrew/cask-drivers" "cask"
 brew_install "Google Backup & Sync" "google-backup-and-sync" "homebrew/cask" "cask"
 brew_install "Google Drive File Stream" "google-drive-file-stream" "homebrew/cask" "cask"
