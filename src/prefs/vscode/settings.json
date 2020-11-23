@@ -14,6 +14,7 @@
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
   "workbench.colorTheme": "Ayu Mirage",
   "workbench.startupEditor": "newUntitledFile"
 }
