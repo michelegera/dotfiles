@@ -1,7 +1,7 @@
 [alias]
 
     a   = commit --amend
-    br  = branch
+    b   = branch
     c   = commit
     ca  = !git add -A && git commit
     co  = checkout
@@ -15,7 +15,7 @@
     p   = push
     r   = rebase
     rc  = rebase --continue
-    s   = status
+    st  = status
     sth = stash --include-untracked
     u   = commit --amend --no-edit
     up  = !git fetch && git rebase --autostash FETCH_HEAD
