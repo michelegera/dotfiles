@@ -37,6 +37,8 @@ src/shell/config/htop
 
 src/shell/config/nvm
 
+src/shell/config/tmuxinator
+
 src/shell/config/yarn
 
 src/shell/ssh/*
