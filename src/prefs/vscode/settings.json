@@ -9,7 +9,7 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.minimap.enabled": false,
-  "editor.rulers": [80],
+  "editor.rulers": [80, 120],
   "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
