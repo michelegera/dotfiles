@@ -226,8 +226,8 @@
     inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
     " Use <Tab> and <S-Tab> to navigate across placehoders
-    let g:coc_snippet_next = '<Tab>'
-    let g:coc_snippet_prev = '<S-Tab>'
+    let g:coc_snippet_next='<Tab>'
+    let g:coc_snippet_prev='<S-Tab>'
 
     " --------------------------------------------------------------------------
     " emmett-vim
@@ -267,7 +267,7 @@
     " --------------------------------------------------------------------------
     let g:closetag_filenames='*.html,*.js,*.jsx'
     let g:closetag_emptyTags_caseSensitive=1
-    let g:closetag_regions = {
+    let g:closetag_regions={
     \  'javascript.jsx': 'jsxRegion',
     \  'javascriptreact': 'jsxRegion',
     \}
