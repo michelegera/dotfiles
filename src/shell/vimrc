@@ -46,6 +46,7 @@
     Plug 'matze/vim-move'
     Plug 'mlaursen/vim-react-snippets'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'stefandtw/quickfix-reflector.vim'
     Plug 'terryma/vim-multiple-cursors'
     Plug 'tpope/vim-abolish'
     Plug 'tpope/vim-commentary'
