@@ -37,18 +37,18 @@ set -x GPG_TTY (tty)
 
 # Homebrew’s executables path
 
-set -ua fish_user_paths /usr/local/sbin
+set -x PATH /usr/local/sbin $PATH
 
 # sbt executables path
 
-set -ua fish_user_paths /usr/local/opt/sbt@0.13/bin
+set -x PATH /usr/local/opt/sbt@0.13/bin $PATH
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Link Rubies to Homebrew’s OpenSSL, since ruby-build installs a non-Homebrew
 # OpenSSL for each Ruby version installed and these are never upgraded.
 
-set -x RUBY_CONFIGURE_OPTS --with-openssl-dir=(brew --prefix openssl)
+set -x RUBY_CONFIGURE_OPTS --with-openssl-dir=/usr/local/opt/openssl@1.1
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
