@@ -40,6 +40,8 @@ src/shell/config/nvm
 
 src/shell/config/tmuxinator
 
+src/shell/config/ultralist
+
 src/shell/config/yarn
 
 src/shell/ssh/*
