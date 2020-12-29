@@ -142,7 +142,7 @@
 " }}}
 " Commands and Autocommands {{{
     " Format with Prettier
-    command! -nargs=0 Prettier :CocCommand prettier.formatFile
+    command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
     " Set specific type based on file type
     autocmd FileType gitcommit setlocal textwidth=72
