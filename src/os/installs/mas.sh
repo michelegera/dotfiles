@@ -14,7 +14,6 @@ install_apps() {
         "1091189122:Bear"
         "536511979:Characters"
         "1450640351:Lightweight PDF"
-        "441258766:Magnet"
         "1464122853:NextDNS"
         "957810159:Raindrop.io for Safari"
         "1529448980:Reeder 5"
