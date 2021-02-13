@@ -12,6 +12,7 @@ install_apps() {
 
     declare -a MAS_APPS=(
         "1091189122:Bear"
+        "1544743900:Hush Nag Blocker"
         "1450640351:Lightweight PDF"
         "1464122853:NextDNS"
         "957810159:Raindrop.io for Safari"
