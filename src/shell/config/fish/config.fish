@@ -39,10 +39,6 @@ set -x GPG_TTY (tty)
 
 set -x PATH /usr/local/sbin $PATH
 
-# sbt executables path
-
-set -x PATH /usr/local/opt/sbt@0.13/bin $PATH
-
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Link Rubies to Homebrew’s OpenSSL, since ruby-build installs a non-Homebrew
