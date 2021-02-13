@@ -65,7 +65,10 @@
     Plug 'tpope/vim-rails'
 
     " Advanced JavaScript + frameworks
+    Plug 'Quramy/vim-js-pretty-template'
+    Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
     Plug 'maxmellon/vim-jsx-pretty'
+    Plug 'pantharshit00/vim-prisma'
     Plug 'styled-components/vim-styled-components', {'branch': 'main'}
 
     " GraphQL
@@ -277,6 +280,15 @@
     " --------------------------------------------------------------------------
     " allow jsx syntax in .js files
     let g:jsx_ext_required=0
+
+    " --------------------------------------------------------------------------
+    " vim-js-pretty-template
+    " --------------------------------------------------------------------------
+    " Register tag name associated the filetype
+    call jspretmpl#register_tag('gql', 'graphql')
+
+    autocmd FileType javascript JsPreTmpl
+    autocmd FileType javascript.jsx JsPreTmpl
 " }}}
 " Custom functions {{{
 " }}}
