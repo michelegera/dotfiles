@@ -18,7 +18,6 @@ install_apps() {
         "957810159:Raindrop.io for Safari"
         "1529448980:Reeder 5"
         "1176895641:Spark"
-        "1384080005:Tweetbot"
     )
 
 
