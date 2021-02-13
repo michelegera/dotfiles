@@ -15,7 +15,6 @@ print_in_purple "\n • Installs\n\n"
 ./applications.sh
 ./browsers.sh
 ./creative_tools.sh
-./fonts.sh
 ./git.sh
 ./gpg.sh
 ./mas.sh
