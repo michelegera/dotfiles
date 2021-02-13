@@ -1,29 +1,40 @@
 {
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "css.validate": false,
   "editor.find.addExtraSpaceOnTop": false,
   "editor.fontFamily": "MonoLisa",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
-  "editor.formatOnSave": true,
   "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
   "editor.formatOnType": false,
   "editor.lineHeight": 0,
   "editor.minimap.enabled": false,
-  "editor.rulers": [80, 120],
+  "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "i18n-ally.displayLanguage": "en",
-  "workbench.colorTheme": "Ayu Mirage",
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.startupEditor": "newUntitledFile",
   "files.watcherExclude": {
     "**/.bloop": true,
     "**/.metals": true,
     "**/.ammonite": true
+  },
+  "i18n-ally.displayLanguage": "en",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "less.validate": false,
+  "scss.validate": false,
+  "tailwindCSS.emmetCompletions": true,
+  "workbench.colorTheme": "Ayu Mirage",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "newUntitledFile",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
