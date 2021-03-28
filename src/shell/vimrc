@@ -23,10 +23,10 @@
 
     " File navigation and utilities
     Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
+    Plug 'craigemery/vim-autotag'
     Plug 'jremmen/vim-ripgrep'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'ludovicchabant/vim-gutentags'
     Plug 'schickling/vim-bufonly'
     Plug 'scrooloose/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
     Plug 'tpope/vim-eunuch'
