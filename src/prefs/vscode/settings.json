@@ -5,16 +5,15 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
   "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.formatOnType": false,
   "editor.lineHeight": 0,
   "editor.minimap.enabled": false,
   "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
@@ -23,18 +22,28 @@
     "**/.metals": true,
     "**/.ammonite": true
   },
+  "gitlens.currentLine.enabled": false,
   "i18n-ally.displayLanguage": "en",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "less.validate": false,
   "scss.validate": false,
-  "tailwindCSS.emmetCompletions": true,
+  "todo-tree.tree.showScanModeButton": false,
+  "vsicons.dontShowNewVersionMessage": true,
   "workbench.colorTheme": "Ayu Mirage",
   "workbench.iconTheme": "vscode-icons",
+  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
+
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
