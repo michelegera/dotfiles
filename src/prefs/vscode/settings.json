@@ -34,7 +34,6 @@
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.colorTheme": "Ayu Mirage",
   "workbench.iconTheme": "vscode-icons",
-  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
 
   "[css]": {
