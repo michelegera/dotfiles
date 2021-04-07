@@ -16,9 +16,9 @@
     call plug#begin(s:plugged_install_dir)
 
     " Theme and UI
-    Plug 'ayu-theme/ayu-vim'
     Plug 'itchyny/lightline.vim'
     Plug 'jeffkreeftmeijer/vim-numbertoggle'
+    Plug 'kaicataldo/material.vim', {'branch': 'main'}
     Plug 'mengelbrecht/lightline-bufferline'
 
     " File navigation and utilities
@@ -93,8 +93,8 @@
 " }}}
 " Colors {{{
     set termguicolors                 " Enable true colors support
-    let ayucolor="mirage"             " Other options: 'light' or 'dark'
-    colorscheme ayu
+    let g:material_theme_style='palenight'
+    colorscheme material
     syntax enable
 " }}}
 " UI Layout {{{
@@ -248,7 +248,7 @@
     " --------------------------------------------------------------------------
     " lightline
     " --------------------------------------------------------------------------
-    let g:lightline={'colorscheme': 'ayu'}
+    let g:lightline = {'colorscheme': 'material_vim'}
 
     " --------------------------------------------------------------------------
     " lightline-bufferline

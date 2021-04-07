@@ -172,12 +172,12 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Ayu Mirage)
+# Colors (Material Theme / Palenight)
 colors:
   # Default colors
   primary:
-    background: "#1f2430"
-    foreground: "#CBCCC6"
+    background: "0x292d3e"
+    foreground: "0xd0d0d0"
 
     # Bright and dim foreground colors
     #
@@ -234,25 +234,25 @@ colors:
 
   # Normal colors
   normal:
-    black: "#191e2a"
-    red: "#ff3333"
-    green: "#bae67e"
-    yellow: "#ffcc66"
-    blue: "#73d0ff"
-    magenta: "#d4bfff"
-    cyan: "#5ccfe6"
-    white: "#cbccc6"
+    black: "0x292d3e"
+    red: "0xf07178"
+    green: "0xc3e88d"
+    yellow: "0xffcb6b"
+    blue: "0x82aaff"
+    magenta: "0xc792ea"
+    cyan: "0x89ddff"
+    white: "0x959dcb" # or "0x959dcb"
 
   # Bright colors
-  #bright:
-  #  black:   '#666666'
-  #  red:     '#d54e53'
-  #  green:   '#b9ca4a'
-  #  yellow:  '#e7c547'
-  #  blue:    '#7aa6da'
-  #  magenta: '#c397d8'
-  #  cyan:    '#70c0b1'
-  #  white:   '#eaeaea'
+  bright:
+    black: "0x434758"
+    red: "0xff8b92"
+    green: "0xddffa7"
+    yellow: "0xffe585"
+    blue: "0x9cc4ff"
+    magenta: "0xe1acff"
+    cyan: "0xa3f7ff"
+    white: "0xffffff"
 
   # Dim colors
   #

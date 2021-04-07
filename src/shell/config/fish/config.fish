@@ -54,16 +54,13 @@ eval (gdircolors -c $HOME/.dircolors)
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Load fzf auto-completion (using fd, as suggested by its author) and key
-# bindings, set Ayu Mirage colors
+# Load fzf auto-completion (with fd as suggested by its author) and key bindings
 
 set -x FZF_DEFAULT_COMMAND fd --type f --hidden --follow
 set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
-set -xa FZF_DEFAULT_OPTS "
---color=fg:#707a8c,bg:#1f2430,hl:#cbccc6
---color=fg+:#cbccc6,bg+:#191e2a,hl+:#ffcc66
---color=info:#73d0ff,prompt:#707a8c,pointer:#cbccc6
---color=marker:#73d0ff,spinner:#73d0ff,header:#d4bfff"
+
+# Source fzf color scheme
+source $HOME/.config/fish/fzf/base16-material-palenight.fish
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

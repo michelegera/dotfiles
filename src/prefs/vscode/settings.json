@@ -32,8 +32,8 @@
   "scss.validate": false,
   "todo-tree.tree.showScanModeButton": false,
   "vsicons.dontShowNewVersionMessage": true,
-  "workbench.colorTheme": "Ayu Mirage",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Material Theme Palenight",
+  "workbench.iconTheme": "eq-material-theme-icons-palenight",
   "workbench.startupEditor": "newUntitledFile",
 
   "[css]": {

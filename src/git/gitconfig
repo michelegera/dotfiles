@@ -69,7 +69,6 @@
 
 [delta]
     line-numbers = true
-    syntax-theme = ayu-mirage
 
 [diff]
 
