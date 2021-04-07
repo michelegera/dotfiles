@@ -22,8 +22,8 @@ set -e MAILCHECK
 
 set -x EDITOR nvim
 set -x VISUAL nvim
-set -x VIMCONFIG ~/.config/nvim
-set -x VIMDATA ~/.local/share/nvim
+set -x VIMCONFIG $HOME/.config/nvim
+set -x VIMDATA $HOME/.local/share/nvim
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
