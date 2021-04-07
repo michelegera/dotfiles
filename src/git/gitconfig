@@ -46,7 +46,6 @@
     autocrlf = input
     editor = nvim
     excludesfile = ~/.gitignore
-    pager = delta
 
     # Prevent showing files whose names contain non-ASCII symbols as
     # unversioned.
@@ -66,9 +65,6 @@
     # [default] space-before-tab: looks for spaces before tabs at the beginning
     # of a line
     whitespace = space-before-tab,-indent-with-non-tab,trailing-space,cr-at-eol
-
-[delta]
-    line-numbers = true
 
 [diff]
 
