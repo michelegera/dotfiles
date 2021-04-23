@@ -22,7 +22,6 @@ src/shell/config/fish/*
 !src/shell/config/fish/functions
 src/shell/config/fish/functions/__*
 src/shell/config/fish/functions/fisher.fish
-src/shell/config/fish/functions/sdk.fish
 
 !src/shell/config/fish/fzf
 
