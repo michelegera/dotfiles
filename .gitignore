@@ -24,7 +24,6 @@ src/shell/config/fish/functions/__*
 src/shell/config/fish/functions/_nvm*.fish
 src/shell/config/fish/functions/fisher.fish
 src/shell/config/fish/functions/nvm.fish
-src/shell/config/fish/functions/rbenv.fish
 src/shell/config/fish/functions/sdk.fish
 
 !src/shell/config/fish/fzf
