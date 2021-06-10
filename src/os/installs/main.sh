@@ -13,6 +13,7 @@ print_in_purple "\n • Installs\n\n"
 ./fish.sh
 
 ./applications.sh
+./asdf.sh
 ./browsers.sh
 ./communications.sh
 ./creative_tools.sh

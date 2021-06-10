@@ -70,6 +70,22 @@ starship init fish | source
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Source asdf version manager
+
+source /usr/local/opt/asdf/asdf.fish
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Set path for binstubs (https://wolfgangrittner.dev/bundle-exec-be-gone/)
+set PATH ./bin $PATH
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Set JAVA_HOME
+source $HOME/.asdf/plugins/java/set-java-home.fish
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Source local config
 
 source $HOME/.fishconfig.local
