@@ -12,15 +12,18 @@
   "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {
+    "**/.ammonite": true,
     "**/.bloop": true,
-    "**/.metals": true,
-    "**/.ammonite": true
+    "**/.metals": true
   },
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
@@ -29,9 +32,6 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "less.validate": false,
   "scss.validate": false,
-  "search.exclude": {
-    "**/.gems": true
-  },
   "todo-tree.general.tags": [
     "BUG",
     "HACK",
@@ -42,8 +42,6 @@
     "[x]"
   ],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-  "todo-tree.tree.showScanModeButton": false,
-  "vsicons.dontShowNewVersionMessage": true,
   "workbench.colorTheme": "Material Theme Palenight",
   "workbench.iconTheme": "eq-material-theme-icons-palenight",
   "workbench.startupEditor": "newUntitledFile",
@@ -54,6 +52,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
