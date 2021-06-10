@@ -12,14 +12,15 @@ install_apps() {
 
     declare -a MAS_APPS=(
         "1091189122:Bear"
-        "1544743900:Hush Nag Blocker"
+        "1544743900:Hush"
+        "1136220934:Infuse"
         "1450640351:Lightweight PDF"
         "1464122853:NextDNS"
+        "639968404:Parcel"
         "957810159:Raindrop.io for Safari"
-        "1529448980:Reeder 5"
+        "1529448980:Reeder"
         "1176895641:Spark"
     )
-
 
     local appID=""
     local appName=""
