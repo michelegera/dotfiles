@@ -1,8 +1,14 @@
 
 command_timeout = 1000
 
+[java]
+symbol = "🫖"
+
 [nodejs]
 symbol = "🦖"
 
 [ruby]
 symbol = "🔻"
+
+[scala]
+symbol = "🪜"
