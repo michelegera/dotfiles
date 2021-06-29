@@ -6,13 +6,13 @@ charging_symbol = "⚡️ "
 discharging_symbol = "💀 "
 
 [java]
-symbol = "🫖"
+symbol = "🫖 "
 
 [nodejs]
-symbol = "🦖"
+symbol = "🦖 "
 
 [ruby]
-symbol = "🔻"
+symbol = "🔻 "
 
 [scala]
-symbol = "🪜"
+symbol = "🪜 "
