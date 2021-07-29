@@ -17,8 +17,8 @@ install_apps() {
         "1450640351:Lightweight PDF"
         "1464122853:NextDNS"
         "639968404:Parcel"
-        "957810159:Raindrop.io for Safari"
         "1529448980:Reeder"
+        "1549370672:Save to Raindrop.io"
         "1176895641:Spark"
     )
 
