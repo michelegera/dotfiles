@@ -1,5 +1,6 @@
 {
   "css.validate": false,
+  "editor.bracketPairColorization.enabled": true,
   "editor.find.addExtraSpaceOnTop": false,
   "editor.fontFamily": "MonoLisa",
   "editor.fontLigatures": true,
