@@ -7,7 +7,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Gatekeeper\n\n"
 
- execute "sudo spctl --master-disable" \
+execute "sudo spctl --master-disable" \
     "Enable 'Anywhere' option for Gatekeeper"
 
 execute "defaults write /Library/Preferences/com.apple.security GKAutoRearm -bool false" \
