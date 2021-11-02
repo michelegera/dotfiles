@@ -86,6 +86,11 @@ source $HOME/.asdf/plugins/java/set-java-home.fish
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Set Java options
+set -x JAVA_OPTS "-XX:+UseG1GC -Xms1024m  -Xmx1024m"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Source local config
 
 source $HOME/.fishconfig.local
