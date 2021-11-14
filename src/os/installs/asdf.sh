@@ -21,8 +21,13 @@ install_plugin() {
 
     # Install the specified plugin.
 
+    if [[ $(asdf plugin list | grep "$NAME" | wc -w) -eq 1 ]]; then
+        print_info "$NAME already installed, skipping"
+        return 1
+    fi
+
     execute \
-        "asdf plugin add $NAME https://github.com/$GITHUB_SOURCE" "$1 plugin"
+        "asdf plugin add $NAME https://github.com/$GITHUB_SOURCE" "$NAME plugin"
 
 }
 
