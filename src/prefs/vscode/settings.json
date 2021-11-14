@@ -8,7 +8,7 @@
   "editor.formatOnPaste": false,
   "editor.formatOnType": false,
   "editor.formatOnSave": true,
-  "editor.matchBrackets": "never",
+  "editor.matchBrackets": false,
   "editor.minimap.enabled": false,
   "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
@@ -25,6 +25,11 @@
     "**/.ammonite": true,
     "**/.bloop": true,
     "**/.metals": true
+  },
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
   },
   "formattingToggle.affects": ["formatOnSave"],
   "gitlens.codeLens.authors.enabled": false,
