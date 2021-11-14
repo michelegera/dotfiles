@@ -8,8 +8,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Communications\n\n"
 
-brew_install "Slack" "slack" "homebrew/cask" "cask"
-brew_install "Telegram Desktop" "telegram-desktop" "homebrew/cask" "cask"
-brew_install "Tweetbot" "tweetbot" "homebrew/cask" "cask"
-brew_install "WhatsApp" "whatsapp" "homebrew/cask" "cask"
-brew_install "Zoom" "zoom" "homebrew/cask" "cask"
+brew_install "Slack" "slack" "--cask"
+brew_install "Telegram Desktop" "telegram-desktop" "--cask"
+brew_install "Tweetbot" "tweetbot" "--cask"
+brew_install "WhatsApp" "whatsapp" "--cask"
+brew_install "Zoom" "zoom" "--cask"
