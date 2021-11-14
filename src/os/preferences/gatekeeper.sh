@@ -10,5 +10,5 @@ print_in_purple "\n   Gatekeeper\n\n"
 execute "sudo spctl --master-disable" \
     "Enable 'Anywhere' option for Gatekeeper"
 
-execute "defaults write /Library/Preferences/com.apple.security GKAutoRearm -bool false" \
+execute "sudo defaults write /Library/Preferences/com.apple.security GKAutoRearm -bool false" \
     "Prevent Gatekeeper from re-enabling itself after 30 days"
