@@ -20,7 +20,6 @@ print_in_purple "\n • Installs\n\n"
 ./development.sh
 ./git.sh
 ./gpg.sh
-./mas.sh
 ./neovim.sh
 ./tools.sh
 ./vscode.sh
