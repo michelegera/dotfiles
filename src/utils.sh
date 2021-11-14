@@ -211,6 +211,10 @@ print_error_stream() {
     done
 }
 
+print_info() {
+    print_in_purple "   [i] $1 $2\n"
+}
+
 print_in_color() {
     printf "%b" \
         "$(tput setaf "$2" 2> /dev/null)" \
