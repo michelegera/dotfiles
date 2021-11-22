@@ -50,6 +50,7 @@
     "[x]"
   ],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "window.newWindowDimensions": "inherit",
   "workbench.colorTheme": "Palenight Theme",
   "workbench.startupEditor": "newUntitledFile",
   "[css]": {
