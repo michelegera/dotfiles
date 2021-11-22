@@ -33,7 +33,7 @@ That’s it! ✨
 The setup process will:
 
 - Download the dotfiles on your computer (by default it will suggest
-  `~/Code/dotfiles`)
+  `~/Code/$(whoami)/dotfiles`)
 - Create some additional [directories][dirs]
 - [Symlink][symlink] the [Git][git], [prefs][prefs], and [shell][shell] files
 - Install [applications and command-line tools][installs]
