@@ -37,9 +37,9 @@ src/shell/config/gh
 
 src/shell/config/htop
 
-src/shell/config/tmuxinator
+src/shell/config/raycast
 
-src/shell/config/ultralist
+src/shell/config/tmuxinator
 
 src/shell/config/yarn
 
