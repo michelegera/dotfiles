@@ -3,6 +3,8 @@
     "css",
     "html",
     "javascript",
-    "markdown"
+    "markdown",
+    "typescript",
+    "typescriptreact"
   ]
 }
