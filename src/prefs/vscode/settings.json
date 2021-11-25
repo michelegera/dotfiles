@@ -31,7 +31,7 @@
     "**/.metals": true,
     "**/.ammonite": true
   },
-  "formattingToggle.affects": ["formatOnSave"],
+  "formattingToggle.affects": ["editor.formatOnSave"],
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
   "gitlens.currentLine.enabled": false,
