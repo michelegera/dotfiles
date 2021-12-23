@@ -64,6 +64,12 @@ source $HOME/.config/fish/fzf/base16-material-palenight.fish
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Source zoxide
+
+zoxide init fish | source
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Source prompt
 
 starship init fish | source
