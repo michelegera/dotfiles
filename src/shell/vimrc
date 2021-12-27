@@ -1,313 +1,652 @@
-:scriptencoding utf-8
-" Plugins {{{
-    " Install vim-plug automatically
-    let s:plugged_autoload_prefix='~/.vim'
-    let s:plugged_autoload_path=s:plugged_autoload_prefix . '/autoload/plug.vim'
-    let s:plugged_install_dir=s:plugged_autoload_prefix . '/plugged'
+" ------------------------------------------------------------------------------
+" | General Settings                                                           |
+" ------------------------------------------------------------------------------
 
-    if empty(glob(s:plugged_autoload_path))
-        let s:command='!curl -fLo ' . s:plugged_autoload_path . ' --create-dirs '
-        let s:command.='https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+set nocompatible                    " Don’t make Vim vi-compatibile.
 
-        silent exec s:command
+syntax on                           " Enable syntax highlighting.
 
-        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-    endif
-    call plug#begin(s:plugged_install_dir)
+if has('autocmd')
+  filetype plugin indent on
+  "           │     │    └────────── Enable file type detection.
+  "           │     └─────────────── Enable loading of indent file.
+  "           └───────────────────── Enable loading of plugin files.
+endif
 
-    " Theme and UI
-    Plug 'itchyny/lightline.vim'
-    Plug 'jeffkreeftmeijer/vim-numbertoggle'
-    Plug 'drewtempelmeyer/palenight.vim'
-    Plug 'mengelbrecht/lightline-bufferline'
+set autoindent                      " Copy indent to the new line.
 
-    " File navigation and utilities
-    Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
-    Plug 'craigemery/vim-autotag'
-    Plug 'jremmen/vim-ripgrep'
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-    Plug 'schickling/vim-bufonly'
-    Plug 'scrooloose/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
-    Plug 'tpope/vim-eunuch'
-    Plug 'tpope/vim-unimpaired'
+set autoread                         " Reload files changed elsewhere.
 
-    " Git
-    Plug 'airblade/vim-gitgutter'
-    Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-rhubarb'
+set backspace=indent                " ┐
+set backspace+=eol                  " │ Allow `backspace` in insert mode.
+set backspace+=start                " ┘
 
-    " Code editing, formatting and completion
-    Plug 'alvan/vim-closetag'
-    Plug 'ap/vim-css-color'
-    Plug 'cespare/vim-toml'
-    Plug 'christoomey/vim-sort-motion'
-    Plug 'editorconfig/editorconfig-vim'
-    Plug 'jiangmiao/auto-pairs'
-    Plug 'mattn/emmet-vim'
-    Plug 'matze/vim-move'
-    Plug 'mlaursen/vim-react-snippets'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'stefandtw/quickfix-reflector.vim'
-    Plug 'terryma/vim-multiple-cursors'
-    Plug 'tpope/vim-abolish'
-    Plug 'tpope/vim-commentary'
-    Plug 'tpope/vim-repeat'
-    Plug 'tpope/vim-surround'
-    Plug 'w0rp/ale'
+set backupdir=~/.vim/backups        " Set directory for backup files.
 
-    " HTML, CSS and JavaScript
-    Plug 'hail2u/vim-css3-syntax'
-    Plug 'cakebaker/scss-syntax.vim'
-    Plug 'pangloss/vim-javascript'
+if has('wildignore')
+  set backupskip=/tmp/*             " ┐ Don’t create backups for certain files.
+  set backupskip+=/private/tmp/*    " ┘
+endif
 
-    " Ruby + frameworks
-    Plug 'tpope/vim-bundler'
-    Plug 'tpope/vim-endwise'
-    Plug 'tpope/vim-rails'
+set clipboard=unnamed               " ┐
+                                    " │ Use the system clipboard as the default
+if has('unnamedplus')               " │ register.
+  set clipboard+=unnamedplus        " │
+endif                               " ┘
 
-    " Advanced JavaScript + frameworks
-    Plug 'Quramy/vim-js-pretty-template'
-    Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
-    Plug 'maxmellon/vim-jsx-pretty'
-    Plug 'pantharshit00/vim-prisma'
-    Plug 'styled-components/vim-styled-components', {'branch': 'main'}
+set cmdheight=2                     " Avoid “Press <ENTER> to continue” prompt
 
-    " GraphQL
-    Plug 'jparise/vim-graphql'
-    call plug#end()
-" }}}
-" General settings {{{
-    set nocompatible                  " Allow Vim-only settings (must be first)
-    set autoread                      " Reload files changed outside of Vim
-    set backspace=indent,eol,start    " Allow backspace in insert mode
-    set cmdheight=2                   " Avoid “Press <ENTER> to continue” prompt
-    set hidden                        " Hide buffers when abandoned
-    set history=1000                  " Number of commands to remember
-    set laststatus=2                  " Always display a status line
-    set mouse=a                       " Enable mouse support
-    set noshowmode                    " Do not show mode
-    set ttimeoutlen=10                " Avoid pausing when leaving insert mode
-    set undolevels=1000               " Number of undo levels
-    set visualbell                    " No sounds
-" }}}
-" Colors {{{
-    set termguicolors                 " Enable true colors support
-    set background=dark
-    colorscheme palenight
-    syntax enable
-" }}}
-" UI Layout {{{
-    set colorcolumn=+1
-    set fillchars+=vert:┃
-    set lazyredraw
-    set list
-    set listchars=tab:▸\ ,trail:·     " Display tabs and trailing spaces
-    set nocursorline                  " Highlight current line
-    set number relativenumber         " Show current line number and relative
-    set scrolloff=5                   " Start scrolling when close to margin
-    set showcmd                       " Show command in bottom bar
-    set showmatch                     " Higlight matching parenthesis
-    set showtabline=2                 " Show buffers bar
-    set splitright                    " Open new splits on the right
-    set textwidth=80
-    set wildmenu
-" }}}
-" Behavior {{{
-    " Open :help in a new tab
-    cnoreabbrev <expr> help getcmdtype() == ":" && getcmdline() == 'help' ?
-        \ 'tab help' : 'help'
-" }}}
-" Spaces & Tabs {{{
-    filetype indent plugin on         " Enable file type detection
-    set autoindent smartindent        " Auto-indent based on previous line
-    set expandtab smarttab            " Use spaces for tabs
-    set modelines=1
-    set shiftwidth=2
-    set softtabstop=2
-    set tabstop=2                     " Two-space tab
-" }}}
-" Searching {{{
-    set hlsearch                      " Highlight all matches
-    set ignorecase                    " Ignore case when searching
-    set incsearch                     " Search as you type
-    set smartcase                     " Try to be smart about cases
-" }}}
-" Folding {{{
-    nnoremap <space> za
-    set foldenable                    " Do not fold files by default on open
-    set foldlevelstart=10             " Start with fold level of 10
-    set foldmethod=indent             " Fold based on indent level
-    set foldnestmax=10                " Max 10 depth
-" }}}
-" Swap files {{{
-    set nobackup
-    set noswapfile
-    set nowb
-" }}}
-" Commands and Autocommands {{{
-    " Format with Prettier
-    command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+if has('syntax')
+  set colorcolumn+=1                " Highlight certain column(s).
+  set cursorline                    " Highlight the current line.
+endif
 
-    " Set specific type based on file type
+set directory=~/.vim/swaps          " Set directory for swap files.
+set encoding=utf-8 nobomb           " Use UTF-8 without BOM.
+
+if has('cmdline_hist')
+  set history=5000                  " Increase command line history.
+endif
+
+if has('extra_search')
+  set hlsearch                      " Enable search highlighting.
+
+  set incsearch                     " Highlight search pattern as it is being
+                                    " typed.
+endif
+
+set ignorecase                      " Ignore case in search patterns.
+
+set laststatus=2                    " Always show the status line.
+
+set lazyredraw                      " Do not redraw the screen while executing
+                                    " macros, registers and other commands that
+                                    " have not been typed.
+
+set listchars=tab:▸\                " ┐
+set listchars+=trail:·              " │ Use custom symbols to represent
+set listchars+=eol:↴                " │ invisible characters.
+set listchars+=nbsp:_               " ┘
+
+set magic                           " Enable extended regexp.
+set mousehide                       " Hide mouse pointer while typing.
+
+set nojoinspaces                    " When using the join command, only insert a
+                                    " single space after a `.`, `?`, or `!`.
+
+set nomodeline                      " Disable for security reasons.
+                                    " https://git.io/JyIVt
+
+if has('linebreak')
+  set numberwidth=5                 " Increase the minimal number of columns
+                                    " used for the `line number`.
+endif
+
+set report=0                        " Report the number of lines changed.
+
+if has('cmdline_info')
+  set ruler                         " Show cursor position.
+endif
+
+set scrolloff=5                     " When scrolling, keep the cursor 5 lines
+                                    " below the top and 5 lines above the bottom
+                                    " of the screen.
+
+set shortmess=aAItW                 " Avoid all the hit-enter prompts.
+
+if has('cmdline_info')
+  set showcmd                       " Show the command being typed.
+endif
+
+set showmatch                       " Higlight matching parenthesis.
+
+set showmode                        " Show current mode.
+
+if has('syntax')
+  set spelllang=en_us               " Set the spellchecking language.
+endif
+
+set smartcase                       " Override `ignorecase` option if the search
+                                    " pattern contains uppercase characters.
+
+if has('syntax')
+  set synmaxcol=2500                " Limit syntax highlighting (this avoids the
+                                    " very slow redrawing when files contain
+                                    " long lines).
+endif
+
+set splitright                      " Open new splits on the right
+
+set tabstop=2                       " ┐
+set softtabstop=2                   " │ Set global <TAB> settings.
+set shiftwidth=2                    " │
+set expandtab                       " ┘
+
+set textwidth=80                    " ┐
+set colorcolumn=+1                  " │
+set fillchars+=vert:┃               " │ Set UI.
+set list                            " │
+set showtabline=2                   " ┘
+
+set ttyfast                         " Enable fast terminal connection.
+
+if has('persistent_undo')
+  set undodir=~/.vim/undos          " Set directory for undo files.
+  set undofile                      " Automatically save undo history.
+endif
+
+set visualbell                      " ┐
+set noerrorbells                    " │ Disable beeping and window flashing.
+set t_vb=                           " ┘ https://vim.wikia.com/wiki/Disable_beeping
+
+if has('wildmenu')
+  set wildmenu                      " Enable enhanced command-line completion
+endif                               " (by hitting <TAB> in command mode, Vim
+                                    " will show the possible matches just above
+                                    " the command line with the first match
+                                    " highlighted).
+
+if has('windows')
+  set winminheight=0                " Allow windows to be squashed.
+endif
+
+" Prevent `Q` in `normal` mode from entering `Ex` mode.
+nmap Q <Nop>
+
+
+" ------------------------------------------------------------------------------
+" | Plugins                                                                    |
+" ------------------------------------------------------------------------------
+
+" Install vim-plug automatically
+let s:plugged_autoload_prefix='~/.vim'
+let s:plugged_autoload_path=s:plugged_autoload_prefix . '/autoload/plug.vim'
+let s:plugged_install_dir=s:plugged_autoload_prefix . '/plugged'
+
+if empty(glob(s:plugged_autoload_path))
+  let s:command='!curl -fLo ' . s:plugged_autoload_path . ' --create-dirs '
+  let s:command.='https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+  silent exec s:command
+
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin(s:plugged_install_dir)
+
+" Theme and UI
+Plug 'itchyny/lightline.vim'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'mengelbrecht/lightline-bufferline'
+
+" File navigation and utilities
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+Plug 'craigemery/vim-autotag'
+Plug 'jremmen/vim-ripgrep'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'schickling/vim-bufonly'
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-unimpaired'
+
+" Git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+
+" Code editing, formatting and completion
+Plug 'alvan/vim-closetag'
+Plug 'ap/vim-css-color'
+Plug 'cespare/vim-toml'
+Plug 'christoomey/vim-sort-motion'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'mattn/emmet-vim'
+Plug 'matze/vim-move'
+Plug 'mlaursen/vim-react-snippets'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'stefandtw/quickfix-reflector.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'w0rp/ale'
+
+" HTML, CSS and JavaScript
+Plug 'hail2u/vim-css3-syntax'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'pangloss/vim-javascript'
+
+" Ruby + frameworks
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+
+" Advanced JavaScript + frameworks
+Plug 'Quramy/vim-js-pretty-template'
+Plug 'kristijanhusak/vim-js-file-import', { 'do': 'npm install' }
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'pantharshit00/vim-prisma'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+" GraphQL
+Plug 'jparise/vim-graphql'
+
+call plug#end()
+
+
+" ------------------------------------------------------------------------------
+" | Plugin - ale                                                               |
+" ------------------------------------------------------------------------------
+
+" Don’t run linters while typing
+let g:ale_lint_on_text_changed='never'
+
+" Automatically fix files when saving them
+let g:ale_fix_on_save=1
+
+" Set fixers by file type
+let g:ale_fixers={
+  \  '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \  'javascript': ['prettier', 'eslint'],
+  \  'json': ['jq'],
+  \  'ruby': ['rubocop'],
+  \}
+
+
+" ------------------------------------------------------------------------------
+" | Plugin - emmet-vim                                                         |
+" ------------------------------------------------------------------------------
+
+" Redefine trigger key.
+let g:user_emmet_leader_key=","
+
+" Only enable normal mode functions.
+let g:user_emmet_mode='a'
+
+
+" ------------------------------------------------------------------------------
+" | Plugin - coc.nvim                                                          |
+" ------------------------------------------------------------------------------
+
+" Don’t pass messages to |ins-completion-menu|
+set shortmess+=c
+
+let g:coc_global_extensions=[
+  \  'coc-css',
+  \  'coc-html',
+  \  'coc-json',
+  \  'coc-snippets',
+  \  'coc-solargraph',
+  \  'coc-tailwindcss',
+  \  'coc-tsserver'
+  \]
+
+" Use <TAB> to trigger completion with characters ahead and navigate.
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+
+" ------------------------------------------------------------------------------
+" Plugin - vim-endwise                                                           |
+" ------------------------------------------------------------------------------
+
+" disable mapping to not break coc.nvim
+let g:endwise_no_mappings = 1
+
+
+" ------------------------------------------------------------------------------
+" Plugin - lightline                                                           |
+" ------------------------------------------------------------------------------
+
+" Set color scheme
+let g:lightline = { 'colorscheme': 'palenight' }
+
+
+" ------------------------------------------------------------------------------
+" Plugin - lightline-bufferline                                                |
+" ------------------------------------------------------------------------------
+
+" Integrate bufferline functionality to the lightline plugin.
+let g:lightline.tabline={ 'left': [['buffers']] }
+let g:lightline.component_expand={ 'buffers': 'lightline#bufferline#buffers' }
+let g:lightline.component_type={ 'buffers': 'tabsel' }
+
+
+" ------------------------------------------------------------------------------
+" Plugin - nerdtree                                                            |
+" ------------------------------------------------------------------------------
+
+let NERDTreeAutoDeleteBuffer=1
+let NERDTreeDirArrows=1
+let NERDTreeMinimalUI=1
+let NERDTreeQuitOnOpen=1
+let NERDTreeShowHidden=1
+let g:NERDTreeHijackNetrw=0
+
+
+" ------------------------------------------------------------------------------
+" Plugin - netrw                                                               |
+" ------------------------------------------------------------------------------
+
+" Disable builtin file explorer, use NERDTree instead
+let g:loaded_netrw=1
+let g:loaded_netrwPlugin=1
+
+
+" ------------------------------------------------------------------------------
+" Plugin - vim-closetag                                                        |
+" ------------------------------------------------------------------------------
+
+let g:closetag_filenames='*.html,*.js,*.jsx,*.ts,*.tsx'
+let g:closetag_emptyTags_caseSensitive=1
+let g:closetag_regions={
+  \ 'javascript': 'jsxRegion',
+  \ 'javascript.jsx': 'jsxRegion',
+  \ 'javascriptreact': 'jsxRegion',
+  \ 'typescript': 'jsxRegion,tsxRegion',
+  \ 'typescriptreact': 'jsxRegion,tsxRegion',
+  \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+  \}
+
+
+" ------------------------------------------------------------------------------
+" Plugin - vim-jsx-pretty                                                      |
+" ------------------------------------------------------------------------------
+
+" allow jsx syntax in .js files
+let g:jsx_ext_required=0
+
+
+" ------------------------------------------------------------------------------
+" Plugin - vim-js-pretty-template                                              |
+" ------------------------------------------------------------------------------
+
+" Register tag name associated the filetype
+call jspretmpl#register_tag('gql', 'graphql')
+
+autocmd FileType javascript JsPreTmpl
+autocmd FileType javascript.jsx JsPreTmpl
+
+
+" ------------------------------------------------------------------------------
+" | Automatic Commands                                                         |
+" ------------------------------------------------------------------------------
+
+if has("autocmd")
+
+  " Autocommand Groups.
+  " http://learnvimscriptthehardway.stevelosh.com/chapters/14.html
+
+  " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  " Automatically reload `~/.vimrc` if changed.
+
+  augroup auto_reload_vim_configs
+
+    autocmd!
+    autocmd BufWritePost vimrc source $MYVIMRC
+
+  augroup END
+
+  " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  " Correctly recognize files.
+
+  augroup correctly_recognize_files
+
+    autocmd!
+    autocmd BufEnter  gitconfig       :setlocal filetype=gitconfig
+    autocmd BufEnter .gitconfig.local :setlocal filetype=gitconfig
+
+  augroup END
+
+  " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  " Use relative line numbers.
+  " http://jeffkreeftmeijer.com/2012/relative-line-numbers-in-vim-for-super-fast-movement/
+
+  augroup relative_line_numbers
+
+    autocmd!
+
+    " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    " Automatically switch to absolute line numbers when Vim loses focus.
+
+    autocmd FocusLost * :set number
+
+    " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    " Automatically switch to relative line numbers when Vim gains focus.
+
+    autocmd FocusGained * :set relativenumber
+
+    " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    " Automatically switch to absolute line numbers when Vim is in insert mode.
+
+    autocmd InsertEnter * :set number
+
+    " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    " Automatically switch to relative line numbers when Vim is in normal mode.
+
+    autocmd InsertLeave * :set relativenumber
+
+  augroup END
+
+  " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  " NERDTree utilities
+
+  augroup nerdtree_utilities
+
+    autocmd!
+
+    " Exit Vim if NERDTree is the only window remaining in the only tab.
+    autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+    " Close the tab if NERDTree is the only window remaining in it.
+    autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+    " If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+    autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+
+  augroup END
+
+  " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  " Update buffers.
+
+  augroup update_buffers
+
+    autocmd!
+
+    " If files are changed externally (e.g.: changing branches), update buffers.
+
+    autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+    autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk, buffer reloaded." | echohl None
+
+  augroup END
+
+  " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  " Git commit messages.
+
+  augroup git_commit_messages
+
+    autocmd!
+
+    " Set commit message text width and enable spell check
+
     autocmd FileType gitcommit setlocal textwidth=72
     autocmd FileType gitcommit setlocal spell
 
-  " If files are changed externally (e.g.: changing branches), update buffers
-  autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
-  autocmd FileChangedShellPost *
-  \ echohl WarningMsg | echo "File changed on disk, buffer reloaded." | echohl None
+  augroup END
 
-  " Correctly style all .env files
-  autocmd BufNewFile,BufRead * if expand('%t') =~ '.env' | set filetype=sh | endif
-" }}}
-" Key bindings {{{
-    " Cycle through listed buffers
-    nnoremap <Tab> :bnext<CR>
-    nnoremap <S-Tab> :bprevious<CR>
+endif
 
-    " Vim. Live it.
-    nnoremap <up> <nop>
-    nnoremap <down> <nop>
-    nnoremap <left> <nop>
-    nnoremap <right> <nop>
-    inoremap <up> <nop>
-    inoremap <down> <nop>
-    inoremap <left> <nop>
-    inoremap <right> <nop>
 
-    " Toggle NERDTree
-    map <silent> <C-p><C-p> :NERDTreeToggle<CR>
+" ------------------------------------------------------------------------------
+" | Color Scheme                                                               |
+" ------------------------------------------------------------------------------
 
-    " Easy ESC with jk in insert mode
-    inoremap jk <esc>
-    snoremap jk <esc>
+" Enable true color
 
-    " Toggle invisibles
-    nmap <leader>l :set list!<CR>
+if (has("nvim"))
 
-    vmap <leader>p  <Plug>(coc-format-selected)
-    nmap <leader>p  <Plug>(coc-format-selected)
+  " For Neovim 0.1.3 and 0.1.4
+  " https://github.com/neovim/neovim/pull/2198
 
-    " Search for stuff
-    nnoremap <C-p> :Files<CR>
-    nnoremap <Leader>b :Buffers<CR>
-    nnoremap <Leader>h :History<CR>
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-    " Search project for current word
-    map <leader>* :Rg <cword><CR><CR>
+endif
 
-    " Symbols for tabstops and EOLs
-    set listchars=tab:▸\ ,eol:¬
-" }}}
-" Plugins configuration {{{
-    " --------------------------------------------------------------------------
-    " ale
-    " --------------------------------------------------------------------------
-    let g:ale_lint_on_text_changed='never'
-    let g:ale_fix_on_save=1
-    let g:ale_fixers={
-    \  '*': ['remove_trailing_lines', 'trim_whitespace'],
-    \  'javascript': ['prettier', 'eslint'],
-    \}
+if (has("termguicolors"))
 
-    " --------------------------------------------------------------------------
-    " coc.nvim
-    " --------------------------------------------------------------------------
-    " Don’t pass messages to |ins-completion-menu|
-    set shortmess+=c
+  " For Neovim > 0.1.5 and Vim > patch 7.4.1799
+  " https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162
 
-    let g:coc_global_extensions=[
-    \  'coc-css',
-    \  'coc-html',
-    \  'coc-json',
-    \  'coc-snippets',
-    \  'coc-tailwindcss',
-    \  'coc-tsserver'
-    \]
+  set termguicolors
 
-    " Use <Tab> and <S-Tab> to navigate the completion list
-    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+endif
 
-    " Use <Tab> and <S-Tab> to navigate across placehoders
-    let g:coc_snippet_next='<Tab>'
-    let g:coc_snippet_prev='<S-Tab>'
+set background=dark            " Use colors that look good on a dark background.
 
-    " Use <C-l> for trigger snippet expand.
-    imap <C-l> <Plug>(coc-snippets-expand)
+silent! colorscheme palenight  " Use custom color scheme.
 
-    " Use <C-j> for select text for visual placeholder of snippet.
-    vmap <C-j> <Plug>(coc-snippets-select)
 
-    " --------------------------------------------------------------------------
-    " emmett-vim
-    " --------------------------------------------------------------------------
-    let g:user_emmet_leader_key=','
+" ------------------------------------------------------------------------------
+" | Key Mappings                                                               |
+" ------------------------------------------------------------------------------
 
-    " --------------------------------------------------------------------------
-    " lightline
-    " --------------------------------------------------------------------------
-    let g:lightline = {'colorscheme': 'palenight'}
+" Vim. Live it.
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
-    " --------------------------------------------------------------------------
-    " lightline-bufferline
-    " --------------------------------------------------------------------------
-    let g:lightline.tabline={'left': [['buffers']]}
-    let g:lightline.component_expand={'buffers': 'lightline#bufferline#buffers'}
-    let g:lightline.component_type={'buffers': 'tabsel'}
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    " --------------------------------------------------------------------------
-    " nerdtree
-    " --------------------------------------------------------------------------
-    let NERDTreeAutoDeleteBuffer=1
-    let NERDTreeDirArrows=1
-    let NERDTreeMinimalUI=1
-    let NERDTreeQuitOnOpen=1
-    let NERDTreeShowHidden=1
-    let g:NERDTreeHijackNetrw=0
+" Use a different mapleader (default is "\").
 
-    " --------------------------------------------------------------------------
-    " netrw
-    " --------------------------------------------------------------------------
-    let g:loaded_netrw=1
-    let g:loaded_netrwPlugin=1
+let mapleader = ","
 
-    " --------------------------------------------------------------------------
-    " vim-closetag
-    " --------------------------------------------------------------------------
-    let g:closetag_filenames='*.html,*.js,*.jsx'
-    let g:closetag_emptyTags_caseSensitive=1
-    let g:closetag_regions={
-    \  'javascript.jsx': 'jsxRegion',
-    \  'javascriptreact': 'jsxRegion',
-    \}
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    " --------------------------------------------------------------------------
-    " vim-jsx-pretty
-    " --------------------------------------------------------------------------
-    " allow jsx syntax in .js files
-    let g:jsx_ext_required=0
+" [,cc] Toggle code comments.
+" https://github.com/tomtom/tcomment_vim
 
-    " --------------------------------------------------------------------------
-    " vim-js-pretty-template
-    " --------------------------------------------------------------------------
-    " Register tag name associated the filetype
-    call jspretmpl#register_tag('gql', 'graphql')
+map <leader>cc :TComment<CR>
 
-    autocmd FileType javascript JsPreTmpl
-    autocmd FileType javascript.jsx JsPreTmpl
-" }}}
-" Custom functions {{{
-" }}}
-" Local settings {{{
-  " Load local settings if they exist.
-  "
-  " [!] The following needs to remain at the end of this file in order to allow
-  "     any of the above settings to be overwritten by the local ones.
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  if filereadable(glob("~/.vimrc.local"))
-    source ~/.vimrc.local
-  endif
-" }}}
-" vim:foldmethod=marker:foldlevel=0
+" [,cs] Clear search.
+
+map <leader>cs <Esc>:noh<CR>
+
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+" [,*] Search project for current word
+
+map <leader>* :Rg <cword><CR><CR>
+
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+" [,l] Toggle invisibles
+
+nmap <leader>l :set list!<CR>
+
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+" [jk] Easy ESC in insert mode
+
+inoremap jk <esc>
+snoremap jk <esc>
+
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+" [<Tab> / <S-Tab>] Cycle through listed buffers
+
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+" [,p] Format selection
+
+vmap <leader>p  <Plug>(coc-format-selected)
+nmap <leader>p  <Plug>(coc-format-selected)
+
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+" [<C-p>] Search for files
+
+nnoremap <C-p> :Files<CR>
+
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+" [<C-p><C-p>] Toggle NERDTree
+
+map <silent> <C-p><C-p> :NERDTreeToggle<CR>
+
+
+" ------------------------------------------------------------------------------
+" | Local Settings                                                             |
+" ------------------------------------------------------------------------------
+
+" Load local settings if they exist.
+"
+" [!] The following needs to remain at the end of this file in order to allow
+"     any of the above settings to be overwritten by the local ones.
+
+if filereadable(glob("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif

@@ -6,5 +6,9 @@
     "markdown",
     "typescript",
     "typescriptreact"
-  ]
+  ],
+  "solargraph.autoformat": true,
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true,
+  "solargraph.hover": true
 }
