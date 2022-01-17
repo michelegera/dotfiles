@@ -1,6 +1,6 @@
 ---
 BUNDLE_BUILD__FFI: "--with-cflags=-Wno-implicit-function-declaration"
-BUNDLE_BUILD__GITHUB-MARKDOWN: "--with-cflags=-Wno-error=implicit-function-declaration"
+BUNDLE_BUILD__GITHUB___MARKDOWN: "--with-cflags=-Wno-error=implicit-function-declaration"
 BUNDLE_BUILD__MARKDOWN: "--with-cflags=-Wno-implicit-function-declaration"
 BUNDLE_BUILD__MYSQL2: "--with-opt-dir=/usr/local/opt/openssl"
 BUNDLE_BUILD__NIO4R: "--with-cflags=-Wno-error=implicit-function-declaration"
