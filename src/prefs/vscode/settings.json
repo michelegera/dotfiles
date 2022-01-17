@@ -38,6 +38,9 @@
   "i18n-ally.displayLanguage": "en",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "less.validate": false,
+  "material-icon-theme.folders.color": "#8695b7",
+  "material-icon-theme.folders.theme": "specific",
+  "material-icon-theme.hidesExplorerArrows": true,
   "prettier.requireConfig": true,
   "scss.validate": false,
   "todo-tree.general.tags": [
@@ -52,6 +55,7 @@
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "window.newWindowDimensions": "inherit",
   "workbench.colorTheme": "Palenight (Mild Contrast)",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "[css][html][javascript][json][jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
