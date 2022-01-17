@@ -217,8 +217,8 @@ Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 
 " HTML, CSS and JavaScript
-Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
 
 " Ruby + frameworks
