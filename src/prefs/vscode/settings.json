@@ -51,7 +51,7 @@
   ],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "window.newWindowDimensions": "inherit",
-  "workbench.colorTheme": "Palenight Theme",
+  "workbench.colorTheme": "Palenight (Mild Contrast)",
   "workbench.startupEditor": "newUntitledFile",
   "[css][html][javascript][json][jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
