@@ -55,6 +55,7 @@
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "window.newWindowDimensions": "inherit",
   "workbench.colorTheme": "Palenight (Mild Contrast)",
+  "workbench.editor.untitled.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "[css][html][javascript][json][jsonc]": {
