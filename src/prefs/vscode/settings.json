@@ -1,6 +1,9 @@
 {
   "css.validate": false,
   "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "editor.find.addExtraSpaceOnTop": false,
   "editor.fontFamily": "MonoLisa",
   "editor.fontLigatures": true,
@@ -16,6 +19,8 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
+
+  "eslint.validate": ["javascript", "javascriptreact"],
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.insertFinalNewline": true,
