@@ -27,6 +27,7 @@ create_symlinks() {
         "shell/gemrc"
         "shell/hushlogin"
         "shell/inputrc"
+        "shell/irbrc"
         "shell/rgignore"
         "shell/screenrc"
         "shell/ssh"
