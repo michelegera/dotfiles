@@ -37,6 +37,8 @@ src/shell/config/gh
 
 src/shell/config/htop
 
+src/shell/config/pgcli
+
 src/shell/config/raycast
 
 src/shell/config/tmuxinator
