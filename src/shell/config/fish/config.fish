@@ -76,6 +76,12 @@ starship init fish | source
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Source direnv
+
+direnv hook fish | source
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Source asdf version manager
 
 source /usr/local/opt/asdf/asdf.fish
