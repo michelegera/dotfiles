@@ -9,8 +9,9 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
   "editor.formatOnPaste": false,
-  "editor.formatOnType": false,
   "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.guides.bracketPairs": "active",
   "editor.matchBrackets": false,
   "editor.minimap.enabled": false,
   "editor.rulers": [80],
@@ -19,11 +20,11 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-
   "eslint.validate": ["javascript", "javascriptreact"],
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.insertFinalNewline": true,
+  "files.simpleDialog.enable": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "files.exclude": {
@@ -62,6 +63,7 @@
   "workbench.colorTheme": "Palenight (Mild Contrast)",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "[css][html][javascript][json][jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
