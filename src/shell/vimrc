@@ -28,12 +28,6 @@ if has('wildignore')
   set backupskip+=/private/tmp/*    " ┘
 endif
 
-set clipboard=unnamed               " ┐
-                                    " │ Use the system clipboard as the default
-if has('unnamedplus')               " │ register.
-  set clipboard+=unnamedplus        " │
-endif                               " ┘
-
 set cmdheight=2                     " Avoid “Press <ENTER> to continue” prompt
 
 if has('syntax')
