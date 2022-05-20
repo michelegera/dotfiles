@@ -29,8 +29,8 @@ execute "defaults write com.apple.screencapture location -string '$HOME/Desktop'
 execute "defaults write com.apple.screencapture show-thumbnail -bool false" \
     "Do not show thumbnail"
 
-execute "defaults write com.apple.screencapture type -string 'png'" \
-    "Save screenshots as PNGs"
+execute "defaults write com.apple.screencapture type -string 'jpg'" \
+    "Save screenshots as JPEGs"
 
 execute "defaults write com.apple.screensaver askForPassword -int 1 && \
          defaults write com.apple.screensaver askForPasswordDelay -int 0"\
