@@ -22,6 +22,7 @@ src/shell/config/fish/*
 !src/shell/config/fish/functions
 src/shell/config/fish/functions/__*
 src/shell/config/fish/functions/fisher.fish
+src/shell/config/fish/functions/exa_git.fish
 
 !src/shell/config/fish/fzf
 
