@@ -64,6 +64,12 @@ source $HOME/.config/fish/fzf/base16-material-palenight.fish
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Source aliases
+
+source $HOME/.config/fish/aliases.fish
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Source zoxide
 
 zoxide init fish | source
