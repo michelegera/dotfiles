@@ -7,6 +7,9 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Dock\n\n"
 
+execute "defaults write com.apple.dock 'mineffect' -string 'scale'" \
+    "Set window minimization animation to 'scale'"
+
 execute "defaults write com.apple.dock expose-animation-duration -float 0.1" \
     "Speed up Mission Control animations"
 
