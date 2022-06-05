@@ -47,6 +47,9 @@
   "material-icon-theme.folders.theme": "specific",
   "material-icon-theme.hidesExplorerArrows": true,
   "prettier.requireConfig": true,
+  "ruby.lint": {
+    "rubocop": true
+  },
   "scss.validate": false,
   "todo-tree.general.tags": [
     "BUG",
@@ -68,6 +71,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[xml]": {
