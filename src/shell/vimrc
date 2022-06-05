@@ -221,7 +221,6 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 
 " Advanced JavaScript + frameworks
-Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
 Plug 'kristijanhusak/vim-js-file-import', { 'do': 'npm install' }
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pantharshit00/vim-prisma'
