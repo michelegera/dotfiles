@@ -23,6 +23,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ./miscellaneous.sh
 ./photos.sh
 ./safari.sh
+./security_and_privacy.sh
 ./textedit.sh
 ./trackpad_and_mouse.sh
 ./transmission.sh
