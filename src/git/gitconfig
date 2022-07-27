@@ -121,6 +121,11 @@
 
 [push]
 
+    # Make new branches to be pushed to the default remote
+    # and also set upstream tracking
+
+    autoSetupRemote = true
+
     # Make `git push` automatically push relevant
     # annotated tags when pushing branches out
 
