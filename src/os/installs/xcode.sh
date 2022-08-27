@@ -36,7 +36,7 @@ install_xcode() {
         "until is_xcode_installed; do \
             sleep 5; \
          done" \
-        "Xcode.app"
+        "Xcode"
 
 }
 
@@ -59,18 +59,25 @@ install_xcode_command_line_tools() {
 }
 
 is_xcode_installed() {
-    [ -d "/Applications/Xcode.app" ]
+    [ -d "/Applications/Xcode.app" ] || [ -d "/Applications/Xcode-beta.app" ]
 }
 
 set_xcode_developer_directory() {
 
     # Point the `xcode-select` developer directory to the appropriate directory
-    # from within `Xcode.app`.
+    # from within `Xcode`.
     #
     # https://github.com/alrra/dotfiles/issues/13
 
-    sudo xcode-select -switch "/Applications/Xcode.app/Contents/Developer" &> /dev/null
-    print_result $? "Make 'xcode-select' developer directory point to the appropriate directory from within Xcode.app"
+    if [ -d "/Applications/Xcode-beta.app" ]; then
+        sudo xcode-select -switch "/Applications/Xcode-beta.app/Contents/Developer" &> /dev/null
+    fi
+
+    if [ -d "/Applications/Xcode.app" ]; then
+        sudo xcode-select -switch "/Applications/Xcode.app/Contents/Developer" &> /dev/null
+    fi
+
+    print_result $? "Make 'xcode-select' developer directory point to the appropriate directory from within Xcode"
 
 }
 
