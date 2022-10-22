@@ -11,6 +11,7 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
   "editor.guides.bracketPairs": "active",
+  "editor.inlineSuggest.enabled": true,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.rulers": [80],
@@ -37,20 +38,29 @@
     "**/.ammonite": true
   },
   "formattingToggle.affects": ["editor.formatOnSave"],
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true
+  },
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
   "gitlens.currentLine.enabled": false,
-  "i18n-ally.displayLanguage": "en",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "less.validate": false,
   "material-icon-theme.folders.color": "#8695b7",
   "material-icon-theme.folders.theme": "specific",
   "material-icon-theme.hidesExplorerArrows": true,
+  "playwright.reuseBrowser": false,
   "prettier.requireConfig": true,
   "ruby.lint": {
     "rubocop": true
   },
   "scss.validate": false,
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "javascript"
+  },
   "todo-tree.general.tags": [
     "BUG",
     "HACK",
@@ -62,7 +72,7 @@
   ],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "window.newWindowDimensions": "inherit",
-  "workbench.colorTheme": "Palenight (Mild Contrast)",
+  "workbench.colorTheme": "Palenight Italic",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
