@@ -39,8 +39,6 @@ main() {
 
     brew_install "asdf" "asdf"
 
-    install_plugin "elixir" "asdf-vm/asdf-elixir"
-    install_plugin "erlang" "asdf-vm/asdf-erlang"
     install_plugin "java" "halcyon/asdf-java"
     install_plugin "nodejs" "asdf-vm/asdf-nodejs"
     install_plugin "ruby" "asdf-vm/asdf-ruby"

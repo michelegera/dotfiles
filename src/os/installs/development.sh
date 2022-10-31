@@ -10,5 +10,4 @@ print_in_purple "\n   Development\n\n"
 
 brew_install "Paw" "paw" "--cask"
 brew_install "Postico" "postico" "--cask"
-brew_install "Sequel Pro (Nightly)" "sequel-pro-nightly" "--cask" "homebrew/cask-versions"
 brew_install "Tower" "tower" "--cask"
