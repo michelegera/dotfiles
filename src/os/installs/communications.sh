@@ -8,6 +8,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Communications\n\n"
 
+brew_install "Discord" "discord" "--cask"
+brew_install "Notion" "notion" "--cask"
 brew_install "Slack" "slack" "--cask"
 brew_install "Telegram Desktop" "telegram-desktop" "--cask"
 brew_install "Tweetbot" "tweetbot" "--cask"
