@@ -88,12 +88,6 @@ direnv hook fish | source
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Source asdf version manager
-
-source /usr/local/opt/asdf/asdf.fish
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 # Set path for binstubs (https://wolfgangrittner.dev/bundle-exec-be-gone/)
 set PATH ./bin $PATH
 
