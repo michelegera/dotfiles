@@ -8,4 +8,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Fonts\n\n"
 
-brew_install "Syne" "font-syne"
+brew_install "Syne" "font-syne" "--cask" "homebrew/cask-fonts"
