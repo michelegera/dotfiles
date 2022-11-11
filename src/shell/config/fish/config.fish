@@ -103,6 +103,12 @@ set -x JAVA_OPTS "-XX:+UseG1GC -Xms1024m  -Xmx1024m"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Set Java options for Elasticsearch
+set -x ES_JAVA_HOME $JAVA_HOME
+set -x ES_JAVA_OPTS $JAVA_OPTS
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Source local config
 
 source $HOME/.fishconfig.local
