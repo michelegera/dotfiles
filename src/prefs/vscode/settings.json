@@ -7,25 +7,18 @@
   "editor.fontFamily": "MonoLisa",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
-  "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
-  "editor.formatOnType": false,
   "editor.guides.bracketPairs": "active",
   "editor.inlineSuggest.enabled": true,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact"],
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.insertFinalNewline": true,
@@ -42,9 +35,6 @@
     "**/.metals": true,
     "**/.ammonite": true
   },
-  "formattingToggle.affects": [
-    "editor.formatOnSave"
-  ],
   "github.copilot.enable": {
     "*": true,
     "yaml": true,
@@ -84,16 +74,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
-  "[css][html][javascript][json][jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
+  "[css][html][javascript][json][jsonc][typescript][typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
