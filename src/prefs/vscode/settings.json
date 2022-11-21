@@ -7,7 +7,9 @@
   "editor.fontFamily": "MonoLisa",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
+  "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
+  "editor.formatOnType": false,
   "editor.guides.bracketPairs": "active",
   "editor.inlineSuggest.enabled": true,
   "editor.matchBrackets": "never",
@@ -50,7 +52,6 @@
   "material-icon-theme.folders.theme": "specific",
   "material-icon-theme.hidesExplorerArrows": true,
   "playwright.reuseBrowser": false,
-  "prettier.requireConfig": true,
   "ruby.lint": {
     "rubocop": true
   },
@@ -68,13 +69,14 @@
     "[x]"
   ],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "window.newWindowDimensions": "inherit",
   "workbench.colorTheme": "Palenight Italic",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
-  "[css][html][javascript][json][jsonc][typescript][typescriptreact]": {
+  "[css][html][javascript][json][jsonc][markdown][typescript][typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
