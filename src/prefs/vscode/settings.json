@@ -37,6 +37,7 @@
     "**/.metals": true,
     "**/.ammonite": true
   },
+  "formattingToggle.affects": ["editor.formatOnSave"],
   "github.copilot.enable": {
     "*": true,
     "yaml": true,
