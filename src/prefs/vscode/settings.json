@@ -53,6 +53,7 @@
   "material-icon-theme.folders.theme": "specific",
   "material-icon-theme.hidesExplorerArrows": true,
   "playwright.reuseBrowser": false,
+  "prettier.requireConfig": true,
   "ruby.lint": {
     "rubocop": true
   },
