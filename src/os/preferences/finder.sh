@@ -7,6 +7,9 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Finder\n\n"
 
+execute "defaults write -g NSDocumentSaveNewDocumentsToCloud -bool false" \
+    "Sets default save target to be a local disk, not iCloud"
+
 execute "defaults write com.apple.finder WarnOnEmptyTrash -bool false" \
     "Disable the warning before emptying the Trash"
 

@@ -36,8 +36,8 @@ execute "defaults write com.apple.screensaver askForPassword -int 1 && \
          defaults write com.apple.screensaver askForPasswordDelay -int 0"\
     "Require password immediately after going into sleep or screen saver mode"
 
-execute "defaults write -g AppleFontSmoothing -int 2" \
-    "Enable subpixel font rendering on non-Apple LCDs"
+execute "defaults write -g CGFontRenderingFontSmoothingDisabled -bool fals" \
+    "Enable subpixel anti-aliasing (font-smoothing)"
 
 execute "defaults write -g NSDisableAutomaticTermination -bool true" \
     "Disable automatic termination of inactive apps"
