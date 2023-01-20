@@ -24,7 +24,6 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.insertFinalNewline": true,
-  "files.simpleDialog.enable": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "files.exclude": {
@@ -73,7 +72,7 @@
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.newWindowDimensions": "inherit",
-  "workbench.colorTheme": "Palenight Italic",
+  "workbench.colorTheme": "Palenight Theme",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
