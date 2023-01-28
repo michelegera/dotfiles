@@ -11,7 +11,6 @@ For more specific local needs I use the `*.local` files described in the
   - [🌍 Local Settings](#local-settings)
     - [🐟 `~/.fishconfig.local`](#fishconfiglocal)
     - [🐙 `~/.gitconfig.local`](#gitconfiglocal)
-    - [💻 `~/.vimrc.local`](#vimrclocal)
   - [🔀 Forks](#forks)
 - [↕️ Update](#update)
 - [🥇 Acknowledgements](#acknowledgements)
@@ -89,29 +88,6 @@ Git user credentials, e.g.:
     name = John Appleseed
     email = john.appleseed@apple.com
     signingKey = XXXXXXXX
-```
-
-#### `~/.vimrc.local`
-
-The `~/.vimrc.local` file will be automatically sourced after `~/.vimrc`, thus
-allowing its content to add or overwrite the settings from `~/.vimrc`.
-
-Here is an example:
-
-```vim
-" Disable arrow keys in insert mode.
-
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-
-" Disable arrow keys in normal mode.
-
-nnoremap <Down>  :echoe "Use j"<CR>
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
 ```
 
 ### Forks

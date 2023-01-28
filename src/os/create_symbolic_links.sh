@@ -31,7 +31,6 @@ create_symlinks() {
         "shell/rgignore"
         "shell/screenrc"
         "shell/ssh"
-        "shell/vimrc"
 
     )
 
