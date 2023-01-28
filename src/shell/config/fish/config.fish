@@ -89,7 +89,7 @@ direnv hook fish | source
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Set path for binstubs (https://wolfgangrittner.dev/bundle-exec-be-gone/)
-set PATH ./bin $PATH
+set -x PATH ./bin $PATH
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
