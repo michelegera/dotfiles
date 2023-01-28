@@ -41,7 +41,9 @@ main() {
 
     install_plugin "java" "halcyon/asdf-java"
     install_plugin "nodejs" "asdf-vm/asdf-nodejs"
+    install_plugin "python" "asdf-community/asdf-python"
     install_plugin "ruby" "asdf-vm/asdf-ruby"
+    install_plugin "rust" "code-lever/asdf-rust"
     install_plugin "scala" "mtatheonly/asdf-scala"
 
 }
