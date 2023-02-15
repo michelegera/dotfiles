@@ -89,21 +89,25 @@ direnv hook fish | source
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Set path for binstubs (https://wolfgangrittner.dev/bundle-exec-be-gone/)
+
 set -x PATH ./bin $PATH
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Set JAVA_HOME
+
 source $HOME/.asdf/plugins/java/set-java-home.fish
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Set Java options
+
 set -x JAVA_OPTS "-XX:+UseG1GC -Xms1024m  -Xmx1024m"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Set Java options for Elasticsearch
+
 set -x ES_JAVA_HOME $JAVA_HOME
 set -x ES_JAVA_OPTS $JAVA_OPTS
 
