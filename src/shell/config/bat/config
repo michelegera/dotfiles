@@ -1,4 +1,4 @@
-# Set the theme to "base16"
+# Set the theme to "Catppuccin-macchiato"
 # Remeber to update the binary cache with `bat cache --build`
 
---theme="base16"
+--theme="Catppuccin-macchiato"

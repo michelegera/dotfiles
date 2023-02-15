@@ -13,11 +13,10 @@ src/shell/bundle/*
 !src/shell/bundle/config
 
 src/shell/config/*
-!src/shell/config/fish/aliases.fish
-!src/shell/config/fish/config.fish
-!src/shell/config/fish/fish_plugins
-!src/shell/config/fzf/base16-material-palenight.fish
-!src/shell/config/nvim/coc-settings.json
+!src/shell/config/alacritty/
+!src/shell/config/bat/
+!src/shell/config/bottom/
+!src/shell/config/lazygit/config.yml
 !src/shell/config/starship.toml
 !src/shell/config/tmux
 
