@@ -18,7 +18,6 @@ create_symlinks() {
         "prefs/gnupg"
         "prefs/vscode"
 
-        "shell/alacritty.yml"
         "shell/bundle"
         "shell/config"
         "shell/curlrc"
