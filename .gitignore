@@ -19,6 +19,7 @@ src/shell/config/*
 !src/shell/config/fzf/base16-material-palenight.fish
 !src/shell/config/nvim/coc-settings.json
 !src/shell/config/starship.toml
+!src/shell/config/tmux
 
 src/shell/ssh/*
 !src/shell/ssh/config
