@@ -13,12 +13,12 @@ src/shell/bundle/*
 !src/shell/bundle/config
 
 src/shell/config/*
-!src/shell/config/alacritty/
 !src/shell/config/bat/
 !src/shell/config/bottom/
 !src/shell/config/lazygit/config.yml
 !src/shell/config/starship.toml
 !src/shell/config/tmux
+!src/shell/config/wezterm
 
 src/shell/ssh/*
 !src/shell/ssh/config
