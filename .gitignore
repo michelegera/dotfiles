@@ -16,6 +16,11 @@ src/shell/config/*
 !src/shell/config/bat/
 !src/shell/config/bottom/
 !src/shell/config/lazygit/config.yml
+!src/shell/config/lvim
+
+src/shell/config/lvim/*
+!src/shell/config/lvim/config.lua
+
 !src/shell/config/starship.toml
 !src/shell/config/tmux
 !src/shell/config/wezterm
