@@ -3,7 +3,7 @@
 -- -----------------------------------------------------------------------------
 
 lvim.colorscheme = "catppuccin-macchiato"
-lvim.format_on_save.enabled = false
+lvim.format_on_save.enabled = true
 lvim.log.level = "warn"
 
 
@@ -58,10 +58,27 @@ lvim.builtin.treesitter.ensure_installed = {
 -- -----------------------------------------------------------------------------
 
 lvim.plugins = {
+  -- catppuccin
   {
     "catppuccin/nvim",
     name = "catppuccin"
   },
+
+  -- nvim-surround
+  {
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+      require("nvim-surround").setup()
+    end
+  },
+
+  -- vim-prisma
+  {
+    'prisma/vim-prisma'
+  },
+
+  -- tailwind-sorter
   {
     "laytan/tailwind-sorter.nvim",
     requires = { "nvim-treesitter/nvim-treesitter", "nvim-lua/plenary.nvim" },
@@ -82,6 +99,11 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
     command = "prettier",
-    filetypes = { "typescript", "typescriptreact" },
+    filetypes = {
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    },
   },
 }
