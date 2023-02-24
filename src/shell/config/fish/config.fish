@@ -84,9 +84,15 @@ starship init fish | source
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Source direnv
+# Source direnv (should come before rtx)
 
 direnv hook fish | source
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Source rtx
+
+/usr/local/bin/rtx activate fish | source
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -98,12 +104,6 @@ set -x PATH ./bin $PATH
 
 # Add LunarVim to path
 set -x PATH $HOME/.local/bin $PATH
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Set JAVA_HOME
-
-source $HOME/.asdf/plugins/java/set-java-home.fish
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
