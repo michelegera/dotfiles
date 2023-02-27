@@ -20,6 +20,10 @@ lvim.keys.normal_mode["<Tab>"] = ":BufferLineCycleNext<CR>"
 -- Exit insert mode with jk
 lvim.keys.insert_mode["jk"] = "<ESC>"
 
+-- Save file
+lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
+lvim.keys.insert_mode["<C-s>"] = "<Esc>:w<CR>"
+
 
 -- -----------------------------------------------------------------------------
 -- Plugins (Built-in)
