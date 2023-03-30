@@ -79,7 +79,7 @@ lvim.plugins = {
 
   -- vim-prisma
   {
-    'prisma/vim-prisma'
+    "prisma/vim-prisma"
   },
 
   -- tailwind-sorter
