@@ -14,13 +14,18 @@
   "editor.inlineSuggest.enabled": true,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
-  "editor.rulers": [80],
+  "editor.rulers": [
+    80
+  ],
   "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "eslint.validate": ["javascript", "javascriptreact"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact"
+  ],
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.insertFinalNewline": true,
@@ -36,7 +41,9 @@
     "**/.metals": true,
     "**/.ammonite": true
   },
-  "formattingToggle.affects": ["editor.formatOnSave"],
+  "formattingToggle.affects": [
+    "editor.formatOnSave"
+  ],
   "github.copilot.enable": {
     "*": true,
     "yaml": true,
@@ -53,10 +60,8 @@
   "material-icon-theme.hidesExplorerArrows": true,
   "playwright.reuseBrowser": false,
   "prettier.requireConfig": true,
-  "ruby.lint": {
-    "rubocop": true
-  },
   "scss.validate": false,
+  "svgPreview.autoOpen": false,
   "tailwindCSS.includeLanguages": {
     "plaintext": "javascript"
   },
@@ -80,7 +85,10 @@
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
-  "[css][html][javascript][json][jsonc][markdown][typescript][typescriptreact]": {
+  "[css][html][javascript][json][markdown][typescript][typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
 }
