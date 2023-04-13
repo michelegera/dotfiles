@@ -1,6 +1,7 @@
 [alias]
 
-    a   = commit --amend
+    a   = add
+    amd = commit --amend
     b   = branch
     c   = commit
     ca  = !git add -A && git commit
