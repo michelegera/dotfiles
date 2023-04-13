@@ -55,7 +55,7 @@
   "gitlens.currentLine.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "less.validate": false,
-  "material-icon-theme.folders.color": "#8695b7",
+  "material-icon-theme.folders.color": "#42a5f5",
   "material-icon-theme.folders.theme": "specific",
   "material-icon-theme.hidesExplorerArrows": true,
   "playwright.reuseBrowser": false,
@@ -79,7 +79,7 @@
   "window.newWindowDimensions": "inherit",
   "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.editor.untitled.hint": "hidden",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "eq-material-theme-icons",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "[astro]": {
