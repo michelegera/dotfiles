@@ -90,6 +90,27 @@ Git user credentials, e.g.:
     signingKey = XXXXXXXX
 ```
 
+### Set up GPG signing for Git commits
+
+First, make sure permissions are set correctly on the `.gnupg` directory:
+
+```shell
+chmod -R go= ~/.gnupg/
+```
+
+Next, import your private GPG key:
+
+```shell
+gpg --import <key-file>
+```
+
+Finally, set `user.signingKey` in `~/.gitconfig.local` to the short id of your
+key. You can find it by running:
+
+```shell
+gpg --list-secret-keys --keyid-format SHORT
+```
+
 ### Forks
 
 If you decide to [fork] this project, do not forget to substitute my username
