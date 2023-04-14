@@ -17,4 +17,7 @@ return {
 
 	-- Set color scheme
 	color_scheme = "Catppuccin Macchiato", -- or Mocha, Frappe, Latte
+
+  -- Set cursor style
+  default_cursor_style = "SteadyUnderline",
 }
