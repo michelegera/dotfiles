@@ -8,4 +8,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   System\n\n"
 
-brew_install "Logi Options +" "logi-options-plus" "--cask" "homebrew/cask-drivers"
+brew_install "Logi Options +" "logi-options-plus" "--cask"
