@@ -14,41 +14,25 @@
   "editor.inlineSuggest.enabled": true,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact"],
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "files.exclude": {
-    "**/.ammonite": true,
-    "**/.bloop": true,
-    "**/.metals": true
-  },
-  "files.watcherExclude": {
-    "**/.bloop": true,
-    "**/.metals": true,
-    "**/.ammonite": true
-  },
-  "formattingToggle.affects": [
-    "editor.formatOnSave"
-  ],
+  "formattingToggle.affects": ["editor.formatOnSave"],
   "github.copilot.enable": {
     "*": true,
-    "yaml": true,
-    "plaintext": true,
-    "markdown": true
+    "markdown": false,
+    "plaintext": false,
+    "scminput": false
   },
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
@@ -82,14 +66,11 @@
   "workbench.iconTheme": "eq-material-theme-icons",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
-  "[astro]": {
-    "editor.defaultFormatter": "astro-build.astro-vscode"
-  },
   "[css][html][javascript][json][markdown][typescript][typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
@@ -97,4 +78,8 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[handlebars]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.linkedEditing": true
 }
