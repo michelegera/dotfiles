@@ -15,6 +15,7 @@ alias cat   'bat'
 alias cp    'cp -iv'
 alias df    'duf'
 alias fldns 'sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder;'
+alias lts   "curl -s https://nodejs.org/dist/index.json | jq -r 'map(select(.lts != false)) | first | .version' | cut -c2-"
 alias mkdir 'mkdir -pv'
 alias mv    'mv -iv'
 alias ping  'prettyping --nolegend'
