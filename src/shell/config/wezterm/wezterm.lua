@@ -16,7 +16,7 @@ return {
 	font_size = 13.0,
 
 	-- Set color scheme
-	color_scheme = "Catppuccin Macchiato", -- or Mocha, Frappe, Latte
+	color_scheme = 'Tokyo Night Storm',
 
   -- Set cursor style
   default_cursor_style = "SteadyUnderline",

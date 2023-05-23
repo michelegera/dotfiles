@@ -1,4 +1,3 @@
-# Set the theme to "Catppuccin-macchiato"
 # Remeber to update the binary cache with `bat cache --build`
 
---theme="Catppuccin-macchiato"
+--theme="tokyonight_storm"

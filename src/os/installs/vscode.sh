@@ -27,7 +27,6 @@ printf "\n"
 
 # Install the VSCode plugins
 install_plugin "Babel JavaScript" "mgmcdermott.vscode-language-babel"
-install_plugin "Catppuccin for VSCode" "Catppuccin.catppuccin-vsc"
 install_plugin "change-case" "wmaurer.change-case"
 install_plugin "Color Highlight" "naumovs.color-highlight"
 install_plugin "DotENV" "mikestead.dotenv"
@@ -58,6 +57,7 @@ install_plugin "Subtle Match Brackets" "rafamel.subtle-brackets"
 install_plugin "Svg Preview" "SimonSiefke.svg-preview"
 install_plugin "Tailwind CSS IntelliSense" "bradlc.vscode-tailwindcss"
 install_plugin "Todo Tree" "Gruntfuggly.todo-tree"
+install_plugin "Tokyo Night" "enkia.tokyo-night"
 install_plugin "Transformer" "dakara.transformer"
 install_plugin "vscode-viml-syntax" "dunstontc.viml"
 
