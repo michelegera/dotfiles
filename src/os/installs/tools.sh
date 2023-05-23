@@ -10,6 +10,7 @@ print_in_purple "\n   Tools\n\n"
 
 brew_install "bash" "bash"
 brew_install "bat" "bat"
+brew_install "bottom" "bottom"
 brew_install "coreutils" "coreutils"
 brew_install "curl" "curl"
 brew_install "difftastic" "difftastic"
