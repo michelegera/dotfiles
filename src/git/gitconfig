@@ -44,7 +44,7 @@
     abbrev = 12
     attributesfile = ~/.gitattributes
     autocrlf = input
-    editor = lvim
+    editor = nvim
     excludesfile = ~/.gitignore
 
     # Prevent showing files whose names contain non-ASCII symbols as

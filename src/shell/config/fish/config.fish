@@ -18,10 +18,10 @@ set -e MAILCHECK
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Use LunarVim as the preferred editor
+# Use Neovim as the preferred editor
 
-set -x EDITOR lvim
-set -x VISUAL lvim
+set -x EDITOR nvim
+set -x VISUAL nvim
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -92,11 +92,6 @@ direnv hook fish | source
 # Set path for binstubs (https://wolfgangrittner.dev/bundle-exec-be-gone/)
 
 set -x PATH ./bin $PATH
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Add LunarVim to path
-set -x PATH $HOME/.local/bin $PATH
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
