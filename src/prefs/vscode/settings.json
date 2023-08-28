@@ -11,7 +11,7 @@
   "editor.formatOnType": false,
   "editor.guides.bracketPairs": "active",
   "editor.inlineSuggest.enabled": true,
-  "editor.matchBrackets": "never",
+  "editor.matchBrackets": false,
   "editor.minimap.enabled": false,
   "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
@@ -19,7 +19,6 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "eslint.validate": ["javascript", "javascriptreact"],
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
@@ -29,7 +28,7 @@
   "formattingToggle.affects": ["editor.formatOnSave"],
   "github.copilot.enable": {
     "*": true,
-    "markdown": false,
+    "markdown": true,
     "plaintext": false,
     "scminput": false
   },
@@ -65,20 +64,10 @@
   "workbench.iconTheme": "eq-material-theme-icons",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
-  "[css][html][javascript][json][markdown][typescript][typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
+  "[css][glimmer-js][glimmer-ts][handlebars][html][javascript][json][jsonc][markdown][scss][typescript][typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[handlebars]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.linkedEditing": true
+  }
 }
