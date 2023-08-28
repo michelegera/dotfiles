@@ -1,7 +1,9 @@
 return {
+  { "kwsp/halcyon-neovim" },
   {
-    "folke/tokyonight.nvim",
-    lazy = true,
-    opts = { style = "storm" },
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "halcyon",
+    },
   }
 }

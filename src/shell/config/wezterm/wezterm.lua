@@ -16,8 +16,8 @@ return {
 	font_size = 12.0,
 
 	-- Set color scheme
-	color_scheme = 'Tokyo Night Storm',
+	color_scheme = 'Halcyon',
 
   -- Set cursor style
-  default_cursor_style = "SteadyUnderline",
+  default_cursor_style = "BlinkingUnderline",
 }

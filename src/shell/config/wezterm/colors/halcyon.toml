@@ -1,0 +1,35 @@
+[colors]
+background = "#1d2433"
+foreground = "#a2aabc"
+
+ansi = [
+  "#171c28",
+  "#ef6b73",
+  "#bae67e",
+  "#ffd580",
+  "#5ccfe6",
+  "#c3a6ff",
+  "#5ccfe6",
+  "#d7dce2",
+]
+
+brights = [
+  "#8695b7",
+  "#f07178",
+  "#bae67e",
+  "#ffd580",
+  "#5ccfe6",
+  "#c3a6ff",
+  "#5ccfe6",
+  "#d7dce2",
+]
+
+cursor_bg = "#ffd580"
+cursor_border = "#ffd580"
+cursor_fg = "#171c28"
+selection_bg = "#2f3b54"
+selection_fg = "#d7dce2"
+
+[metadata]
+name = "Halcyon"
+author = "Brittany Chiang"
