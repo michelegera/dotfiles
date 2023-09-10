@@ -11,7 +11,7 @@
   "editor.formatOnType": false,
   "editor.guides.bracketPairs": "active",
   "editor.inlineSuggest.enabled": true,
-  "editor.matchBrackets": false,
+  "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
