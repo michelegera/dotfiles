@@ -72,6 +72,7 @@ main() {
     brew_update
     brew_upgrade
 
+    brew_tap "buo/cask-upgrade"
 }
 
 main
