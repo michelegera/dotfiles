@@ -6,6 +6,7 @@ For more specific local needs I use the `*.local` files described in the
 
 ## Table of Contents
 
+- [0️⃣ Before getting started](#before-getting-started)
 - [🔧 Setup](#setup)
 - [🎛 Customize](#customize)
   - [🌍 Local Settings](#local-settings)
@@ -15,6 +16,13 @@ For more specific local needs I use the `*.local` files described in the
 - [↕️ Update](#update)
 - [🥇 Acknowledgements](#acknowledgements)
 - [⚖️ License](#license)
+
+## Before getting started
+
+Some commands (e.g. `defaults write`) won’t work unless the terminal has full
+disk access. To grant full disk access to the terminal, go to
+`System Settings > Privacy & Security > Full Disk Access` and add the terminal
+to the list of apps.
 
 ## Setup
 
