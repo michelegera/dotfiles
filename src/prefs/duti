@@ -57,8 +57,11 @@ cx.c3.theunarchiver           .zipx                           all
 
 org.m0k.transmission          .torrent                        all
 
-org.videolan.vlc              .avi                            all
-org.videolan.vlc              .mkv                            all
+com.colliderli.iina           .avi                            all
+com.colliderli.iina           .m4v                            all
+com.colliderli.iina           .mkv                            all
+com.colliderli.iina           .mov                            all
+com.colliderli.iina           .mp4                            all
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
