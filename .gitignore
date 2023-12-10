@@ -28,6 +28,7 @@ src/shell/config/nvim/*
 !src/shell/config/nvim/lua
 src/shell/config/nvim/lua/*
 !src/shell/config/nvim/lua/plugins
+src/shell/config/nvim/lua/plugins/example.lua
 
 !src/shell/config/starship.toml
 !src/shell/config/tmux

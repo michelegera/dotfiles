@@ -6,9 +6,14 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 install_lazyvim() {
+    declare -r NVIM_DIRECTORY="$HOME/.config/nvim"
 
-    git clone https://github.com/LazyVim/starter ~/.config/nvim && \
-    rm -rf ~/.config/nvim/.git &> /dev/null
+    # Clone the repository into an non-empty directory
+    git -C "$NVIM_DIRECTORY" init &> /dev/null
+    git -C "$NVIM_DIRECTORY" remote add origin https://github.com/LazyVim/starter &> /dev/null
+    git -C "$NVIM_DIRECTORY" fetch &> /dev/null
+    git -C "$NVIM_DIRECTORY" checkout origin/main &> /dev/null
+    rm -rf "$NVIM_DIRECTORY/.git" &> /dev/null
 
     print_result $? "Install LazyVim"
 
