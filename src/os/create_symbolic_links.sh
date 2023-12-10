@@ -29,6 +29,7 @@ create_symlinks() {
         "shell/irbrc"
         "shell/rgignore"
         "shell/screenrc"
+        "shell/scripts"
         "shell/ssh"
 
     )

@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+# Usage: ./no_automount My\ Disk
+
+NAME=$1
+if [ -z "$NAME" ] ; then
+    echo "Usage: no_automount {Disk Name}"
+    exit 1
+fi
+
+FSTAB=/etc/fstab
+
+# Add an volume as not auto-mounted to the /etc/fstab file
+# by it's identifier. Also pass in the volume name to add a
+# comment on that line so that we can identify it later.
+function add_identifier {
+    ID=$1
+    VOLUME_NAME=$2
+    if [ -z "$VOLUME_NAME" ] ; then
+        echo "add_identifier() takes two parameters: ID and VOLUME_NAME"
+        exit 2
+    fi
+
+    # get UUID and TYPE from `diskutil info $ID`
+    UUID=`diskutil info "$ID" | grep "Volume UUID" | awk '{print $NF}'`
+    TYPE=`diskutil info "$ID" | grep "Type (Bundle)" | awk '{print $NF}'`
+
+    # Remove this UUID from fstab file
+    sudo sed -i '' "/$UUID/d" $FSTAB
+
+    # Add this UUID to fstab file
+    echo "UUID=$UUID none $TYPE rw,noauto # $VOLUME_NAME" | sudo tee -a $FSTAB > /dev/null
+    echo "Added $UUID ($VOLUME_NAME) to $FSTAB"
+}
+
+# Add all volumes that start with $NAME to the /etc/fstab such
+# that they do not automout.
+
+# Get list of identifiers and volume names from `diskutil info`
+LIST=`diskutil list | grep "$NAME"`
+
+# Iterate over $LIST
+echo "$LIST" | while read LINE
+do
+    # Example of $LINE:
+    #    1: APFS Volume Swiftsure Clone - Data 592.1 GB disk4s1
+
+    # Extract disk identifier which is the last field on the line
+    ID=`echo $LINE | awk '{print $NF}'`
+
+    # Extract volume name in the middle of $LINE by:
+    #    1. remove all characters before $NAME using regex capture assign to $PARTIAL
+    [[ ${LINE} =~ ($NAME.*) ]] && PARTIAL=${BASH_REMATCH[1]}
+    #    2. Cut out the last 3 fields (size, units & ID) from $PARTIAL
+    #       by reversing, cutting and un-reversing
+    VOLUME_NAME=`echo $PARTIAL | rev | cut -d' ' -f 4- | rev`
+
+    add_identifier $ID "$VOLUME_NAME"
+done
+
+# All done!
+exit 0
