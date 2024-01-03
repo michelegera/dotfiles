@@ -77,15 +77,9 @@ starship init fish | source
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Source direnv (should come before rtx)
+# Source direnv
 
 direnv hook fish | source
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Source rtx
-
-/usr/local/bin/rtx activate fish | source
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
