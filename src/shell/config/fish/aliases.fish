@@ -1,3 +1,4 @@
+alias c     'clear'
 alias be    'bundle exec'
 alias bi    'bundle install'
 alias bl    'bundle list'
