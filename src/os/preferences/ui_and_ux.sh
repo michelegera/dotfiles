@@ -60,6 +60,9 @@ execute "defaults write -g QLPanelAnimationDuration -float 0" \
 execute "defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false" \
     "Disable resume system-wide"
 
+execute "defaults write com.apple.mail DisableInlineAttachmentViewing -bool true" \
+    "Show Mail attachments as icons"
+
 execute "sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string 'Laptop' && \
          sudo scutil --set ComputerName 'laptop' && \
          sudo scutil --set HostName 'laptop' && \
