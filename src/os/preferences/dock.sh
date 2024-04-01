@@ -29,6 +29,9 @@ execute "defaults write com.apple.dock show-recents -bool false" \
 execute "defaults write com.apple.dock tilesize -int 40" \
     "Set icon size"
 
+execute "defaults write com.apple.Dock size-immutable -bool false" \
+    "Lock dock size"
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Set hot corners
