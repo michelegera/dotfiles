@@ -5,14 +5,8 @@ full_symbol = "🔋 "
 charging_symbol = "⚡️ "
 discharging_symbol = "💀 "
 
-[java]
-symbol = "☕ "
-
 [nodejs]
 symbol = "🦖 "
 
 [ruby]
 symbol = "🔻 "
-
-[scala]
-symbol = "🪜 "
