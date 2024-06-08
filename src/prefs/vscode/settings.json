@@ -1,7 +1,7 @@
 {
   "css.validate": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "editor.find.addExtraSpaceOnTop": false,
   "editor.fontFamily": "MonoLisa Nerd Font",
@@ -60,7 +60,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.newWindowDimensions": "inherit",
   "workbench.colorTheme": "Halcyon",
-  "workbench.editor.untitled.hint": "hidden",
+  "workbench.editor.empty.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
