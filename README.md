@@ -28,8 +28,9 @@ to the list of apps.
 
 To set up the dotfiles run the appropriate snippet in the terminal:
 
-(⚠️ **DO NOT** run the `setup` snippet if you do not fully understand
-[what it does][setup]. Seriously, **DON’T**!)
+[!CAUTION]
+**DO NOT** run the `setup` snippet if you do not fully understand
+[what it does][setup]. Seriously, **DON’T**!
 
 ```shell
 bash -c "$(curl -LsS https://setup.dotfiles.michelegera.dev)"
