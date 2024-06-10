@@ -22,7 +22,7 @@ printf "\n"
 # Symlink settings
 mkdir -p "${HOME}/Library/Application\ Support/Code/User/"
 symlink "$(realpath ~/.vscode)/settings.json" \
-    "${HOME}/Library/Application\ Support/Code/User/settings.json"
+    "${HOME}/Library/Application\ Support/Code/User/"
 
 printf "\n"
 
