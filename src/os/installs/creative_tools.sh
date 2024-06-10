@@ -10,9 +10,9 @@ print_in_purple "\n   Creative Tools\n\n"
 
 brew_tap "homebrew/cask-versions"
 
-brew_install "Affinity Designer v1" "affinity-designer1"
-brew_install "Affinity Photo v1" "affinity-photo1"
-brew_install "Affinity Publisher v1" "affinity-publisher1"
+brew_install "Affinity Designer" "affinity-designer"
+brew_install "Affinity Photo" "affinity-photo"
+brew_install "Affinity Publisher" "affinity-publisher"
 brew_install "Figma" "figma"
 brew_install "Handbrake" "handbrake"
 brew_install "Kap" "kap"
