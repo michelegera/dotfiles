@@ -19,6 +19,7 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
+  "eslint.validate": ["glimmer-ts", "glimmer-js"],
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
@@ -42,6 +43,7 @@
   "material-icon-theme.folders.theme": "specific",
   "material-icon-theme.hidesExplorerArrows": true,
   "playwright.reuseBrowser": false,
+  "prettier.documentSelectors": ["**/*.gts", "**/*.gjs"],
   "prettier.requireConfig": true,
   "scss.validate": false,
   "svgPreview.autoOpen": false,
@@ -66,7 +68,8 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "[css][glimmer-js][glimmer-ts][handlebars][html][javascript][json][jsonc][markdown][scss][typescript][typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.foldingStrategy": "indentation"
   },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
