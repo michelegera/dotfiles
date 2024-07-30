@@ -87,6 +87,11 @@ direnv hook fish | source
 
 set -x PATH ./bin $PATH
 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Disable Homebrew hints
+
+set -x HOMEBREW_NO_ENV_HINTS 1
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
