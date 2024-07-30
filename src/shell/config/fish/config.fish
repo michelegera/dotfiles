@@ -87,18 +87,6 @@ direnv hook fish | source
 
 set -x PATH ./bin $PATH
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Set Java options
-
-set -x JAVA_OPTS "-XX:+UseG1GC -Xms1024m  -Xmx1024m"
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Set Java options for Elasticsearch
-
-set -x ES_JAVA_HOME $JAVA_HOME
-set -x ES_JAVA_OPTS $JAVA_OPTS
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
