@@ -8,6 +8,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Tools\n\n"
 
+brew_tap "buo/cask-upgrade"
+
 brew_install "bash" "bash"
 brew_install "bat" "bat"
 brew_install "bottom" "bottom"
