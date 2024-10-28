@@ -1,9 +1,9 @@
 -- WezTerm configuration
 ---------------------------------------------------------------
-require 'status'
-require 'tabs'
+require("status")
+require("tabs")
 
-local tables = require "utils/tables"
+local tables = require("utils/tables")
 
 local full_config = tables.merge_all(
   require("fonts"),

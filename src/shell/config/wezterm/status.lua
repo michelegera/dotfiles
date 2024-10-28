@@ -1,7 +1,7 @@
-require 'constants'
+require("constants")
 
-local wezterm = require 'wezterm'
-local constants = require 'constants'
+local wezterm = require("wezterm")
+local constants = require("constants")
 
 wezterm.on("update-status", function(window, _pane)
   local color_scheme = window:effective_config().resolved_palette
@@ -39,13 +39,13 @@ wezterm.on("update-status", function(window, _pane)
     {
       icon = wezterm.nerdfonts.md_server,
       color = wezterm.color.parse(color_scheme.ansi[6]),
-      content = wezterm.hostname()
+      content = wezterm.hostname(),
     },
     {
       icon = wezterm.nerdfonts.md_calendar_clock,
       color = wezterm.color.parse(color_scheme.ansi[5]),
-      content = wezterm.strftime('%Y-%m-%d %H:%M')
-    }
+      content = wezterm.strftime("%Y-%m-%d %H:%M"),
+    },
   }
 
   local elements = {}

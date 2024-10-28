@@ -1,5 +1,5 @@
 local config = {}
 
-config.color_scheme = 'Tokyo Night'
+config.color_scheme = "Tokyo Night"
 
 return config

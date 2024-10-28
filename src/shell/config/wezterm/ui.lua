@@ -1,7 +1,7 @@
 local config = {}
 
 -- Window
-config.window_decorations = 'RESIZE'
+config.window_decorations = "RESIZE"
 
 -- Tabs
 config.show_new_tab_button_in_tab_bar = false

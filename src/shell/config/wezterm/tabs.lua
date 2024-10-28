@@ -1,5 +1,5 @@
-local wezterm = require 'wezterm'
-local constants = require 'constants'
+local wezterm = require("wezterm")
+local constants = require("constants")
 
 local function tab_title(tab)
   local title = tab.tab_title
