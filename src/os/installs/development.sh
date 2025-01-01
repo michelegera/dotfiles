@@ -8,6 +8,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Development\n\n"
 
+brew_install "Bruno" "bruno"
 brew_install "Postico" "postico"
-brew_install "RapidAPI" "rapidapi"
 brew_install "Tower" "tower"
