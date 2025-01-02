@@ -1,18 +1,22 @@
--- WezTerm configuration
----------------------------------------------------------------
-require("status")
-require("tabs")
+local wezterm = require 'wezterm'
 
-local tables = require("utils/tables")
+return {
+	-- Hide tab bar, since we use tmux
+	enable_tab_bar = false,
 
-local full_config = tables.merge_all(
-  require("fonts"),
-  require("key_tables"),
-  require("keys"),
-  require("misc"),
-  require("theme"),
-  require("ui"),
-  {}
-)
+	-- Remove vertical padding
+	window_padding = {
+    top = 0,
+    bottom = 0,
+  },
 
-return full_config
+	-- Use a nerd font
+	font = wezterm.font 'MonoLisa Nerd Font',
+	font_size = 12.0,
+
+	-- Set color scheme
+	color_scheme = "Tokyo Night",
+
+  -- Set cursor style
+  default_cursor_style = "BlinkingUnderline",
+}
