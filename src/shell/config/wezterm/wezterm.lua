@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 
 return {
-  -- Hide tab bar, since we use tmux
+  -- Hide tab bar, since we use a terminal multiplexer
   enable_tab_bar = false,
 
   -- Remove vertical padding

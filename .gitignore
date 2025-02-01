@@ -27,6 +27,7 @@ src/shell/config/fish/*
 !src/shell/config/starship.toml
 !src/shell/config/tmux
 !src/shell/config/wezterm
+!src/shell/config/zellij
 
 src/shell/ssh/*
 !src/shell/ssh/config
