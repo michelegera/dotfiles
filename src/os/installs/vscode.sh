@@ -39,12 +39,12 @@ install_plugin "GitHub Copilot" "GitHub.copilot"
 install_plugin "GitLens" "eamodio.gitlens"
 install_plugin "GraphQL" "GraphQL.vscode-graphql"
 install_plugin "GraphQL: Syntax Highlight" "GraphQL.vscode-graphql-syntax"
-install_plugin "Halcyon" "brittanychiang.halcyon-vscode"
 install_plugin "Lua" "keyring.Lua"
 install_plugin "npm IntelliSense" "christian-kohler.npm-intellisense"
 install_plugin "Path IntelliSense" "christian-kohler.path-intellisense"
 install_plugin "Prettier" "esbenp.prettier-vscode"
 install_plugin "Tailwind CSS IntelliSense" "bradlc.vscode-tailwindcss"
+install_plugin "Tokyo Night Moon" "patricknasralla.tokyo-night-moon"
 
 
 # Close VSCode
