@@ -4,15 +4,21 @@
   "editor.formatOnSave": true,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
+  "editor.rulers": [160],
   "explorer.confirmDelete": false,
   "git.openRepositoryInParentFolders": "never",
-  "terminal.integrated.fontLigatures": true,
+  "Lua.diagnostics.globals": ["vim"],
   "workbench.colorTheme": "Tokyo Night Moon",
-  "workbench.settings.applyToAllProfiles": [],
   "workbench.sideBar.location": "right",
 
   // File-specific settings
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua"
   }
 }
