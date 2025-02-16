@@ -1,4 +1,4 @@
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 
 return {
   -- Hide tab bar, since we use a terminal multiplexer
@@ -11,7 +11,7 @@ return {
   },
 
   -- Use a nerd font
-  font = wezterm.font 'MonoLisa Nerd Font',
+  font = wezterm.font("MonoLisa Nerd Font"),
   font_size = 12.0,
 
   -- Set color scheme
