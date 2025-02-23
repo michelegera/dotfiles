@@ -59,6 +59,12 @@ set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Set eza theme directory
+
+set -x EZA_CONFIG_DIR $HOME/.config/eza
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Source aliases
 
 source $HOME/.config/fish/aliases.fish
