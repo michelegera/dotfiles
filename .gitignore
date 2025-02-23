@@ -24,7 +24,7 @@ src/shell/config/fish/*
 
 !src/shell/config/eza
 !src/shell/config/ghostty
-!src/shell/config/lazygit/config.yml
+!src/shell/config/lazygit
 !src/shell/config/starship.toml
 !src/shell/config/tmux
 
