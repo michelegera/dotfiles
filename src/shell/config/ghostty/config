@@ -1,0 +1,12 @@
+# Cursor
+cursor-style = "underline"
+cursor-style-blink = true
+shell-integration-features = "no-cursor"
+
+# Font
+font-family = "MonoLisa Nerd Font"
+font-size = 12
+
+# Visuals
+theme = "tokyonight_moon"
+window-decoration = "none"

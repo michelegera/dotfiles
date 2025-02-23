@@ -22,10 +22,10 @@ src/shell/config/fish/*
 !src/shell/config/fish/config.fish
 !src/shell/config/fish/fish_plugins
 
+!src/shell/config/ghostty
 !src/shell/config/lazygit/config.yml
 !src/shell/config/starship.toml
 !src/shell/config/tmux
-!src/shell/config/wezterm
 
 src/shell/ssh/*
 !src/shell/ssh/config
