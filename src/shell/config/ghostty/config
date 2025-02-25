@@ -9,4 +9,4 @@ font-size = 12
 
 # Visuals
 theme = "tokyonight_moon"
-window-decoration = "none"
+macos-titlebar-style = "hidden"
