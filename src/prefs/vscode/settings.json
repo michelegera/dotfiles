@@ -5,10 +5,12 @@
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.rulers": [160],
+  "editor.scrollBeyondLastLine": false,
   "explorer.confirmDelete": false,
   "git.openRepositoryInParentFolders": "never",
   "workbench.colorTheme": "Tokyo Night Moon",
   "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
 
   // File-specific settings
   "[json]": {
