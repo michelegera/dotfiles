@@ -16,6 +16,7 @@ src/shell/config/*
 !src/shell/config/bat/
 !src/shell/config/bottom/
 !src/shell/config/fish
+!src/shell/config/zellij
 
 src/shell/config/fish/*
 !src/shell/config/fish/aliases.fish

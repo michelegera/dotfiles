@@ -42,6 +42,10 @@ alias yai   'yarn init'
 alias yarm  'yarn remove'
 alias yaru  'yarn run'
 alias yat   'yarn test'
+alias zj    'zellij'
+alias zja   'zellij attach'
+alias zjl   'zellij list-sessions'
+alias zjn   'zellij --session'
 
 # Aliases for .gitaliases
 alias ga    'git a'
