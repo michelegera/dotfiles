@@ -8,7 +8,8 @@
   "editor.scrollBeyondLastLine": false,
   "explorer.confirmDelete": false,
   "git.openRepositoryInParentFolders": "never",
-  "workbench.colorTheme": "Tokyo Night Moon",
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
 
