@@ -56,6 +56,12 @@ keybinds clear-defaults=true {
         bind "k" { MoveFocus "Up"; SwitchToMode "Normal"; }
         bind "l" { MoveFocus "Right"; SwitchToMode "Normal"; }
 
+        // Move panes
+        bind "Ctrl h" { MovePane "Left"; SwitchToMode "Normal"; }
+        bind "Ctrl j" { MovePane "Down"; SwitchToMode "Normal"; }
+        bind "Ctrl k" { MovePane "Up"; SwitchToMode "Normal"; }
+        bind "Ctrl l" { MovePane "Right"; SwitchToMode "Normal"; }
+
         // Rename panes
         bind "." { SwitchToMode "RenamePane"; PaneNameInput 0; }
 
