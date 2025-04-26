@@ -14,8 +14,8 @@ keybinds clear-defaults=true {
     }
 
     tmux {
-        bind "Ctrl a" { Write 2; SwitchToMode "Normal"; }
-        bind "Esc" { SwitchToMode "Scroll"; }
+        bind "Ctrl a" "Esc" { Write 2; SwitchToMode "Normal"; }
+        bind "`" { SwitchToMode "Scroll"; }
         bind "z" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
 
         // Session manager
