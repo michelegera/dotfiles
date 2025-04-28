@@ -1,3 +1,5 @@
+git:
+  ovverideGpg: true
 gui:
   nerdFontsVersion: "3"
   theme:
