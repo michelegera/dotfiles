@@ -18,15 +18,10 @@ layout {
 
                 format_left                     "#[bg=$white,fg=$bg,bold] {session} #[bg=$bg,fg=$white]#[bg=$bg,fg=$fg] {mode} {tabs}"
                 format_center                   ""
-                format_right                    "{datetime}"
+                format_right                    "{command_weather} {command_ip} {datetime} "
                 format_space                    "#[bg=$bg]"
                 format_hide_on_overlength       "true"
                 format_precedence               "crl"
-
-                border_enabled                  false
-                border_char                     "─"
-                border_format                   "#[fg=#6C7086]{char}"
-                border_position                 "top"
 
                 mode_normal                     "#[bg=$bg,fg=$green]#[bg=$green,fg=$bg,bold] NORMAL #[bg=$bg,fg=$green]"
                 mode_locked                     "#[bg=$bg,fg=$red]#[bg=$red,fg=$bg,bold] LOCKED  #[bg=$bg,fg=$red]"
@@ -43,31 +38,33 @@ layout {
                 mode_prompt                     "#[bg=$bg,fg=$blue]#[bg=$blue,fg=$bg,bold] PROMPT #[bg=$bg,fg=$blue]"
                 mode_tmux                       "#[bg=$bg,fg=$magenta]#[bg=$magenta,fg=$bg,bold] TMUX #[bg=$bg,fg=$magenta]"
 
-                // Inactive tabs
-                tab_normal                      "#[bg=$bg,fg=$cyan]#[bg=$cyan,fg=$bg,bold] {index} #[bg=$bg,fg=$cyan,bold] {name}{floating_indicator} #[bg=$bg,fg=$bg,bold]"
+                tab_normal                      "#[bg=$bg,fg=$cyan]#[bg=$cyan,fg=$bg,bold] {index} #[bg=$bg,fg=$cyan,bold] {name} #[bg=$bg,fg=$bg,bold]"
                 tab_normal_fullscreen           "#[bg=$bg,fg=$cyan]#[bg=$cyan,fg=$bg,bold] {index} #[bg=$bg,fg=$cyan,bold] {name}{fullscreen_indicator} #[bg=$bg,fg=$bg,bold]"
                 tab_normal_sync                 "#[bg=$bg,fg=$cyan]#[bg=$cyan,fg=$bg,bold] {index} #[bg=$bg,fg=$cyan,bold] {name}{sync_indicator} #[bg=$bg,fg=$bg,bold]"
 
-                // Active tab
-                tab_active                      "#[bg=$bg,fg=$yellow]#[bg=$yellow,fg=$bg,bold] {index} #[bg=$bg,fg=$yellow,bold] {name}{floating_indicator} #[bg=$bg,fg=$bg,bold]"
+                tab_active                      "#[bg=$bg,fg=$yellow]#[bg=$yellow,fg=$bg,bold] {index} #[bg=$bg,fg=$yellow,bold] {name} #[bg=$bg,fg=$bg,bold]"
                 tab_active_fullscreen           "#[bg=$bg,fg=$yellow]#[bg=$yellow,fg=$bg,bold] {index} #[bg=$bg,fg=$yellow,bold] {name}{fullscreen_indicator} #[bg=$bg,fg=$bg,bold]"
                 tab_active_sync                 "#[bg=$bg,fg=$yellow]#[bg=$yellow,fg=$bg,bold] {index} #[bg=$bg,fg=$yellow,bold] {name}{sync_indicator} #[bg=$bg,fg=$bg,bold]"
 
-                // Tab separator
+                tab_rename                      "#[bg=$bg,fg=$red]#[bg=$red,fg=$bg,bold] {index} #[bg=$bg,fg=$red,bold] {name} #[bg=$bg,fg=$bg,bold]"
+
                 tab_separator                   "#[bg=$bg] "
 
-                // Indicators
                 tab_sync_indicator              " "
                 tab_fullscreen_indicator        " 󰊓"
                 tab_floating_indicator          " 󰹙"
-                command_git_branch_command      "git rev-parse --abbrev-ref HEAD"
-                command_git_branch_format       "#[fg=$blue] {stdout} "
-                command_git_branch_interval     "10"
-                command_git_branch_rendermode   "static"
 
-                datetime                        "#[fg=$fg] {format} "
-                datetime_format                 "%A, %d %b %Y %H:%M"
+                datetime                        "#[bg=$bg,fg=$white]#[bg=$white,fg=$bg,bold] {format} #[bg=$bg,fg=$white]"
+                datetime_format                 "󰃮 %d %b %Y  %H:%M"
                 datetime_timezone               "Europe/Rome"
+
+                command_weather_command         "curl wttr.in/?format=3"
+                command_weather_format          "#[bg=$bg,fg=$black]#[bg=$black,fg=$fg,bold] {stdout} #[bg=$bg,fg=$black]"
+                command_weather_interval        "60"
+
+                command_ip_command              "curl ipecho.net/plain"
+                command_ip_format               "#[bg=$bg,fg=$cyan]#[bg=$cyan,fg=$bg,bold]   {stdout} #[bg=$bg,fg=$cyan]"
+                command_ip_interval             "60"
             }
         }
     }
