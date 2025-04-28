@@ -10,3 +10,4 @@ font-size = 12
 # Visuals
 theme = "catppuccin-macchiato"
 macos-titlebar-style = "hidden"
+window-colorspace = display-p3
