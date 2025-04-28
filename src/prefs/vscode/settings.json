@@ -7,6 +7,7 @@
   "editor.rulers": [160],
   "editor.scrollBeyondLastLine": false,
   "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
   "git.openRepositoryInParentFolders": "never",
   "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.iconTheme": "catppuccin-macchiato",
