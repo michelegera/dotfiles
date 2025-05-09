@@ -9,6 +9,10 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "git.openRepositoryInParentFolders": "never",
+  "github.copilot.enable": {
+    "*": true
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.sideBar.location": "right",
