@@ -14,3 +14,4 @@ printf "\n"
 
 brew_install "Chrome" "google-chrome"
 brew_install "Firefox" "firefox"
+brew_install "Vivaldi" "vivaldi"
