@@ -1,5 +1,5 @@
 # Cursor
-cursor-style = "underline"
+cursor-style = "bar"
 cursor-style-blink = true
 shell-integration-features = "no-cursor"
 
