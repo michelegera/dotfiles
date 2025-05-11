@@ -29,7 +29,6 @@ printf "\n"
 # Install the VSCode plugins
 install_plugin "Babel JavaScript" "mgmcdermott.vscode-language-babel"
 install_plugin "Better Comments" "aaron-bond.better-comments"
-install_plugin "Catppuccin for VSCode" "catppuccin.catppuccin-vsc"
 install_plugin "Catppuccin Icons for VSCode" "catppuccin.catppuccin-vsc-icons"
 install_plugin "DotENV" "mikestead.dotenv"
 install_plugin "EditorConfig" "EditorConfig.EditorConfig"
@@ -47,6 +46,7 @@ install_plugin "npm IntelliSense" "christian-kohler.npm-intellisense"
 install_plugin "Path IntelliSense" "christian-kohler.path-intellisense"
 install_plugin "Prettier" "esbenp.prettier-vscode"
 install_plugin "Tailwind CSS IntelliSense" "bradlc.vscode-tailwindcss"
+install_plugin "Tokyo Night" "enkia.tokyo-night"
 
 # Close VSCode
 osascript -e 'quit app "Visual Studio Code"'

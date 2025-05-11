@@ -13,7 +13,7 @@
     "*": true
   },
   "github.copilot.nextEditSuggestions.enabled": true,
-  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.colorTheme": "Tokyo Night Storm",
   "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",

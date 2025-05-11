@@ -5,7 +5,7 @@
 
 // Basic configuration
 show_startup_tips false
-theme "catppuccin-macchiato"
+theme "tokyo-night-storm"
 
 // Keybindings
 keybinds clear-defaults=true {

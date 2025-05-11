@@ -57,13 +57,29 @@ eval (gdircolors -c $HOME/.dircolors)
 set -x FZF_DEFAULT_COMMAND fd --type f --hidden --follow
 set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
-# Catppuccin Macchiato
-set -Ux FZF_DEFAULT_OPTS "\
-  --color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
-  --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
-  --color=marker:#b7bdf8,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796 \
-  --color=selected-bg:#494d64 \
-  --color=border:#363a4f,label:#cad3f5"
+# Tokyo Night Storm
+set -x FZF_DEFAULT_OPTS $FZF_DEFAULT_OPTS \
+    --highlight-line \
+    --info=inline-right \
+    --ansi \
+    --layout=reverse \
+    --border=none \
+    --color=bg+:#2e3c64 \
+    --color=bg:#1f2335 \
+    --color=border:#29a4bd \
+    --color=fg:#c0caf5 \
+    --color=gutter:#1f2335 \
+    --color=header:#ff9e64 \
+    --color=hl+:#2ac3de \
+    --color=hl:#2ac3de \
+    --color=info:#545c7e \
+    --color=marker:#ff007c \
+    --color=pointer:#ff007c \
+    --color=prompt:#2ac3de \
+    --color=query:#c0caf5:regular \
+    --color=scrollbar:#29a4bd \
+    --color=separator:#ff9e64 \
+    --color=spinner:#ff007c
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

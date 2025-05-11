@@ -8,6 +8,6 @@ font-family = "MonoLisa Nerd Font"
 font-size = 12
 
 # Visuals
-theme = "catppuccin-macchiato"
+theme = "tokyonight-storm"
 macos-titlebar-style = "hidden"
 window-colorspace = display-p3
