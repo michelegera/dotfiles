@@ -10,4 +10,3 @@ font-size = 12
 # Visuals
 theme = "tokyonight-storm"
 macos-titlebar-style = "hidden"
-window-colorspace = display-p3
