@@ -8,6 +8,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Applications\n\n"
 
+brew_install "1Password" "1password"
 brew_install "A Better Finder Rename" "a-better-finder-rename"
 brew_install "AppCleaner" "appcleaner"
 brew_install "Arq" "arq"
