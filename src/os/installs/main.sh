@@ -17,6 +17,7 @@ print_in_purple "\n • Installs\n\n"
 ./communications.sh
 ./creative_tools.sh
 ./development.sh
+./fonts.sh
 ./gpg.sh
 ./system.sh
 ./tools.sh
