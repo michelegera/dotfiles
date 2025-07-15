@@ -31,6 +31,7 @@ create_symlinks() {
         "shell/screenrc"
         "shell/scripts"
         "shell/ssh"
+        "shell/tmux.conf"
 
     )
 
