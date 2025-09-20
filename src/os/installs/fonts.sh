@@ -8,6 +8,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Fonts\n\n"
 
-brew_tap "shaunsingh/SFMono-Nerd-Font-Ligaturized"
-
-brew_install "SF Mono Nerd Font Ligaturized" "font-sf-mono-nerd-font-ligaturized" "--cask"
+brew_install "Maple Mono Nerd Font" "font-sf-mono-nerd-font-ligaturized" "--cask"

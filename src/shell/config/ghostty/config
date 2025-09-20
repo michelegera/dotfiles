@@ -4,9 +4,8 @@ cursor-style-blink = true
 shell-integration-features = "no-cursor"
 
 # Font
-font-family = "Liga SFMono Nerd Font"
+font-family = "Maple Mono NF"
 font-size = 12
-adjust-cell-height = "15%"
 
 # Visuals
 theme = "tokyonight-storm"
