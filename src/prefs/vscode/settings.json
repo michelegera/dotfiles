@@ -20,8 +20,6 @@
   "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
-
-  // File-specific settings
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
