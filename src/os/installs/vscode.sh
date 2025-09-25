@@ -20,8 +20,8 @@ brew_install "Visual Studio Code" "visual-studio-code"
 printf "\n"
 
 # Symlink settings
-mkdir -p "${HOME}/Library/Application Support/Code/User/"
-symlink "$(realpath ~/.vscode)/settings.json" \
+mkdir -p "${HOME}/Library/Application Support/Code/User"
+symlink "$(realpath ../../prefs/vscode/settings.json)" \
     "${HOME}/Library/Application Support/Code/User"
 
 printf "\n"
