@@ -16,7 +16,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ./dock.sh
 ./finder.sh
 ./firefox.sh
-./gatekeeper.sh
 ./keyboard.sh
 ./language_and_region.sh
 ./maps.sh
