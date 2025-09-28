@@ -12,6 +12,7 @@ print_in_purple "\n • Installs\n\n"
 ./homebrew.sh
 ./fish.sh
 
+./ai.sh
 ./applications.sh
 ./browsers.sh
 ./communications.sh

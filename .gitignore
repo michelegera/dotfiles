@@ -28,5 +28,8 @@ src/shell/config/fish/*
 !src/shell/config/starship.toml
 !src/shell/config/tmux
 
+src/shell/gemini/*
+!src/shell/gemini/settings.json
+
 src/shell/ssh/*
 !src/shell/ssh/config
