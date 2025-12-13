@@ -18,7 +18,7 @@ add_to_path() {
 
     # If not, add it to the PATH.
 
-    PATH="/usr/local/bin:$PATH"
+    PATH="/opt/homebrew/bin:$PATH"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
