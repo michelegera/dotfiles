@@ -42,7 +42,7 @@ set -x PATH /usr/local/sbin $PATH
 # Link Rubies to Homebrew’s OpenSSL, since ruby-build installs a non-Homebrew
 # OpenSSL for each Ruby version installed and these are never upgraded.
 
-set -x RUBY_CONFIGURE_OPTS --with-openssl-dir=/usr/local/opt/openssl@3
+set -x RUBY_CONFIGURE_OPTS --with-openssl-dir=$(brew --prefix openssl@3)
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
