@@ -1,6 +1,9 @@
 # Ignore Desktop Services Store files
 .DS_Store
 
+# Ignore AI settings
+.claude
+
 # Ignore non-customized configuration files
 src/prefs/gnupg/*
 !src/prefs/gnupg/gpg-agent.conf
