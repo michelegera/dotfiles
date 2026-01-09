@@ -57,29 +57,29 @@ set -x RUBY_CONFIGURE_OPTS --with-openssl-dir=$(brew --prefix openssl@3)
 set -x FZF_DEFAULT_COMMAND fd --type f --hidden --follow
 set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
-# Tokyo Night Storm
+# Moonlight
 set -x FZF_DEFAULT_OPTS $FZF_DEFAULT_OPTS \
     --highlight-line \
     --info=inline-right \
     --ansi \
     --layout=reverse \
     --border=none \
-    --color=bg+:#2e3c64 \
-    --color=bg:#1f2335 \
-    --color=border:#29a4bd \
-    --color=fg:#c0caf5 \
-    --color=gutter:#1f2335 \
-    --color=header:#ff9e64 \
-    --color=hl+:#2ac3de \
-    --color=hl:#2ac3de \
-    --color=info:#545c7e \
-    --color=marker:#ff007c \
-    --color=pointer:#ff007c \
-    --color=prompt:#2ac3de \
-    --color=query:#c0caf5:regular \
-    --color=scrollbar:#29a4bd \
-    --color=separator:#ff9e64 \
-    --color=spinner:#ff007c
+    --color=bg+:#444a73 \
+    --color=bg:#212337 \
+    --color=border:#82aaff \
+    --color=fg:#c8d3f5 \
+    --color=gutter:#212337 \
+    --color=header:#ff995e \
+    --color=hl+:#86e1fc \
+    --color=hl:#86e1fc \
+    --color=info:#7a88cf \
+    --color=marker:#fca7ea \
+    --color=pointer:#fca7ea \
+    --color=prompt:#82aaff \
+    --color=query:#c8d3f5:regular \
+    --color=scrollbar:#82aaff \
+    --color=separator:#ff995e \
+    --color=spinner:#fca7ea
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -91,7 +91,7 @@ set -x EZA_CONFIG_DIR $HOME/.config/eza
 
 # Set lazygit configuration file
 
-set -x LG_CONFIG_FILE $HOME/.config/lazygit/config.yml
+set -x LG_CONFIG_FILE $HOME/.config/lazygit/config.yml,$HOME/.config/lazygit/moonlight.yml
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

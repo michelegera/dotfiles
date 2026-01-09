@@ -42,11 +42,11 @@ install_plugin "GitHub Copilot" "GitHub.copilot"
 install_plugin "GitLens" "eamodio.gitlens"
 install_plugin "GraphQL" "GraphQL.vscode-graphql"
 install_plugin "GraphQL: Syntax Highlight" "GraphQL.vscode-graphql-syntax"
+install_plugin "Moonlight" "atomiks.moonlight"
 install_plugin "npm IntelliSense" "christian-kohler.npm-intellisense"
 install_plugin "Path IntelliSense" "christian-kohler.path-intellisense"
 install_plugin "Prettier" "esbenp.prettier-vscode"
 install_plugin "Tailwind CSS IntelliSense" "bradlc.vscode-tailwindcss"
-install_plugin "Tokyo Night" "enkia.tokyo-night"
 
 # Close VSCode
 osascript -e 'quit app "Visual Studio Code"'

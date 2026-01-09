@@ -1,0 +1,46 @@
+# Moonlight theme for Ghostty
+# Based on: https://github.com/atomiks/moonlight-vscode-theme
+
+# Background and foreground
+background = 212337
+foreground = c8d3f5
+
+# Cursor
+cursor-color = 82aaff
+cursor-text = 212337
+
+# Selection
+selection-background = 444a73
+selection-foreground = c8d3f5
+
+# Black (0, 8)
+palette = 0=#191a2a
+palette = 8=#7a88cf
+
+# Red (1, 9)
+palette = 1=#ff757f
+palette = 9=#ff757f
+
+# Green (2, 10)
+palette = 2=#c3e88d
+palette = 10=#c3e88d
+
+# Yellow (3, 11)
+palette = 3=#ffc777
+palette = 11=#ffc777
+
+# Blue (4, 12)
+palette = 4=#82aaff
+palette = 12=#65bcff
+
+# Magenta (5, 13)
+palette = 5=#c099ff
+palette = 13=#fca7ea
+
+# Cyan (6, 14)
+palette = 6=#86e1fc
+palette = 14=#86e1fc
+
+# White (7, 15)
+palette = 7=#c8d3f5
+palette = 15=#c8d3f5
