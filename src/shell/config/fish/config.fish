@@ -12,7 +12,13 @@ set -x LANGUAGE en_US.UTF-8
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Don’t check mail when opening terminal
+# Set XDG base directory
+
+set -x XDG_CONFIG_HOME $HOME/.config
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Don't check mail when opening terminal
 
 set -e MAILCHECK
 
@@ -80,6 +86,12 @@ set -x FZF_DEFAULT_OPTS $FZF_DEFAULT_OPTS \
 # Set eza theme directory
 
 set -x EZA_CONFIG_DIR $HOME/.config/eza
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Set lazygit configuration file
+
+set -x LG_CONFIG_FILE $HOME/.config/lazygit/config.yml
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
