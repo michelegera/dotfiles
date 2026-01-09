@@ -21,7 +21,6 @@ create_symlinks() {
         "shell/bundle"
         "shell/config"
         "shell/curlrc"
-        "shell/dircolors"
         "shell/fdignore"
         "shell/gemrc"
         "shell/hushlogin"

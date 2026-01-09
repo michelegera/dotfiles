@@ -46,12 +46,6 @@ set -x RUBY_CONFIGURE_OPTS --with-openssl-dir=$(brew --prefix openssl@3)
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Set up dircolors
-
-eval (gdircolors -c $HOME/.dircolors)
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 # Load fzf auto-completion (with fd as suggested by its author) and key bindings
 
 set -x FZF_DEFAULT_COMMAND fd --type f --hidden --follow
