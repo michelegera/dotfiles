@@ -8,4 +8,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Fonts\n\n"
 
-brew_install "Maple Mono Nerd Font" "font-sf-mono-nerd-font-ligaturized" "--cask"
+brew_install "San Francisco Mono Nerd Font Ligaturized" "font-sf-mono-nerd-font-ligaturized" "--cask"
