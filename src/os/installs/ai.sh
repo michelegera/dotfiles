@@ -12,4 +12,4 @@ print_in_purple "\n   AI\n"
 
 printf "\n"
 
-brew_install "Gemini" "gemini-cli"
+brew_install "Claude Code" "claude-code"
