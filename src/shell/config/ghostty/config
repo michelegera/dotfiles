@@ -1,12 +1,13 @@
 # Cursor
-cursor-style = "bar"
+cursor-style = bar
 cursor-style-blink = true
-shell-integration-features = "no-cursor"
 
 # Font
+adjust-cell-height = 10%
 font-family = "Liga SFMono Nerd Font"
 font-size = 12
 
 # Visuals
-theme = "moonlight"
-macos-titlebar-style = "hidden"
+macos-titlebar-style = hidden
+mouse-hide-while-typing = true
+theme = moonlight
