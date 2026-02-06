@@ -91,7 +91,7 @@ set -x EZA_CONFIG_DIR $HOME/.config/eza
 
 # Set lazygit configuration file
 
-set -x LG_CONFIG_FILE $HOME/.config/lazygit/config.yml,$HOME/.config/lazygit/moonlight.yml
+set -x LG_CONFIG_FILE $HOME/.config/lazygit/config.yml
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
