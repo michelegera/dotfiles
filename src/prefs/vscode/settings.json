@@ -1,4 +1,7 @@
 {
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features",
   },
@@ -11,16 +14,25 @@
   "[ruby]": {
     "editor.defaultFormatter": "Shopify.ruby-lsp",
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
   "chat.disableAIFeatures": true,
   "chat.viewSessions.enabled": false,
   "chat.viewTitle.enabled": false,
   "chat.viewWelcome.enabled": false,
+  "claudeCode.initialPermissionMode": "acceptEdits",
   "claudeCode.preferredLocation": "sidebar",
+  "colorize.decoration_type": "dot",
+  "colorize.languages": ["yaml", "javascript"],
   "editor.fontFamily": "'Liga SFMono Nerd Font'",
   "editor.fontLigatures": true,
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
   "editor.formatOnType": true,
+  "editor.formatOnSave": true,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.rulers": [120],
@@ -28,9 +40,11 @@
   "editor.semanticHighlighting.enabled": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
   "gitlens.graph.minimap.enabled": false,
+  "gitlens.launchpad.indicator.enabled": false,
   "rubyLsp.featureFlags": {
     "fullTestDiscovery": true,
   },
@@ -38,16 +52,4 @@
   "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "claudeCode.initialPermissionMode": "acceptEdits",
-  "extensions.ignoreRecommendations": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "gitlens.launchpad.indicator.enabled": false,
 }
