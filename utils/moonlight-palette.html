@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moonlight Color Palette</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background: #1e2030;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      color: #c8d3f5;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 16px;
+    }
+
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .color {
+      height: 100px;
+      width: 100%;
+    }
+
+    .info {
+      background: #222436;
+      padding: 12px;
+    }
+
+    .name {
+      color: #c8d3f5;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .hex {
+      color: #828bb8;
+      font-size: 12px;
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="section">
+      <div class="section-title">Reds</div>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="color" style="background: #ff98a4"></div>
+          <div class="info">
+            <div class="name">lightRed</div>
+            <div class="hex">#ff98a4</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #ff757f"></div>
+          <div class="info">
+            <div class="name">red</div>
+            <div class="hex">#ff757f</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #ff5370"></div>
+          <div class="info">
+            <div class="name">darkRed</div>
+            <div class="hex">#ff5370</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Oranges</div>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="color" style="background: #f8b576"></div>
+          <div class="info">
+            <div class="name">lightOrange</div>
+            <div class="hex">#f8b576</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #ff966c"></div>
+          <div class="info">
+            <div class="name">orange</div>
+            <div class="hex">#ff966c</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #fc7b7b"></div>
+          <div class="info">
+            <div class="name">darkOrange</div>
+            <div class="hex">#fc7b7b</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Yellow & Green</div>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="color" style="background: #ffc777"></div>
+          <div class="info">
+            <div class="name">yellow</div>
+            <div class="hex">#ffc777</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #c3e88d"></div>
+          <div class="info">
+            <div class="name">green</div>
+            <div class="hex">#c3e88d</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Teals & Cyans</div>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="color" style="background: #7af8ca"></div>
+          <div class="info">
+            <div class="name">lightTeal</div>
+            <div class="hex">#7af8ca</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #3ad7c7"></div>
+          <div class="info">
+            <div class="name">teal</div>
+            <div class="hex">#3ad7c7</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #b4f9f8"></div>
+          <div class="info">
+            <div class="name">lightCyan</div>
+            <div class="hex">#b4f9f8</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #78dbff"></div>
+          <div class="info">
+            <div class="name">cyan</div>
+            <div class="hex">#78dbff</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Blues</div>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="color" style="background: #60bdff"></div>
+          <div class="info">
+            <div class="name">sky</div>
+            <div class="hex">#60bdff</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #7cafff"></div>
+          <div class="info">
+            <div class="name">blue</div>
+            <div class="hex">#7cafff</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #3d6fe0"></div>
+          <div class="info">
+            <div class="name">darkBlue</div>
+            <div class="hex">#3d6fe0</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #3b63cf"></div>
+          <div class="info">
+            <div class="name">darkestBlue</div>
+            <div class="hex">#3b63cf</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Purples & Pinks</div>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="color" style="background: #af9fff"></div>
+          <div class="info">
+            <div class="name">indigo</div>
+            <div class="hex">#af9fff</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #c4a2ff"></div>
+          <div class="info">
+            <div class="name">purple</div>
+            <div class="hex">#c4a2ff</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #fca7ea"></div>
+          <div class="info">
+            <div class="name">pink</div>
+            <div class="hex">#fca7ea</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #fd8aca"></div>
+          <div class="info">
+            <div class="name">darkPink</div>
+            <div class="hex">#fd8aca</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Grays</div>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="color" style="background: #7a88cf"></div>
+          <div class="info">
+            <div class="name">saturatedGray</div>
+            <div class="hex">#7a88cf</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #979bb6"></div>
+          <div class="info">
+            <div class="name">desaturatedGray</div>
+            <div class="hex">#979bb6</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #d5def8"></div>
+          <div class="info">
+            <div class="name">gray11</div>
+            <div class="hex">#d5def8</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #c8d3f5"></div>
+          <div class="info">
+            <div class="name">gray10</div>
+            <div class="hex">#c8d3f5</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #b4c2f0"></div>
+          <div class="info">
+            <div class="name">gray9</div>
+            <div class="hex">#b4c2f0</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #a9b8e8"></div>
+          <div class="info">
+            <div class="name">gray8</div>
+            <div class="hex">#a9b8e8</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #828bb8"></div>
+          <div class="info">
+            <div class="name">gray7</div>
+            <div class="hex">#828bb8</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #444a73"></div>
+          <div class="info">
+            <div class="name">gray6</div>
+            <div class="hex">#444a73</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #2f334d"></div>
+          <div class="info">
+            <div class="name">gray5</div>
+            <div class="hex">#2f334d</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #222436"></div>
+          <div class="info">
+            <div class="name">gray4</div>
+            <div class="hex">#222436</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #1e2030"></div>
+          <div class="info">
+            <div class="name">gray3</div>
+            <div class="hex">#1e2030</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #191a2a"></div>
+          <div class="info">
+            <div class="name">gray2</div>
+            <div class="hex">#191a2a</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="color" style="background: #131421"></div>
+          <div class="info">
+            <div class="name">gray1</div>
+            <div class="hex">#131421</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
