@@ -3,8 +3,7 @@ cursor-style = bar
 cursor-style-blink = true
 
 # Font
-adjust-cell-height = 10%
-font-family = "Liga SFMono Nerd Font"
+font-family = "BlexMono Nerd Font"
 font-size = 12
 
 # Visuals
