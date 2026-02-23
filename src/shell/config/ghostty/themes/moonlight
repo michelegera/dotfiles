@@ -2,7 +2,7 @@
 # Based on: https://github.com/atomiks/moonlight-vscode-theme
 
 # Basic colors
-background = 1e2030
+background = 222436
 foreground = c8d3f5
 cursor-color = 3ad7c7
 selection-background = 444a73
