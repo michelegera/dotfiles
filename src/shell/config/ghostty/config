@@ -3,8 +3,9 @@ cursor-style = bar
 cursor-style-blink = true
 
 # Font
-font-family = "BlexMono Nerd Font"
+font-family = "Liga SFMono Nerd Font"
 font-size = 12
+adjust-cell-height = 15%
 
 # Visuals
 macos-titlebar-style = hidden

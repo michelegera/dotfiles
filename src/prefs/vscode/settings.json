@@ -28,7 +28,7 @@
   "claudeCode.preferredLocation": "sidebar",
   "colorize.decoration_type": "dot",
   "colorize.languages": ["yaml", "javascript"],
-  "editor.fontFamily": "'BlexMono Nerd Font'",
+  "editor.fontFamily": "'Liga SFMono Nerd Font'",
   "editor.fontLigatures": true,
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,
