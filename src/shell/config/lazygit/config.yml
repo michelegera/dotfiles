@@ -1,5 +1,5 @@
 git:
-  ovverideGpg: true
+  overrideGpg: true
 gui:
   nerdFontsVersion: "3"
   theme:
