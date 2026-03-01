@@ -1,3 +1,16 @@
+customCommands:
+  - key: "<c-a>"
+    description: "Pick AI commit"
+    command: 'git commit -m "{{.Form.Msg}}"'
+    context: "files"
+    prompts:
+      - type: "menuFromCommand"
+        title: "ai Commits"
+        key: "Msg"
+        command: "lazycommit commit"
+        filter: "^(?P<raw>.+)$"
+        valueFormat: "{{ .raw }}"
+        labelFormat: "{{ .raw | green }}"
 git:
   overrideGpg: true
 gui:

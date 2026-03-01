@@ -1,0 +1,4 @@
+language: English
+system_message: "You are a helpful assistant that generates git commit messages, and pull request titles."
+commit_message_template: "Based on the following git diff, generate 10 commit messages. Use the same format as existing commits in this project, falling back to conventional commits. Each message should be on a new line, without any numbering or bullet points:\n\n%s"
+pr_title_template: "Based on the following git diff, generate 10 pull request title suggestions. Each title should be on a new line, without any numbering or bullet points:\n\n%s"

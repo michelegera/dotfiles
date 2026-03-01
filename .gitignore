@@ -16,6 +16,7 @@ src/shell/bundle/*
 !src/shell/bundle/config
 
 src/shell/config/*
+!src/shell/config/.lazycommit.prompts.yaml
 !src/shell/config/bat
 !src/shell/config/bottom
 !src/shell/config/fish
