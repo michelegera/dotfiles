@@ -1,24 +1,24 @@
 {
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[ruby]": {
-    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "chat.disableAIFeatures": true,
   "chat.viewSessions.enabled": false,
@@ -46,7 +46,7 @@
   "gitlens.graph.minimap.enabled": false,
   "gitlens.launchpad.indicator.enabled": false,
   "rubyLsp.featureFlags": {
-    "fullTestDiscovery": true,
+    "fullTestDiscovery": true
   },
   "workbench.colorTheme": "Moonlight",
   "workbench.iconTheme": "catppuccin-macchiato",
