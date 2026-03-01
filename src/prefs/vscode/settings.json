@@ -43,13 +43,14 @@
   "extensions.ignoreRecommendations": true,
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
   "gitlens.graph.minimap.enabled": false,
   "gitlens.launchpad.indicator.enabled": false,
   "rubyLsp.featureFlags": {
     "fullTestDiscovery": true
   },
   "workbench.colorTheme": "Moonlight",
-  "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
 }
