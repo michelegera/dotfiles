@@ -32,6 +32,9 @@ execute "defaults write com.apple.dock tilesize -int 40" \
 execute "defaults write com.apple.Dock size-immutable -bool false" \
     "Lock dock size"
 
+execute "defaults write com.apple.dock expose-group-apps -bool" \
+    "Enable grouping windows by application"
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Set hot corners
