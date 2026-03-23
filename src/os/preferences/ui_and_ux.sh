@@ -63,6 +63,9 @@ execute "defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bo
 execute "defaults write com.apple.mail DisableInlineAttachmentViewing -bool true" \
     "Show Mail attachments as icons"
 
+execute "defaults write com.apple.spaces spans-displays -bool true" \
+    "Disable separate spaces for displays"
+
 execute "sudo systemsetup -setrestartfreeze on" \
     "Restart automatically if the computer freezes"
 
