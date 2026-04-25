@@ -1,16 +1,18 @@
 customCommands:
-  - key: "<c-a>"
-    description: "Pick AI commit"
-    command: 'git commit -m "{{.Form.Msg}}"'
+  # Quick commit with AI-generated subject (c in files panel)
+  - key: "c"
     context: "files"
+    description: "Generate commit message with aicommit2"
     prompts:
       - type: "menuFromCommand"
-        title: "ai Commits"
-        key: "Msg"
-        command: "lazycommit commit"
-        filter: "^(?P<raw>.+)$"
-        valueFormat: "{{ .raw }}"
-        labelFormat: "{{ .raw | green }}"
+        title: "Select commit message"
+        key: "Commit"
+        command: "aicommit2 --output json"
+        filter: '"subject":"(?P<subject>[^"]+)","body":"(?P<body>[^"]*)"'
+        valueFormat: '{{ .subject }}<SEP>{{ .body }}'
+        labelFormat: '{{ .subject }}'
+    output: "terminal"
+    command: bash -c 'MSG="{{ .Form.Commit }}" && SUBJ="${MSG%%<SEP>*}" && BODY="${MSG#*<SEP>}" && git commit -e -m "$SUBJ" ${BODY:+-m "$BODY"}'
 git:
   overrideGpg: true
 gui:
