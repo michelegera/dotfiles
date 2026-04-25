@@ -131,6 +131,12 @@ set -x PATH ./bin $PATH
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Set path for local tools
+
+set -x PATH $HOME/.local/bin $PATH
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Disable Homebrew hints
 
 set -x HOMEBREW_NO_ENV_HINTS 1
