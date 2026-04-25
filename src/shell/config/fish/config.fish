@@ -119,6 +119,12 @@ direnv hook fish | source
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Source mise
+
+mise activate fish | source
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Set path for binstubs (https://wolfgangrittner.dev/bundle-exec-be-gone/)
 
 set -x PATH ./bin $PATH
