@@ -9,9 +9,11 @@ adjust-cell-height = 10%
 
 # Visuals
 macos-titlebar-style = hidden
+macos-titlebar-proxy-icon = hidden
 mouse-hide-while-typing = true
 theme = Moonlight
 
 # Misc
 # Send the actual macOS Unicode character for Option combos instead of escape sequences
 macos-option-as-alt = false
+clipboard-write = allow
