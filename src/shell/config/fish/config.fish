@@ -137,6 +137,12 @@ set -x PATH $HOME/.local/bin $PATH
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Set path for LLM Studio
+
+set -gx PATH $PATH $HOME/.lmstudio/bin
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Disable Homebrew hints
 
 set -x HOMEBREW_NO_ENV_HINTS 1
