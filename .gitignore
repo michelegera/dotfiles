@@ -15,6 +15,9 @@ src/prefs/vscode/*
 src/shell/bundle/*
 !src/shell/bundle/config
 
+src/shell/claude/*
+!src/shell/claude/settings.json
+
 src/shell/config/*
 !src/shell/config/.lazycommit.prompts.yaml
 !src/shell/config/bat
