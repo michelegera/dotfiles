@@ -19,8 +19,13 @@ src/shell/config/*
 !src/shell/config/.lazycommit.prompts.yaml
 !src/shell/config/bat
 !src/shell/config/bottom
+!src/shell/config/eza
 !src/shell/config/fish
+!src/shell/config/ghostty
+!src/shell/config/lazygit
 !src/shell/config/mise
+!src/shell/config/starship.toml
+!src/shell/config/tmux
 !src/shell/config/zed
 
 src/shell/config/fish/*
@@ -30,12 +35,6 @@ src/shell/config/fish/*
 
 src/shell/config/zed/*
 !src/shell/config/zed/settings.json
-
-!src/shell/config/eza
-!src/shell/config/ghostty
-!src/shell/config/lazygit
-!src/shell/config/starship.toml
-!src/shell/config/tmux
 
 src/shell/ssh/*
 !src/shell/ssh/config
