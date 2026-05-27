@@ -9,9 +9,6 @@ src/prefs/gnupg/*
 !src/prefs/gnupg/gpg-agent.conf
 !src/prefs/gnupg/gpg.conf
 
-src/prefs/vscode/*
-!src/prefs/vscode/settings.json
-
 src/shell/bundle/*
 !src/shell/bundle/config
 
@@ -24,11 +21,15 @@ src/shell/config/*
 !src/shell/config/bottom
 !src/shell/config/fish
 !src/shell/config/mise
+!src/shell/config/zed
 
 src/shell/config/fish/*
 !src/shell/config/fish/aliases.fish
 !src/shell/config/fish/config.fish
 !src/shell/config/fish/fish_plugins
+
+src/shell/config/zed/*
+!src/shell/config/zed/settings.json
 
 !src/shell/config/eza
 !src/shell/config/ghostty

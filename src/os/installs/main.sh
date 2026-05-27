@@ -22,5 +22,4 @@ print_in_purple "\n • Installs\n\n"
 ./gpg.sh
 ./system.sh
 ./tools.sh
-./vscode.sh
 ./neovim.sh

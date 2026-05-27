@@ -16,7 +16,6 @@ create_symlinks() {
 
         "prefs/duti"
         "prefs/gnupg"
-        "prefs/vscode"
 
         "shell/bundle"
         "shell/config"

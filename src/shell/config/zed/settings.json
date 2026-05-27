@@ -1,0 +1,38 @@
+{
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
+  "auto_install_extensions": {
+    "colored-zed-icons-theme": true,
+    "comment": true,
+    "editorconfig": true,
+    "env": true,
+    "fish": true,
+    "graphql": true,
+    "html": true,
+    "moonlight": true,
+    "ruby": true,
+    "toml": true,
+  },
+  "buffer_font_size": 12,
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Colored Zed Icons Theme Dark",
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "Moonlight",
+    "dark": "Moonlight",
+  },
+  "ui_font_size": 14,
+}
