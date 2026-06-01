@@ -1,5 +1,5 @@
 {
-  "model": "opus",
+  "advisorModel": "opus",
   "skipDangerousModePermissionPrompt": true,
   "statusLine": {
     "command": "bunx -y ccstatusline@latest",
