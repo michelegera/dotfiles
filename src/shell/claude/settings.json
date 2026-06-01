@@ -1,23 +1,13 @@
 {
-  "env": {
-    "ENABLE_TOOL_SEARCH": "true"
-  },
+  "model": "opus",
+  "skipDangerousModePermissionPrompt": true,
   "statusLine": {
-    "type": "command",
     "command": "bunx -y ccstatusline@latest",
     "padding": 0,
-    "refreshInterval": 10
+    "refreshInterval": 10,
+    "type": "command"
   },
-  "extraKnownMarketplaces": {
-    "anthropic-agent-skills": {
-      "source": {
-        "source": "github",
-        "repo": "anthropics/skills"
-      }
-    }
-  },
-  "tui": "fullscreen",
-  "skipDangerousModePermissionPrompt": true,
   "theme": "dark-ansi",
+  "tui": "fullscreen",
   "voiceEnabled": true
 }
