@@ -25,15 +25,11 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Bundle id                   UTI/ext/MIME types              Role
-dev.zed.Zed                   .conf                           all
 dev.zed.Zed                   .css                            all
 dev.zed.Zed                   .js                             all
 dev.zed.Zed                   .json                           all
-dev.zed.Zed                   .jsx                            all
 dev.zed.Zed                   .md                             all
 dev.zed.Zed                   .rb                             all
-dev.zed.Zed                   .sass                           all
-dev.zed.Zed                   .scss                           all
 dev.zed.Zed                   .ts                             all
 dev.zed.Zed                   .tsx                            all
 dev.zed.Zed                   public.plain-text               all
@@ -41,26 +37,23 @@ dev.zed.Zed                   public.script                   all
 dev.zed.Zed                   public.shell-script             all
 dev.zed.Zed                   public.source-code              all
 
-cx.c3.theunarchiver           .7z                             all
-cx.c3.theunarchiver           .ace                            all
-cx.c3.theunarchiver           .arj                            all
-cx.c3.theunarchiver           .bz2                            all
-cx.c3.theunarchiver           .gz                             all
-cx.c3.theunarchiver           .gzip                           all
-cx.c3.theunarchiver           .lha                            all
-cx.c3.theunarchiver           .lzh                            all
-cx.c3.theunarchiver           .rar                            all
-cx.c3.theunarchiver           .sit                            all
-cx.c3.theunarchiver           .sitx                           all
-cx.c3.theunarchiver           .tar                            all
-cx.c3.theunarchiver           .taz                            all
-cx.c3.theunarchiver           .tbz2                           all
-cx.c3.theunarchiver           .tgz                            all
-cx.c3.theunarchiver           .z                              all
-cx.c3.theunarchiver           .zip                            all
-cx.c3.theunarchiver           .zipx                           all
+com.macpaw.site.theunarchiver org.7-zip.7-zip-archive                   all
+com.macpaw.site.theunarchiver com.winace.ace-archive                    all
+com.macpaw.site.theunarchiver cx.c3.arj-archive                         all
+com.macpaw.site.theunarchiver public.bzip2-archive                      all
+com.macpaw.site.theunarchiver org.gnu.gnu-zip-archive                   all
+com.macpaw.site.theunarchiver cx.c3.lha-archive                         all
+com.macpaw.site.theunarchiver com.rarlab.rar-archive                    all
+com.macpaw.site.theunarchiver com.stuffit.archive.sit                   all
+com.macpaw.site.theunarchiver com.stuffit.archive.sitx                  all
+com.macpaw.site.theunarchiver public.tar-archive                        all
+com.macpaw.site.theunarchiver public.tar-bzip2-archive                  all
+com.macpaw.site.theunarchiver org.gnu.gnu-zip-tar-archive               all
+com.macpaw.site.theunarchiver public.z-archive                          all
+com.macpaw.site.theunarchiver public.zip-archive                        all
+com.macpaw.site.theunarchiver com.winzip.zipx-archive                   all
 
-org.m0k.transmission          .torrent                        all
+org.m0k.transmission          org.bittorrent.torrent                    all
 
 com.colliderli.iina           .avi                            all
 com.colliderli.iina           .m4v                            all
