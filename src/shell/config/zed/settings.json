@@ -1,8 +1,8 @@
 {
   "agent_servers": {
     "claude-acp": {
-      "type": "registry",
-    },
+      "type": "registry"
+    }
   },
   "auto_install_extensions": {
     "colored-zed-icons-theme": true,
@@ -14,14 +14,14 @@
     "html": true,
     "moonlight": true,
     "ruby": true,
-    "toml": true,
+    "toml": true
   },
   "buffer_font_size": 12,
   "cli_default_open_behavior": "new_window",
   "icon_theme": {
     "mode": "dark",
     "light": "Zed (Default)",
-    "dark": "Colored Zed Icons Theme Dark",
+    "dark": "Colored Zed Icons Theme Dark"
   },
   "languages": {
     "JSON": {
@@ -29,22 +29,22 @@
       "formatter": {
         "external": {
           "command": "jq",
-          "arguments": ["-S", "--indent", "2", "."],
-        },
-      },
-    },
+          "arguments": ["-S", "--indent", "2", "."]
+        }
+      }
+    }
   },
   "session": {
-    "trust_all_worktrees": true,
+    "trust_all_worktrees": true
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false,
+    "metrics": false
   },
   "theme": {
     "mode": "dark",
     "light": "Moonlight",
-    "dark": "Moonlight",
+    "dark": "Moonlight"
   },
-  "ui_font_size": 14,
+  "ui_font_size": 14
 }
