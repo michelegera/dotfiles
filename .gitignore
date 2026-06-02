@@ -24,6 +24,7 @@ src/shell/config/*
 !src/shell/config/ghostty
 !src/shell/config/lazygit
 !src/shell/config/mise
+!src/shell/config/opencode
 !src/shell/config/starship.toml
 !src/shell/config/tmux
 !src/shell/config/zed

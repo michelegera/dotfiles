@@ -13,3 +13,4 @@ print_in_purple "\n   AI\n"
 printf "\n"
 
 brew_install "Claude Code" "claude-code"
+brew_install "OpenCode" "opencode"
