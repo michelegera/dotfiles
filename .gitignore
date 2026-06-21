@@ -3,39 +3,3 @@
 
 # Ignore AI settings
 .claude
-
-# Ignore non-customized configuration files
-src/prefs/gnupg/*
-!src/prefs/gnupg/gpg-agent.conf
-!src/prefs/gnupg/gpg.conf
-
-src/shell/bundle/*
-!src/shell/bundle/config
-
-src/shell/claude/*
-!src/shell/claude/settings.json
-
-src/shell/config/*
-!src/shell/config/.lazycommit.prompts.yaml
-!src/shell/config/bat
-!src/shell/config/bottom
-!src/shell/config/eza
-!src/shell/config/fish
-!src/shell/config/ghostty
-!src/shell/config/lazygit
-!src/shell/config/mise
-!src/shell/config/opencode
-!src/shell/config/starship.toml
-!src/shell/config/tmux
-!src/shell/config/zed
-
-src/shell/config/fish/*
-!src/shell/config/fish/aliases.fish
-!src/shell/config/fish/config.fish
-!src/shell/config/fish/fish_plugins
-
-src/shell/config/zed/*
-!src/shell/config/zed/settings.json
-
-src/shell/ssh/*
-!src/shell/ssh/config

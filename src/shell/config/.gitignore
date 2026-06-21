@@ -1,0 +1,15 @@
+*
+!.gitignore
+!.lazycommit.prompts.yaml
+!bat
+!bottom
+!eza
+!fish
+!ghostty
+!hunk
+!lazygit
+!mise
+!opencode
+!starship.toml
+!tmux
+!zed
