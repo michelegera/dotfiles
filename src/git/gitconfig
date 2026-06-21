@@ -46,6 +46,7 @@
     autocrlf = input
     editor = nvim
     excludesfile = ~/.gitignore
+    pager = hunk pager
 
     # Prevent showing files whose names contain non-ASCII symbols as
     # unversioned.
@@ -74,9 +75,6 @@
     # https://git-scm.com/docs/git-diff#git-diff-zebra
 
     colorMoved = zebra
-
-    # Use `difftastic` for diffing
-	external = difft
 
     # Enable an experimental heuristic that shifts the hunk boundary in an
     # attempt to make the resulting patch easier to read.

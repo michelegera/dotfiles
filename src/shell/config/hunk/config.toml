@@ -1,0 +1,71 @@
+theme = "custom"
+
+[custom_theme]
+base = "catppuccin-mocha"
+label = "Moonlight"
+
+# Surface colors
+background = "#212337"
+panel = "#191a2a"
+panelAlt = "#1e2030"
+border = "#222436"
+
+# Foreground colors
+text = "#c8d3f5"
+muted = "#7a88cf"
+
+# Accent colors
+accent = "#82aaff"
+accentMuted = "#444a73"
+
+# Diff backgrounds
+addedBg = "#2a3a2a"
+removedBg = "#3a2a2a"
+movedAddedBg = "#2a353a"
+movedRemovedBg = "#3a2a35"
+contextBg = "#212337"
+addedContentBg = "#2a3a2a"
+removedContentBg = "#3a2a2a"
+contextContentBg = "#212337"
+
+# Diff signs
+addedSignColor = "#c3e88d"
+removedSignColor = "#ff757f"
+
+# Line numbers
+lineNumberBg = "#191a2a"
+lineNumberFg = "#3b4261"
+
+# Selection
+selectedHunk = "#444a73"
+
+# Badges
+badgeAdded = "#c3e88d"
+badgeRemoved = "#ff757f"
+badgeNeutral = "#7a88cf"
+
+# File status
+fileNew = "#c3e88d"
+fileDeleted = "#ff757f"
+fileRenamed = "#ffc777"
+fileModified = "#82aaff"
+fileUntracked = "#7a88cf"
+
+# Notes
+noteBorder = "#222436"
+noteBackground = "#191a2a"
+noteTitleBackground = "#1e2030"
+noteTitleText = "#c8d3f5"
+
+[custom_theme.syntax]
+default = "#c8d3f5"
+keyword = "#65bcff"
+string = "#c3e88d"
+comment = "#7a88cf"
+number = "#ff995e"
+function = "#82aaff"
+property = "#86e1fc"
+type = "#65bcff"
+variable = "#ffc777"
+operator = "#c099ff"
+punctuation = "#86e1fc"
