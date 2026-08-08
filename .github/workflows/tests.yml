@@ -7,17 +7,19 @@
 
 name: tests
 
-on: push
+on:
+  push:
+  pull_request:
 
 jobs:
-  tests:
-    runs-on: macos-latest
+  shellcheck:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: brew install shellcheck
+      - name: Install shellcheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
 
-      - name: Run tests
+      - name: Run ShellCheck
         run: ./tests/shellcheck.sh
