@@ -271,10 +271,9 @@ set_trap() {
 
 skip_questions() {
 
-     while :; do
+    while [ $# -gt 0 ]; do
         case $1 in
             -y|--yes) return 0;;
-                   *) break;;
         esac
         shift 1
     done
