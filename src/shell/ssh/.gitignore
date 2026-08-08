@@ -1,3 +1,7 @@
 *
+
+# Defensive: SSH host key backups (redundant with * but explicit)
+known_hosts.old
+
 !.gitignore
 !config
