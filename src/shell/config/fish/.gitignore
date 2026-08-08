@@ -1,5 +1,19 @@
-*
+# Ignore runtime-generated files
+fish_variables
+
+# Ignore all function files except custom ones
+functions/*.fish
+!functions/eza_git.fish
+!functions/fisher.fish
+
+# Ignore all completion files except fisher
+completions/*.fish
+!completions/fisher.fish
+
+# Track root-level config files and conf.d
 !.gitignore
 !aliases.fish
 !config.fish
 !fish_plugins
+!conf.d/
+!conf.d/*.fish
