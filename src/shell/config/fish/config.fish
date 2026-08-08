@@ -33,9 +33,14 @@ set -x VISUAL nvim
 
 # Configure gpg-agent
 
-gpgconf --launch gpg-agent
-set -x SSH_AUTH_SOCKET $HOME/.gnupg/S.gpg-agent.ssh
-set -x GPG_TTY (tty)
+# Only launch if the agent socket isn't already present — avoids spawning a
+# process on every new shell.
+if not test -S $HOME/.gnupg/S.gpg-agent.ssh
+    gpgconf --launch gpg-agent
+end
+
+set -gx SSH_AUTH_SOCKET $HOME/.gnupg/S.gpg-agent.ssh
+set -gx GPG_TTY (tty)
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
