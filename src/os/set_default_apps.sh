@@ -12,8 +12,8 @@ main() {
     # Check if `duti` is installed
 
     if ! cmd_exists "duti"; then
-        print_error "duti is required, please install it!"
-        exit 1
+        print_warning "duti is not installed — skipping default application setup"
+        return 0
     fi
 
     execute "duti ${HOME}/.duti" "duti"
