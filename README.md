@@ -12,6 +12,7 @@ For more specific local needs I use the `*.local` files described in the
   - [🌍 Local Settings](#local-settings)
     - [🐟 `~/.fishconfig.local`](#fishconfiglocal)
     - [🐙 `~/.gitconfig.local`](#gitconfiglocal)
+    - [🔑 `~/.sshconfig.local`](#sshconfiglocal)
   - [🔀 Forks](#forks)
 - [↕️ Update](#update)
 - [🥇 Acknowledgements](#acknowledgements)
@@ -97,6 +98,21 @@ Git user credentials, e.g.:
     name = John Appleseed
     email = john.appleseed@apple.com
     signingKey = XXXXXXXX
+```
+
+#### `~/.sshconfig.local`
+
+The `~/.sshconfig.local` file will be automatically included after the
+configurations from `~/.ssh/config`, thus, allowing its content to add to or
+overwrite the existing SSH configurations.
+
+**Note:** Use `~/.sshconfig.local` to store machine-specific SSH settings such
+as custom hosts or identity files, e.g.:
+
+```sshconfig
+Host github.com
+  IdentityFile ~/.ssh/github
+  LogLevel ERROR
 ```
 
 ### Set up GPG signing for Git commits
