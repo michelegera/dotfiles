@@ -1,5 +1,13 @@
-# Ignore Desktop Services Store files
-.DS_Store
+# Ignore Desktop Services Store files anywhere in the tree
+**/.DS_Store
 
 # Ignore AI settings
 .claude
+
+# Defensive: backup and temporary files
+*.bak
+*.orig
+*.old
+
+# Defensive: dependency directories
+node_modules/
