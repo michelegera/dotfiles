@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 declare -r GITHUB_REPOSITORY="michelegera/dotfiles"
 
 declare -r DOTFILES_ORIGIN="https://github.com/$GITHUB_REPOSITORY.git"

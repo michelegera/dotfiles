@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 answer_is_yes() {
     [[ "$REPLY" =~ ^[Yy]$ ]] \
         && return 0 \
