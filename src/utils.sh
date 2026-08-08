@@ -339,6 +339,9 @@ show_spinner() {
 }
 
 symlink() {
+
+    local skipQuestions="${3:-false}"
+
     if [ ! -e "$2" ] || $skipQuestions; then
 
         execute \
