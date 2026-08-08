@@ -121,8 +121,25 @@ download_utils() {
 
     tmpFile="$(mktemp /tmp/XXXXX)"
 
-    download "$DOTFILES_UTILS_URL" "$tmpFile" \
-        && . "$tmpFile" \
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Download the utility script. This is a single-file bootstrap: the main
+    # tarball is downloaded separately in download_dotfiles(). To mitigate
+    # supply-chain risk, perform a basic sanity check before sourcing.
+
+    download "$DOTFILES_UTILS_URL" "$tmpFile" || return 1
+
+    # Sanity check: file must be non-empty and contain expected content.
+    # This is not a cryptographic guarantee, but it catches empty files,
+    # 404 HTML responses, and obvious corruption.
+
+    if [ ! -s "$tmpFile" ] || ! grep -q "print_success" "$tmpFile"; then
+        printf "Downloaded utility script appears corrupted or unexpected.\n"
+        rm -rf "$tmpFile"
+        return 1
+    fi
+
+    . "$tmpFile" \
         && rm -rf "$tmpFile" \
         && return 0
 
