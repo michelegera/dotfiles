@@ -139,7 +139,17 @@ gpg --list-secret-keys --keyid-format SHORT
 ### Forks
 
 If you decide to [fork] this project, do not forget to substitute my username
-with your own in the `setup` script.
+with your own in the following places:
+
+| File | What to change |
+|------|---------------|
+| [`src/setup.sh`][setup] | `GITHUB_REPOSITORY` variable |
+| [`README.md`](README.md) | Setup URL, CI badge links, profile links |
+| `~/.gitconfig.local` (after setup) | Git `user.name` and `user.email` |
+
+> **Note:** `src/shell/config/gh/hosts.yml` is also ignored and contains your
+> GitHub CLI user. If you fork, update it after the first run or delete it and
+> re-run `gh auth login`.
 
 ## Update
 
