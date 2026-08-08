@@ -1,3 +1,8 @@
 *
+
+# Defensive: backup files (redundant with * but explicit)
+*.bak
+*.orig
+
 !.gitignore
 !settings.json
