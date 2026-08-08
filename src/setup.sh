@@ -10,7 +10,9 @@ declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSIT
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-declare dotfilesDirectory="$HOME/Code/$(whoami)/dotfiles"
+dotfilesDirectory="$HOME/Code/$(whoami)/dotfiles"
+declare dotfilesDirectory
+
 declare skipQuestions=false
 
 #  ----------------------------------------------------------------------------
@@ -167,8 +169,11 @@ verify_os() {
 
     declare -r MINIMUM_MACOS_VERSION="13.0"
 
-    local os_name="$(get_os)"
-    local os_version="$(get_os_version)"
+    local os_name
+    os_name="$(get_os)"
+
+    local os_version
+    os_version="$(get_os_version)"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
