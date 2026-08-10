@@ -1,0 +1,19 @@
+onboarding = false
+
+[keys]
+prefix = "ctrl+a"
+split_vertical = "prefix+|"
+split_horizontal = "prefix+minus"
+
+[[keys.command]]
+key = "prefix+semicolon"
+type = "popup"
+command = "lazygit"
+width = "80%"
+height = "80%"
+
+[[keys.command]]
+key = "prefix+x"
+type = "plugin_action"
+command = "es.quick-actions.open"
+description = "Quick actions"
