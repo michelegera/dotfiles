@@ -130,12 +130,6 @@ mise activate fish | source
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Workmux autocompletion
-
-workmux completions fish | source
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 # Set path for binstubs (https://wolfgangrittner.dev/bundle-exec-be-gone/)
 
 set -x PATH ./bin $PATH

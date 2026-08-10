@@ -46,8 +46,6 @@ alias yai   'yarn init'
 alias yarm  'yarn remove'
 alias yaru  'yarn run'
 alias yat   'yarn test'
-alias wm    'workmux'
-alias wmd   'workmux dashboard'
 
 # Aliases for .gitaliases
 alias ga    'git a'
