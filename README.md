@@ -106,8 +106,10 @@ The `~/.sshconfig.local` file will be automatically included after the
 configurations from `~/.ssh/config`, thus, allowing its content to add to or
 overwrite the existing SSH configurations.
 
-**Note:** Use `~/.sshconfig.local` to store machine-specific SSH settings such
-as custom hosts or identity files, e.g.:
+**Note:** The base configuration routes all SSH connections through the
+[1Password SSH agent][1password ssh agent], so SSH keys stored in 1Password
+work out of the box. Use `~/.sshconfig.local` to store machine-specific SSH
+settings such as custom hosts or identity files, e.g.:
 
 ```sshconfig
 Host github.com
@@ -142,7 +144,7 @@ If you decide to [fork] this project, do not forget to substitute my username
 with your own in the following places:
 
 | File | What to change |
-|------|---------------|
+| ------ | --------------- |
 | [`src/setup.sh`][setup] | `GITHUB_REPOSITORY` variable |
 | [`README.md`](README.md) | Setup URL, CI badge links, profile links |
 | `~/.gitconfig.local` (after setup) | Git `user.name` and `user.email` |
@@ -167,6 +169,7 @@ The code is available under the [MIT license][license].
 
 <!-- Link labels -->
 
+[1password ssh agent]: https://developer.1password.com/docs/ssh/
 [alrra]: https://github.com/alrra/dotfiles
 [ci badge]: https://github.com/michelegera/dotfiles/workflows/tests/badge.svg
 [ci link]: https://github.com/michelegera/dotfiles/actions
