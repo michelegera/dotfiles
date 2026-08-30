@@ -13,6 +13,7 @@ For more specific local needs I use the `*.local` files described in the
     - [🐟 `~/.fishconfig.local`](#fishconfiglocal)
     - [🐙 `~/.gitconfig.local`](#gitconfiglocal)
     - [🔑 `~/.sshconfig.local`](#sshconfiglocal)
+  - [🔏 Set up GPG signing for Git commits](#set-up-gpg-signing-for-git-commits)
   - [🔀 Forks](#forks)
 - [↕️ Update](#update)
 - [🥇 Acknowledgements](#acknowledgements)
