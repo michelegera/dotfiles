@@ -46,7 +46,7 @@ The setup process will:
 - Create some additional [directories][dirs]
 - [Symlink][symlink] the [Git][git], [prefs][prefs], and [shell][shell] files
 - Install [applications and command-line tools][installs]
-- Set custom [preferences][preferences] preferences
+- Set custom [preferences][preferences]
 
 ## Customize
 
