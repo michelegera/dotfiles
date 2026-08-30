@@ -3,17 +3,14 @@
 
 # Track specific subdirectories
 !/bat/
-!/bottom/
 !/eza/
 !/fish/
 !/ghostty/
 !/herdr/
 !/lazygit/
 !/mise/
-!/tmux/
 !/zed/
 
 # Track specific root-level files
 !starship.toml
 !.gitignore
-!.lazycommit.prompts.yaml
