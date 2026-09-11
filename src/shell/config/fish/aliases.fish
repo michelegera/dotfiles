@@ -44,6 +44,20 @@ alias txk   'tmux kill-session -t'
 alias txl   'tmux list-sessions'
 alias txn   'tmux new -s'
 
+# Workmux
+alias wma  'workmux add'
+alias wmc  'workmux capture'
+alias wmcl 'workmux close'
+alias wmd  'workmux dashboard'
+alias wml  'workmux list'
+alias wmm  'workmux merge'
+alias wmo  'workmux open'
+alias wmp  'workmux path'
+alias wmr  'workmux remove'
+alias wms  'workmux status'
+alias wmsd 'workmux send'
+alias wmw  'workmux wait'
+
 # Generic tools
 alias cat   'bat'
 alias cd    'z'
