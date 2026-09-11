@@ -1,6 +1,10 @@
+# Bundler
 alias be    'bundle exec'
 alias bi    'bundle install'
 alias bl    'bundle list'
+alias bu    'bundle update'
+
+# Homebrew
 alias brcl  'brew cleanup'
 alias brcu  'brew cu'
 alias brd   'brew doctor'
@@ -11,32 +15,19 @@ alias brout 'brew outdated'
 alias brs   'brew search'
 alias brun  'brew uninstall'
 alias brup  'brew upgrade'
-alias bu    'bundle update'
-alias cat   'bat'
-alias cl    'clear'
-alias clauded 'claude --dangerously-skip-permissions'
-alias cp    'cp -iv'
-alias cd    'z'
-alias df    'duf'
-alias fldns 'sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
-alias gcs   'gh copilot suggest'
+
+# AI tools
 alias gce   'gh copilot explain'
-alias ls    'll'
-alias mkdir 'mkdir -pv'
-alias mv    'mv -iv'
-alias ping  'gping'
+alias gcs   'gh copilot suggest'
+alias oc    'opencode'
+
+# Rails
 alias r     'rails'
 alias rc    'rails console'
 alias rdbm  'rails db:migrate'
 alias rs    'rails server'
-alias serve 'npx http-server --port'
-alias tmxtr 'tmuxinator start'
-alias top   'htop'
-alias txa   'tmux attach-session -t'
-alias txk   'tmux kill-session -t'
-alias txl   'tmux list-sessions'
-alias txn   'tmux new -s'
-alias v     'nvim'
+
+# Yarn
 alias ya    'yarn'
 alias yaa   'yarn add'
 alias yaad  'yarn add --dev'
@@ -46,6 +37,27 @@ alias yai   'yarn init'
 alias yarm  'yarn remove'
 alias yaru  'yarn run'
 alias yat   'yarn test'
+
+# Tmux
+alias txa   'tmux attach-session -t'
+alias txk   'tmux kill-session -t'
+alias txl   'tmux list-sessions'
+alias txn   'tmux new -s'
+
+# Generic tools
+alias cat   'bat'
+alias cd    'z'
+alias cl    'clear'
+alias cp    'cp -iv'
+alias df    'duf'
+alias fldns 'sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
+alias ls    'll'
+alias mkdir 'mkdir -pv'
+alias mv    'mv -iv'
+alias ping  'gping'
+alias serve 'npx http-server --port'
+alias top   'htop'
+alias v     'nvim'
 
 # Aliases for .gitaliases
 alias ga    'git a'
