@@ -1,0 +1,24 @@
+# Packages installed on this machine that are intentionally not declared
+# in `src/os/installs` (machine-local tools).
+#
+# One entry per line; '#' starts a comment. Entries can match Homebrew
+# formula leaves, cask tokens, tap names, or Mac App Store IDs.
+
+# Formulae
+
+flyctl
+ifstat
+mailpit
+snitch
+worktrunk
+
+# Casks
+
+adobe-digital-editions
+figma
+lm-studio
+
+# Mac App Store
+
+# Xcode (managed by `src/os/installs/xcode.sh`).
+497799835

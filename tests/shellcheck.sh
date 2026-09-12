@@ -14,6 +14,7 @@ main() {
         ../tests \
         -type f \
         ! -path '../src/os/preferences/*.applescript' \
+        ! -name 'brew_local_allowlist' \
         -exec shellcheck \
                 -e SC1090 \
                 -e SC1091 \
