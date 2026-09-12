@@ -29,11 +29,8 @@ execute "defaults write com.apple.dock show-recents -bool false" \
 execute "defaults write com.apple.dock tilesize -int 40" \
     "Set icon size"
 
-execute "defaults write com.apple.Dock size-immutable -bool false" \
-    "Lock dock size"
-
-execute "defaults write com.apple.dock expose-group-apps -bool" \
-    "Enable grouping windows by application"
+execute "defaults write com.apple.dock size-immutable -bool false" \
+    "Do not lock the dock size"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

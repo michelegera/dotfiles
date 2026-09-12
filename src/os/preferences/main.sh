@@ -4,10 +4,10 @@ cd "$(dirname "${BASH_SOURCE[0]}")" || exit 1
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Close any open `System Preferences` panes in order to
+# Close any open `System Settings` panes in order to
 # avoid overriding the preferences that are being changed.
 
-./close_system_preferences_panes.applescript
+./close_system_settings_panes.applescript
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
