@@ -159,6 +159,19 @@ with your own in the following places:
 To update the dotfiles you can either run the [`setup` script][setup] or, if you
 want to update one particular part, run the appropriate [`os` script][os].
 
+### Checking for package drift
+
+To check whether the Homebrew packages and taps, or the App Store applications
+installed on this machine have drifted from the ones declared in the
+[`installs` scripts][installs], run:
+
+```shell
+./tests/brew_drift.sh
+```
+
+Packages that are intentionally managed only on the local machine can be
+listed in `tests/brew_local_allowlist`.
+
 ## Acknowledgements
 
 Inspiration and code was taken from many sources, but mainly
