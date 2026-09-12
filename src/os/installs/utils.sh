@@ -82,3 +82,34 @@ brew_upgrade() {
         "Homebrew (upgrade)"
 
 }
+
+mas_install() {
+
+    declare -r APP_ID="$2"
+    declare -r APP_READABLE_NAME="$1"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Check if `mas` is installed.
+
+    if ! cmd_exists "mas"; then
+        print_error "$APP_READABLE_NAME ('mas' is not installed)"
+        return 1
+    fi
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Install the specified application.
+    #
+    # Note: This requires being signed in to the App Store, and the app
+    # needs to have been previously obtained with the signed-in account.
+
+    if mas list | awk '{ print $1 }' | grep -qx "$APP_ID"; then
+        print_success "$APP_READABLE_NAME"
+    else
+        execute \
+            "mas install $APP_ID" \
+            "$APP_READABLE_NAME"
+    fi
+
+}

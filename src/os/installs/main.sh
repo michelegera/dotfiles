@@ -23,3 +23,4 @@ print_in_purple "\n • Installs\n\n"
 ./system.sh
 ./tools.sh
 ./neovim.sh
+./mas.sh
