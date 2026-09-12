@@ -17,3 +17,9 @@ completions/*.fish
 !fish_plugins
 !conf.d/
 !conf.d/*.fish
+
+# Ignore plugin conf.d files, which Fisher regenerates from fish_plugins.
+# Their functions/ and completions/ counterparts are ignored above, so
+# tracking them here would only half-vendor the plugin and drift on update.
+conf.d/fish-eza.fish
+conf.d/opah.fish
