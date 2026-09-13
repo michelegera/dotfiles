@@ -1,3 +1,11 @@
+customCommands:
+  - key: "<c-a>"
+    context: "files"
+    description: "Commit this file with an AI-written conventional commit message"
+    command: '"$HOME/.scripts/ai-commit-msg" {{.SelectedFile.Name | quote}}'
+    loadingText: "Generating commit message..."
+    output: popup
+    outputTitle: "AI commit message"
 git:
   overrideGpg: true
 gui:

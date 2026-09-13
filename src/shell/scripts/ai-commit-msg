@@ -1,0 +1,127 @@
+#!/usr/bin/env bash
+
+# Commit with a Conventional Commits subject line written by OpenCode.
+#
+# Usage: ai-commit-msg [path]
+#
+# With a path, only that path is committed and any other staged changes stay
+# staged. Without one, whatever is already staged is committed.
+#
+# Environment:
+#   AI_COMMIT_MODEL       OpenCode model as provider/model
+#                         (default: opencode/mimo-v2.5-free)
+#   AI_COMMIT_DIFF_LINES  Maximum diff lines sent to the model (default: 400)
+#
+# The default is one of OpenCode Zen's free models, which are offered for a
+# limited time and may be retired; paid models such as opencode/gpt-5-nano
+# need credit on the Zen workspace.
+
+set -euo pipefail
+
+MODEL="${AI_COMMIT_MODEL:-opencode/mimo-v2.5-free}"
+MAX_DIFF_LINES="${AI_COMMIT_DIFF_LINES:-400}"
+
+CONVENTIONAL_RE='^(feat|fix|chore|docs|style|refactor|perf|test|build|ci|revert)(\([^)]+\))?!?: .+'
+
+die() {
+    printf 'ai-commit-msg: %s\n' "$1" >&2
+    exit 1
+}
+
+for cmd in git jq opencode; do
+    command -v "$cmd" >/dev/null 2>&1 || die "$cmd is required but not installed"
+done
+
+git rev-parse --git-dir >/dev/null 2>&1 || die "not inside a git repository"
+
+path="${1:-}"
+
+if [[ -n $path ]]; then
+    git add -A -- "$path" 2>/dev/null \
+        || die "cannot stage $path (does it exist, and is it gitignored?)"
+    diff="$(git diff --cached -- "$path")"
+else
+    diff="$(git diff --cached)"
+fi
+
+[[ -n $diff ]] || die "nothing to commit"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Keep the diff within the model's attention span and our patience.
+
+line_count="$(printf '%s\n' "$diff" | wc -l | tr -d '[:space:]')"
+
+if ((line_count > MAX_DIFF_LINES)); then
+    printf 'ai-commit-msg: diff is %s lines, sending the first %s\n' \
+        "$line_count" "$MAX_DIFF_LINES" >&2
+    diff="$(printf '%s\n' "$diff" | awk -v limit="$MAX_DIFF_LINES" 'NR <= limit')"
+    diff+=$'\n[diff truncated]'
+fi
+
+# Recent subjects teach the model this repository's scope vocabulary, which
+# matters more here than any instruction we could spell out.
+
+style="$(git log --format='%s' -n 15 2>/dev/null || true)"
+
+prompt="$(
+    cat <<EOF
+Write one Conventional Commits subject line for the git change below.
+
+Rules:
+- Output the subject line only. No quotes, no backticks, no explanation, no body.
+- Format: type(scope): imperative summary
+- Allowed types: feat, fix, chore, docs, style, refactor, perf, test, build, ci, revert
+- Lowercase, no trailing period, at most 72 characters.
+- Match the scope style of these recent commits from this repository:
+$style
+- Describe only the change below. Never reuse or paraphrase those examples.
+
+Change:
+$diff
+EOF
+)"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# OpenCode writes JSON events to stdout and logs to stderr, so stderr is left
+# attached for the caller (lazygit's command log) to surface.
+
+raw="$(opencode run --pure --format json -m "$MODEL" "$prompt")" \
+    || die "the OpenCode call failed (model: $MODEL)"
+
+[[ -n $raw ]] || die "the OpenCode call returned nothing"
+
+reply="$(printf '%s\n' "$raw" \
+    | jq -rs '[.[] | select(.type == "text") | .part.text] | join("")')" \
+    || die "could not parse the OpenCode response"
+
+[[ -n $reply ]] || die "the model returned no text (model: $MODEL)"
+
+# Take the first non-empty line, in case the model adds a preamble anyway.
+
+subject="$(printf '%s\n' "$reply" \
+    | awk 'NF { gsub(/^[[:space:]]+|[[:space:]]+$/, ""); print; exit }')"
+
+# Strip the wrapping punctuation models reach for despite being told not to.
+
+subject="${subject#\"}"
+subject="${subject#\'}"
+subject="${subject#\`}"
+subject="${subject#- }"
+subject="${subject#\* }"
+subject="${subject%\"}"
+subject="${subject%\'}"
+subject="${subject%\`}"
+subject="${subject%.}"
+
+[[ $subject =~ $CONVENTIONAL_RE ]] \
+    || die "model returned a non-conventional subject: $subject"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+if [[ -n $path ]]; then
+    git commit -m "$subject" -- "$path"
+else
+    git commit -m "$subject"
+fi
