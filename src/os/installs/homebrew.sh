@@ -8,10 +8,12 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 add_to_path() {
 
+    local exitCode=0
+
     # Check if `brew` is available.
 
     if command -v brew &> /dev/null; then
-        return
+        return 0
     fi
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -19,23 +21,32 @@ add_to_path() {
     # If not, add it to the PATH.
 
     PATH="/opt/homebrew/bin:$PATH"
+    export PATH
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # Inform the user about the availability of `brew`.
+    #
+    # `command -v` must not abort the script through `set -e`, otherwise a
+    # missing `brew` exits silently without reporting anything.
 
-    command -v brew &> /dev/null
-    print_result $? "Add to PATH"
+    command -v brew &> /dev/null \
+        || exitCode=1
+
+    print_result "$exitCode" "Add to PATH"
 }
 
 get_git_config_file_path() {
 
-    local path=""
+    local repository=""
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    if path="$(brew --repository 2> /dev/null)/.git/config"; then
-        printf "%s" "$path"
+    # Only the command substitution can fail here, so it needs to be checked
+    # on its own. Testing the whole assignment would always succeed.
+
+    if repository="$(brew --repository 2> /dev/null)" && [ -n "$repository" ]; then
+        printf "%s" "$repository/.git/config"
         return 0
     else
         print_error "Get config file path"
@@ -46,13 +57,38 @@ get_git_config_file_path() {
 
 install() {
 
-    if ! cmd_exists "brew"; then
-        ask_for_sudo
-        printf "\n" | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &> /dev/null
-        #  └─ simulate the ENTER keypress
+    local exitCode=0
+    local tmpFile=""
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Nothing to do if `brew` is already installed.
+
+    if cmd_exists "brew"; then
+        print_success "Install"
+        return 0
     fi
 
-    print_result $? "Install"
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    ask_for_sudo
+
+    tmpFile="$(mktemp /tmp/XXXXX)"
+
+    # `NONINTERACTIVE=1` is the documented way to run the installer without
+    # prompting. Keep `stdin` attached so the installer can still use `sudo`.
+
+    NONINTERACTIVE=1 /bin/bash -c \
+        "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" \
+        > "$tmpFile" 2>&1 \
+        || exitCode=$?
+
+    print_result "$exitCode" "Install" \
+        || print_error_stream < "$tmpFile"
+
+    rm -rf "$tmpFile"
+
+    return "$exitCode"
 
 }
 
@@ -98,8 +134,15 @@ main() {
 
     print_in_purple "\n   Homebrew\n\n"
 
-    install
-    add_to_path
+    # Without `brew` on the PATH every subsequent step is meaningless, so bail
+    # out early and loudly instead of reporting success.
+
+    install \
+        || return 1
+
+    add_to_path \
+        || return 1
+
     opt_out_of_analytics
 
     update
