@@ -6,18 +6,6 @@
 
 # Formulae
 
-flyctl
-ifstat
-mailpit
-snitch
-worktrunk
-
 # Casks
 
-adobe-digital-editions
-figma
-
 # Mac App Store
-
-# Xcode (managed by `src/os/installs/xcode.sh`).
-497799835
