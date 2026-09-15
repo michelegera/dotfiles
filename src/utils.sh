@@ -204,7 +204,7 @@ mkd() {
 }
 
 print_error() {
-    print_in_red "   [✖] $1 $2\n"
+    print_in_red "   [✖] $1 ${2:-}\n"
 }
 
 print_error_stream() {
@@ -214,7 +214,7 @@ print_error_stream() {
 }
 
 print_info() {
-    print_in_purple "   [i] $1 $2\n"
+    print_in_purple "   [i] $1 ${2:-}\n"
 }
 
 print_in_color() {
@@ -267,7 +267,7 @@ print_warning() {
 set_trap() {
 
     trap -p "$1" | grep "$2" &> /dev/null \
-        || trap '$2' "$1"
+        || trap "$2" "$1"
 
 }
 

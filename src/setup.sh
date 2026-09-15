@@ -202,7 +202,7 @@ main() {
 
     # Ensure that the following actions are made relative to this file’s path.
 
-    cd "$(dirname "${BASH_SOURCE[0]}")" \
+    cd "$(dirname "${BASH_SOURCE[0]:-$0}")" \
         || exit 1
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -244,7 +244,7 @@ main() {
     # most likely means that dotfiles were not yet set up and they will need to
     # be downloaded.
 
-    printf "%s" "${BASH_SOURCE[0]}" | grep "setup.sh" &> /dev/null \
+    printf "%s" "${BASH_SOURCE[0]:-}" | grep "setup.sh" &> /dev/null \
         || download_dotfiles
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
