@@ -19,9 +19,11 @@ add_to_path() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # If not, add it to the PATH.
+    #
+    # `utils.sh` already does this when it is sourced, but `brew` did not exist
+    # yet at that point on a machine where it was just installed.
 
-    PATH="/opt/homebrew/bin:$PATH"
-    export PATH
+    add_homebrew_to_path
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

@@ -5,6 +5,40 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Make `brew` available to every install script.
+#
+# `main.sh` runs each install script as a separate process, so the PATH that
+# `homebrew.sh` sets up is gone by the time the next script starts. Adding the
+# `Homebrew` directory here means all of them can find `brew`, no matter which
+# one runs first.
+
+add_homebrew_to_path() {
+
+    local prefix=""
+
+    for prefix in "/opt/homebrew" "/usr/local"; do
+
+        if [ -x "$prefix/bin/brew" ]; then
+
+            case ":$PATH:" in
+                *":$prefix/bin:"*) ;;
+                *) PATH="$prefix/bin:$PATH" && export PATH ;;
+            esac
+
+            return 0
+
+        fi
+
+    done
+
+    return 0
+
+}
+
+add_homebrew_to_path
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 brew_install() {
 
     declare -r ARGUMENTS="${3:-}"
