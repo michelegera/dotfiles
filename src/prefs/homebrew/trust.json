@@ -1,11 +1,11 @@
 {
+  "trustedcasks": [],
+  "trustedcommands": [],
+  "trustedformulae": [],
   "trustedtaps": [
     "agavra/tap",
     "anomalyco/tap",
     "buo/cask-upgrade",
     "raine/workmux"
-  ],
-  "trustedformulae": [],
-  "trustedcasks": [],
-  "trustedcommands": []
+  ]
 }
