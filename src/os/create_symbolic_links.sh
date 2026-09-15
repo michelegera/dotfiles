@@ -33,6 +33,15 @@ create_symlinks() {
 
     )
 
+    # Files whose target is not simply `$HOME/.<basename>`, declared as
+    # '<path in this repository>:<path relative to $HOME>'.
+
+    declare -a PATHS_TO_SYMLINK=(
+
+        "prefs/homebrew/trust.json:.homebrew/trust.json"
+
+    )
+
     local i=""
     local sourceFile=""
     local targetFile=""
@@ -49,6 +58,22 @@ create_symlinks() {
 
         sourceFile="$(cd .. && pwd)/$i"
         targetFile="$HOME/.$(printf "%s" "$i" | sed "s/.*\/\(.*\)/\1/g")"
+
+        symlink "$sourceFile" "$targetFile" $skipQuestions
+
+    done
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    for i in "${PATHS_TO_SYMLINK[@]}"; do
+
+        sourceFile="$(cd .. && pwd)/${i%%:*}"
+        targetFile="$HOME/${i##*:}"
+
+        # The parent directory needs to exist before the link is created.
+
+        mkdir -p "$(dirname "$targetFile")" \
+            || print_error "$(dirname "$targetFile")"
 
         symlink "$sourceFile" "$targetFile" $skipQuestions
 
