@@ -59,4 +59,5 @@ execute "defaults write com.apple.dock wvous-bl-corner -int 5 && \
          defaults write com.apple.dock wvous-bl-modifier -int 0" \
     "Bottom left screen corner → Start screen saver"
 
-killall "Dock" &> /dev/null
+killall "Dock" &> /dev/null \
+    || true

@@ -14,4 +14,5 @@ execute "defaults write com.apple.TextEdit PlainTextEncoding -int 4 && \
 execute "defaults write com.apple.TextEdit RichText 0" \
     "Use plain text mode for new documents"
 
-killall "TextEdit" &> /dev/null
+killall "TextEdit" &> /dev/null \
+    || true

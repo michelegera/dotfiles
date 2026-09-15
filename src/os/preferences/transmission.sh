@@ -43,4 +43,5 @@ execute "defaults write org.m0k.transmission AutoSize -bool true" \
 execute "defaults write org.m0k.transmission RandomPort -bool true" \
     "Randomize port on launch"
 
-killall "Transmission" &> /dev/null
+killall "Transmission" &> /dev/null \
+    || true

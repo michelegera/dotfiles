@@ -14,4 +14,5 @@ execute "defaults write com.apple.Maps LastClosedWindowViewOptions '{
          }'" \
     "Set view options"
 
-killall "Maps" &> /dev/null
+killall "Maps" &> /dev/null \
+    || true

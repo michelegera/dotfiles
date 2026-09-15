@@ -95,6 +95,7 @@ install() {
 opt_out_of_analytics() {
 
     local path=""
+    local exitCode=0
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -110,8 +111,12 @@ opt_out_of_analytics() {
     # https://git.io/JThIQ
 
     if [ "$(git config --file="$path" --get homebrew.analyticsdisabled)" != "true" ]; then
-        git config --file="$path" --replace-all homebrew.analyticsdisabled true &> /dev/null
-        print_result $? "Opt-out of analytics"
+
+        git config --file="$path" --replace-all homebrew.analyticsdisabled true &> /dev/null \
+            || exitCode=$?
+
+        print_result "$exitCode" "Opt-out of analytics"
+
     fi
 
 }

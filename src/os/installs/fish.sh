@@ -10,6 +10,7 @@ change_default_shell() {
 
     local newShellPath=""
     local brewPrefix=""
+    local exitCode=0
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -42,9 +43,19 @@ change_default_shell() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # Set Fish as the default shell.
+    #
+    # `chsh` prompts for a password, so its output must not be discarded
+    # silently and its exit code must not abort the script.
 
-    chsh -s "$newShellPath" &> /dev/null
-    print_result $? "Fish (set as default)"
+    if [ "$SHELL" == "$newShellPath" ]; then
+        print_success "Fish (set as default)"
+        return 0
+    fi
+
+    chsh -s "$newShellPath" \
+        || exitCode=$?
+
+    print_result "$exitCode" "Fish (set as default)"
 
 }
 
@@ -52,12 +63,18 @@ change_default_shell() {
 
 install_fisher() {
 
+    local exitCode=0
+
     local script="curl -sL git.io/fisher | source && \
         fisher install jorgebucaran/fisher"
 
+    # Fisher needs network access, so a failure must be reported instead of
+    # aborting the script through `set -e`.
 
-    fish -c "$script" &> /dev/null
-    print_result $? "Fisher"
+    fish -c "$script" &> /dev/null \
+        || exitCode=$?
+
+    print_result "$exitCode" "Fisher"
 
 }
 

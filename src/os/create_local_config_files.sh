@@ -8,6 +8,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 create_fishconfig_local() {
 
     declare -r FILE_PATH="$HOME/.fishconfig.local"
+    local exitCode=0
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -17,15 +18,17 @@ create_fishconfig_local() {
 "# set -x NPM_GITHUB_AUTH_TOKEN
 # set -x NPMJS_AUTH_TOKEN
 # set -x REACT_APP_NPMJS_AUTH_TOKEN \$NPMJS_AUTH_TOKEN" \
-        >> "$FILE_PATH"
+        >> "$FILE_PATH" \
+            || exitCode=$?
     fi
 
-    print_result $? "$FILE_PATH"
+    print_result "$exitCode" "$FILE_PATH"
 }
 
 create_gitconfig_local() {
 
     declare -r FILE_PATH="$HOME/.gitconfig.local"
+    local exitCode=0
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -45,16 +48,18 @@ create_gitconfig_local() {
     name =
     email =
     # signingkey =" \
-        >> "$FILE_PATH"
+        >> "$FILE_PATH" \
+            || exitCode=$?
     fi
 
-    print_result $? "$FILE_PATH"
+    print_result "$exitCode" "$FILE_PATH"
 
 }
 
 create_sshconfig_local() {
 
     declare -r FILE_PATH="$HOME/.sshconfig.local"
+    local exitCode=0
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -64,10 +69,11 @@ create_sshconfig_local() {
 "# Host github.com
 #   IdentityFile ~/.ssh/github
 #   LogLevel ERROR" \
-        >> "$FILE_PATH"
+        >> "$FILE_PATH" \
+            || exitCode=$?
     fi
 
-    print_result $? "$FILE_PATH"
+    print_result "$exitCode" "$FILE_PATH"
 
 }
 

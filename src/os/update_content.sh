@@ -7,9 +7,16 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 main() {
 
-    ssh -T git@github.com &> /dev/null
+    local sshExitCode=0
 
-    if [ $? -ne 1 ]; then
+    # `ssh -T git@github.com` exits with 1 when the authentication succeeds,
+    # since GitHub does not provide shell access. Anything else means the SSH
+    # key is not set up yet.
+
+    ssh -T git@github.com &> /dev/null \
+        || sshExitCode=$?
+
+    if [ "$sshExitCode" -ne 1 ]; then
         ./set_github_ssh_key.sh \
             || return 1
     fi
@@ -52,12 +59,18 @@ main() {
                 || print_warning "Failed to stash local changes — they may be lost"
         fi
 
-        git fetch --all 1> /dev/null \
+        # A failure in any of these must be reported instead of aborting the
+        # script through `set -e`.
+
+        local updateExitCode=0
+
+        { git fetch --all 1> /dev/null \
             && git reset --hard origin/main 1> /dev/null \
             && git checkout main &> /dev/null \
-            && git clean -fd 1> /dev/null
+            && git clean -fd 1> /dev/null ; } \
+            || updateExitCode=$?
 
-        print_result $? "Update content"
+        print_result "$updateExitCode" "Update content"
 
         if [ -n "$localChanges" ]; then
             print_info "Run 'git stash pop' in the dotfiles directory to restore stashed changes."

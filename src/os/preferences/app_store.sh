@@ -22,4 +22,5 @@ execute "defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1" \
 execute "defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1" \
     "Install System data files and security updates"
 
-killall "App Store" &> /dev/null
+killall "App Store" &> /dev/null \
+    || true

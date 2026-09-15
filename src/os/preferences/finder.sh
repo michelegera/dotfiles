@@ -65,7 +65,8 @@ execute "/usr/libexec/PlistBuddy -c 'Set :DesktopViewSettings:IconViewSettings:a
          /usr/libexec/PlistBuddy -c 'Set :StandardViewSettings:IconViewSettings:arrangeBy grid' ~/Library/Preferences/com.apple.finder.plist" \
     "Arrange icons in grid"
 
-killall "Finder" &> /dev/null
+killall "Finder" &> /dev/null \
+    || true
 
 # Starting with Mac OS X Mavericks preferences are cached,
 # so in order for things to get properly set using `PlistBuddy`,
@@ -73,4 +74,5 @@ killall "Finder" &> /dev/null
 #
 # https://github.com/alrra/dotfiles/commit/035dda057ddc6013ba21db3d2c30eeb51ba8f200
 
-killall "cfprefsd" &> /dev/null
+killall "cfprefsd" &> /dev/null \
+    || true

@@ -7,21 +7,28 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 add_ssh_configs() {
 
+    local exitCode=0
+
     printf "%s\n" \
         "Host github.com" \
         "  IdentityFile $1" \
-        "  LogLevel ERROR" >> ~/.ssh/config
+        "  LogLevel ERROR" >> ~/.ssh/config \
+        || exitCode=$?
 
-    print_result $? "Add SSH configs"
+    print_result "$exitCode" "Add SSH configs"
 
 }
 
 copy_public_ssh_key_to_clipboard () {
 
+    local exitCode=0
+
     if cmd_exists "pbcopy"; then
 
-        pbcopy < "$1"
-        print_result $? "Copy public SSH key to clipboard"
+        pbcopy < "$1" \
+            || exitCode=$?
+
+        print_result "$exitCode" "Copy public SSH key to clipboard"
 
     else
         print_warning "Please copy the public SSH key ($1) to clipboard"
@@ -31,10 +38,19 @@ copy_public_ssh_key_to_clipboard () {
 
 generate_ssh_keys() {
 
-    ask "Please provide an email address: " && printf "\n"
-    ssh-keygen -t ed25519 -C "$(get_answer)" -f "$1"
+    local exitCode=0
 
-    print_result $? "Generate SSH keys"
+    ask "Please provide an email address: " && printf "\n"
+
+    # `ssh-keygen` is interactive, so a failure must be reported instead of
+    # aborting the script through `set -e`.
+
+    ssh-keygen -t ed25519 -C "$(get_answer)" -f "$1" \
+        || exitCode=$?
+
+    print_result "$exitCode" "Generate SSH keys"
+
+    return "$exitCode"
 
 }
 
@@ -76,10 +92,19 @@ set_github_ssh_key() {
 
 test_ssh_connection() {
 
+    local exitCode=0
+
     while true; do
 
-        ssh -T git@github.com &> /dev/null
-        [ $? -eq 1 ] && break
+        # `ssh -T git@github.com` exits with 1 once the key is authorized,
+        # since GitHub does not provide shell access.
+
+        exitCode=0
+
+        ssh -T git@github.com &> /dev/null \
+            || exitCode=$?
+
+        [ "$exitCode" -eq 1 ] && break
 
         sleep 5
 
@@ -90,6 +115,9 @@ test_ssh_connection() {
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 main() {
+
+    local exitCode=0
+    local sshExitCode=0
 
     print_in_purple "\n • Set up GitHub SSH keys\n\n"
 
@@ -102,15 +130,21 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    ssh -T git@github.com &> /dev/null
+    # `ssh -T git@github.com` exits with 1 when the key is already authorized,
+    # since GitHub does not provide shell access. Anything else means the keys
+    # still need to be set up.
 
-    if [ $? -ne 1 ]; then
-        set_github_ssh_key
+    ssh -T git@github.com &> /dev/null \
+        || sshExitCode=$?
+
+    if [ "$sshExitCode" -ne 1 ]; then
+        set_github_ssh_key \
+            || exitCode=$?
     fi
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    print_result $? "Set up GitHub SSH keys"
+    print_result "$exitCode" "Set up GitHub SSH keys"
 
 }
 

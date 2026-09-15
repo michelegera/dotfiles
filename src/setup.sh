@@ -50,6 +50,7 @@ download() {
 download_dotfiles() {
 
     local tmpFile=""
+    local exitCode=0
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -57,8 +58,10 @@ download_dotfiles() {
 
     tmpFile="$(mktemp /tmp/XXXXX)"
 
-    download "$DOTFILES_TARBALL_URL" "$tmpFile"
-    print_result $? "Download archive" "true"
+    download "$DOTFILES_TARBALL_URL" "$tmpFile" \
+        || exitCode=$?
+
+    print_result "$exitCode" "Download archive" "true"
     printf "\n"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -99,18 +102,30 @@ download_dotfiles() {
 
     fi
 
-    mkdir -p "$dotfilesDirectory"
-    print_result $? "Create '$dotfilesDirectory'" "true"
+    exitCode=0
+
+    mkdir -p "$dotfilesDirectory" \
+        || exitCode=$?
+
+    print_result "$exitCode" "Create '$dotfilesDirectory'" "true"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    extract "$tmpFile" "$dotfilesDirectory"
-    print_result $? "Extract archive" "true"
+    exitCode=0
+
+    extract "$tmpFile" "$dotfilesDirectory" \
+        || exitCode=$?
+
+    print_result "$exitCode" "Extract archive" "true"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    rm -rf "$tmpFile"
-    print_result $? "Remove archive"
+    exitCode=0
+
+    rm -rf "$tmpFile" \
+        || exitCode=$?
+
+    print_result "$exitCode" "Remove archive"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

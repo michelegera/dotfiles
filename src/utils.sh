@@ -81,9 +81,12 @@ execute() {
 
     # Wait for the commands to no longer be executing in the background, then
     # get their exit code.
+    #
+    # `wait` returns the exit code of the commands, so it must not abort
+    # `execute` through `set -e`, otherwise failures are never reported.
 
-    wait "$cmdsPID" &> /dev/null
-    exitCode=$?
+    wait "$cmdsPID" &> /dev/null \
+        || exitCode=$?
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

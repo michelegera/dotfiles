@@ -16,4 +16,5 @@ execute "defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool
 execute "defaults write com.google.Chrome DisablePrintPreview -bool true" \
     "Use system-native print preview dialog"
 
-killall "Google Chrome" &> /dev/null
+killall "Google Chrome" &> /dev/null \
+    || true
