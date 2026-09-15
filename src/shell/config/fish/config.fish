@@ -46,7 +46,7 @@ set -gx GPG_TTY (tty)
 
 # Homebrew’s executables path
 
-set -x PATH /usr/local/sbin $PATH
+fish_add_path -Pm /usr/local/sbin
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -119,20 +119,22 @@ starship init fish | source
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Set path for binstubs (https://wolfgangrittner.dev/bundle-exec-be-gone/)
+# Note: deliberately not fish_add_path — ./bin must stay relative (fish_add_path
+# would resolve it to a fixed absolute path), so dedupe with contains instead.
 
-set -x PATH ./bin $PATH
+contains -- ./bin $PATH; or set -gx PATH ./bin $PATH
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Set path for local tools
 
-set -x PATH $HOME/.local/bin $PATH
+fish_add_path -Pm $HOME/.local/bin
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Set path for LLM Studio
 
-set -gx PATH $PATH $HOME/.lmstudio/bin
+fish_add_path -Pam $HOME/.lmstudio/bin
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
