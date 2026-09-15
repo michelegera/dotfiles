@@ -183,12 +183,21 @@ is_supported_version() {
 
 kill_all_subprocesses() {
 
+    # Preserve the exit code the script is already exiting with, as this runs
+    # from an `EXIT` trap and must not change the status of the script.
+
+    local -r EXIT_CODE="$?"
     local i=""
 
+    # Killing a subprocess makes `wait` return 128 + the signal number, which
+    # would otherwise become the exit code of the script.
+
     for i in $(jobs -p); do
-        kill "$i"
-        wait "$i" &> /dev/null
+        kill "$i" &> /dev/null || true
+        wait "$i" &> /dev/null || true
     done
+
+    return "$EXIT_CODE"
 
 }
 
@@ -269,6 +278,11 @@ print_warning() {
 
 set_trap() {
 
+    # The handler is expanded here on purpose, so that the caller's value ends
+    # up in the trap. Quoting it with single quotes would install a literal
+    # `$2`, which expands to nothing when the trap is signalled.
+    #
+    # shellcheck disable=SC2064
     trap -p "$1" | grep "$2" &> /dev/null \
         || trap "$2" "$1"
 
