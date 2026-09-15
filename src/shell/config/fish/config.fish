@@ -132,12 +132,6 @@ fish_add_path -Pm $HOME/.local/bin
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Set path for LLM Studio
-
-fish_add_path -Pam $HOME/.lmstudio/bin
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 # Disable Homebrew hints
 
 set -x HOMEBREW_NO_ENV_HINTS 1
