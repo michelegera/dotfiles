@@ -15,4 +15,3 @@ print_in_purple "\n   Creative Tools\n\n"
 
 brew_install "Affinity" "affinity"
 brew_install "HandBrake" "handbrake-app"
-brew_install "Optimage" "optimage"
