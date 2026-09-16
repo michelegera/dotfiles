@@ -37,22 +37,6 @@ dev.zed.Zed                   public.script                   all
 dev.zed.Zed                   public.shell-script             all
 dev.zed.Zed                   public.source-code              all
 
-com.macpaw.site.theunarchiver org.7-zip.7-zip-archive                   all
-com.macpaw.site.theunarchiver com.winace.ace-archive                    all
-com.macpaw.site.theunarchiver cx.c3.arj-archive                         all
-com.macpaw.site.theunarchiver public.bzip2-archive                      all
-com.macpaw.site.theunarchiver org.gnu.gnu-zip-archive                   all
-com.macpaw.site.theunarchiver cx.c3.lha-archive                         all
-com.macpaw.site.theunarchiver com.rarlab.rar-archive                    all
-com.macpaw.site.theunarchiver com.stuffit.archive.sit                   all
-com.macpaw.site.theunarchiver com.stuffit.archive.sitx                  all
-com.macpaw.site.theunarchiver public.tar-archive                        all
-com.macpaw.site.theunarchiver public.tar-bzip2-archive                  all
-com.macpaw.site.theunarchiver org.gnu.gnu-zip-tar-archive               all
-com.macpaw.site.theunarchiver public.z-archive                          all
-com.macpaw.site.theunarchiver public.zip-archive                        all
-com.macpaw.site.theunarchiver com.winzip.zipx-archive                   all
-
 org.m0k.transmission          org.bittorrent.torrent                    all
 
 com.colliderli.iina           .avi                            all
