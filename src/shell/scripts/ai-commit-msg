@@ -11,6 +11,8 @@
 #   AI_COMMIT_MODEL       OpenCode model as provider/model
 #                         (default: opencode/mimo-v2.5-free)
 #   AI_COMMIT_DIFF_LINES  Maximum diff lines sent to the model (default: 400)
+#   AI_COMMIT_SERVER_PORT Port of the persistent OpenCode server the script
+#                         attaches to (default: 4096); started on demand
 #
 # The default is one of OpenCode Zen's free models, which are offered for a
 # limited time and may be retired; paid models such as opencode/gpt-5-nano
@@ -20,6 +22,7 @@ set -euo pipefail
 
 MODEL="${AI_COMMIT_MODEL:-opencode/mimo-v2.5-free}"
 MAX_DIFF_LINES="${AI_COMMIT_DIFF_LINES:-400}"
+SERVER_URL="http://127.0.0.1:${AI_COMMIT_SERVER_PORT:-4096}"
 
 CONVENTIONAL_RE='^(feat|fix|chore|docs|style|refactor|perf|test|build|ci|revert)(\([^)]+\))?!?: .+'
 
@@ -28,7 +31,7 @@ die() {
     exit 1
 }
 
-for cmd in git jq opencode; do
+for cmd in git jq opencode curl; do
     command -v "$cmd" >/dev/null 2>&1 || die "$cmd is required but not installed"
 done
 
@@ -84,10 +87,24 @@ EOF
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# OpenCode writes JSON events to stdout and logs to stderr, so stderr is left
-# attached for the caller (lazygit's command log) to surface.
+# A cold `opencode run` spends most of its time on startup, so attach to a
+# long-lived server instead. It is started on first use and survives this
+# script; the health check doubles as a wait loop for that first boot.
 
-raw="$(opencode run --pure --format json -m "$MODEL" "$prompt")" \
+if ! curl -sf "$SERVER_URL/config" > /dev/null 2>&1; then
+    nohup opencode serve --pure --port "${SERVER_URL##*:}" > /dev/null 2>&1 &
+    for _ in $(seq 1 100); do
+        curl -sf "$SERVER_URL/config" > /dev/null 2>&1 && break
+        sleep 0.1
+    done
+fi
+
+# OpenCode writes JSON events to stdout and logs to stderr, so stderr is left
+# attached for the caller (lazygit's command log) to surface. A failed attach
+# (e.g. a stale server from an older OpenCode) falls back to a cold run.
+
+raw="$(opencode run --pure --attach "$SERVER_URL" --dir "$PWD" --format json -m "$MODEL" "$prompt")" \
+    || raw="$(opencode run --pure --format json -m "$MODEL" "$prompt")" \
     || die "the OpenCode call failed (model: $MODEL)"
 
 [[ -n $raw ]] || die "the OpenCode call returned nothing"
