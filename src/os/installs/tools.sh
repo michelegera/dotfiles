@@ -15,6 +15,7 @@ print_in_purple "\n   Tools\n\n"
 
 brew_tap "buo/cask-upgrade"
 
+brew_install "1Password CLI" "1password-cli"
 brew_install "bash" "bash"
 brew_install "bat" "bat"
 brew_install "bottom" "bottom"
