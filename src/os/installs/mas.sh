@@ -15,6 +15,5 @@ print_in_purple "\n   Mac App Store\n\n"
 
 mas_install "Convert & Compress" "6752861983"
 mas_install "Lightweight PDF" "1450640351"
-mas_install "NextDNS" "1464122853"
 mas_install "Parcel" "375589283"
 mas_install "Things" "904280696"
