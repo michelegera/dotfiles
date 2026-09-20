@@ -137,12 +137,15 @@ mas_install() {
     #
     # Note: This requires being signed in to the App Store, and the app
     # needs to have been previously obtained with the signed-in account.
+    #
+    # `MAS_NO_AUTO_INDEX=1` prevents `mas` from triggering Spotlight
+    # indexing of App Store apps and printing noisy warnings about it.
 
-    if mas list | awk '{ print $1 }' | grep -qx "$APP_ID"; then
+    if MAS_NO_AUTO_INDEX=1 mas list | awk '{ print $1 }' | grep -qx "$APP_ID"; then
         print_success "$APP_READABLE_NAME"
     else
         execute \
-            "mas install $APP_ID" \
+            "MAS_NO_AUTO_INDEX=1 mas install $APP_ID" \
             "$APP_READABLE_NAME"
     fi
 
