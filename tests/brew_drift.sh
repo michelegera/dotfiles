@@ -64,7 +64,10 @@ main() {
     fi
 
     local allowlist=""
-    allowlist="$(grep -Ev '^[[:space:]]*(#|$)' "$ALLOWLIST_FILE" 2> /dev/null | awk '{ print $1 }' | sort -u)"
+    # `grep` exits 1 when the allowlist has no entries, which would abort the
+    # script through `set -e` (inherited from `utils.sh`), so allow that.
+
+    allowlist="$(grep -Ev '^[[:space:]]*(#|$)' "$ALLOWLIST_FILE" 2> /dev/null | awk '{ print $1 }' | sort -u || true)"
 
     local declaredFormulae="" declaredTaps="" declaredMasIds=""
     declaredFormulae="$(get_declared_formulae)"
