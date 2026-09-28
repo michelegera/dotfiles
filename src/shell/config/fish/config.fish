@@ -44,9 +44,11 @@ set -gx GPG_TTY (tty)
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Homebrew’s executables path
+# Set executables paths, in order
 
+fish_add_path -Pm /opt/homebrew/bin
 fish_add_path -Pm /usr/local/sbin
+fish_add_path -Pm $HOME/.local/bin
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -62,7 +64,7 @@ set -x RUBY_CONFIGURE_OPTS --with-openssl-dir=/opt/homebrew/opt/openssl@4
 set -x FZF_DEFAULT_COMMAND fd --type f --hidden --follow
 set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
-# Moonlight
+# Moonlight theme
 set -x FZF_DEFAULT_OPTS $FZF_DEFAULT_OPTS \
     --highlight-line \
     --info=inline-right \
@@ -100,6 +102,12 @@ set -x LG_CONFIG_FILE $HOME/.config/lazygit/config.yml
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Disable Homebrew hints
+
+set -x HOMEBREW_NO_ENV_HINTS 1
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Source aliases
 
 source $HOME/.config/fish/aliases.fish
@@ -115,26 +123,6 @@ zoxide init fish | source
 # Source prompt
 
 starship init fish | source
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Set path for binstubs (https://wolfgangrittner.dev/bundle-exec-be-gone/)
-# Note: deliberately not fish_add_path — ./bin must stay relative (fish_add_path
-# would resolve it to a fixed absolute path), so dedupe with contains instead.
-
-contains -- ./bin $PATH; or set -gx PATH ./bin $PATH
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Set path for local tools
-
-fish_add_path -Pm $HOME/.local/bin
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Disable Homebrew hints
-
-set -x HOMEBREW_NO_ENV_HINTS 1
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
