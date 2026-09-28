@@ -17,8 +17,6 @@ alias brun  'brew uninstall'
 alias brup  'brew upgrade'
 
 # AI tools
-alias gce   'gh copilot explain'
-alias gcs   'gh copilot suggest'
 alias oc    'opencode'
 
 # Rails
