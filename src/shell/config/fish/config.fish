@@ -108,6 +108,13 @@ set -x HOMEBREW_NO_ENV_HINTS 1
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Enable Oh My Opencode Slim background subagents
+
+set -gx OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS true
+set -gx OPENCODE_ENABLE_EXA 1
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 # Source aliases
 
 source $HOME/.config/fish/aliases.fish
