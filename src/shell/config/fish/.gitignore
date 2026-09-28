@@ -6,9 +6,10 @@ functions/*.fish
 !functions/eza_git.fish
 !functions/fisher.fish
 
-# Ignore all completion files except fisher
+# Ignore all completion files except fisher and our opencode override
 completions/*.fish
 !completions/fisher.fish
+!completions/oc.fish
 
 # Track root-level config files and conf.d
 !.gitignore
