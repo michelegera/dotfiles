@@ -24,3 +24,8 @@ completions/*.fish
 # tracking them here would only half-vendor the plugin and drift on update.
 conf.d/fish-eza.fish
 conf.d/opah.fish
+
+# Ignore plugin themes, which Fisher regenerates from catppuccin/fish.
+# Tracking them would only half-vendor the plugin and drift on update.
+themes/**
+

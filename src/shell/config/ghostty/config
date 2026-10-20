@@ -3,17 +3,21 @@ cursor-style = bar
 cursor-style-blink = true
 
 # Font
-font-family = "Lilex Nerd Font"
 font-size = 12
 adjust-cell-height = 10%
+font-family = Lilex Nerd Font Mono
 
 # Visuals
+theme = Catppuccin Mocha
+background-opacity = 1
+background-blur-radius = 20
 macos-titlebar-style = hidden
-macos-titlebar-proxy-icon = hidden
 mouse-hide-while-typing = true
-theme = Moonlight
+macos-titlebar-proxy-icon = hidden
+window-decoration = true
+window-padding-x = 16
 
 # Misc
 # Send the actual macOS Unicode character for Option combos instead of escape sequences
-macos-option-as-alt = false
 clipboard-write = allow
+macos-option-as-alt = false

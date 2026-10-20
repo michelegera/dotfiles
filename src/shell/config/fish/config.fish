@@ -64,29 +64,13 @@ set -x RUBY_CONFIGURE_OPTS --with-openssl-dir=/opt/homebrew/opt/openssl@4
 set -x FZF_DEFAULT_COMMAND fd --type f --hidden --follow
 set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
-# Moonlight theme
-set -x FZF_DEFAULT_OPTS $FZF_DEFAULT_OPTS \
-    --highlight-line \
-    --info=inline-right \
-    --ansi \
-    --layout=reverse \
-    --border=none \
-    --color=bg+:#444a73 \
-    --color=bg:#212337 \
-    --color=border:#82aaff \
-    --color=fg:#c8d3f5 \
-    --color=gutter:#212337 \
-    --color=header:#ff995e \
-    --color=hl+:#86e1fc \
-    --color=hl:#86e1fc \
-    --color=info:#7a88cf \
-    --color=marker:#fca7ea \
-    --color=pointer:#fca7ea \
-    --color=prompt:#82aaff \
-    --color=query:#c8d3f5:regular \
-    --color=scrollbar:#82aaff \
-    --color=separator:#ff995e \
-    --color=spinner:#fca7ea
+# Catppuccin Mocha theme
+set -Ux FZF_DEFAULT_OPTS "\
+--color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
+--color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
+--color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
+--color=selected-bg:#45475A \
+--color=border:#6C7086,label:#CDD6F4"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
