@@ -15,9 +15,15 @@ macos-titlebar-style = hidden
 mouse-hide-while-typing = true
 macos-titlebar-proxy-icon = hidden
 window-decoration = true
-window-padding-x = 16
+window-padding-x = 0
 
 # Misc
 # Send the actual macOS Unicode character for Option combos instead of escape sequences
 clipboard-write = allow
 macos-option-as-alt = false
+
+# Notifications
+notify-on-command-finish = never
+notify-on-command-finish-action = no-bell,no-notify
+desktop-notifications = false
+bell-features = no-attention,no-title
