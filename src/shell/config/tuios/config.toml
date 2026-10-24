@@ -1,0 +1,60 @@
+[startup]
+tiled = true
+daemon = true
+
+[appearance]
+theme = "catppuccin_mocha"
+
+[appearance.sidebar]
+position = "left"
+sections = "sessions,agents"
+
+[keybindings]
+leader_key = "ctrl+a"
+
+# Leader + h/j/k/l moves the focus between windows, like the arrow keys
+# under the leader do. j and k belonged to two other actions, so those
+# move to their shifted keys.
+[keybindings.prefix_mode]
+terminal_focus_left = ["left", "h"]
+terminal_focus_down = ["down", "j"]
+terminal_focus_up = ["up", "k"]
+terminal_focus_right = ["right", "l"]
+prefix_jump_notif = ["J"]
+prefix_keybinds = ["K"]
+
+# Leader + r renames the focused window. Settings would take the comma by
+# default, so settings moved to E and the comma is kept here as a second
+# rename key.
+prefix_rename_window = ["r", ","]
+prefix_settings = ["E"]
+
+# Leader + [ swaps the focused window with the one on its left, Leader + ]
+# with the one on its right. The brackets used to be copy mode and paste
+# buffer: copy mode is on esc now and paste buffer on the shifted bracket.
+# Leaving terminal mode keeps opt+esc, so the leader no longer needs a key.
+swap_left = ["["]
+swap_right = ["]"]
+prefix_selection = ["esc"]
+paste_buffer = ["}"]
+prefix_exit_mode = []
+
+# Leader + Y opens a picker for a worktree of the repository the focused
+# pane is in. Enter switches to the worktree picked, or makes one from the
+# name typed.
+[[keybindings.command]]
+key = "prefix+Y"
+type = "popup"
+command = "$HOME/.config/tuios/scripts/worktree-picker.sh"
+description = "Worktree"
+width = "60%"
+height = "50%"
+
+# Leader + ; opens lazygit on the repository the focused pane is in.
+[[keybindings.command]]
+key = "prefix+;"
+type = "popup"
+command = "lazygit"
+description = "Lazygit"
+width = "80%"
+height = "80%"

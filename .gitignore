@@ -11,3 +11,6 @@
 
 # Defensive: dependency directories
 node_modules/
+
+# Defensive: worktrees
+.worktrees
