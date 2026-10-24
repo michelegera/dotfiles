@@ -1,15 +1,16 @@
 {
   "$schema": "https://opencode.ai/v2/cli.json",
-  "theme": {
-    "name": "system"
-  },
+  "animations": true,
   "diffs": {
     "wrap": "word"
   },
   "session": {
-    "sidebar": "auto",
     "scrollbar": false,
-    "thinking": "hide"
+    "sidebar": "auto",
+    "thinking": "hide",
+    "verbosity": "low"
   },
-  "animations": true
+  "theme": {
+    "name": "catppuccin"
+  }
 }
