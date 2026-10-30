@@ -9,8 +9,8 @@ font-family = Lilex Nerd Font Mono
 
 # Visuals
 theme = Catppuccin Mocha
-background-opacity = 1
-background-blur-radius = 20
+background-opacity = 0.9
+background-blur = 20
 macos-titlebar-style = hidden
 mouse-hide-while-typing = true
 macos-titlebar-proxy-icon = hidden
