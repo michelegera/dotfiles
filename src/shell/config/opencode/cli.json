@@ -6,7 +6,7 @@
   },
   "session": {
     "scrollbar": false,
-    "sidebar": "auto",
+    "sidebar": "hide",
     "thinking": "hide",
     "verbosity": "low"
   },

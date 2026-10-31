@@ -5,53 +5,114 @@
     "opencode-go": {
       "designer": {
         "mcps": [],
-        "model": "opencode-go/kimi-k2.7-code",
+        "model": [
+          "opencode-go/kimi-k2.7-code",
+          {
+            "id": "opencode-go/claude-haiku-5-5",
+            "variant": "high"
+          }
+        ],
         "skills": []
       },
       "explorer": {
         "mcps": [],
-        "model": "opencode-go/deepseek-v4-flash",
-        "skills": [],
-        "variant": "high"
+        "model": [
+          {
+            "id": "opencode-go/deepseek-v4.1-flash",
+            "variant": "low"
+          },
+          {
+            "id": "opencode-go/glm-5.3-flash",
+            "variant": "high"
+          }
+        ],
+        "skills": []
       },
       "fixer": {
         "mcps": [],
-        "model": "opencode-go/deepseek-v4-flash",
-        "skills": [],
-        "variant": "high"
+        "model": [
+          {
+            "id": "opencode-go/deepseek-v4.1-flash",
+            "variant": "high"
+          },
+          {
+            "id": "opencode-go/minimax-m3.1-flash",
+            "variant": "high"
+          },
+          {
+            "id": "opencode-go/gpt-6-luna",
+            "variant": "high"
+          }
+        ],
+        "skills": []
       },
       "librarian": {
         "mcps": [
           "context7",
           "gh_grep"
         ],
-        "model": "opencode-go/deepseek-v4-flash",
-        "skills": [],
-        "variant": "high"
+        "model": [
+          {
+            "id": "opencode-go/deepseek-v4.1-flash",
+            "variant": "low"
+          },
+          {
+            "id": "opencode-go/gpt-6-luna",
+            "variant": "low"
+          }
+        ],
+        "skills": []
       },
       "observer": {
         "mcps": [],
-        "model": "opencode-go/mimo-v2.5",
+        "model": [
+          "opencode-go/mimo-v2.5",
+          "opencode-go/beam-free"
+        ],
         "skills": []
       },
       "oracle": {
         "mcps": [],
-        "model": "opencode-go/qwen3.7-max",
+        "model": [
+          {
+            "id": "opencode-go/qwen3.8-max",
+            "variant": "xhigh"
+          },
+          {
+            "id": "opencode-go/glm-5.3",
+            "variant": "max"
+          },
+          {
+            "id": "opencode-go/kimi-k3.1-pro",
+            "variant": "high"
+          }
+        ],
         "skills": [
           "simplify"
-        ],
-        "variant": "max"
+        ]
       },
       "orchestrator": {
         "mcps": [
           "*",
           "!context7"
         ],
-        "model": "opencode-go/minimax-m3",
+        "model": [
+          {
+            "id": "opencode-go/minimax-m3",
+            "variant": "thinking"
+          },
+          {
+            "id": "opencode-go/qwen3.8-max",
+            "variant": "xhigh"
+          },
+          {
+            "id": "opencode-go/gpt-6-luna",
+            "variant": "high"
+          }
+        ],
         "skills": [
           "*"
-        ],
-        "variant": "thinking"
+        ]
       }
     }
   }
