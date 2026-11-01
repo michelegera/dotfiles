@@ -10,5 +10,8 @@
       "disable": true
     }
   },
-  "lsp": true
+  "lsp": true,
+  "worktree": {
+    "directory": ".worktrees"
+  }
 }
