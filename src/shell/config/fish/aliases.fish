@@ -42,6 +42,9 @@ alias txk   'tmux kill-session -t'
 alias txl   'tmux list-sessions'
 alias txn   'tmux new -s'
 
+# Worktrunk
+alias wts  'wt switch'
+
 # Workmux
 alias wma  'workmux add'
 alias wmc  'workmux capture'
