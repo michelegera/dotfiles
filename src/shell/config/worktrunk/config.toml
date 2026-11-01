@@ -1,0 +1,5 @@
+# Worktrunk user configuration
+# https://worktrunk.dev/config/
+
+# Create worktrees inside the repository, at <repo>/.worktrees/<branch>.
+worktree-path = "{{ repo_path }}/.worktrees/{{ branch | sanitize }}"
