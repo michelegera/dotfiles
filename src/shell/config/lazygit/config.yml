@@ -13,32 +13,29 @@ gui:
   # Branch-drawing glyphs are drawn natively by Ghostty (even through tmux),
   # instead of the classic fallback lazygit picks because tmux reports itself.
   commitGraphStyle: "detailed"
-  # Catppuccin Mocha (Blue)
+  # Ink Meridian
   theme:
     activeBorderColor:
-      - '#89b4fa'
+      - '#83A8F2'
       - bold
-    inactiveBorderColor:
-      - '#a6adc8'
-    searchingActiveBorderColor:
-      - '#f9e2af'
-    optionsTextColor:
-      - '#89b4fa'
-    selectedLineBgColor:
-      - '#313244'
-    inactiveViewSelectedLineBgColor:
-      - '#6c7086'
-    cherryPickedCommitFgColor:
-      - '#89b4fa'
-    cherryPickedCommitBgColor:
-      - '#45475a'
-    markedBaseCommitFgColor:
-      - '#89b4fa'
-    markedBaseCommitBgColor:
-      - '#f9e2af'
-    unstagedChangesColor:
-      - '#f38ba8'
-    defaultFgColor:
-      - '#cdd6f4'
+    inactiveBorderColor: ['#26365A']
+    searchingActiveBorderColor: ['#E9C78C']
+    optionsTextColor: ['#83A8F2']
+    selectedLineFgColor: ['#E6ECF7']
+    selectedLineBgColor: ['#25324E']
+    inactiveViewSelectedLineBgColor: ['#1A2233']
+    cherryPickedCommitFgColor: ['#83A8F2']
+    cherryPickedCommitBgColor: ['#233949']
+    markedBaseCommitFgColor: ['#83A8F2']
+    markedBaseCommitBgColor: ['#3C3834']
+    unstagedChangesColor: ['#EC8B97']
+    defaultFgColor: ['#CCD6EA']
     authorColors:
-      '*': '#b4befe'
+      '*': '#A687E0'
+    branchColorPatterns:
+      '^\*\s': '#9DD4A7'
+      '^\+\s': '#9DD4A7'
+      '^-\s': '#EC8B97'
+      ' -> ': '#E9C78C'
+      '^remotes/': '#67B7CF'
+      '^tags/': '#BDA3EC'

@@ -64,13 +64,18 @@ set -x RUBY_CONFIGURE_OPTS --with-openssl-dir=/opt/homebrew/opt/openssl@4
 set -x FZF_DEFAULT_COMMAND fd --type f --hidden --follow
 set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
-# Catppuccin Mocha theme
+# Ink Meridian theme
 set -Ux FZF_DEFAULT_OPTS "\
---color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
---color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
---color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
---color=selected-bg:#45475A \
---color=border:#6C7086,label:#CDD6F4"
+--color=fg:#CCD6EA,list-fg:#CCD6EA,selected-fg:#E6ECF7,preview-fg:#CCD6EA \
+--color=bg:#101623,list-bg:#101623,selected-bg:#26365A,preview-bg:#1A2233 \
+--color=input-bg:#101623,header-bg:#101623,footer-bg:#101623 \
+--color=hl:#83A8F2,selected-hl:#8DB0F2,current-fg:#E6ECF7,current-bg:#26365A \
+--color=current-hl:#83A8F2,border:#26365A,list-border:#26365A,preview-border:#26365A \
+--color=input-border:#26365A,header-border:#26365A,footer-border:#26365A \
+--color=label:#AAB8D0,list-label:#AAB8D0,preview-label:#AAB8D0,input-label:#AAB8D0 \
+--color=header-label:#8DB0F2,footer-label:#AAB8D0,prompt:#83A8F2,pointer:#8DB0F2 \
+--color=marker:#A687E0,spinner:#67B7CF,info:#58657F,header:#8DB0F2,query:#E6ECF7 \
+--color=disabled:#58657F,separator:#26365A,scrollbar:#26365A,gutter:#101623"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

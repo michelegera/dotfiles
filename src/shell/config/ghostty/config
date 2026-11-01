@@ -8,7 +8,7 @@ adjust-cell-height = 10%
 font-family = Lilex Nerd Font Mono
 
 # Visuals
-theme = Catppuccin Mocha
+theme = ink-meridian
 background-opacity = 0.9
 background-blur = 20
 macos-titlebar-style = hidden

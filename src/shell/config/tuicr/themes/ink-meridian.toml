@@ -1,0 +1,64 @@
+# Ink Meridian local theme for tuicr.
+# Flat key/value schema is intentional: local themes use the same top-level keys
+# that tuicr validates at load time, so the file stays easy to copy and edit.
+
+# Panel chrome and base foregrounds.
+panel_bg = "#1A2233"
+bg_highlight = "#26365A"
+fg_primary = "#CCD6EA"
+fg_secondary = "#AAB8D0"
+fg_dim = "#58657F"
+
+# Diff rendering.
+diff_add = "#9DD4A7"
+diff_add_bg = "#283B3B"
+diff_del = "#EC8B97"
+diff_del_bg = "#3D2937"
+diff_context = "#CCD6EA"
+diff_hunk_header = "#8DB0F2"
+expanded_context_fg = "#58657F"
+
+# Syntax backgrounds for added and removed lines.
+syntax_add_bg = "#283B3B"
+syntax_del_bg = "#3D2937"
+# Optional syntax theme, resolved relative to this file.
+syntax_theme = "ink-meridian-syntax.tmTheme"
+
+# File status markers.
+file_added = "#9DD4A7"
+file_modified = "#E9C78C"
+file_deleted = "#EC8B97"
+file_renamed = "#8DB0F2"
+
+# Review states.
+reviewed = "#9DD4A7"
+pending = "#E9C78C"
+
+# Comment label accents.
+comment_note = "#83A8F2"
+comment_suggestion = "#87CEE2"
+comment_issue = "#EC8B97"
+comment_praise = "#9DD4A7"
+
+# Chrome: borders, status bar, cursor, branch, help.
+border_focused = "#83A8F2"
+border_unfocused = "#26365A"
+status_bar_bg = "#1A2233"
+cursor_color = "#83A8F2"
+cursor_line_bg = "#25324E"
+branch_name = "#BDA3EC"
+help_indicator = "#58657F"
+
+# Inline messages and the update badge.
+message_info_fg = "#101623"
+message_info_bg = "#83A8F2"
+message_warning_fg = "#101623"
+message_warning_bg = "#E9C78C"
+message_error_fg = "#101623"
+message_error_bg = "#EC8B97"
+update_badge_fg = "#101623"
+update_badge_bg = "#E9C78C"
+
+# Mode indicator.
+mode_fg = "#101623"
+mode_bg = "#8DB0F2"

@@ -1,0 +1,29 @@
+# Ink Meridian — ghostty colour theme
+# Palette source: https://github.com/michelegera/ink-meridian
+
+background = #101623
+foreground = #CCD6EA
+cursor-color = #83A8F2
+cursor-text = #101623
+selection-background = #26365A
+selection-foreground = #E6ECF7
+
+# ANSI palette (0-15)
+palette = 0=#1A2233
+palette = 1=#DE6E7C
+palette = 2=#7CBF8E
+palette = 3=#D9B06E
+palette = 4=#6F96E8
+palette = 5=#A687E0
+palette = 6=#67B7CF
+palette = 7=#AAB8D0
+palette = 8=#58657F
+palette = 9=#EC8B97
+palette = 10=#9DD4A7
+palette = 11=#E9C78C
+palette = 12=#8DB0F2
+palette = 13=#BDA3EC
+palette = 14=#87CEE2
+palette = 15=#E6ECF7
+
+palette-generate = true
