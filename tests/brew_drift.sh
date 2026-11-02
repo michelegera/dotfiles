@@ -46,9 +46,17 @@ get_declared_taps() {
 
 get_declared_mas_ids() {
 
-    grep -hE '^[[:space:]]*mas_install[[:space:]]+"' "$INSTALLS_DIR"/*.sh \
-        | sed -E 's/.*mas_install[[:space:]]+"[^"]*"[[:space:]]+"([^"]+)".*/\1/' \
-        | sort -u
+    {
+        grep -hE '^[[:space:]]*mas_install[[:space:]]+"' "$INSTALLS_DIR"/*.sh \
+            | sed -E 's/.*mas_install[[:space:]]+"[^"]*"[[:space:]]+"([^"]+)".*/\1/'
+
+        # Apps that cannot be installed through `mas` (e.g. `Xcode`, which is
+        # too large for the App Store tooling) are declared by opening their
+        # App Store page instead, so their ID is read from that URL.
+
+        grep -hEo 'macappstores://[^"]+' "$INSTALLS_DIR"/*.sh \
+            | sed -E 's|.*/id([0-9]+)$|\1|'
+    } | sort -u
 
 }
 

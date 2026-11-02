@@ -19,4 +19,4 @@ printf "\n"
 
 brew_install "Claude" "claude" "--cask"
 brew_install "Claude Code" "claude-code"
-brew_install "OpenCode" "opencode" "" "anomalyco/tap"
+brew_install "OpenCode" "opencode-v2" "" "anomalyco/tap"
