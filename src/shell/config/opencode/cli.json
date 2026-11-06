@@ -11,6 +11,7 @@
     "verbosity": "low"
   },
   "theme": {
-    "name": "system"
+    "name": "ink-meridian",
+    "mode": "system"
   }
 }
