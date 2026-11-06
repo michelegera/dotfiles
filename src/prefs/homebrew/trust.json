@@ -5,7 +5,6 @@
   "trustedtaps": [
     "agavra/tap",
     "anomalyco/tap",
-    "buo/cask-upgrade",
-    "raine/workmux"
+    "buo/cask-upgrade"
   ]
 }
