@@ -120,6 +120,12 @@ Host github.com
 
 ### Set up GPG signing for Git commits
 
+The setup creates `~/.gnupg` as a real directory and links the tracked
+`gpg.conf` into it. It is deliberately **not** a symbolic link into this
+repository, so that your private keys cannot be lost by an update. The
+`gpg-agent.conf` is generated from the template in [`src/prefs/gnupg`][gnupg],
+with the Homebrew prefix resolved for your machine.
+
 First, make sure permissions are set correctly on the `.gnupg` directory:
 
 ```shell
@@ -159,6 +165,13 @@ with your own in the following places:
 To update the dotfiles you can either run the [`setup` script][setup] or, if you
 want to update one particular part, run the appropriate [`os` script][os].
 
+The setup script never deletes an existing dotfiles directory. If the directory
+is already a clone of this repository, it is updated in place: only the `main`
+branch is updated, any other branch is left untouched, and local changes are
+stashed rather than discarded. If the directory is not a clone of this
+repository, it is moved aside to `<directory>.backup-<timestamp>` instead of
+being overwritten, so that nothing is ever lost.
+
 ### Checking for package drift
 
 To check whether the Homebrew packages and taps, or the App Store applications
@@ -171,6 +184,21 @@ installed on this machine have drifted from the ones declared in the
 
 Packages that are intentionally managed only on the local machine can be
 listed in `tests/brew_local_allowlist`.
+
+### Running the tests
+
+The same checks that run in CI can be run locally:
+
+```shell
+./tests/shellcheck.sh      # ShellCheck over every shell script
+./tests/bash_syntax.sh     # `bash -n` over every shell script
+./tests/fish_syntax.sh     # `fish --no-execute` over every Fish script
+./tests/symlink_targets.sh # every symlinked path exists in this repository
+```
+
+`./tests/fish_format.sh` additionally checks the formatting of the Fish files.
+It is not part of CI, because the output of `fish_indent` changes between Fish
+releases, and the vendored Fisher files are excluded from it.
 
 ## Acknowledgements
 
@@ -192,6 +220,7 @@ The code is available under the [MIT license][license].
 [fork]: https://help.github.com/en/github/getting-started-with-github/fork-a-repo
 [git]: src/git
 [github profile]: https://github.com/michelegera
+[gnupg]: src/prefs/gnupg
 [installs]: src/os/installs
 [license]: LICENSE.txt
 [os]: src/os
