@@ -44,9 +44,24 @@ set -gx GPG_TTY (tty)
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# Resolve the Homebrew prefix portably: `brew` may already be on the path,
+# otherwise fall back to the Apple Silicon or Intel default location.
+
+set -l brew_prefix
+
+if command -q brew
+    set brew_prefix (brew --prefix)
+else if test -d /opt/homebrew/bin
+    set brew_prefix /opt/homebrew
+else if test -d /usr/local/bin
+    set brew_prefix /usr/local
+end
+
 # Set executables paths, in order
 
-fish_add_path -Pm /opt/homebrew/bin
+if set -q brew_prefix
+    fish_add_path -Pm $brew_prefix/bin
+end
 fish_add_path -Pm /usr/local/sbin
 fish_add_path -Pm $HOME/.local/bin
 
@@ -54,8 +69,17 @@ fish_add_path -Pm $HOME/.local/bin
 
 # Link Rubies to Homebrew’s OpenSSL, since ruby-build installs a non-Homebrew
 # OpenSSL for each Ruby version installed and these are never upgraded.
+#
+# `brew --prefix openssl` follows Homebrew’s current formula alias (e.g.
+# `openssl@4` today), so this keeps working when the versioned formula changes.
 
-set -x RUBY_CONFIGURE_OPTS --with-openssl-dir=/opt/homebrew/opt/openssl@4
+if command -q brew
+    set -l openssl_prefix (brew --prefix openssl 2>/dev/null)
+
+    if test -d $openssl_prefix
+        set -x RUBY_CONFIGURE_OPTS --with-openssl-dir=$openssl_prefix
+    end
+end
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

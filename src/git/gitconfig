@@ -93,7 +93,7 @@
 
 [gpg]
 
-    program = /opt/homebrew/bin/gpg
+    program = gpg
 
 [help]
 
