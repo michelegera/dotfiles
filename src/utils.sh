@@ -21,7 +21,7 @@ ask_for_confirmation() {
 
 ask_for_password() {
     print_question "$1"
-    read -s
+    read -s -r
 }
 
 ask_for_sudo() {
@@ -65,9 +65,7 @@ execute() {
 
     # Execute commands in background
 
-    eval "$CMDS" \
-        &> /dev/null \
-        2> "$TMP_FILE" &
+    eval "$CMDS" > /dev/null 2> "$TMP_FILE" &
 
     cmdsPID=$!
 
@@ -91,8 +89,12 @@ execute() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # Print output based on what happened.
+    #
+    # `print_result` returns the exit code, which must not abort `execute`
+    # through `set -e` before the stderr of the commands has been printed.
 
-    print_result $exitCode "$MSG"
+    print_result $exitCode "$MSG" \
+        || true
 
     if [ $exitCode -ne 0 ]; then
         print_error_stream < "$TMP_FILE"
@@ -202,6 +204,11 @@ kill_all_subprocesses() {
 }
 
 mkd() {
+
+    local escapedPath=""
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     if [ -n "$1" ]; then
         if [ -e "$1" ]; then
             if [ ! -d "$1" ]; then
@@ -210,9 +217,16 @@ mkd() {
                 print_success "$1"
             fi
         else
-            execute "mkdir -p $1" "$1"
+
+            # `execute` runs the command through `eval`, so the path has to be
+            # escaped in order not to break on spaces and special characters.
+
+            printf -v escapedPath '%q' "$1"
+
+            execute "mkdir -p $escapedPath" "$1"
         fi
     fi
+
 }
 
 print_error() {
@@ -360,35 +374,79 @@ symlink() {
 
     local skipQuestions="${3:-false}"
 
-    if [ ! -e "$2" ] || $skipQuestions; then
+    local escapedSource=""
+    local escapedTarget=""
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # `execute` runs the command through `eval`, so the paths have to be
+    # escaped in order not to break on spaces and special characters.
+
+    printf -v escapedSource '%q' "$1"
+    printf -v escapedTarget '%q' "$2"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # If the target is already the wanted symbolic link, there is nothing to do.
+
+    if [ -L "$2" ] && [ "$(readlink "$2")" == "$1" ]; then
+        print_success "$2 → $1"
+        return 0
+    fi
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # `ln -sfn` does not replace a real directory, it creates the link inside
+    # it (e.g. `~/.config/config`). Refuse to touch it, otherwise the setup
+    # would end up silently broken.
+
+    if [ -d "$2" ] && [ ! -L "$2" ]; then
+        print_error "$2 is a directory, left untouched"
+        return 0
+    fi
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Create the link if the target does not exist (yet).
+
+    if [ ! -e "$2" ]; then
 
         execute \
-            "ln -fs $1 $2" \
+            "ln -sfn $escapedSource $escapedTarget" \
             "$2 → $1"
 
-    elif [ "$(readlink "$2")" == "$1" ]; then
-        print_success "$2 → $1"
+        return
+    fi
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Replace an existing file (or a symbolic link pointing somewhere else)
+    # without asking, if the user requested to skip the questions.
+
+    if $skipQuestions; then
+
+        execute \
+            "ln -sfn $escapedSource $escapedTarget" \
+            "$2 → $1"
+
+        return
+    fi
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    ask_for_confirmation \
+        "'$2' already exists, do you want to overwrite it?"
+
+    if answer_is_yes; then
+
+        rm -rf "$2"
+
+        execute \
+            "ln -sfn $escapedSource $escapedTarget" \
+            "$2 → $1"
+
     else
-
-        if ! $skipQuestions; then
-
-            ask_for_confirmation \
-                "'$2' already exists, do you want to overwrite it?"
-
-            if answer_is_yes; then
-
-                rm -rf "$2"
-
-                execute \
-                    "ln -fs $1 $2" \
-                    "$2 → $1"
-
-            else
-                print_error "$2 → $1"
-            fi
-
-        fi
-
+        print_error "$2 → $1"
     fi
 
 }

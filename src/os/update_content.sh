@@ -38,7 +38,7 @@ main() {
 
         if [ -n "$localChanges" ]; then
             printf "\n"
-            print_warning "The following local changes will be stashed:"
+            print_warning "The following local changes (including untracked files) will be stashed:"
             printf "%s\n" "$localChanges"
             printf "\n"
 
@@ -52,21 +52,27 @@ main() {
 
         # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        # Stash local changes before resetting, so they can be restored later.
+        # Stash local changes (untracked files included) before resetting, so
+        # they can be restored later. Without `-u`, `git clean` would delete
+        # the untracked files instead of preserving them.
 
         if [ -n "$localChanges" ]; then
-            git stash push -m "dotfiles-update-$(date +%s)" 1> /dev/null \
+            git stash push -u -m "dotfiles-update-$(date +%s)" 1> /dev/null \
                 || print_warning "Failed to stash local changes — they may be lost"
         fi
 
         # A failure in any of these must be reported instead of aborting the
         # script through `set -e`.
+        #
+        # `checkout` comes first because `reset --hard origin/main` would
+        # otherwise move the pointer of whatever branch is currently checked
+        # out instead of `main`.
 
         local updateExitCode=0
 
-        { git fetch --all 1> /dev/null \
+        { git checkout main &> /dev/null \
+            && git fetch --all 1> /dev/null \
             && git reset --hard origin/main 1> /dev/null \
-            && git checkout main &> /dev/null \
             && git clean -fd 1> /dev/null ; } \
             || updateExitCode=$?
 
