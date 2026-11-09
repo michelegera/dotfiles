@@ -22,8 +22,8 @@ function add_identifier {
     fi
 
     # get UUID and TYPE from `diskutil info $ID`
-    UUID=`diskutil info "$ID" | grep "Volume UUID" | awk '{print $NF}'`
-    TYPE=`diskutil info "$ID" | grep "Type (Bundle)" | awk '{print $NF}'`
+    UUID=$(diskutil info "$ID" | grep "Volume UUID" | awk '{print $NF}')
+    TYPE=$(diskutil info "$ID" | grep "Type (Bundle)" | awk '{print $NF}')
 
     # Remove this UUID from fstab file
     sudo sed -i '' "/$UUID/d" $FSTAB
@@ -37,25 +37,25 @@ function add_identifier {
 # that they do not automout.
 
 # Get list of identifiers and volume names from `diskutil info`
-LIST=`diskutil list | grep "$NAME"`
+LIST=$(diskutil list | grep "$NAME")
 
 # Iterate over $LIST
-echo "$LIST" | while read LINE
+echo "$LIST" | while read -r LINE
 do
     # Example of $LINE:
     #    1: APFS Volume Swiftsure Clone - Data 592.1 GB disk4s1
 
     # Extract disk identifier which is the last field on the line
-    ID=`echo $LINE | awk '{print $NF}'`
+    ID=$(echo "$LINE" | awk '{print $NF}')
 
     # Extract volume name in the middle of $LINE by:
     #    1. remove all characters before $NAME using regex capture assign to $PARTIAL
     [[ ${LINE} =~ ($NAME.*) ]] && PARTIAL=${BASH_REMATCH[1]}
     #    2. Cut out the last 3 fields (size, units & ID) from $PARTIAL
     #       by reversing, cutting and un-reversing
-    VOLUME_NAME=`echo $PARTIAL | rev | cut -d' ' -f 4- | rev`
+    VOLUME_NAME=$(echo "$PARTIAL" | rev | cut -d' ' -f 4- | rev)
 
-    add_identifier $ID "$VOLUME_NAME"
+    add_identifier "$ID" "$VOLUME_NAME"
 done
 
 # All done!

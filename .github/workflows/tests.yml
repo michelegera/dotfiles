@@ -23,3 +23,33 @@ jobs:
 
       - name: Run ShellCheck
         run: ./tests/shellcheck.sh
+
+  bash_syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Run Bash syntax check
+        run: ./tests/bash_syntax.sh
+
+  fish_syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Install fish
+        run: sudo apt-get update && sudo apt-get install -y fish
+
+      - name: Run Fish syntax check
+        run: ./tests/fish_syntax.sh
+
+  symlink_targets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Run symbolic link target check
+        run: ./tests/symlink_targets.sh
