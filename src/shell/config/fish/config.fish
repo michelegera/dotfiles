@@ -31,15 +31,17 @@ set -x VISUAL nvim
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Configure gpg-agent
+# Configure gpg-agent for commit signing.
 
-# Only launch if the agent socket isn't already present — avoids spawning a
-# process on every new shell.
-if not test -S $HOME/.gnupg/S.gpg-agent.ssh
+# SSH authentication is handled entirely by the 1Password agent
+# (see ~/.ssh/config), so gpg-agent's SSH support is intentionally unused.
+
+# Only launch the agent if its socket isn't already present — avoids spawning
+# a process on every new shell.
+if not test -S $HOME/.gnupg/S.gpg-agent
     gpgconf --launch gpg-agent
 end
 
-set -gx SSH_AUTH_SOCKET $HOME/.gnupg/S.gpg-agent.ssh
 set -gx GPG_TTY (tty)
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -90,7 +92,7 @@ set -x FZF_DEFAULT_COMMAND fd --type f --hidden --follow
 set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
 # Ink Meridian theme
-set -Ux FZF_DEFAULT_OPTS "\
+set -gx FZF_DEFAULT_OPTS "\
 --color=fg:#CCD6EA,list-fg:#CCD6EA,selected-fg:#E6ECF7,preview-fg:#CCD6EA \
 --color=bg:#101623,list-bg:#101623,selected-bg:#26365A,preview-bg:#1A2233 \
 --color=input-bg:#101623,header-bg:#101623,footer-bg:#101623 \
