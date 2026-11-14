@@ -61,6 +61,7 @@ end
 
 if set -q brew_prefix
     fish_add_path -Pm $brew_prefix/bin
+    fish_add_path -Pm $brew_prefix/sbin
 end
 fish_add_path -Pm /usr/local/sbin
 fish_add_path -Pm $HOME/.local/bin
