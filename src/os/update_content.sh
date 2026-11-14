@@ -7,22 +7,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 main() {
 
-    local sshExitCode=0
-
-    # `ssh -T git@github.com` exits with 1 when the authentication succeeds,
-    # since GitHub does not provide shell access. Anything else means the SSH
-    # key is not set up yet.
-
-    ssh -T git@github.com &> /dev/null \
-        || sshExitCode=$?
-
-    if [ "$sshExitCode" -ne 1 ]; then
-        ./set_github_ssh_key.sh \
-            || return 1
-    fi
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     print_in_purple "\n • Update content\n\n"
 
     ask_for_confirmation "Do you want to update the content from the 'dotfiles' directory?"
