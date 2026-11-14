@@ -16,6 +16,6 @@ main() {
         sudo shutdown -r now &> /dev/null
     fi
 
- }
+}
 
- main
+main
