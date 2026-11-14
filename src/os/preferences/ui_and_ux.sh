@@ -11,6 +11,10 @@ execute "defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool
          defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true" \
    "Avoid creating '.DS_Store' files on network or USB volumes"
 
+# Deliberately disable the Gatekeeper "downloaded from the internet" prompt
+# for every downloaded app. This is an intentional security trade-off:
+# convenience over Gatekeeper's warning. Re-enable by setting LSQuarantine
+# back to true.
 execute "defaults write com.apple.LaunchServices LSQuarantine -bool false" \
     "Disable 'Are you sure you want to open this application?' dialog"
 
@@ -53,9 +57,6 @@ execute "defaults write -g QLPanelAnimationDuration -float 0" \
 
 execute "defaults write -g NSQuitAlwaysKeepsWindows -bool false" \
     "Disable resume system-wide"
-
-execute "defaults write com.apple.mail DisableInlineAttachmentViewing -bool true" \
-    "Show Mail attachments as icons"
 
 execute "defaults write com.apple.spaces spans-displays -bool true" \
     "Disable separate spaces for displays"

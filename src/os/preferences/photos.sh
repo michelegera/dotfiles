@@ -7,8 +7,5 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Photos\n\n"
 
-execute "defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true" \
-    "Prevent Photos from opening automatically when devices are plugged in"
-
 killall "Photos" &> /dev/null \
     || true

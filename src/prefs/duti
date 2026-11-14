@@ -51,8 +51,6 @@ com.colliderli.iina           .mp4                            all
 com.panic.Transmit                  ftp
 com.panic.Transmit                  sftp
 
-com.readdle.SparkDesktop            mailto
-
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Last line must be blank

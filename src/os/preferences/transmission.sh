@@ -17,8 +17,7 @@ execute "defaults write org.m0k.transmission DownloadAsk -bool false && \
 execute "defaults write org.m0k.transmission CheckRemoveDownloading -bool true" \
     "Don’t prompt for confirmation before removing non-downloading active transfers"
 
-execute "defaults write org.m0k.transmission DownloadChoice -string 'Constant' && \
-         defaults write org.m0k.transmission DownloadFolder -string '$HOME/Torrents'" \
+execute "defaults write org.m0k.transmission DownloadFolder -string '$HOME/Torrents'" \
     "Use '~/Torrents' to store complete downloads"
 
 execute "defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true && \
