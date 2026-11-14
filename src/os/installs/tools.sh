@@ -59,3 +59,7 @@ brew_install "wget" "wget"
 brew_install "Worktrunk" "worktrunk"
 brew_install "xh" "xh"
 brew_install "zoxide" "zoxide"
+
+# Report any failure from the list above through the exit status.
+
+exit "${install_failed:-0}"

@@ -15,3 +15,7 @@ print_in_purple "\n   Fonts\n\n"
 
 brew_install "San Francisco Mono Nerd Font Ligaturized" "font-sf-mono-nerd-font-ligaturized" "--cask"
 brew_install "Lilex Nerd Font" "font-lilex-nerd-font" "--cask"
+
+# Report any failure from the list above through the exit status.
+
+exit "${install_failed:-0}"

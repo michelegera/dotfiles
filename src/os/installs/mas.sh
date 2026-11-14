@@ -17,3 +17,7 @@ mas_install "Convert & Compress" "6752861983"
 mas_install "Lightweight PDF" "1450640351"
 mas_install "Parcel" "375589283"
 mas_install "Things" "904280696"
+
+# Report any failure from the list above through the exit status.
+
+exit "${install_failed:-0}"

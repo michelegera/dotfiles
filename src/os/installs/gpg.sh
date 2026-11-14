@@ -122,6 +122,12 @@ render_gpg_agent_config() {
         mv "$tempFile" "$configFile" || exitCode=$?
     fi
 
+    # Restart the agent so a changed `pinentry-program` path takes effect.
+    # Best-effort: a machine without a running agent has nothing to kill.
+    if [ "$exitCode" -eq 0 ]; then
+        gpgconf --kill gpg-agent &> /dev/null || true
+    fi
+
     # Never leave a partial file behind on failure.
 
     if [ "$exitCode" -ne 0 ] && [ -n "$tempFile" ]; then
@@ -132,4 +138,9 @@ render_gpg_agent_config() {
 
 }
 
-render_gpg_agent_config
+render_gpg_agent_config \
+    || install_failed=1
+
+# Report any failure from the list above through the exit status.
+
+exit "$install_failed"

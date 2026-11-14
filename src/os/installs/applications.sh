@@ -30,7 +30,10 @@ brew_install "NTFS for Mac" "paragon-ntfs"
 brew_install "Purge" "purge" "--cask"
 brew_install "Raycast" "raycast"
 brew_install "Shottr" "shottr"
-brew_install "Spark" "readdle-spark"
 brew_install "Spotify" "spotify"
 brew_install "Transmission" "transmission" "--cask"
 brew_install "Transmit" "transmit"
+
+# Report any failure from the list above through the exit status.
+
+exit "${install_failed:-0}"

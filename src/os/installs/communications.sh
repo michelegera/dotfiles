@@ -17,3 +17,7 @@ brew_install "Discord" "discord"
 brew_install "Slack" "slack"
 brew_install "Telegram Desktop" "telegram-desktop"
 brew_install "WhatsApp" "whatsapp"
+
+# Report any failure from the list above through the exit status.
+
+exit "${install_failed:-0}"

@@ -18,3 +18,7 @@ brew_install "Medis" "medis"
 brew_install "Postico" "postico"
 brew_install "Tuicr" "tuicr"
 brew_install "Zed" "zed"
+
+# Report any failure from the list above through the exit status.
+
+exit "${install_failed:-0}"

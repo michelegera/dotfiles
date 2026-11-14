@@ -39,6 +39,8 @@ install_xcode() {
 
     # Wait until `Xcode` is installed.
 
+    print_info "Waiting for Xcode to finish installing - complete the install in the App Store."
+
     execute \
         "until is_xcode_installed; do \
             sleep 5; \
@@ -61,6 +63,8 @@ install_xcode_command_line_tools() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # Wait until the `Xcode Command Line Tools` are installed.
+
+    print_info "Waiting for the Xcode Command Line Tools to finish installing - complete the install prompt."
 
     execute \
         "until are_xcode_command_line_tools_installed; do \

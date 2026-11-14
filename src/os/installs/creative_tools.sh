@@ -15,3 +15,7 @@ print_in_purple "\n   Creative Tools\n\n"
 
 brew_install "Affinity" "affinity"
 brew_install "HandBrake" "handbrake-app"
+
+# Report any failure from the list above through the exit status.
+
+exit "${install_failed:-0}"

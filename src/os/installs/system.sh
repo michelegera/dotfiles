@@ -16,3 +16,7 @@ print_in_purple "\n   System\n\n"
 brew_install "Mole" "mole"
 brew_install "OpenLogi" "openlogi"
 brew_install "Rode Connect" "rode-connect"
+
+# Report any failure from the list above through the exit status.
+
+exit "${install_failed:-0}"

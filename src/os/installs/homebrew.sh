@@ -150,10 +150,19 @@ main() {
     add_to_path \
         || return 1
 
-    opt_out_of_analytics
+    # None of the steps below are fatal: a transient network failure while
+    # opting out of analytics, updating or upgrading must not abort the whole
+    # bootstrap. The error is already reported by `execute`/`print_result`, so
+    # the failure is swallowed here on purpose. Do not remove the guards.
 
-    update
-    upgrade
+    opt_out_of_analytics \
+        || true
+
+    update \
+        || true
+
+    upgrade \
+        || true
 }
 
 main

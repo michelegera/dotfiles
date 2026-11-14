@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# `install_failed` (see below) is assigned here but read by the install scripts
+# that source this file, so `shellcheck` cannot see the usage.
+# shellcheck disable=SC2034
+
 cd "$(dirname "${BASH_SOURCE[0]}")" \
     && . "../../utils.sh"
 
@@ -11,6 +15,11 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 # `homebrew.sh` sets up is gone by the time the next script starts. Adding the
 # `Homebrew` directory here means all of them can find `brew`, no matter which
 # one runs first.
+
+# Set to 1 by `brew_install` / `mas_install` when an install fails, so a script
+# that continues past a failure (under `set +e`) can still report it through
+# its exit status. A script's exit status is otherwise that of its last command.
+install_failed=0
 
 add_homebrew_to_path() {
 
@@ -46,12 +55,15 @@ brew_install() {
     declare -r FORMULA_READABLE_NAME="$1"
     declare -r TAP_VALUE="${4:-}"
 
+    local exitCode=0
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # Check if `Homebrew` is installed.
 
     if ! cmd_exists "brew"; then
         print_error "$FORMULA_READABLE_NAME ('Homebrew' is not installed)"
+        install_failed=1
         return 1
     fi
 
@@ -62,6 +74,7 @@ brew_install() {
     if [ -n "$TAP_VALUE" ]; then
         if ! brew_tap "$TAP_VALUE"; then
             print_error "$FORMULA_READABLE_NAME ('brew tap $TAP_VALUE' failed)"
+            install_failed=1
             return 1
         fi
     fi
@@ -76,7 +89,14 @@ brew_install() {
     else
         execute \
             "brew install $FORMULA $ARGUMENTS" \
-            "$FORMULA_READABLE_NAME"
+            "$FORMULA_READABLE_NAME" \
+                || exitCode=$?
+
+        if [ "$exitCode" -ne 0 ]; then
+            install_failed=1
+        fi
+
+        return "$exitCode"
     fi
 
 }
@@ -101,26 +121,12 @@ brew_tap() {
     brew tap "$1" &> /dev/null
 }
 
-brew_update() {
-
-    execute \
-        "brew update" \
-        "Homebrew (update)"
-
-}
-
-brew_upgrade() {
-
-    execute \
-        "brew upgrade" \
-        "Homebrew (upgrade)"
-
-}
-
 mas_install() {
 
     declare -r APP_ID="$2"
     declare -r APP_READABLE_NAME="$1"
+
+    local exitCode=0
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -128,6 +134,7 @@ mas_install() {
 
     if ! cmd_exists "mas"; then
         print_error "$APP_READABLE_NAME ('mas' is not installed)"
+        install_failed=1
         return 1
     fi
 
@@ -146,7 +153,14 @@ mas_install() {
     else
         execute \
             "MAS_NO_AUTO_INDEX=1 mas install $APP_ID" \
-            "$APP_READABLE_NAME"
+            "$APP_READABLE_NAME" \
+                || exitCode=$?
+
+        if [ "$exitCode" -ne 0 ]; then
+            install_failed=1
+        fi
+
+        return "$exitCode"
     fi
 
 }

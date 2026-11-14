@@ -65,7 +65,7 @@ install_fisher() {
 
     local exitCode=0
 
-    local script="curl -sL git.io/fisher | source && \
+    local script="curl -fsSL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && \
         fisher install jorgebucaran/fisher"
 
     # Fisher needs network access, so a failure must be reported instead of

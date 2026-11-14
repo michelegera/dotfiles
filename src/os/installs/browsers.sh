@@ -19,3 +19,7 @@ printf "\n"
 
 brew_install "Chrome" "google-chrome"
 brew_install "Firefox" "firefox"
+
+# Report any failure from the list above through the exit status.
+
+exit "${install_failed:-0}"

@@ -20,3 +20,7 @@ printf "\n"
 brew_install "Claude" "claude" "--cask"
 brew_install "Claude Code" "claude-code"
 brew_install "OpenCode" "opencode-v2" "" "anomalyco/tap"
+
+# Report any failure from the list above through the exit status.
+
+exit "${install_failed:-0}"
