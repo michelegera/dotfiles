@@ -26,7 +26,13 @@ migrate_gnupg_out_of_repository() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    repoRoot="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd -P)" \
+    # The script has already `cd`'d into its own directory (`src/os`) above, so
+    # the repository root is two levels up from the current directory. Do not
+    # derive this from `BASH_SOURCE` — when the script is invoked through a
+    # relative path (e.g. `./os/create_symbolic_links.sh`) that path is no
+    # longer valid after the `cd`.
+
+    repoRoot="$(cd ../.. && pwd -P)" \
         || return 1
 
     # Fresh machine: `~/.gnupg` has to be a real directory, never a link.
