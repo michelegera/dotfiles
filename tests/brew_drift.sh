@@ -3,6 +3,14 @@
 # Checks for drift between the packages declared in the install scripts
 # and what is actually installed through Homebrew / `mas` on this machine.
 #
+# The two directions that are reported mean different things:
+#
+#   - "declared but not installed" → the package is expected here but is
+#     missing, i.e. the install script was not run (a warning: install it).
+#   - "installed but not declared" → the package is on this machine without
+#     being declared anywhere (drift: declare it in `src/os/installs`, or
+#     allow-list it if it is intentionally local-only).
+#
 # Packages that are intentionally managed only locally can be listed in
 # the `brew_local_allowlist` file (one entry per line, '#' starts a comment).
 #
@@ -15,18 +23,73 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# `jq` is needed to read the aliases / old names out of Homebrew's JSON
+# output. Without this check the script would abort halfway through, because
+# of the `set -e` inherited from `utils.sh`, with a confusing error.
+
+if ! cmd_exists "jq"; then
+    print_error "This script requires 'jq' (brew install jq)"
+    exit 1
+fi
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 declare -r INSTALLS_DIR="../src/os/installs"
 declare -r ALLOWLIST_FILE="./brew_local_allowlist"
 
+# A single- or double-quoted shell string, and a single quote character, as
+# POSIX extended regular expressions (used by the extraction helpers below).
+
+declare -r QUOTE='["'"'"']'
+declare -r QUOTED='["'"'"'][^"'"'"']*["'"'"']'
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+get_normalized_installs() {
+
+    # Print the install scripts with the `\`-terminated continuation lines
+    # joined, so that a call written as:
+    #
+    #     brew_install "Multi" \
+    #         "multi-line"
+    #
+    # is matched exactly like `brew_install "Multi" "multi-line"`.
+    #
+    # Only lines that end with a backslash are joined, so unrelated lines are
+    # left untouched.
+
+    local file=""
+
+    for file in "$INSTALLS_DIR"/*.sh; do
+        awk '
+            /\\[[:space:]]*$/ {
+                sub(/[[:space:]]*\\[[:space:]]*$/, " ")
+                printf "%s", $0
+                next
+            }
+            { print }
+        ' "$file"
+    done
+
+}
 
 get_declared_formulae() {
 
     # Extract the formula / cask tokens (second `brew_install` argument),
     # stripping any tap prefixes.
+    #
+    # The recognised call shapes are all indented or line-initial, on a single
+    # line or continued with a trailing `\`, and single- or double-quoted:
+    #
+    #     brew_install "Name" "token"
+    #     brew_install 'Name' 'token'
+    #
+    # Limitation: calls that do not start the line (e.g. `if brew_install ...`
+    # or `x && brew_install ...`) are not detected.
 
-    grep -hE '^[[:space:]]*brew_install[[:space:]]+"' "$INSTALLS_DIR"/*.sh \
-        | sed -E 's/.*brew_install[[:space:]]+"[^"]*"[[:space:]]+"([^"]+)".*/\1/' \
+    get_normalized_installs \
+        | grep -E "^[[:space:]]*brew_install[[:space:]]+${QUOTE}" \
+        | sed -E "s/.*brew_install[[:space:]]+${QUOTED}[[:space:]]+${QUOTE}([^\"']+)${QUOTE}.*/\1/" \
         | sed -E 's|.*/||' \
         | sort -u
 
@@ -35,11 +98,16 @@ get_declared_formulae() {
 get_declared_taps() {
 
     {
-        grep -hE '^[[:space:]]*brew_tap[[:space:]]+"' "$INSTALLS_DIR"/*.sh \
-            | sed -E 's/.*brew_tap[[:space:]]+"([^"]+)".*/\1/'
+        get_normalized_installs \
+            | grep -E "^[[:space:]]*brew_tap[[:space:]]+${QUOTE}" \
+            | sed -E "s/.*brew_tap[[:space:]]+${QUOTE}([^\"']+)${QUOTE}.*/\1/"
 
-        grep -hE '^[[:space:]]*brew_install[[:space:]]+"' "$INSTALLS_DIR"/*.sh \
-            | sed -nE 's/.*brew_install[[:space:]]+"[^"]*"[[:space:]]+"[^"]*"[[:space:]]+"[^"]*"[[:space:]]+"([^"]+)".*/\1/p'
+        # Taps are also declared as the fourth `brew_install` argument
+        # (e.g. `brew_install "OpenCode" "opencode-v2" "" "anomalyco/tap"`).
+
+        get_normalized_installs \
+            | grep -E "^[[:space:]]*brew_install[[:space:]]+${QUOTE}" \
+            | sed -nE "s/.*brew_install[[:space:]]+${QUOTED}[[:space:]]+${QUOTED}[[:space:]]+${QUOTED}[[:space:]]+${QUOTE}([^\"']+)${QUOTE}.*/\1/p"
     } | sort -u
 
 }
@@ -47,14 +115,16 @@ get_declared_taps() {
 get_declared_mas_ids() {
 
     {
-        grep -hE '^[[:space:]]*mas_install[[:space:]]+"' "$INSTALLS_DIR"/*.sh \
-            | sed -E 's/.*mas_install[[:space:]]+"[^"]*"[[:space:]]+"([^"]+)".*/\1/'
+        get_normalized_installs \
+            | grep -E "^[[:space:]]*mas_install[[:space:]]+${QUOTE}" \
+            | sed -E "s/.*mas_install[[:space:]]+${QUOTED}[[:space:]]+${QUOTE}([^\"']+)${QUOTE}.*/\1/"
 
         # Apps that cannot be installed through `mas` (e.g. `Xcode`, which is
         # too large for the App Store tooling) are declared by opening their
         # App Store page instead, so their ID is read from that URL.
 
-        grep -hEo 'macappstores://[^"]+' "$INSTALLS_DIR"/*.sh \
+        get_normalized_installs \
+            | grep -oE "macappstores://[^\"']+" \
             | sed -E 's|.*/id([0-9]+)$|\1|'
     } | sort -u
 
@@ -128,6 +198,10 @@ main() {
     resolvedDeclared="$(printf "%s" "$resolvedDeclared" | sort -u)"
 
     # Check for installed packages that are not declared.
+    #
+    # Note: the opposite direction — "declared but not installed" — is printed
+    # as a warning further down, because it means the install is missing on
+    # this machine rather than that an undeclared package is present.
 
     local driftDetected=0
 
