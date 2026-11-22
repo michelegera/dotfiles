@@ -67,6 +67,7 @@ if set -q brew_prefix
 end
 fish_add_path -Pm /usr/local/sbin
 fish_add_path -Pm $HOME/.local/bin
+fish_add_path -Pm $HOME/.docker/bin
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
